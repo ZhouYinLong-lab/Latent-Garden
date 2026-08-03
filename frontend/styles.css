@@ -141,20 +141,6 @@ input::placeholder { color: #9ba08f; }
 .legend i { display: block; width: 10px; height: 10px; border: 2px solid rgba(255,255,255,.72); border-radius: 50%; box-shadow: 0 0 0 1px rgba(86,105,70,.1); }
 .legend .cluster-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .legend .cluster-count { color: #9ba08f; font-size: 10px; }
-.method-card { margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(199,205,180,.72); color: var(--muted); font-size: 10px; }
-.method-card summary { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 8px; list-style: none; color: var(--ink); cursor: pointer; }
-.method-card summary::-webkit-details-marker { display: none; }
-.method-card summary::before { content: "+"; display: grid; place-items: center; width: 17px; height: 17px; border: 1px solid var(--line-strong); border-radius: 50%; color: var(--accent-dark); grid-row: 1; }
-.method-card[open] summary::before { content: "−"; }
-.method-card summary span { grid-column: 2; font-weight: 700; }
-.method-card summary small { grid-column: 2; color: var(--muted); font-size: 9px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.method-body { position: absolute; z-index: 4; right: 14px; bottom: 54px; left: 14px; padding: 15px 16px; border: 1px solid var(--line-strong); border-radius: 14px; background: rgba(250,247,233,.97); box-shadow: 0 14px 38px rgba(70,76,54,.16); backdrop-filter: blur(12px); }
-.method-body p { margin: 0 0 8px; line-height: 1.55; }
-.method-body strong { color: var(--ink); }
-.method-params { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
-.method-params span { padding: 4px 6px; border-radius: 999px; background: rgba(159,180,107,.17); color: var(--accent-dark); font-size: 9px; }
-.method-body .method-note { margin: 10px 0 0; padding-top: 9px; border-top: 1px solid rgba(199,205,180,.65); color: #7e6958; }
-
 .detail { position: absolute; right: 24px; bottom: 42px; z-index: 2; width: min(360px, calc(100% - 48px)); padding: 22px; border: 1px solid var(--line-strong); border-radius: 16px; background: rgba(247,243,226,.94); backdrop-filter: blur(14px); box-shadow: 0 16px 50px var(--shadow); }
 .detail h2 { margin: 4px 0 10px; color: var(--ink-strong); font: 700 27px/1.08 Georgia, "Songti SC", serif; }
 .detail p:not(.eyebrow) { color: var(--muted); line-height: 1.55; font-size: 13px; }
@@ -195,9 +181,6 @@ html[data-embed="true"] .map-card { min-height: 100vh; margin-top: 0; border-rad
   .legend { grid-template-columns: 1fr 1fr; gap: 3px 6px; margin-top: 7px; }
   .legend button { padding: 5px 6px; font-size: 10px; }
   .legend .cluster-count { font-size: 9px; }
-  .method-card { padding-top: 7px; }
-  .method-card summary small { display: none; }
-  .method-body { right: 8px; bottom: 42px; left: 8px; }
   .detail { right: 14px; bottom: 42px; width: calc(100% - 28px); }
   footer { font-size: 9px; }
 }

@@ -109,7 +109,6 @@ function render() {
   document.querySelector("#item-count").textContent = nodes.length + " 篇文字";
   document.querySelector("#cluster-count").textContent = clusters.length + " 个主题";
   document.querySelector("#generated").textContent = "生成于 " + new Date(state.garden.generated_at).toLocaleDateString();
-  renderMethod();
   document.querySelector("#legend").innerHTML = clusters.map((cluster, index) =>
     '<button type="button" aria-pressed="' + (state.cluster === cluster.id) + '" data-cluster="' + Number(cluster.id) + '" class="' +
     (state.cluster === cluster.id ? "active" : "") + '"><i style="background:' +
@@ -121,29 +120,6 @@ function render() {
     render();
   }));
   renderGraph();
-}
-
-function renderMethod() {
-  const garden = state.garden;
-  const metadata = garden.metadata || {};
-  const reducerConfig = metadata.reducer_config || {};
-  const provider = String(metadata.provider || "unknown");
-  const providerLabel = provider === "hash" ? "Hash（演示）" : provider;
-  const reducerLabel = String(garden.reducer || "projection").toUpperCase();
-  document.querySelector("#method-summary").textContent = providerLabel + " " + garden.dimensions + "D → " + reducerLabel + " 2D";
-  const parameters = [
-    "向量 " + garden.dimensions + "D",
-    reducerConfig.n_neighbors != null ? "邻域 " + reducerConfig.n_neighbors : null,
-    reducerConfig.min_dist != null ? "最小距 " + reducerConfig.min_dist : null,
-    "连线 1–2 近邻",
-  ].filter(Boolean);
-  document.querySelector("#method-params").innerHTML = parameters.map(value => "<span>" + esc(value) + "</span>").join("");
-  document.querySelector("#provider-note").textContent = provider === "hash"
-    ? "当前 Hash provider 侧重零密钥、可复现演示；接入真实 embedding provider 后，语义相似度会更可靠。"
-    : "当前地图使用 " + provider + " embedding；二维距离是高维关系的近似，不是绝对分数。";
-  document.querySelector("#topic-method").textContent = metadata.topic_mode === "curated"
-    ? "颜色来自博客关键词策展，不代表坐标轴数值。"
-    : "颜色来自 " + String(garden.clusterer || "聚类算法") + " 分组。";
 }
 
 function nodeVisibility(node) {
