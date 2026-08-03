@@ -50,3 +50,7 @@ The repository includes a minimal Dockerfile:
 To use real UMAP in the container, change the install line to install both API and analysis extras:
 
     pip install --no-cache-dir ".[api,analysis]"
+
+## Scheduled refresh
+
+The repository includes .github/workflows/refresh-garden.yml. It runs weekly and can also be started manually from GitHub Actions. It rebuilds the public zylatent.com map with the analysis extra and commits only when the generated JSON changes.

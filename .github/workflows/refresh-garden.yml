@@ -1,0 +1,39 @@
+name: Refresh zylatent garden
+
+on:
+  schedule:
+    - cron: "17 2 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install analysis dependencies
+        run: python -m pip install -e ".[analysis]"
+      - name: Rebuild garden from zylatent.com
+        run: |
+          python -m pipeline.cli \
+            --website https://zylatent.com \
+            --output frontend/garden.json \
+            --cache .latent-garden/zylatent-embeddings.json \
+            --max-pages 6
+          cp frontend/garden.json examples/zylatent-garden.json
+      - name: Commit only when the map changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/garden.json examples/zylatent-garden.json
+          if git diff --cached --quiet; then
+            echo "Garden is unchanged."
+            exit 0
+          fi
+          git commit -m "Refresh zylatent semantic garden"
+          git push

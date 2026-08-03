@@ -104,6 +104,8 @@ Embedding 缓存的 key 同时包含内容 hash、provider、模型和向量维�
 
 GitHub Actions 会在 main 分支 push 和 pull request 上运行 Python 测试、编译检查和前端 JavaScript 语法检查。
 
+仓库还包含一个每周运行的 refresh-garden workflow：它会抓取 zylatent.com，使用 analysis extra 中的真实 UMAP 重建地图，仅在输出发生变化时自动提交。也可以在 GitHub Actions 页面手动触发。
+
 ## 远程仓库
 
 远程仓库已绑定为 [ZhouYinLong-lab/Latent-Garden](https://github.com/ZhouYinLong-lab/Latent-Garden)。如果你从一个全新 clone 开始，常规推送方式是：
