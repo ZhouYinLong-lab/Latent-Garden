@@ -82,10 +82,13 @@ def curate(garden: dict) -> dict:
         for topic in TOPICS
         if members[topic["id"]]
     ]
+    garden["clusterer"] = "curated-keywords"
     metadata = garden.setdefault("metadata", {})
     metadata["cluster_count"] = len(garden["clusters"])
     metadata["topic_mode"] = "curated"
     metadata["topic_source"] = "zylatent.com editorial taxonomy"
+    metadata.setdefault("reducer_config", {"n_neighbors": 15, "min_dist": 0.1, "random_state": 42})
+    metadata["edge_config"] = {"neighbors": 2, "max_second_distance": 0.48, "metric": "euclidean-2d"}
     return garden
 
 

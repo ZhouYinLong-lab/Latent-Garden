@@ -119,6 +119,8 @@ class PipelineTests(unittest.TestCase):
         self.assertIn("clusters", payload)
         self.assertEqual(payload["nodes"][0]["url"], "https://example.com")
         self.assertIn("reducer_config", payload["metadata"])
+        self.assertEqual(payload["metadata"]["reducer_config"]["random_state"], 42)
+        self.assertEqual(payload["metadata"]["clusterer_config"]["iterations"], 30)
         json.dumps(payload)
 
     def test_reducer_points_are_normalized_for_frontend_viewbox(self):

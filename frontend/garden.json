@@ -3,7 +3,7 @@
   "generated_at": "2026-08-03T10:10:37.169118+00:00",
   "dimensions": 64,
   "reducer": "umap",
-  "clusterer": "kmeans",
+  "clusterer": "curated-keywords",
   "nodes": [
     {
       "id": "五子棋搜索实验",
@@ -784,6 +784,16 @@
     "item_count": 41,
     "cluster_count": 5,
     "topic_mode": "curated",
-    "topic_source": "zylatent.com editorial taxonomy"
+    "topic_source": "zylatent.com editorial taxonomy",
+    "reducer_config": {
+      "n_neighbors": 15,
+      "min_dist": 0.1,
+      "random_state": 42
+    },
+    "edge_config": {
+      "neighbors": 2,
+      "max_second_distance": 0.48,
+      "metric": "euclidean-2d"
+    }
   }
 }

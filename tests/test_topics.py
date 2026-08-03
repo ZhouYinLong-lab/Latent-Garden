@@ -25,7 +25,10 @@ class TopicCurationTests(unittest.TestCase):
         self.assertEqual(labels, [topic["label"] for topic in TOPICS])
         self.assertEqual(len(labels), len(set(labels)))
         self.assertEqual({node["cluster_id"] for node in result["nodes"]}, {0, 1, 2, 3, 4})
+        self.assertEqual(result["clusterer"], "curated-keywords")
         self.assertEqual(result["metadata"]["topic_mode"], "curated")
+        self.assertEqual(result["metadata"]["reducer_config"]["n_neighbors"], 15)
+        self.assertEqual(result["metadata"]["edge_config"]["metric"], "euclidean-2d")
 
     def test_published_blog_nodes_all_have_safe_targets(self):
         garden = json.loads(Path("frontend/garden.json").read_text(encoding="utf-8"))

@@ -60,8 +60,12 @@ def build_garden(
             "reducer_config": {
                 "n_neighbors": getattr(reducer, "n_neighbors", None),
                 "min_dist": getattr(reducer, "min_dist", None),
+                "random_state": getattr(reducer, "random_state", None),
             },
-            "clusterer_config": {"clusters": getattr(clusterer, "clusters", None)},
+            "clusterer_config": {
+                "clusters": getattr(clusterer, "clusters", None),
+                "iterations": getattr(clusterer, "iterations", None),
+            },
         },
     )
 
