@@ -10,6 +10,16 @@ Use the frontend directly or embed it with:
 
     https://your-host.example/frontend/?embed=1&data=/garden.json
 
+## GitHub Pages
+
+The repository includes `.github/workflows/pages.yml`. It publishes the contents of `frontend/` as a static GitHub Pages site on pushes to `main`, manual runs, and successful blog refreshes.
+
+The default project URL is:
+
+    https://zhouyinlong-lab.github.io/Latent-Garden/
+
+If a custom domain is configured in the repository's Pages settings, use that domain in the README and iframe URL instead. The frontend is self-contained: `index.html`, `app.js`, `styles.css`, and `garden.json` are deployed together.
+
 ## API deployment
 
 Install the API extra:

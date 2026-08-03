@@ -8,6 +8,12 @@ Latent Garden 是一个独立的语义地图生成工具。它读取 Markdown、
 
 它不是某个博客的专用插件。博客、项目集、研究笔记、知识库和文档站都可以通过 JSON、静态页面、iframe 或 API 使用同一套处理流程。
 
+## 在线交互地图
+
+**[打开 Latent Garden 交互语义地图 ↗](https://zhouyinlong-lab.github.io/Latent-Garden/)**
+
+这是由 `frontend/` 自动部署的 GitHub Pages 实例，支持搜索、主题筛选、缩放、拖拽和点击文章节点。README 中的静态图适合快速预览，在线页面提供完整交互。
+
 ## 博客案例：寒柳别苑
 
 Latent Garden 的第一个真实使用案例是个人博客 [zylatent.com（寒柳别苑）](https://zylatent.com)。仓库中的案例数据由博客公开页面生成，不依赖博客源码，也不把文章正文写入最终地图文件。
