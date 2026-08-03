@@ -1,122 +1,189 @@
 # Latent Garden
 
-Latent Garden（个人语义花园）是一个独立的通用语义地图生成工具：读取 Markdown、MDX、JSON 或未来接入的知识源，提取统一内容字段，生成 embedding，经过 UMAP 降维与主题聚类，输出可以被任意前端消费的 garden.json。
+[![CI](https://github.com/ZhouYinLong-lab/Latent-Garden/actions/workflows/ci.yml/badge.svg)](https://github.com/ZhouYinLong-lab/Latent-Garden/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-zylatent.com 是这个项目的展示示例，也是仓库名字的来源。它只是示例内容的第一个使用者；Latent Garden 不依赖博客源码，未来可以被博客通过 JSON、静态页面、iframe 或 API 接入。
+Latent Garden 是一个独立的语义地图生成工具。它读取 Markdown、MDX、JSON、RSS/Atom 或公开网站内容，提取统一的内容字段，生成 embedding，经 UMAP 降维与主题聚类后输出前端可直接消费的 `garden.json`。
 
-## 目录
+它不是某个博客的专用插件。博客、项目集、研究笔记、知识库和文档站都可以通过 JSON、静态页面、iframe 或 API 使用同一套处理流程。
 
-- core/：ContentItem、GardenNode、Garden 等稳定数据模型
-- pipeline/：内容处理、hash 缓存、embedding、UMAP、聚类与 CLI
-- api/：可选 FastAPI 服务，提供 garden JSON、健康检查和受保护刷新接口
-- providers/：可替换 EmbeddingProvider；内置离线 hash provider 与显式调用的 OpenAI provider
-- adapters/：Markdown、MDX、JSON、RSS/Atom 读取适配器
-- adapters/website.py：抓取 Astro 风格公开博客的文章元数据与正文
-- frontend/：零构建依赖的独立交互式语义地图
-- examples/：来自 zylatent.com 的脱钩示例内容与生成输出
-- tests/：适配器、缓存与输出契约测试
+## 博客案例：寒柳别苑
+
+Latent Garden 的第一个真实使用案例是个人博客 [zylatent.com（寒柳别苑）](https://zylatent.com)。仓库中的案例数据由博客公开页面生成，不依赖博客源码，也不把文章正文写入最终地图文件。
+
+当前案例快照：
+
+| 项目 | 结果 |
+| --- | --- |
+| 内容来源 | [zylatent.com](https://zylatent.com) 公开文章 |
+| 地图节点 | 41 |
+| 主题分组 | 5 |
+| 降维方法 | UMAP |
+| 聚类方法 | K-Means |
+| 输出文件 | [`examples/zylatent-garden.json`](examples/zylatent-garden.json) |
+| 独立前端 | [`frontend/`](frontend/) |
+
+这份输出保留每篇文章的标题、摘要、标签、日期、原始 URL、二维坐标和主题编号。打开节点后，地图会跳转回寒柳别苑的原文页面。
+
+重新生成博客案例：
+
+```bash
+pip install -e ".[analysis]"
+python -m pipeline.cli \
+  --website https://zylatent.com \
+  --output examples/zylatent-garden.json \
+  --cache .latent-garden/zylatent-embeddings.json \
+  --max-pages 6
+cp examples/zylatent-garden.json frontend/garden.json
+python -m http.server 8000 --directory frontend
+```
+
+然后访问 <http://localhost:8000>。也可以直接复用生成结果：
+
+```text
+https://your-site.example/latent-garden/?data=/garden.json&embed=1
+```
+
+## 特性
+
+- 统一的 `ContentItem`、`GardenNode` 和 `Garden` 数据模型
+- 可替换的 `EmbeddingProvider`，内置离线 hash provider 与 OpenAI provider
+- 以内容 hash、provider、模型和维度为 key 的 embedding 缓存
+- 可选真实 UMAP；没有科学计算依赖时仍可使用确定性降维回退
+- K-Means 主题聚类与稳定的前端坐标范围
+- Markdown、MDX、JSON、RSS、Atom 和公开网站适配器
+- 零构建依赖的交互式前端，支持搜索、主题筛选、缩放、拖拽和原文跳转
+- 可选 FastAPI 服务，提供 JSON、健康检查和受保护刷新接口
+- GitHub Actions CI 与定期博客地图刷新
 
 ## 快速开始
 
-要求 Python 3.10+。使用内置的 hash provider 不需要 API key：
+要求 Python 3.10+。
 
-    python -m pipeline.cli --input examples/content --output examples/garden.json
-    Copy-Item examples/garden.json frontend/garden.json
+```bash
+git clone https://github.com/ZhouYinLong-lab/Latent-Garden.git
+cd Latent-Garden
+python -m venv .venv
+source .venv/bin/activate       # Windows PowerShell: .\.venv\Scripts\Activate.ps1
+pip install -e ".[analysis]"
+```
 
-然后用任意静态服务器打开 frontend/。例如：
+使用示例内容生成地图：
 
-    python -m http.server 8000 --directory frontend
+```bash
+python -m pipeline.cli \
+  --input examples/content \
+  --output examples/garden.json \
+  --cache .latent-garden/examples-embeddings.json
+cp examples/garden.json frontend/garden.json
+python -m http.server 8000 --directory frontend
+```
 
-浏览器访问 http://localhost:8000，点击节点可以跳转到示例文章 URL；滚轮可以缩放地图，拖拽可以移动视野。也可以通过 ?data=https://example.com/garden.json 指向任意允许 CORS 的远程输出。
+### 使用 OpenAI embedding
 
-启动 API 服务：
+```bash
+pip install -e ".[analysis]"
+export OPENAI_API_KEY="your-key"  # Windows PowerShell: $env:OPENAI_API_KEY="your-key"
+python -m pipeline.cli --input examples/content --output examples/garden.json --provider openai
+```
 
-    pip install -e ".[api]"
-    uvicorn api.server:app --host 0.0.0.0 --port 8000
+### 运行 API
 
-API 提供 /health、/garden.json、/api/garden、/api/refresh 和 /frontend/。完整部署说明见 docs/deployment.md。
+```bash
+pip install -e ".[api]"
+uvicorn api.server:app --host 0.0.0.0 --port 8000
+```
 
-## 用 zylatent.com 练手
+API 提供 `/health`、`/garden.json`、`/api/garden`、`/api/refresh` 和 `/frontend/`。生产部署、Docker 与定时刷新见 [`docs/deployment.md`](docs/deployment.md)。
 
-仓库已经包含一份由 zylatent.com 当前公开博客生成的 examples/zylatent-garden.json，并作为 frontend/ 的默认数据。它包含文章标题、摘要、日期、标签、URL、embedding 坐标和主题簇，不把博客源码作为 Python 依赖。
+## 输入与输出
 
-重新抓取并生成：
+Markdown/MDX 使用 YAML frontmatter：
 
-    python -m pipeline.cli --website https://zylatent.com --output examples/zylatent-garden.json --cache .latent-garden/zylatent-embeddings.json --max-pages 6
-    Copy-Item examples/zylatent-garden.json frontend/garden.json -Force
+```markdown
+---
+title: A note
+description: Short summary
+tags: [design, note]
+date: 2026-01-01
+url: https://example.com/note
+type: article
+---
 
-这个适配器只面向公开页面，抓取到的正文仅用于生成 embedding；garden.json 不保存正文。博客更新后重新运行命令即可刷新地图。
+正文会参与 embedding，但不会写入 garden.json。
+```
 
-可以按数据规模覆盖分析参数：
+JSON 可以是单个对象、对象数组或 `{ "items": [...] }`。常用字段为 `id`、`title`、`description`、`body/content/text`、`tags`、`date`、`url` 和 `type`。
 
-    python -m pipeline.cli --website https://zylatent.com --output frontend/garden.json --umap-neighbors 12 --umap-min-dist 0.08 --clusters 5
+输出节点至少包含：
 
-生产环境可安装可选分析依赖，让 reducer 使用真正的 UMAP：
+```json
+{
+  "id": "thinking-in-gardens",
+  "title": "Thinking in gardens",
+  "description": "Short summary",
+  "tags": ["writing", "knowledge"],
+  "date": "2026-01-18",
+  "url": "https://example.com/notes/thinking-in-gardens",
+  "content_type": "article",
+  "x": 0.12,
+  "y": -0.34,
+  "cluster_id": 0
+}
+```
 
-    pip install -e ".[analysis]"
+## 工作流
 
-使用 OpenAI embedding：
+```text
+Content source → Adapter → ContentItem → EmbeddingProvider
+                                      ↓
+                              hash cache lookup
+                                      ↓
+                         UMAP reducer → Clusterer
+                                      ↓
+                              garden.json → Frontend/API
+```
 
-    $env:OPENAI_API_KEY = "your-key"
-    python -m pipeline.cli --input examples/content --output examples/garden.json --provider openai
+详细设计见 [`docs/architecture.md`](docs/architecture.md)。
 
-## 输入格式
+## 仓库结构
 
-Markdown/MDX 支持 YAML 风格 frontmatter：
+```text
+latent-garden/
+├── core/                  # 稳定的数据模型
+├── pipeline/              # 加载、缓存、embedding、降维、聚类与 CLI
+├── providers/             # EmbeddingProvider 实现
+├── adapters/              # Markdown、JSON、RSS/Atom、网站适配器
+├── api/                   # 可选 FastAPI 服务
+├── frontend/              # 独立交互式语义地图
+├── examples/              # 示例内容与 zylatent.com 输出
+├── tests/                 # 单元与 API 契约测试
+├── docs/                  # 架构和部署文档
+├── .github/               # CI、定时刷新与 Issue/PR 模板
+├── pyproject.toml         # Python 包和可选依赖
+└── README.md              # 项目入口
+```
 
-    ---
-    title: A note
-    description: Short summary
-    tags: [design, note]
-    date: 2026-01-01
-    url: https://example.com/note
-    type: article
-    ---
+## 文档与项目规范
 
-JSON 可以是单个对象、对象数组，或 { "items": [...] }。常用字段为 id、title、description、body/content/text、tags、date、url、type。
+- [`docs/architecture.md`](docs/architecture.md)：模块边界与扩展点
+- [`docs/deployment.md`](docs/deployment.md)：静态、API、Docker 和定时刷新
+- [`CONTRIBUTING.md`](CONTRIBUTING.md)：开发、测试和 Pull Request 流程
+- [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)：社区参与准则
+- [`SECURITY.md`](SECURITY.md)：漏洞报告方式
+- [`CHANGELOG.md`](CHANGELOG.md)：版本变化记录
 
-RSS/Atom feed 可以直接作为输入：
+## 参与贡献
 
-    python -m pipeline.cli --rss https://example.com/feed.xml --output examples/feed-garden.json
+欢迎提交适配器、EmbeddingProvider、可视化改进和文档修正。开始前请阅读 [`CONTRIBUTING.md`](CONTRIBUTING.md)，并通过 [GitHub Issues](https://github.com/ZhouYinLong-lab/Latent-Garden/issues) 报告问题或提出功能建议。
 
-## garden.json 契约
+## 许可证
 
-每个 node 至少包含：
+Latent Garden 使用 [MIT License](LICENSE)。
 
-    {
-      "id": "thinking-in-gardens",
-      "title": "Thinking in gardens",
-      "description": "...",
-      "tags": ["writing", "knowledge"],
-      "date": "2026-01-18",
-      "url": "https://zylatent.com/notes/thinking-in-gardens",
-      "content_type": "article",
-      "x": 0.12,
-      "y": -0.34,
-      "cluster_id": 0
-    }
+## 致谢
 
-这使得博客无需知道 embedding、UMAP 或聚类实现，只需展示输出。
+感谢 [UMAP-learn](https://github.com/lmcinnes/umap)、[scikit-learn](https://scikit-learn.org/)、[FastAPI](https://fastapi.tiangolo.com/) 以及 Python 开源社区提供的基础工具。
 
-Embedding 缓存的 key 同时包含内容 hash、provider、模型和向量维度，避免切换模型后误用旧向量；缓存文件使用临时文件原子替换写入。
-
-## 持续集成
-
-GitHub Actions 会在 main 分支 push 和 pull request 上运行 Python 测试、编译检查和前端 JavaScript 语法检查。
-
-仓库还包含一个每周运行的 refresh-garden workflow：它会抓取 zylatent.com，使用 analysis extra 中的真实 UMAP 重建地图，仅在输出发生变化时自动提交。也可以在 GitHub Actions 页面手动触发。
-
-## 远程仓库
-
-远程仓库已绑定为 [ZhouYinLong-lab/Latent-Garden](https://github.com/ZhouYinLong-lab/Latent-Garden)。如果你从一个全新 clone 开始，常规推送方式是：
-
-    git init
-    git add .
-    git commit -m "Initialize Latent Garden"
-    git branch -M main
-    git remote add origin https://github.com/ZhouYinLong-lab/Latent-Garden.git
-    git push -u origin main
-
-## License
-
-MIT
+项目主页：[github.com/ZhouYinLong-lab/Latent-Garden](https://github.com/ZhouYinLong-lab/Latent-Garden)
