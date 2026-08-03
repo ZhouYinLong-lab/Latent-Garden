@@ -19,6 +19,6 @@ jobs:
       - name: Run Python tests
         run: python -m unittest discover -v
       - name: Compile Python packages
-        run: python -m compileall -q api core pipeline providers adapters tests
+        run: python -m compileall -q api core pipeline providers adapters scripts tests
       - name: Check frontend JavaScript
         run: node --check frontend/app.js

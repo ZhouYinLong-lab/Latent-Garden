@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Latent Garden semantic map for zylatent.com</title>
+<desc id="desc">A two-dimensional semantic map of blog articles, colored by topic cluster.</desc>
+<defs>
+<linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f4e5"/><stop offset="1" stop-color="#e0e7cf"/></linearGradient>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#697653" flood-opacity=".18"/></filter>
+</defs>
+<rect width="1200" height="720" rx="26" fill="#e8ead8"/>
+<rect x="20" y="20" width="1160" height="680" rx="22" fill="url(#paper)" stroke="#c7cdb4" filter="url(#shadow)"/>
+<text x="64" y="72" fill="#586347" font-family="Georgia, serif" font-size="38" font-weight="700">Latent Garden<tspan fill="#a4b96f">.</tspan></text>
+<text x="66" y="101" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="13" letter-spacing="2">ZYLATENT.COM · PERSONAL SEMANTIC GARDEN</text>
+<text x="1110" y="72" text-anchor="end" fill="#718650" font-family="Segoe UI, sans-serif" font-size="13">41 nodes · 5 clusters</text>
+<text x="1110" y="98" text-anchor="end" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">UMAP · hash provider</text>
+<rect x="64" y="132" width="820" height="500" rx="18" fill="#f7f3e2" fill-opacity=".64" stroke="#c7cdb4"/>
+<circle cx="474.0" cy="382.0" r="100" fill="none" stroke="#87986a" stroke-opacity=".18" stroke-width="1"/>
+<circle cx="474.0" cy="382.0" r="185" fill="none" stroke="#87986a" stroke-opacity=".18" stroke-width="1"/>
+<circle cx="474.0" cy="382.0" r="270" fill="none" stroke="#87986a" stroke-opacity=".18" stroke-width="1"/>
+<path d="M 474.0 150 V 614" stroke="#87986a" stroke-opacity=".12"/>
+<path d="M 82 382.0 H 866" stroke="#87986a" stroke-opacity=".12"/>
+<g><title>从五子棋作业到搜索实验：用第五章的方法拆开一个 Agent</title><circle cx="257.61" cy="367.85" r="7" fill="#a8bd72" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="257.61" cy="367.85" r="12" fill="none" stroke="#a8bd72" stroke-opacity=".18"/></g>
+<g><title>从一门必修课出发，我和马斯克之间真的只有五跳？</title><circle cx="246.94" cy="287.69" r="7" fill="#a8bd72" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="246.94" cy="287.69" r="12" fill="none" stroke="#a8bd72" stroke-opacity=".18"/></g>
+<g><title>FastAPI 入门：给寒柳别苑搭一个小型 API</title><circle cx="734.20" cy="228.94" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="734.20" cy="228.94" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>在概率的雾里行走：从贝叶斯更新到 MCMC</title><circle cx="707.93" cy="297.43" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="707.93" cy="297.43" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>Dog-LittleTools：九个 Bash 脚本和我不想再敲第二遍的命令</title><circle cx="645.11" cy="477.48" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="645.11" cy="477.48" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>Dog-Babble：把 AES 密文伪装成一串哈基米</title><circle cx="671.32" cy="226.88" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="671.32" cy="226.88" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>MiniArena 自走棋</title><circle cx="94.21" cy="584.81" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="94.21" cy="584.81" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
+<g><title>nannahelper docs：给完全不会编程的人写一份不会跳步的教程</title><circle cx="485.77" cy="433.96" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="485.77" cy="433.96" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>“绘出七彩”的七天</title><circle cx="816.32" cy="310.13" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="816.32" cy="310.13" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>Dog-Skills：我整理的 48 个 Claude Code 技能库，从写代码到 AI 唱歌全涵盖</title><circle cx="514.49" cy="270.47" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="514.49" cy="270.47" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>消失的半年：代码、项目与一个智科人的大一春季学期</title><circle cx="580.08" cy="270.52" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="580.08" cy="270.52" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>当奇迹遇见奇迹——《挽救计划》书评</title><circle cx="671.97" cy="146.76" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="671.97" cy="146.76" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>每日诗语：海子 《以梦为马》</title><circle cx="615.61" cy="358.62" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="615.61" cy="358.62" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>奔跑在残酷与纯真之间——《小鞋子》影评</title><circle cx="884.00" cy="274.15" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="884.00" cy="274.15" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>自然语言加密器: 自定义 Base-N 文本隐写实验</title><circle cx="576.27" cy="174.89" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="576.27" cy="174.89" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>Smart Agent: 迷宫寻路实验</title><circle cx="351.34" cy="257.77" r="7" fill="#a8bd72" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="351.34" cy="257.77" r="12" fill="none" stroke="#a8bd72" stroke-opacity=".18"/></g>
+<g><title>谁拥有这块内存：一次 C++ 资源管理实验</title><circle cx="399.85" cy="284.75" r="7" fill="#a8bd72" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="399.85" cy="284.75" r="12" fill="none" stroke="#a8bd72" stroke-opacity=".18"/></g>
+<g><title>如何在网络时代退化成一棵树</title><circle cx="843.63" cy="228.77" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="843.63" cy="228.77" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>游记 济南</title><circle cx="571.18" cy="345.02" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="571.18" cy="345.02" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>一只脚与王子的性命孰重？——《七王国的骑士》影评</title><circle cx="317.62" cy="315.18" r="7" fill="#a8bd72" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="317.62" cy="315.18" r="12" fill="none" stroke="#a8bd72" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：地狱之夜</title><circle cx="64.00" cy="434.15" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="64.00" cy="434.15" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：第一次夜晚</title><circle cx="473.21" cy="608.05" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="473.21" cy="608.05" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>夜空为你闪烁</title><circle cx="765.45" cy="366.21" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="765.45" cy="366.21" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：被囚禁者</title><circle cx="327.95" cy="510.22" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="327.95" cy="510.22" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：致一位理性的人</title><circle cx="442.37" cy="565.38" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="442.37" cy="565.38" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：母狼</title><circle cx="129.62" cy="499.95" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="129.62" cy="499.95" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
+<g><title>大庚剑阵</title><circle cx="858.41" cy="362.51" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="858.41" cy="362.51" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：告别</title><circle cx="159.99" cy="615.14" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="159.99" cy="615.14" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：七岁智者</title><circle cx="346.16" cy="453.91" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="346.16" cy="453.91" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：我的饥饿</title><circle cx="588.91" cy="549.53" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="588.91" cy="549.53" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：奥菲利娅</title><circle cx="402.36" cy="614.15" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="402.36" cy="614.15" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：黎明</title><circle cx="345.26" cy="632.00" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="345.26" cy="632.00" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>“接下来我们将要面对面”——《攻壳机动队》影评</title><circle cx="826.56" cy="403.39" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="826.56" cy="403.39" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：邪恶</title><circle cx="307.32" cy="560.93" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="307.32" cy="560.93" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：醉舟</title><circle cx="508.07" cy="514.83" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="508.07" cy="514.83" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：巴黎狂欢节</title><circle cx="206.18" cy="547.04" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="206.18" cy="547.04" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：永恒</title><circle cx="416.50" cy="512.38" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="416.50" cy="512.38" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：山谷睡者</title><circle cx="197.65" cy="459.65" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="197.65" cy="459.65" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：感觉</title><circle cx="250.89" cy="629.64" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="250.89" cy="629.64" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
+<g><title>【每日诗语】兰波：我的流浪</title><circle cx="165.54" cy="398.56" r="7" fill="#a8bd72" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="165.54" cy="398.56" r="12" fill="none" stroke="#a8bd72" stroke-opacity=".18"/></g>
+<g><title>我的2025:三年,三日和三个月</title><circle cx="552.80" cy="132.00" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="552.80" cy="132.00" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<text x="930" y="168" fill="#586347" font-family="Georgia, serif" font-size="22" font-weight="700">主题 clusters</text>
+<text x="930" y="194" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="12">相近节点代表相近的内容语义</text>
+<circle cx="936" cy="233" r="7" fill="#a8bd72"/><text x="956" y="238" fill="#4c5141" font-family="Segoe UI, sans-serif" font-size="14">主题 1 · Python</text><text x="956" y="257" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">6 篇内容</text>
+<circle cx="936" cy="285" r="7" fill="#d5a36c"/><text x="956" y="290" fill="#4c5141" font-family="Segoe UI, sans-serif" font-size="14">主题 2 · 影评</text><text x="956" y="309" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">9 篇内容</text>
+<circle cx="936" cy="337" r="7" fill="#86a8a1"/><text x="956" y="342" fill="#4c5141" font-family="Segoe UI, sans-serif" font-size="14">主题 3 · 兰波</text><text x="956" y="361" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">7 篇内容</text>
+<circle cx="936" cy="389" r="7" fill="#b7a5c8"/><text x="956" y="394" fill="#4c5141" font-family="Segoe UI, sans-serif" font-size="14">主题 4 · 兰波</text><text x="956" y="413" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">12 篇内容</text>
+<circle cx="936" cy="441" r="7" fill="#d5a5a1"/><text x="956" y="446" fill="#4c5141" font-family="Segoe UI, sans-serif" font-size="14">主题 5 · JavaScript</text><text x="956" y="465" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">7 篇内容</text>
+<text x="66" y="666" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">position = reduced embedding coordinate · colors = topic clusters · hover/click in the interactive frontend</text>
+<text x="1110" y="666" text-anchor="end" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">snapshot: 2026-08-03</text>
+</svg>

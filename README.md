@@ -26,6 +26,12 @@ Latent Garden 的第一个真实使用案例是个人博客 [zylatent.com（寒�
 
 这份输出保留每篇文章的标题、摘要、标签、日期、原始 URL、二维坐标和主题编号。打开节点后，地图会跳转回寒柳别苑的原文页面。
 
+静态预览如下；它来自同一份 `garden.json`，完整地图支持搜索、主题筛选、缩放、拖拽和点击跳转：
+
+[![zylatent.com semantic map](docs/assets/zylatent-garden-map.svg)](frontend/)
+
+> 这不是词频词云：每个点是一篇文章，点与点之间的距离表示语义相似度，颜色表示聚类结果。坐标轴本身没有固定的人类语义。
+
 重新生成博客案例：
 
 ```bash
@@ -160,6 +166,8 @@ latent-garden/
 ├── examples/              # 示例内容与 zylatent.com 输出
 ├── tests/                 # 单元与 API 契约测试
 ├── docs/                  # 架构和部署文档
+│   └── assets/            # README 使用的案例地图预览
+├── scripts/               # 可重复运行的生成辅助脚本
 ├── .github/               # CI、定时刷新与 Issue/PR 模板
 ├── pyproject.toml         # Python 包和可选依赖
 └── README.md              # 项目入口
