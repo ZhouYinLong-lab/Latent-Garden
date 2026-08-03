@@ -10,7 +10,24 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [{name = "Latent Garden contributors"}]
+keywords = ["embeddings", "semantic-map", "umap", "clustering", "knowledge-garden"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/ZhouYinLong-lab/Latent-Garden"
+Repository = "https://github.com/ZhouYinLong-lab/Latent-Garden"
+Issues = "https://github.com/ZhouYinLong-lab/Latent-Garden/issues"
+Changelog = "https://github.com/ZhouYinLong-lab/Latent-Garden/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 analysis = [

@@ -173,6 +173,7 @@ latent-garden/
 - [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)：社区参与准则
 - [`SECURITY.md`](SECURITY.md)：漏洞报告方式
 - [`CHANGELOG.md`](CHANGELOG.md)：版本变化记录
+- [`docs/releasing.md`](docs/releasing.md)：维护者发布流程
 
 ## 参与贡献
 
