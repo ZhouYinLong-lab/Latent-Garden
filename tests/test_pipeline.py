@@ -5,6 +5,7 @@ from pathlib import Path
 
 from adapters import load_content
 from adapters.website import _item_from_page, discover_article_paths
+from adapters.rss import load_rss_text
 from core.models import ContentItem
 from pipeline.cache import EmbeddingCache
 from pipeline.runner import build_garden
@@ -36,6 +37,28 @@ class PipelineTests(unittest.TestCase):
         parser = _parse(html)
         paths = [href for href, text in parser.links if text and href.startswith("/blog/") and href.count("/") == 2 and href.rsplit("/", 1)[-1] not in {"categories"} and not href.rsplit("/", 1)[-1].isdigit()]
         self.assertEqual(paths, ["/blog/example"])
+
+    def test_rss_adapter_normalizes_rss_and_atom_fields(self):
+        feed = """
+        <feed xmlns="http://www.w3.org/2005/Atom">
+          <entry>
+            <id>tag:example.com,2026:one</id>
+            <title>一个条目</title>
+            <link href="/one" />
+            <updated>2026-08-03T12:00:00Z</updated>
+            <category term="实验" />
+            <summary>简短摘要</summary>
+            <content>正文内容</content>
+          </entry>
+        </feed>
+        """
+        items = load_rss_text(feed, base_url="https://example.com/feed.xml")
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0].title, "一个条目")
+        self.assertEqual(items[0].date, "2026-08-03")
+        self.assertEqual(items[0].url, "https://example.com/one")
+        self.assertEqual(items[0].body, "正文内容")
+        self.assertEqual(items[0].tags, ["实验"])
 
     def test_website_adapter_normalizes_unicode_article(self):
         html = """

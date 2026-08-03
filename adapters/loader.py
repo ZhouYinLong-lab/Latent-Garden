@@ -5,6 +5,7 @@ from pathlib import Path
 from core.models import ContentItem
 from .json_adapter import load_json
 from .markdown import load_markdown
+from .rss import load_rss
 
 
 def load_content(source: str | Path) -> list[ContentItem]:
@@ -17,6 +18,8 @@ def load_content(source: str | Path) -> list[ContentItem]:
             items.append(load_markdown(file))
         elif suffix == ".json":
             items.extend(load_json(file))
+        elif suffix in {".rss", ".xml"}:
+            items.extend(load_rss(file))
     if not items:
         raise ValueError(f"No Markdown, MDX, or JSON content found in {path}")
     return items

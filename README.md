@@ -10,7 +10,7 @@ zylatent.com 是这个项目的展示示例，也是仓库名字的来源。它�
 - pipeline/：内容处理、hash 缓存、embedding、UMAP、聚类与 CLI
 - api/：可选 FastAPI 服务，提供 garden JSON、健康检查和受保护刷新接口
 - providers/：可替换 EmbeddingProvider；内置离线 hash provider 与显式调用的 OpenAI provider
-- adapters/：Markdown、MDX、JSON 读取适配器
+- adapters/：Markdown、MDX、JSON、RSS/Atom 读取适配器
 - adapters/website.py：抓取 Astro 风格公开博客的文章元数据与正文
 - frontend/：零构建依赖的独立交互式语义地图
 - examples/：来自 zylatent.com 的脱钩示例内容与生成输出
@@ -70,6 +70,10 @@ Markdown/MDX 支持 YAML 风格 frontmatter：
     ---
 
 JSON 可以是单个对象、对象数组，或 { "items": [...] }。常用字段为 id、title、description、body/content/text、tags、date、url、type。
+
+RSS/Atom feed 可以直接作为输入：
+
+    python -m pipeline.cli --rss https://example.com/feed.xml --output examples/feed-garden.json
 
 ## garden.json 契约
 
