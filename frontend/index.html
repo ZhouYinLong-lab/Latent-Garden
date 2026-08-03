@@ -39,6 +39,7 @@
             </defs>
             <rect class="map-surface" x="-.96" y="-.96" width="1.92" height="1.92" rx=".09" />
             <g id="grid" clip-path="url(#map-clip)"></g>
+            <g id="edges" clip-path="url(#map-clip)"></g>
             <g id="nodes" clip-path="url(#map-clip)"></g>
           </svg>
           <div class="map-note"><span class="note-mark"></span><span>相近的点，代表相近的内容语义</span></div>
@@ -53,9 +54,9 @@
         </div>
         <aside class="topic-panel" aria-label="主题分组">
           <div class="topic-heading">
-            <p class="eyebrow">MAP INDEX</p>
-            <h2>主题簇</h2>
-            <p>颜色代表聚类结果。选择一个主题，地图会留下相关内容。</p>
+            <p class="eyebrow">EDITOR'S INDEX</p>
+            <h2>精选主题</h2>
+            <p>颜色代表博客策展主题。选择一个主题，地图会留下相关内容。</p>
           </div>
           <div id="legend" class="legend"></div>
           <div class="topic-footnote">
@@ -66,7 +67,7 @@
       </section>
 
       <footer>
-        <span>文字来自 <a href="https://zylatent.com" target="_blank" rel="noreferrer">寒柳别苑</a></span>
+        <span class="source-credit">文字来自 <a class="blog-link" href="https://zylatent.com" target="_blank" rel="noreferrer"><img src="./assets/zylatent-icon.png" alt="" />寒柳别苑</a></span>
         <span id="generated"></span>
       </footer>
     </main>

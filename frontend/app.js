@@ -5,11 +5,13 @@ if (params.get("embed") === "1") document.documentElement.dataset.embed = "true"
 const state = { garden: null, query: "", cluster: null };
 const nodeLayer = document.querySelector("#nodes");
 const gridLayer = document.querySelector("#grid");
+const edgeLayer = document.querySelector("#edges");
 const detail = document.querySelector("#detail");
 const status = document.querySelector("#status");
 const defaultView = { x: -1.08, y: -1.08, width: 2.16, height: 2.16 };
 const view = { ...defaultView };
 let drag = null;
+let suppressClick = false;
 
 function esc(value) {
   const replacements = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" };
@@ -23,6 +25,15 @@ function safeColor(value) {
 function safeCoordinate(value) {
   const number = Number(value);
   return Number.isFinite(number) ? Math.max(-.9, Math.min(.9, number)) : 0;
+}
+
+function safeExternalUrl(value) {
+  try {
+    const url = new URL(String(value || ""), location.href);
+    return url.protocol === "http:" || url.protocol === "https:" ? url.href : null;
+  } catch (_) {
+    return null;
+  }
 }
 
 function renderGrid() {
@@ -75,9 +86,72 @@ function render() {
   ).join("");
   document.querySelectorAll("[data-cluster]").forEach(button => button.addEventListener("click", () => {
     state.cluster = state.cluster === Number(button.dataset.cluster) ? null : Number(button.dataset.cluster);
-    renderNodes();
     render();
   }));
+  renderGraph();
+}
+
+function nodeVisibility(node) {
+  const searchable = [node.title, node.description].concat(node.tags || []).join(" ").toLowerCase();
+  return {
+    matches: !state.query || searchable.includes(state.query),
+    visibleCluster: state.cluster === null || node.cluster_id === state.cluster,
+  };
+}
+
+function semanticEdges(nodes) {
+  const points = nodes.map(node => ({
+    id: String(node.id),
+    x: safeCoordinate(node.x),
+    y: -safeCoordinate(node.y),
+    clusterId: node.cluster_id,
+  }));
+  const edges = new Map();
+  points.forEach(point => {
+    const neighbors = points
+      .filter(candidate => candidate.id !== point.id)
+      .map(candidate => ({
+        ...candidate,
+        distance: Math.hypot(candidate.x - point.x, candidate.y - point.y),
+      }))
+      .sort((left, right) => left.distance - right.distance)
+      .slice(0, 2);
+    neighbors.forEach((neighbor, index) => {
+      if (index > 0 && neighbor.distance > .48) return;
+      const key = [point.id, neighbor.id].sort().join("\u0000");
+      if (!edges.has(key)) edges.set(key, { from: point, to: neighbor });
+    });
+  });
+  return Array.from(edges.values());
+}
+
+function renderEdges() {
+  const nodes = state.garden.nodes;
+  const byId = new Map(nodes.map(node => [String(node.id), node]));
+  const clusters = state.garden.clusters;
+  edgeLayer.innerHTML = semanticEdges(nodes).map(edge => {
+    const fromNode = byId.get(edge.from.id);
+    const toNode = byId.get(edge.to.id);
+    const fromState = nodeVisibility(fromNode);
+    const toState = nodeVisibility(toNode);
+    const active = fromState.matches && fromState.visibleCluster && toState.matches && toState.visibleCluster;
+    const sameTopic = fromNode.cluster_id === toNode.cluster_id;
+    const cluster = clusters.find(item => item.id === fromNode.cluster_id);
+    return '<line class="edge ' + (active ? "" : "dim") + (sameTopic ? " same-topic" : "") +
+      '" data-a="' + esc(edge.from.id) + '" data-b="' + esc(edge.to.id) + '" x1="' + edge.from.x +
+      '" y1="' + edge.from.y + '" x2="' + edge.to.x + '" y2="' + edge.to.y +
+      '" style="--edge-color:' + safeColor(cluster && cluster.color) + '"></line>';
+  }).join("");
+}
+
+function highlightEdges(id, highlighted) {
+  edgeLayer.querySelectorAll(".edge").forEach(edge => {
+    edge.classList.toggle("focus", highlighted && (edge.dataset.a === id || edge.dataset.b === id));
+  });
+}
+
+function renderGraph() {
+  renderEdges();
   renderNodes();
 }
 
@@ -86,40 +160,66 @@ function renderNodes() {
   const clusters = state.garden.clusters;
   nodeLayer.innerHTML = nodes.map(node => {
     const cluster = clusters.find(item => item.id === node.cluster_id);
-    const searchable = [node.title, node.description].concat(node.tags || []).join(" ").toLowerCase();
-    const matches = !state.query || searchable.includes(state.query);
-    const visibleCluster = state.cluster === null || node.cluster_id === state.cluster;
+    const { matches, visibleCluster } = nodeVisibility(node);
     const radius = matches && visibleCluster ? ".028" : ".018";
     const x = safeCoordinate(node.x);
     const y = safeCoordinate(node.y);
     const label = x > 0.65
       ? '<text x="-0.045" y=".012" text-anchor="end">' + esc(node.title) + "</text>"
       : '<text x=".045" y=".012">' + esc(node.title) + "</text>";
-    const showLabels = Boolean(state.query) || state.cluster !== null;
+    const showLabels = Boolean(state.query) && matches && visibleCluster;
     return '<g class="node ' + (matches && visibleCluster ? "" : "dim") + (showLabels ? " show-label" : "") +
-      '" transform="translate(' + x + " " + (-y) + ')" data-id="' + esc(node.id) + '">' +
+      '" transform="translate(' + x + " " + (-y) + ')" data-id="' + esc(node.id) + '" tabindex="0" role="link" aria-label="打开：' + esc(node.title) + '">' +
+      '<title>' + esc(node.title) + '</title>' +
       '<circle r="' + radius + '" fill="' + safeColor(cluster && cluster.color) + '"></circle>' +
       label + "</g>";
   }).join("");
-  nodeLayer.querySelectorAll(".node").forEach(node => node.addEventListener("click", () => showDetail(node.dataset.id)));
+  nodeLayer.querySelectorAll(".node").forEach(node => {
+    node.addEventListener("pointerenter", () => {
+      nodeLayer.appendChild(node);
+      highlightEdges(node.dataset.id, true);
+    });
+    node.addEventListener("pointerleave", () => highlightEdges(node.dataset.id, false));
+    node.addEventListener("click", () => {
+      if (!suppressClick) openNode(node.dataset.id);
+    });
+    node.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openNode(node.dataset.id);
+      }
+    });
+  });
+}
+
+function openNode(id) {
+  const node = state.garden.nodes.find(item => String(item.id) === String(id));
+  if (!node) return;
+  const url = safeExternalUrl(node.url);
+  if (url) {
+    window.open(url, "_blank", "noopener,noreferrer");
+    return;
+  }
+  showDetail(id);
 }
 
 function showDetail(id) {
-  const node = state.garden.nodes.find(item => item.id === id);
+  const node = state.garden.nodes.find(item => String(item.id) === String(id));
   if (!node) return;
   document.querySelector("#detail-type").textContent = node.content_type;
   document.querySelector("#detail-title").textContent = node.title;
   document.querySelector("#detail-description").textContent = node.description;
   document.querySelector("#detail-tags").innerHTML = (node.tags || []).map(tag => "<span>" + esc(tag) + "</span>").join("");
   const link = document.querySelector("#detail-link");
-  link.href = node.url || "#";
-  link.style.display = node.url ? "inline-block" : "none";
+  const url = safeExternalUrl(node.url);
+  link.href = url || "#";
+  link.style.display = url ? "inline-block" : "none";
   detail.hidden = false;
 }
 
 document.querySelector("#search").addEventListener("input", event => {
   state.query = event.target.value.trim().toLowerCase();
-  renderNodes();
+  renderGraph();
 });
 document.querySelector("#reset").addEventListener("click", () => {
   state.query = "";
@@ -136,20 +236,26 @@ document.querySelector("#map").addEventListener("wheel", event => {
   zoomAt(event.clientX, event.clientY, event.deltaY > 0 ? 1.12 : .89);
 }, { passive: false });
 document.querySelector("#map").addEventListener("pointerdown", event => {
-  drag = { pointerId: event.pointerId, x: event.clientX, y: event.clientY };
+  suppressClick = false;
+  drag = { pointerId: event.pointerId, x: event.clientX, y: event.clientY, moved: false };
   event.currentTarget.setPointerCapture(event.pointerId);
 });
 document.querySelector("#map").addEventListener("pointermove", event => {
   if (!drag || drag.pointerId !== event.pointerId) return;
   const rect = event.currentTarget.getBoundingClientRect();
+  if (Math.abs(event.clientX - drag.x) + Math.abs(event.clientY - drag.y) > 3) drag.moved = true;
   view.x -= ((event.clientX - drag.x) / rect.width) * view.width;
   view.y -= ((event.clientY - drag.y) / rect.height) * view.height;
   drag.x = event.clientX;
   drag.y = event.clientY;
   applyView();
 });
-document.querySelector("#map").addEventListener("pointerup", () => { drag = null; });
-document.querySelector("#map").addEventListener("pointercancel", () => { drag = null; });
+document.querySelector("#map").addEventListener("pointerup", () => {
+  suppressClick = Boolean(drag && drag.moved);
+  drag = null;
+  setTimeout(() => { suppressClick = false; }, 0);
+});
+document.querySelector("#map").addEventListener("pointercancel", () => { drag = null; suppressClick = false; });
 
 renderGrid();
 

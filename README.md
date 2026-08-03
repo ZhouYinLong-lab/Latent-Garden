@@ -65,7 +65,7 @@ https://your-site.example/latent-garden/?data=/garden.json&embed=1
 - 可选真实 UMAP；没有科学计算依赖时仍可使用确定性降维回退
 - K-Means 主题聚类与稳定的前端坐标范围
 - Markdown、MDX、JSON、RSS、Atom 和公开网站适配器
-- 零构建依赖的交互式前端，支持搜索、主题筛选、缩放、拖拽和原文跳转
+- 零构建依赖的交互式前端，支持相似内容连线、搜索、主题筛选、缩放、拖拽和原文跳转
 - 可选 FastAPI 服务，提供 JSON、健康检查和受保护刷新接口
 - GitHub Actions CI 与定期博客地图刷新
 
