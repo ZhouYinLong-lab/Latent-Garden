@@ -8,6 +8,10 @@ class UMAPReducer:
     name = "umap"
 
     def __init__(self, random_state: int = 42, n_neighbors: int = 15, min_dist: float = 0.1) -> None:
+        if n_neighbors < 2:
+            raise ValueError("UMAP n_neighbors must be at least 2")
+        if not 0 <= min_dist <= 1:
+            raise ValueError("UMAP min_dist must be between 0 and 1")
         self.random_state = random_state
         self.n_neighbors = n_neighbors
         self.min_dist = min_dist

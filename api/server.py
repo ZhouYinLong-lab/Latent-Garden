@@ -14,6 +14,8 @@ from fastapi.staticfiles import StaticFiles
 
 from adapters import load_content, load_website
 from pipeline.cache import EmbeddingCache
+from pipeline.cluster import KMeansClusterer
+from pipeline.reduce import UMAPReducer
 from pipeline.runner import build_garden
 from providers.hash_provider import HashEmbeddingProvider
 from providers.openai_provider import OpenAIEmbeddingProvider
@@ -37,6 +39,9 @@ class ApiSettings:
     openai_model: str = "text-embedding-3-small"
     cache_path: Path = field(default_factory=lambda: PROJECT_ROOT / ".latent-garden" / "api-embeddings.json")
     max_pages: int = 6
+    umap_neighbors: int = 15
+    umap_min_dist: float = 0.1
+    clusters: int | None = None
     frontend_path: Path | None = field(default_factory=lambda: PROJECT_ROOT / "frontend")
     refresh_token: str | None = None
     cors_origins: list[str] = field(default_factory=lambda: ["*"])
@@ -53,6 +58,9 @@ class ApiSettings:
             openai_model=os.getenv("LATENT_GARDEN_OPENAI_MODEL", "text-embedding-3-small"),
             cache_path=_configured_path(os.getenv("LATENT_GARDEN_CACHE"), PROJECT_ROOT / ".latent-garden" / "api-embeddings.json"),
             max_pages=int(os.getenv("LATENT_GARDEN_MAX_PAGES", "6")),
+            umap_neighbors=int(os.getenv("LATENT_GARDEN_UMAP_NEIGHBORS", "15")),
+            umap_min_dist=float(os.getenv("LATENT_GARDEN_UMAP_MIN_DIST", "0.1")),
+            clusters=int(os.getenv("LATENT_GARDEN_CLUSTERS")) if os.getenv("LATENT_GARDEN_CLUSTERS") else None,
             frontend_path=_configured_path(os.getenv("LATENT_GARDEN_FRONTEND"), PROJECT_ROOT / "frontend"),
             refresh_token=os.getenv("LATENT_GARDEN_REFRESH_TOKEN") or None,
             cors_origins=origins or ["*"],
@@ -93,7 +101,13 @@ def _refresh(settings: ApiSettings) -> dict[str, Any]:
         raise HTTPException(status_code=400, detail="Configure only one of LATENT_GARDEN_INPUT or LATENT_GARDEN_WEBSITE")
     try:
         items = load_content(settings.input_path) if settings.input_path else load_website(settings.website or "", max_pages=settings.max_pages)
-        garden = build_garden(items, provider=_provider(settings), cache=EmbeddingCache(settings.cache_path))
+        garden = build_garden(
+            items,
+            provider=_provider(settings),
+            cache=EmbeddingCache(settings.cache_path),
+            reducer=UMAPReducer(n_neighbors=settings.umap_neighbors, min_dist=settings.umap_min_dist),
+            clusterer=KMeansClusterer(clusters=settings.clusters),
+        )
         payload = garden.to_dict()
         _write_garden(settings.garden_path, payload)
         return payload

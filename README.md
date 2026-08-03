@@ -47,6 +47,10 @@ API 提供 /health、/garden.json、/api/garden、/api/refresh 和 /frontend/。
 
 这个适配器只面向公开页面，抓取到的正文仅用于生成 embedding；garden.json 不保存正文。博客更新后重新运行命令即可刷新地图。
 
+可以按数据规模覆盖分析参数：
+
+    python -m pipeline.cli --website https://zylatent.com --output frontend/garden.json --umap-neighbors 12 --umap-min-dist 0.08 --clusters 5
+
 生产环境可安装可选分析依赖，让 reducer 使用真正的 UMAP：
 
     pip install -e ".[analysis]"

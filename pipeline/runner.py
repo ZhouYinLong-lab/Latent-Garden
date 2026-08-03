@@ -53,7 +53,16 @@ def build_garden(
         clusterer=clusterer.name,
         nodes=nodes,
         clusters=clusters,
-        metadata={"provider": provider.name, "item_count": len(items), "cluster_count": len(clusters)},
+        metadata={
+            "provider": provider.name,
+            "item_count": len(items),
+            "cluster_count": len(clusters),
+            "reducer_config": {
+                "n_neighbors": getattr(reducer, "n_neighbors", None),
+                "min_dist": getattr(reducer, "min_dist", None),
+            },
+            "clusterer_config": {"clusters": getattr(clusterer, "clusters", None)},
+        },
     )
 
 

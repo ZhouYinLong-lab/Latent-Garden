@@ -8,6 +8,10 @@ class KMeansClusterer:
     name = "kmeans"
 
     def __init__(self, clusters: int | None = None, iterations: int = 30) -> None:
+        if clusters is not None and clusters < 1:
+            raise ValueError("clusters must be at least 1")
+        if iterations < 1:
+            raise ValueError("iterations must be at least 1")
         self.clusters = clusters
         self.iterations = iterations
 
