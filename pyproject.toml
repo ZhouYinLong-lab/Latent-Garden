@@ -18,16 +18,26 @@ analysis = [
   "umap-learn>=0.5.5",
   "scikit-learn>=1.3",
 ]
+api = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+]
 dev = ["pytest>=7.4"]
+test = [
+  "fastapi>=0.115",
+  "httpx>=0.27",
+  "pytest>=7.4",
+]
 
 [project.scripts]
 latent-garden = "pipeline.cli:main"
+latent-garden-api = "api.server:run"
 
 [tool.setuptools]
 py-modules = []
 
 [tool.setuptools.packages.find]
-include = ["core*", "pipeline*", "providers*", "adapters*"]
+include = ["api*", "core*", "pipeline*", "providers*", "adapters*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

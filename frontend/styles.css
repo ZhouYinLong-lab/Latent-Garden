@@ -60,6 +60,10 @@ input { width: 100%; border: 0; outline: 0; background: transparent; color: var(
 .tags span { padding: 5px 8px; border-radius: 999px; background: rgba(164,185,111,.24); color: var(--accent-dark); font-size: 11px; }
 .status { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); color: var(--muted); font-size: 13px; z-index: 1; }
 footer { display: flex; justify-content: space-between; gap: 20px; padding-top: 14px; color: var(--muted); font-size: 11px; }
+html[data-embed="true"] .shell { width: 100%; padding: 0; }
+html[data-embed="true"] .masthead, html[data-embed="true"] footer { display: none; }
+html[data-embed="true"] .toolbar { border-radius: 0; border-left: 0; border-right: 0; margin: 0; }
+html[data-embed="true"] .map-card { min-height: 100vh; margin-top: 0; border-radius: 0; border-left: 0; border-right: 0; }
 @media (max-width: 700px) {
   .shell { width: min(100% - 24px, 1280px); padding-top: 26px; }
   .masthead { display: block; }

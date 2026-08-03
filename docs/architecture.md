@@ -8,6 +8,7 @@ Latent Garden is intentionally split at the content boundary:
 4. UMAPReducer maps vectors into two dimensions. If optional scientific dependencies are absent, a deterministic projection keeps the demo runnable.
 5. KMeansClusterer assigns topic groups and the runner builds the frontend-facing Garden contract.
 6. The static frontend reads garden.json, filters nodes, supports zoom/pan, shows metadata, and follows each node's original URL.
+7. The optional API serves the same contract, mounts the static frontend, and serializes refreshes behind a configured key.
 
 The blog is only represented by example URLs. It is not imported as a package and is not required at runtime.
 

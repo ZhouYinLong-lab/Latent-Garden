@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "generated_at": "2026-08-03T09:24:40.581635+00:00",
+  "generated_at": "2026-08-03T10:10:37.169118+00:00",
   "dimensions": 64,
   "reducer": "umap",
   "clusterer": "kmeans",
@@ -20,8 +20,8 @@
       "date": "2026-07-31",
       "url": "https://zylatent.com/blog/%E4%BA%94%E5%AD%90%E6%A3%8B%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C",
       "content_type": "article",
-      "x": -0.0961947496186949,
-      "y": 0.6198453288745492,
+      "x": -0.48555607010134627,
+      "y": 0.052066466290200175,
       "cluster_id": 0,
       "content_hash": "5ae1063710d7a5f018093293ee52c2693a68400fa613aabbb42a071f94b628c9"
     },
@@ -39,9 +39,9 @@
       "date": "2026-07-30",
       "url": "https://zylatent.com/blog/%E6%88%91%E5%92%8C%E5%9F%83%E9%9A%86%E9%A9%AC%E6%96%AF%E5%85%8B%E4%B9%8B%E9%97%B4%E7%9C%9F%E7%9A%84%E5%8F%AA%E9%9A%94%E4%BA%94%E4%B8%AA%E4%BA%BA%E5%90%97",
       "content_type": "article",
-      "x": 0.20477210927081269,
-      "y": 0.1263362274935812,
-      "cluster_id": 4,
+      "x": -0.509501546015916,
+      "y": 0.3470584869884029,
+      "cluster_id": 0,
       "content_hash": "8d259864e90bb761c12559d30e291ea466d4f297fda9704af4a86c339cc943b2"
     },
     {
@@ -58,9 +58,9 @@
       "date": "2026-07-29",
       "url": "https://zylatent.com/blog/fastapi-basics",
       "content_type": "article",
-      "x": 0.03196959086656459,
-      "y": -0.5864488724735915,
-      "cluster_id": 2,
+      "x": 0.5838604501130603,
+      "y": 0.5632530715682794,
+      "cluster_id": 4,
       "content_hash": "6c506b2f665fa39d5bdc53bd80653684973e2f81b9ff20a0310ca82428303043"
     },
     {
@@ -77,9 +77,9 @@
       "date": "2026-07-27",
       "url": "https://zylatent.com/blog/%E5%9C%A8%E6%A6%82%E7%8E%87%E7%9A%84%E9%9B%BE%E9%87%8C%E8%A1%8C%E8%B5%B0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%B8%8Emcmc%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95",
       "content_type": "article",
-      "x": 0.20689200386555784,
-      "y": 0.2910402869905736,
-      "cluster_id": 4,
+      "x": 0.524916244598625,
+      "y": 0.3112097748901236,
+      "cluster_id": 1,
       "content_hash": "f71ec9ab75aa35b0077355cadea43169282ff1ee0213fb38c89c779b68798158"
     },
     {
@@ -96,9 +96,9 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/dog-littletools%E5%B7%A5%E5%85%B7%E9%9B%86",
       "content_type": "article",
-      "x": 0.3656757564947001,
-      "y": -0.28620898846117926,
-      "cluster_id": 2,
+      "x": 0.3839556069006035,
+      "y": -0.3513494617187095,
+      "cluster_id": 3,
       "content_hash": "5ccd88d9d3474564e5647dbd60d7f98c342c2bb3f47fd4050a69dfd98b2105eb"
     },
     {
@@ -115,9 +115,9 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/dog-babble%E5%8A%A0%E5%AF%86%E5%AE%9E%E9%AA%8C",
       "content_type": "article",
-      "x": -0.5688936967693314,
-      "y": -0.23565465605552005,
-      "cluster_id": 1,
+      "x": 0.442756128178622,
+      "y": 0.5708399909446406,
+      "cluster_id": 4,
       "content_hash": "4ff75703512984073f31cec42dd37979c92fa13e7a07ca4512a455fb759d7d68"
     },
     {
@@ -134,8 +134,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/miniarena%E8%87%AA%E8%B5%B0%E6%A3%8B",
       "content_type": "article",
-      "x": 0.09886976237415712,
-      "y": 0.06738619073078744,
+      "x": -0.8522021425514912,
+      "y": -0.7463471041046201,
       "cluster_id": 2,
       "content_hash": "e0fdff6c12db2ff600e9960fa0552980cdb08bd50e6497a0375a326c56263e2a"
     },
@@ -153,9 +153,9 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/nannahelper%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3",
       "content_type": "article",
-      "x": -0.21604858053168363,
-      "y": 0.16003033096599106,
-      "cluster_id": 2,
+      "x": 0.026400585463265624,
+      "y": -0.19122817460338148,
+      "cluster_id": 3,
       "content_hash": "45d89fb58eb57ab4f4563d1c1661ef141346c31b21e6f64b0f308b7d38e561d2"
     },
     {
@@ -172,9 +172,9 @@
       "date": "2026-07-14",
       "url": "https://zylatent.com/blog/%E7%BB%98%E5%87%BA%E4%B8%83%E5%BD%A9%E7%9A%84%E4%B8%83%E5%A4%A9",
       "content_type": "article",
-      "x": 0.5876297930379469,
-      "y": -0.2162860837199595,
-      "cluster_id": 3,
+      "x": 0.7681354833179083,
+      "y": 0.26449154733565183,
+      "cluster_id": 1,
       "content_hash": "6271efc7ac385b19ba61c2b294804fbce6992880f6349314ad7c19a78f8de97b"
     },
     {
@@ -191,9 +191,9 @@
       "date": "2026-07-03",
       "url": "https://zylatent.com/blog/dog-skills-48-claude-code%E6%8A%80%E8%83%BD%E5%BA%93",
       "content_type": "article",
-      "x": 0.13700670467232057,
-      "y": 0.053595853772132274,
-      "cluster_id": 2,
+      "x": 0.0908460478314107,
+      "y": 0.41042673477919267,
+      "cluster_id": 4,
       "content_hash": "6cc37055561ed055420ad0d15ee74a8efa8eb6b4b6c5b10c580f95f6247916c6"
     },
     {
@@ -206,9 +206,9 @@
       "date": "2026-06-22",
       "url": "https://zylatent.com/blog/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4-%E4%BB%A3%E7%A0%81%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%9B%9E%E9%A1%BE",
       "content_type": "article",
-      "x": -0.453632563567825,
-      "y": -0.1273263189547872,
-      "cluster_id": 1,
+      "x": 0.23804390916505358,
+      "y": 0.4102498868340768,
+      "cluster_id": 4,
       "content_hash": "5e43104559d715440df6c498e879b48b344cc58ff65ea91983f7198a683c28fc"
     },
     {
@@ -223,8 +223,8 @@
       "date": "2026-03-24",
       "url": "https://zylatent.com/blog/%E5%BD%93%E5%A5%87%E8%BF%B9%E9%81%87%E5%88%B0%E5%A5%87%E8%BF%B9",
       "content_type": "article",
-      "x": 0.25130836904455867,
-      "y": 0.39983206333226573,
+      "x": 0.44421739212092903,
+      "y": 0.8656972651304148,
       "cluster_id": 4,
       "content_hash": "aba498102086e5ecd6bdc9db793306527aa87ecb9ea4563b9b4d604b7cd2907d"
     },
@@ -239,8 +239,8 @@
       "date": "2026-03-24",
       "url": "https://zylatent.com/blog/%E6%B5%B7%E5%AD%90-%E4%BB%A5%E6%A2%A6%E4%B8%BA%E9%A9%AC",
       "content_type": "article",
-      "x": -0.4914420282348823,
-      "y": -0.5988151815606041,
+      "x": 0.3177688623010283,
+      "y": 0.08602181994817848,
       "cluster_id": 1,
       "content_hash": "75c04b6285796bc2c185c6b84075c53da5b266c9dcf856a159c58024ff749021"
     },
@@ -257,9 +257,9 @@
       "date": "2026-03-23",
       "url": "https://zylatent.com/blog/we-are-the-world",
       "content_type": "article",
-      "x": 0.07105169319673343,
-      "y": -0.92,
-      "cluster_id": 2,
+      "x": 0.92,
+      "y": 0.39689024705707154,
+      "cluster_id": 1,
       "content_hash": "02349e9d83491d771ef62db43acd6c95914f5292d626934219c23da7ed8be3c5"
     },
     {
@@ -275,9 +275,9 @@
       "date": "2026-03-21",
       "url": "https://zylatent.com/blog/my-compile",
       "content_type": "article",
-      "x": -0.92,
-      "y": -0.059151430385601445,
-      "cluster_id": 1,
+      "x": 0.22948118224431957,
+      "y": 0.7621611806598868,
+      "cluster_id": 4,
       "content_hash": "d1288b07f6c2f1446f671cab278f19bf2e572f6efc0057e259f539adf620c382"
     },
     {
@@ -293,8 +293,8 @@
       "date": "2026-03-18",
       "url": "https://zylatent.com/blog/smartagent",
       "content_type": "article",
-      "x": 0.02711136560331484,
-      "y": 0.92,
+      "x": -0.27524633053772285,
+      "y": 0.45717818299539437,
       "cluster_id": 0,
       "content_hash": "4964e88eb402ad37b0a4d2c83dd9e05ae88d37ede3b7e758a89a9a1ec7a1b24c"
     },
@@ -310,9 +310,9 @@
       "date": "2026-03-08",
       "url": "https://zylatent.com/blog/cpp-memory-ownership-raii",
       "content_type": "article",
-      "x": 0.92,
-      "y": -0.5905031360527184,
-      "cluster_id": 3,
+      "x": -0.16638489351688734,
+      "y": 0.3578662756044836,
+      "cluster_id": 0,
       "content_hash": "a158749c2ae5be982ebf641ed7d6d671ec01320048709abd6fb4666313f7dddd"
     },
     {
@@ -326,8 +326,8 @@
       "date": "2026-03-02",
       "url": "https://zylatent.com/blog/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3%E6%B4%BB%E6%88%90%E4%B8%80%E6%A3%B5%E6%A0%91",
       "content_type": "article",
-      "x": -0.5757720396915642,
-      "y": -0.36158621627476295,
+      "x": 0.8294139649173696,
+      "y": 0.5638822906364876,
       "cluster_id": 1,
       "content_hash": "ddf5455533e8a40508dc7e4085ee6f40018220bd0bdce001cca688cc901bf3c1"
     },
@@ -342,8 +342,8 @@
       "date": "2026-02-28",
       "url": "https://zylatent.com/blog/%E6%B8%B8%E8%AE%B0-%E6%B5%8E%E5%8D%97",
       "content_type": "article",
-      "x": -0.24886774538116452,
-      "y": 0.04275225534057148,
+      "x": 0.21807156320038523,
+      "y": 0.13608645356639848,
       "cluster_id": 1,
       "content_hash": "6c4e993959a3a09b13f276e93e696b9cf0d842d0ef5647e11c07d1e1aa12278a"
     },
@@ -359,9 +359,9 @@
       "date": "2026-02-24",
       "url": "https://zylatent.com/blog/%E4%B8%83%E7%8E%8B%E5%9B%BD%E7%9A%84%E9%AA%91%E5%A3%AB-%E7%AC%AC%E4%B8%80%E5%AD%A3",
       "content_type": "article",
-      "x": 0.303153106242937,
-      "y": 0.07434160939103063,
-      "cluster_id": 4,
+      "x": -0.3509097144165626,
+      "y": 0.2459026684127693,
+      "cluster_id": 0,
       "content_hash": "cd90eed9bf432decac4e3b6990d1821670b61c5ea8c3ac3c3daebebc9b7183b3"
     },
     {
@@ -375,8 +375,8 @@
       "date": "2026-02-19",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%9C%B0%E7%8B%B1%E4%B9%8B%E5%A4%9C",
       "content_type": "article",
-      "x": -0.01126749433051355,
-      "y": -0.08485588445249137,
+      "x": -0.92,
+      "y": -0.191913419276025,
       "cluster_id": 2,
       "content_hash": "ff4856fd6e896c709a000c12b10d8d63ad31e86878826b34d514b755c5f6f02b"
     },
@@ -391,8 +391,8 @@
       "date": "2026-02-18",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A4%9C%E6%99%9A",
       "content_type": "article",
-      "x": 0.6082334566632973,
-      "y": -0.056520403770288,
+      "x": -0.001768637955484098,
+      "y": -0.8318510983585754,
       "cluster_id": 3,
       "content_hash": "dd71a95966741eadddba18a0ade1e5e437f871da320d4c5b706e3e25623fd131"
     },
@@ -406,9 +406,9 @@
       "date": "2026-02-17",
       "url": "https://zylatent.com/blog/%E4%BA%92%E5%8A%A8%E7%BD%91%E9%A1%B5-%E5%A4%9C%E7%A9%BA%E4%B8%BA%E4%BD%A0%E9%97%AA%E7%83%81",
       "content_type": "article",
-      "x": 0.6818646440631578,
-      "y": -0.8047486136323504,
-      "cluster_id": 3,
+      "x": 0.6539864189763859,
+      "y": 0.05810012786218699,
+      "cluster_id": 1,
       "content_hash": "9962c258a38ec0986d2d1dc5774eac1d2d5bdbe75bdec5e44739611f1ade6613"
     },
     {
@@ -422,9 +422,9 @@
       "date": "2026-02-17",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E8%A2%AB%E5%9B%9A%E7%A6%81%E8%80%85",
       "content_type": "article",
-      "x": 0.587109612796077,
-      "y": 0.7036518774218156,
-      "cluster_id": 4,
+      "x": -0.32771372013782496,
+      "y": -0.4718559320149097,
+      "cluster_id": 3,
       "content_hash": "6610132bac53af52fff4b4f4df7af10dece6c7615bf0523337ced065c99c837d"
     },
     {
@@ -438,9 +438,9 @@
       "date": "2026-02-15",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E8%87%B4%E4%B8%80%E4%BD%8D%E7%90%86%E6%80%A7%E7%9A%84%E4%BA%BA",
       "content_type": "article",
-      "x": 0.08213127295754552,
-      "y": 0.3739947988493494,
-      "cluster_id": 4,
+      "x": -0.07098579216833667,
+      "y": -0.6748475785695212,
+      "cluster_id": 3,
       "content_hash": "02ef3ef5a9308d5291ade1ca592b2b649ebac608e2a26d33cf161a4ba1309716"
     },
     {
@@ -454,9 +454,9 @@
       "date": "2026-02-13",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%AF%8D%E7%8B%BC",
       "content_type": "article",
-      "x": 0.2155223061878765,
-      "y": 0.45315614540647264,
-      "cluster_id": 4,
+      "x": -0.7727513394128055,
+      "y": -0.4340530665689726,
+      "cluster_id": 2,
       "content_hash": "b9805595d5f6924a5959f13c1ce1ead62132d9f934353cff77aaf5004c096454"
     },
     {
@@ -470,9 +470,9 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%A4%A7%E5%BA%9A%E5%89%91%E9%98%B5",
       "content_type": "article",
-      "x": 0.5087499482509618,
-      "y": -0.2039425706240262,
-      "cluster_id": 3,
+      "x": 0.8625715920489544,
+      "y": 0.07172827391172099,
+      "cluster_id": 1,
       "content_hash": "4cb678e67e82970f77bed41c809bc3824d85ac1e844859a3d810669388c85b54"
     },
     {
@@ -486,8 +486,8 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%91%8A%E5%88%AB",
       "content_type": "article",
-      "x": 0.3872318894713972,
-      "y": -0.19613303807754912,
+      "x": -0.7046159662703368,
+      "y": -0.8579490802727936,
       "cluster_id": 2,
       "content_hash": "57a174941090f802c5157d76e6a4851fd4bdb143113ab40450db7e4575cb66c2"
     },
@@ -502,9 +502,9 @@
       "date": "2026-02-11",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E4%B8%83%E5%B2%81%E6%99%BA%E8%80%85",
       "content_type": "article",
-      "x": 0.3342047554001547,
-      "y": 0.0021484790771942874,
-      "cluster_id": 2,
+      "x": -0.2868651927147232,
+      "y": -0.26461716638904076,
+      "cluster_id": 3,
       "content_hash": "7349b73e6750505ad6da953a9d66bd86b09519e9783c13880fcab65bcb56ddf5"
     },
     {
@@ -518,8 +518,8 @@
       "date": "2026-02-10",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%88%91%E7%9A%84%E9%A5%A5%E9%A5%BF",
       "content_type": "article",
-      "x": 0.7385369331290678,
-      "y": -0.4536947945991686,
+      "x": 0.2578464895962652,
+      "y": -0.6165184008230564,
       "cluster_id": 3,
       "content_hash": "98f2296bdde74bed71bd652b0c858e8c552be04261860043b0f69943e8017785"
     },
@@ -534,8 +534,8 @@
       "date": "2026-02-09",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%A5%A5%E8%8F%B2%E5%88%A9%E5%A8%85",
       "content_type": "article",
-      "x": 0.8063444711524491,
-      "y": -0.014039763261806004,
+      "x": -0.160748843778024,
+      "y": -0.8543187088167021,
       "cluster_id": 3,
       "content_hash": "22fe9026217dcccc9b18e996e9a658b1db0a42c7d8b759a77d2f25395dba0c6f"
     },
@@ -550,9 +550,9 @@
       "date": "2026-02-08",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%BB%8E%E6%98%8E",
       "content_type": "article",
-      "x": 0.24988468232305971,
-      "y": 0.2617032318431781,
-      "cluster_id": 4,
+      "x": -0.28889111673793333,
+      "y": -0.92,
+      "cluster_id": 3,
       "content_hash": "2571ebfdd4b7e76734323e4b051fe881d4a5e6957ad6c59fb6665a1261322d0b"
     },
     {
@@ -567,9 +567,9 @@
       "date": "2026-02-07",
       "url": "https://zylatent.com/blog/ghost-in-shell",
       "content_type": "article",
-      "x": 0.5165357909517093,
-      "y": -0.04362336319572835,
-      "cluster_id": 3,
+      "x": 0.7911067042367063,
+      "y": -0.07872514280536225,
+      "cluster_id": 1,
       "content_hash": "f6f49b3ce7847a24e4e5f7149eb6cf38b6ad66f5a450375727d85e35c820ccdb"
     },
     {
@@ -583,9 +583,9 @@
       "date": "2026-02-07",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%82%AA%E6%81%B6",
       "content_type": "article",
-      "x": 0.33219793352827354,
-      "y": 0.24819752404964646,
-      "cluster_id": 4,
+      "x": -0.3740189291069691,
+      "y": -0.6584633236270412,
+      "cluster_id": 3,
       "content_hash": "59b8398a7dc92167873d410f18ff244bc25ac2108075081ac4db1ebb114a3a5a"
     },
     {
@@ -599,9 +599,9 @@
       "date": "2026-02-06",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%86%89%E8%88%9F",
       "content_type": "article",
-      "x": 0.42181799995109925,
-      "y": 0.7575594452350171,
-      "cluster_id": 0,
+      "x": 0.07644039906575106,
+      "y": -0.48879616707498563,
+      "cluster_id": 3,
       "content_hash": "8f452feaff1c2b124643b521c5d5d81c2dd77c585271416e642d98ee5b2b78a0"
     },
     {
@@ -615,9 +615,9 @@
       "date": "2026-02-05",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%B7%B4%E9%BB%8E%E7%8B%82%E6%AC%A2%E8%8A%82",
       "content_type": "article",
-      "x": 0.07392254031792467,
-      "y": 0.5926575033056342,
-      "cluster_id": 0,
+      "x": -0.6009694845925286,
+      "y": -0.607359502757864,
+      "cluster_id": 2,
       "content_hash": "5fa280ad23f73e7f635938b66383354aa5c6327c4e2320c672623e7a26537880"
     },
     {
@@ -631,9 +631,9 @@
       "date": "2026-02-04",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%B0%B8%E6%81%92",
       "content_type": "article",
-      "x": 0.46770509609441013,
-      "y": 0.35715859094244806,
-      "cluster_id": 4,
+      "x": -0.12903244541056635,
+      "y": -0.47979440931812395,
+      "cluster_id": 3,
       "content_hash": "c6aa643787d95c600f85879bd5bffbd1867fe01b0ae240ecb96f8469c26424b1"
     },
     {
@@ -647,9 +647,9 @@
       "date": "2026-02-03",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%B1%B1%E8%B0%B7%E7%9D%A1%E8%80%85",
       "content_type": "article",
-      "x": 0.4335019661267977,
-      "y": 0.3970524879608809,
-      "cluster_id": 4,
+      "x": -0.6201135715491708,
+      "y": -0.28574238253345885,
+      "cluster_id": 2,
       "content_hash": "15d763e79af2135f807658f4619adcf13acf2e3d6a6989c5ab7fb24b28a3add5"
     },
     {
@@ -663,8 +663,8 @@
       "date": "2026-02-02",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%84%9F%E8%A7%89",
       "content_type": "article",
-      "x": 0.1420536829254887,
-      "y": 0.05837591594703895,
+      "x": -0.5006400696927307,
+      "y": -0.9113095214881334,
       "cluster_id": 2,
       "content_hash": "4cf575e9b639e31fd2d4e05df5c836b485220bdfcb9d8d13b094209846df18ed"
     },
@@ -679,9 +679,9 @@
       "date": "2026-02-01",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%88%91%E7%9A%84%E6%B5%81%E6%B5%AA",
       "content_type": "article",
-      "x": 0.6927064649099305,
-      "y": 0.054298805442810405,
-      "cluster_id": 3,
+      "x": -0.6921502917990074,
+      "y": -0.060948032131480256,
+      "cluster_id": 0,
       "content_hash": "14d679d8606cccfde23c7305a051dc30f5051d45d6509dc56c173b74b0fa43a6"
     },
     {
@@ -695,8 +695,8 @@
       "date": "2025-12-31",
       "url": "https://zylatent.com/blog/%E6%88%91%E7%9A%842025",
       "content_type": "article",
-      "x": 0.28619600839716164,
-      "y": 0.25716605897265665,
+      "x": 0.17682920819198855,
+      "y": 0.92,
       "cluster_id": 4,
       "content_hash": "62fcfde27a61f35405b517152ec1e97e101acdf46945d281c279b5206660c5b1"
     }
@@ -704,25 +704,30 @@
   "clusters": [
     {
       "id": 0,
-      "label": "兰波",
+      "label": "Python",
       "node_ids": [
         "五子棋搜索实验",
+        "我和埃隆马斯克之间真的只隔五个人吗",
         "smartagent",
-        "兰波-醉舟",
-        "兰波-巴黎狂欢节"
+        "cpp-memory-ownership-raii",
+        "七王国的骑士-第一季",
+        "兰波-我的流浪"
       ],
       "color": "#a8bd72"
     },
     {
       "id": 1,
-      "label": "JavaScript",
+      "label": "影评",
       "node_ids": [
-        "dog-babble加密实验",
-        "2026上半年-代码与项目回顾",
+        "在概率的雾里行走-贝叶斯与mcmc学习记录",
+        "绘出七彩的七天",
         "海子-以梦为马",
-        "my-compile",
+        "we-are-the-world",
         "如何在数字时代活成一棵树",
-        "游记-济南"
+        "游记-济南",
+        "互动网页-夜空为你闪烁",
+        "大庚剑阵",
+        "ghost-in-shell"
       ],
       "color": "#d5a36c"
     },
@@ -730,15 +735,12 @@
       "id": 2,
       "label": "兰波",
       "node_ids": [
-        "fastapi-basics",
-        "dog-littletools工具集",
         "miniarena自走棋",
-        "nannahelper教程文档",
-        "dog-skills-48-claude-code技能库",
-        "we-are-the-world",
         "兰波-地狱之夜",
+        "兰波-母狼",
         "兰波-告别",
-        "兰波-七岁智者",
+        "兰波-巴黎狂欢节",
+        "兰波-山谷睡者",
         "兰波-感觉"
       ],
       "color": "#86a8a1"
@@ -747,33 +749,31 @@
       "id": 3,
       "label": "兰波",
       "node_ids": [
-        "绘出七彩的七天",
-        "cpp-memory-ownership-raii",
+        "dog-littletools工具集",
+        "nannahelper教程文档",
         "兰波-第一次夜晚",
-        "互动网页-夜空为你闪烁",
-        "大庚剑阵",
+        "兰波-被囚禁者",
+        "兰波-致一位理性的人",
+        "兰波-七岁智者",
         "兰波-我的饥饿",
         "兰波-奥菲利娅",
-        "ghost-in-shell",
-        "兰波-我的流浪"
+        "兰波-黎明",
+        "兰波-邪恶",
+        "兰波-醉舟",
+        "兰波-永恒"
       ],
       "color": "#b7a5c8"
     },
     {
       "id": 4,
-      "label": "兰波",
+      "label": "JavaScript",
       "node_ids": [
-        "我和埃隆马斯克之间真的只隔五个人吗",
-        "在概率的雾里行走-贝叶斯与mcmc学习记录",
+        "fastapi-basics",
+        "dog-babble加密实验",
+        "dog-skills-48-claude-code技能库",
+        "2026上半年-代码与项目回顾",
         "当奇迹遇到奇迹",
-        "七王国的骑士-第一季",
-        "兰波-被囚禁者",
-        "兰波-致一位理性的人",
-        "兰波-母狼",
-        "兰波-黎明",
-        "兰波-邪恶",
-        "兰波-永恒",
-        "兰波-山谷睡者",
+        "my-compile",
         "我的2025"
       ],
       "color": "#d5a5a1"

@@ -8,6 +8,7 @@ zylatent.com 是这个项目的展示示例，也是仓库名字的来源。它�
 
 - core/：ContentItem、GardenNode、Garden 等稳定数据模型
 - pipeline/：内容处理、hash 缓存、embedding、UMAP、聚类与 CLI
+- api/：可选 FastAPI 服务，提供 garden JSON、健康检查和受保护刷新接口
 - providers/：可替换 EmbeddingProvider；内置离线 hash provider 与显式调用的 OpenAI provider
 - adapters/：Markdown、MDX、JSON 读取适配器
 - adapters/website.py：抓取 Astro 风格公开博客的文章元数据与正文
@@ -27,6 +28,13 @@ zylatent.com 是这个项目的展示示例，也是仓库名字的来源。它�
     python -m http.server 8000 --directory frontend
 
 浏览器访问 http://localhost:8000，点击节点可以跳转到示例文章 URL；滚轮可以缩放地图，拖拽可以移动视野。也可以通过 ?data=https://example.com/garden.json 指向任意允许 CORS 的远程输出。
+
+启动 API 服务：
+
+    pip install -e ".[api]"
+    uvicorn api.server:app --host 0.0.0.0 --port 8000
+
+API 提供 /health、/garden.json、/api/garden、/api/refresh 和 /frontend/。完整部署说明见 docs/deployment.md。
 
 ## 用 zylatent.com 练手
 

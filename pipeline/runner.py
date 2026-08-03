@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import Counter
 from datetime import datetime, timezone
 from collections.abc import Sequence
+import math
 
 from core.models import ContentItem, Garden, GardenCluster, GardenNode
 from providers.base import EmbeddingProvider
@@ -27,7 +28,7 @@ def build_garden(
     reducer = reducer or UMAPReducer()
     clusterer = clusterer or KMeansClusterer()
     vectors = embed_items(items, provider, cache)
-    points = reducer.fit_transform(vectors)
+    points = _normalize_points(reducer.fit_transform(vectors))
     labels = clusterer.fit_predict(points)
     grouped: dict[int, list[ContentItem]] = {}
     for item, label in zip(items, labels):
@@ -61,3 +62,20 @@ def _cluster_label(items: Sequence[ContentItem]) -> str:
     if tags:
         return tags.most_common(1)[0][0]
     return " / ".join(item.title for item in items[:2])
+
+
+def _normalize_points(points: Sequence[Sequence[float]]) -> list[list[float]]:
+    """Keep every reducer output inside the frontend's stable [-1, 1] contract."""
+    if not points:
+        return []
+    if any(len(point) < 2 for point in points):
+        raise ValueError("Reducer must return two-dimensional points")
+    result: list[list[float]] = []
+    for axis in range(2):
+        values = [float(point[axis]) for point in points]
+        if any(not math.isfinite(value) for value in values):
+            raise ValueError("Reducer points must contain finite numbers")
+        low, high = min(values), max(values)
+        span = high - low
+        result.append([0.0] * len(points) if span == 0 else [-0.92 + 1.84 * ((value - low) / span) for value in values])
+    return [[result[0][index], result[1][index]] for index in range(len(points))]

@@ -1,4 +1,7 @@
-const dataUrl = new URLSearchParams(location.search).get("data") || "./garden.json";
+const params = new URLSearchParams(location.search);
+const dataUrl = params.get("data") || "./garden.json";
+const requestedCluster = params.get("cluster");
+if (params.get("embed") === "1") document.documentElement.dataset.embed = "true";
 const state = { garden: null, query: "", cluster: null };
 const nodeLayer = document.querySelector("#nodes");
 const detail = document.querySelector("#detail");
@@ -45,6 +48,9 @@ function zoomAt(clientX, clientY, scale) {
 function render() {
   const nodes = state.garden.nodes;
   const clusters = state.garden.clusters;
+  if (state.cluster === null && requestedCluster !== null && clusters.some(cluster => Number(cluster.id) === Number(requestedCluster))) {
+    state.cluster = Number(requestedCluster);
+  }
   document.querySelector("#item-count").textContent = nodes.length + " 篇文字";
   document.querySelector("#cluster-count").textContent = clusters.length + " 个主题";
   document.querySelector("#generated").textContent = "生成于 " + new Date(state.garden.generated_at).toLocaleDateString();

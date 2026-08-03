@@ -8,6 +8,7 @@ from adapters.website import _item_from_page, discover_article_paths
 from core.models import ContentItem
 from pipeline.cache import EmbeddingCache
 from pipeline.runner import build_garden
+from pipeline.runner import _normalize_points
 from providers.hash_provider import HashEmbeddingProvider
 
 
@@ -94,6 +95,11 @@ class PipelineTests(unittest.TestCase):
         self.assertIn("clusters", payload)
         self.assertEqual(payload["nodes"][0]["url"], "https://example.com")
         json.dumps(payload)
+
+    def test_reducer_points_are_normalized_for_frontend_viewbox(self):
+        points = _normalize_points([[100, 200], [150, 500], [300, 250]])
+        self.assertTrue(all(-1 <= value <= 1 for point in points for value in point))
+        self.assertEqual(len(points), 3)
 
 
 if __name__ == "__main__":

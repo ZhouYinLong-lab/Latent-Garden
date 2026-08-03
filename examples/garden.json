@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "generated_at": "2026-08-03T09:24:24.788035+00:00",
+  "generated_at": "2026-08-03T10:10:12.744839+00:00",
   "dimensions": 64,
   "reducer": "umap",
   "clusterer": "kmeans",
@@ -17,7 +17,7 @@
       "url": "https://zylatent.com/essays/building-with-agents",
       "content_type": "essay",
       "x": -0.92,
-      "y": 0.92,
+      "y": -0.16910640767658347,
       "cluster_id": 0,
       "content_hash": "2c4515d3ae3202239226139581f7248e57d7cbcbc42f8da4a4b79e38f15a8e5c"
     },
@@ -32,8 +32,8 @@
       "date": "2026-03-12",
       "url": "https://zylatent.com/notes/quiet-tools",
       "content_type": "note",
-      "x": 0.92,
-      "y": 0.5420735778869615,
+      "x": 0.20059319502029138,
+      "y": -0.92,
       "cluster_id": 0,
       "content_hash": "2f2646c35f52033423a0d395a200fd4eda7783bd1d2a6df9edaee951a597770c"
     },
@@ -48,9 +48,9 @@
       "date": "2026-04-05",
       "url": "https://zylatent.com/notes/maps-are-questions",
       "content_type": "note",
-      "x": -0.861536488237731,
-      "y": 0.7312660512970396,
-      "cluster_id": 0,
+      "x": 0.92,
+      "y": 0.18008032476871694,
+      "cluster_id": 1,
       "content_hash": "f51561973879a9272c0c768d52fdea0baa1883eb3768a01c8b3b1037cf9b5add"
     },
     {
@@ -64,8 +64,8 @@
       "date": "2026-01-18",
       "url": "https://zylatent.com/notes/thinking-in-gardens",
       "content_type": "article",
-      "x": -0.6731922715218687,
-      "y": -0.92,
+      "x": -0.03383108048742589,
+      "y": 0.92,
       "cluster_id": 1,
       "content_hash": "f0c20dfbeb9dbf31bd4fd5f1c00044ee2634e19080e4d66b903c4de2ee9c7054"
     }
@@ -73,18 +73,18 @@
   "clusters": [
     {
       "id": 0,
-      "label": "design",
+      "label": "software",
       "node_ids": [
         "building-with-agents",
-        "quiet-tools",
-        "maps-are-questions"
+        "quiet-tools"
       ],
       "color": "#a8bd72"
     },
     {
       "id": 1,
-      "label": "writing",
+      "label": "knowledge",
       "node_ids": [
+        "maps-are-questions",
         "thinking-in-gardens"
       ],
       "color": "#d5a36c"

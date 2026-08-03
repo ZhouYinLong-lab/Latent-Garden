@@ -1,0 +1,7 @@
+.git
+.github
+.latent-garden
+.env
+.pytest_cache
+__pycache__
+*.pyc
