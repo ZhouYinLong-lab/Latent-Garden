@@ -91,11 +91,38 @@ def render(garden: dict) -> str:
         ]
     )
 
+    plotted = []
     for node in nodes:
         cluster_id = node.get("cluster_id", 0)
         fill = colors.get(cluster_id, PALETTE[int(cluster_id) % len(PALETTE)] if isinstance(cluster_id, int) else PALETTE[0])
         x = map_point(node.get("x"), MAP_LEFT + 28, MAP_WIDTH - 56)
         y = MAP_TOP + MAP_HEIGHT - 28 - map_point(node.get("y"), 0, MAP_HEIGHT - 56)
+        plotted.append({"id": str(node.get("id")), "x": x, "y": y, "cluster_id": cluster_id, "fill": fill, "node": node})
+
+    edges = {}
+    for point in plotted:
+        neighbors = sorted(
+            (
+                ((candidate["x"] - point["x"]) ** 2 + (candidate["y"] - point["y"]) ** 2, candidate)
+                for candidate in plotted
+                if candidate["id"] != point["id"]
+            ),
+            key=lambda item: item[0],
+        )[:2]
+        for index, (distance, neighbor) in enumerate(neighbors):
+            if index > 0 and distance > 150**2:
+                continue
+            key = tuple(sorted((point["id"], neighbor["id"])))
+            edges.setdefault(key, (point, neighbor))
+    for point, neighbor in edges.values():
+        same_topic = point["cluster_id"] == neighbor["cluster_id"]
+        stroke = point["fill"] if same_topic else "#879078"
+        opacity = ".24" if same_topic else ".12"
+        parts.append(f'<line x1="{point["x"]:.2f}" y1="{point["y"]:.2f}" x2="{neighbor["x"]:.2f}" y2="{neighbor["y"]:.2f}" stroke="{stroke}" stroke-opacity="{opacity}" stroke-width="1"/>')
+
+    for point in plotted:
+        node = point["node"]
+        x, y, fill = point["x"], point["y"], point["fill"]
         title = escape(node.get("title", node.get("id", "untitled")))
         parts.append(f'<g><title>{title}</title><circle cx="{x:.2f}" cy="{y:.2f}" r="7" fill="{fill}" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="{x:.2f}" cy="{y:.2f}" r="12" fill="none" stroke="{fill}" stroke-opacity=".18"/></g>')
 
@@ -103,8 +130,8 @@ def render(garden: dict) -> str:
 
     parts.extend(
         [
-            '<text x="930" y="168" fill="#586347" font-family="Georgia, serif" font-size="22" font-weight="700">主题 clusters</text>',
-            '<text x="930" y="194" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="12">相近节点代表相近的内容语义</text>',
+            '<text x="930" y="168" fill="#586347" font-family="Georgia, serif" font-size="22" font-weight="700">精选主题</text>',
+            '<text x="930" y="194" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="12">博客内容策展索引</text>',
         ]
     )
     for index, cluster in enumerate(clusters):

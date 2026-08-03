@@ -60,7 +60,7 @@
       "content_type": "article",
       "x": 0.5838604501130603,
       "y": 0.5632530715682794,
-      "cluster_id": 4,
+      "cluster_id": 1,
       "content_hash": "6c506b2f665fa39d5bdc53bd80653684973e2f81b9ff20a0310ca82428303043"
     },
     {
@@ -79,7 +79,7 @@
       "content_type": "article",
       "x": 0.524916244598625,
       "y": 0.3112097748901236,
-      "cluster_id": 1,
+      "cluster_id": 0,
       "content_hash": "f71ec9ab75aa35b0077355cadea43169282ff1ee0213fb38c89c779b68798158"
     },
     {
@@ -98,7 +98,7 @@
       "content_type": "article",
       "x": 0.3839556069006035,
       "y": -0.3513494617187095,
-      "cluster_id": 3,
+      "cluster_id": 1,
       "content_hash": "5ccd88d9d3474564e5647dbd60d7f98c342c2bb3f47fd4050a69dfd98b2105eb"
     },
     {
@@ -117,7 +117,7 @@
       "content_type": "article",
       "x": 0.442756128178622,
       "y": 0.5708399909446406,
-      "cluster_id": 4,
+      "cluster_id": 2,
       "content_hash": "4ff75703512984073f31cec42dd37979c92fa13e7a07ca4512a455fb759d7d68"
     },
     {
@@ -155,7 +155,7 @@
       "content_type": "article",
       "x": 0.026400585463265624,
       "y": -0.19122817460338148,
-      "cluster_id": 3,
+      "cluster_id": 1,
       "content_hash": "45d89fb58eb57ab4f4563d1c1661ef141346c31b21e6f64b0f308b7d38e561d2"
     },
     {
@@ -174,7 +174,7 @@
       "content_type": "article",
       "x": 0.7681354833179083,
       "y": 0.26449154733565183,
-      "cluster_id": 1,
+      "cluster_id": 4,
       "content_hash": "6271efc7ac385b19ba61c2b294804fbce6992880f6349314ad7c19a78f8de97b"
     },
     {
@@ -193,7 +193,7 @@
       "content_type": "article",
       "x": 0.0908460478314107,
       "y": 0.41042673477919267,
-      "cluster_id": 4,
+      "cluster_id": 1,
       "content_hash": "6cc37055561ed055420ad0d15ee74a8efa8eb6b4b6c5b10c580f95f6247916c6"
     },
     {
@@ -208,7 +208,7 @@
       "content_type": "article",
       "x": 0.23804390916505358,
       "y": 0.4102498868340768,
-      "cluster_id": 4,
+      "cluster_id": 1,
       "content_hash": "5e43104559d715440df6c498e879b48b344cc58ff65ea91983f7198a683c28fc"
     },
     {
@@ -225,7 +225,7 @@
       "content_type": "article",
       "x": 0.44421739212092903,
       "y": 0.8656972651304148,
-      "cluster_id": 4,
+      "cluster_id": 3,
       "content_hash": "aba498102086e5ecd6bdc9db793306527aa87ecb9ea4563b9b4d604b7cd2907d"
     },
     {
@@ -241,7 +241,7 @@
       "content_type": "article",
       "x": 0.3177688623010283,
       "y": 0.08602181994817848,
-      "cluster_id": 1,
+      "cluster_id": 3,
       "content_hash": "75c04b6285796bc2c185c6b84075c53da5b266c9dcf856a159c58024ff749021"
     },
     {
@@ -259,7 +259,7 @@
       "content_type": "article",
       "x": 0.92,
       "y": 0.39689024705707154,
-      "cluster_id": 1,
+      "cluster_id": 4,
       "content_hash": "02349e9d83491d771ef62db43acd6c95914f5292d626934219c23da7ed8be3c5"
     },
     {
@@ -277,7 +277,7 @@
       "content_type": "article",
       "x": 0.22948118224431957,
       "y": 0.7621611806598868,
-      "cluster_id": 4,
+      "cluster_id": 1,
       "content_hash": "d1288b07f6c2f1446f671cab278f19bf2e572f6efc0057e259f539adf620c382"
     },
     {
@@ -295,7 +295,7 @@
       "content_type": "article",
       "x": -0.27524633053772285,
       "y": 0.45717818299539437,
-      "cluster_id": 0,
+      "cluster_id": 2,
       "content_hash": "4964e88eb402ad37b0a4d2c83dd9e05ae88d37ede3b7e758a89a9a1ec7a1b24c"
     },
     {
@@ -344,7 +344,7 @@
       "content_type": "article",
       "x": 0.21807156320038523,
       "y": 0.13608645356639848,
-      "cluster_id": 1,
+      "cluster_id": 4,
       "content_hash": "6c4e993959a3a09b13f276e93e696b9cf0d842d0ef5647e11c07d1e1aa12278a"
     },
     {
@@ -361,7 +361,7 @@
       "content_type": "article",
       "x": -0.3509097144165626,
       "y": 0.2459026684127693,
-      "cluster_id": 0,
+      "cluster_id": 4,
       "content_hash": "cd90eed9bf432decac4e3b6990d1821670b61c5ea8c3ac3c3daebebc9b7183b3"
     },
     {
@@ -377,7 +377,7 @@
       "content_type": "article",
       "x": -0.92,
       "y": -0.191913419276025,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "ff4856fd6e896c709a000c12b10d8d63ad31e86878826b34d514b755c5f6f02b"
     },
     {
@@ -408,7 +408,7 @@
       "content_type": "article",
       "x": 0.6539864189763859,
       "y": 0.05810012786218699,
-      "cluster_id": 1,
+      "cluster_id": 2,
       "content_hash": "9962c258a38ec0986d2d1dc5774eac1d2d5bdbe75bdec5e44739611f1ade6613"
     },
     {
@@ -456,7 +456,7 @@
       "content_type": "article",
       "x": -0.7727513394128055,
       "y": -0.4340530665689726,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "b9805595d5f6924a5959f13c1ce1ead62132d9f934353cff77aaf5004c096454"
     },
     {
@@ -472,7 +472,7 @@
       "content_type": "article",
       "x": 0.8625715920489544,
       "y": 0.07172827391172099,
-      "cluster_id": 1,
+      "cluster_id": 2,
       "content_hash": "4cb678e67e82970f77bed41c809bc3824d85ac1e844859a3d810669388c85b54"
     },
     {
@@ -488,7 +488,7 @@
       "content_type": "article",
       "x": -0.7046159662703368,
       "y": -0.8579490802727936,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "57a174941090f802c5157d76e6a4851fd4bdb143113ab40450db7e4575cb66c2"
     },
     {
@@ -569,7 +569,7 @@
       "content_type": "article",
       "x": 0.7911067042367063,
       "y": -0.07872514280536225,
-      "cluster_id": 1,
+      "cluster_id": 4,
       "content_hash": "f6f49b3ce7847a24e4e5f7149eb6cf38b6ad66f5a450375727d85e35c820ccdb"
     },
     {
@@ -617,7 +617,7 @@
       "content_type": "article",
       "x": -0.6009694845925286,
       "y": -0.607359502757864,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "5fa280ad23f73e7f635938b66383354aa5c6327c4e2320c672623e7a26537880"
     },
     {
@@ -649,7 +649,7 @@
       "content_type": "article",
       "x": -0.6201135715491708,
       "y": -0.28574238253345885,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "15d763e79af2135f807658f4619adcf13acf2e3d6a6989c5ab7fb24b28a3add5"
     },
     {
@@ -665,7 +665,7 @@
       "content_type": "article",
       "x": -0.5006400696927307,
       "y": -0.9113095214881334,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "4cf575e9b639e31fd2d4e05df5c836b485220bdfcb9d8d13b094209846df18ed"
     },
     {
@@ -681,7 +681,7 @@
       "content_type": "article",
       "x": -0.6921502917990074,
       "y": -0.060948032131480256,
-      "cluster_id": 0,
+      "cluster_id": 3,
       "content_hash": "14d679d8606cccfde23c7305a051dc30f5051d45d6509dc56c173b74b0fa43a6"
     },
     {
@@ -704,76 +704,76 @@
   "clusters": [
     {
       "id": 0,
-      "label": "Python",
+      "label": "智能与计算",
       "node_ids": [
         "五子棋搜索实验",
         "我和埃隆马斯克之间真的只隔五个人吗",
-        "smartagent",
-        "cpp-memory-ownership-raii",
-        "七王国的骑士-第一季",
-        "兰波-我的流浪"
+        "在概率的雾里行走-贝叶斯与mcmc学习记录",
+        "cpp-memory-ownership-raii"
       ],
-      "color": "#a8bd72"
+      "color": "#9fb46b"
     },
     {
       "id": 1,
-      "label": "影评",
+      "label": "工具与开源",
       "node_ids": [
-        "在概率的雾里行走-贝叶斯与mcmc学习记录",
-        "绘出七彩的七天",
-        "海子-以梦为马",
-        "we-are-the-world",
-        "如何在数字时代活成一棵树",
-        "游记-济南",
-        "互动网页-夜空为你闪烁",
-        "大庚剑阵",
-        "ghost-in-shell"
-      ],
-      "color": "#d5a36c"
-    },
-    {
-      "id": 2,
-      "label": "兰波",
-      "node_ids": [
-        "miniarena自走棋",
-        "兰波-地狱之夜",
-        "兰波-母狼",
-        "兰波-告别",
-        "兰波-巴黎狂欢节",
-        "兰波-山谷睡者",
-        "兰波-感觉"
+        "fastapi-basics",
+        "dog-littletools工具集",
+        "nannahelper教程文档",
+        "dog-skills-48-claude-code技能库",
+        "2026上半年-代码与项目回顾",
+        "my-compile",
+        "如何在数字时代活成一棵树"
       ],
       "color": "#86a8a1"
     },
     {
-      "id": 3,
-      "label": "兰波",
+      "id": 2,
+      "label": "互动实验",
       "node_ids": [
-        "dog-littletools工具集",
-        "nannahelper教程文档",
+        "dog-babble加密实验",
+        "miniarena自走棋",
+        "smartagent",
+        "互动网页-夜空为你闪烁",
+        "大庚剑阵"
+      ],
+      "color": "#d5a36c"
+    },
+    {
+      "id": 3,
+      "label": "诗歌与文学",
+      "node_ids": [
+        "当奇迹遇到奇迹",
+        "海子-以梦为马",
+        "兰波-地狱之夜",
         "兰波-第一次夜晚",
         "兰波-被囚禁者",
         "兰波-致一位理性的人",
+        "兰波-母狼",
+        "兰波-告别",
         "兰波-七岁智者",
         "兰波-我的饥饿",
         "兰波-奥菲利娅",
         "兰波-黎明",
         "兰波-邪恶",
         "兰波-醉舟",
-        "兰波-永恒"
+        "兰波-巴黎狂欢节",
+        "兰波-永恒",
+        "兰波-山谷睡者",
+        "兰波-感觉",
+        "兰波-我的流浪"
       ],
       "color": "#b7a5c8"
     },
     {
       "id": 4,
-      "label": "JavaScript",
+      "label": "影像与见闻",
       "node_ids": [
-        "fastapi-basics",
-        "dog-babble加密实验",
-        "dog-skills-48-claude-code技能库",
-        "2026上半年-代码与项目回顾",
-        "当奇迹遇到奇迹",
-        "my-compile",
+        "绘出七彩的七天",
+        "we-are-the-world",
+        "游记-济南",
+        "七王国的骑士-第一季",
+        "ghost-in-shell",
         "我的2025"
       ],
       "color": "#d5a5a1"
@@ -782,6 +782,8 @@
   "metadata": {
     "provider": "hash",
     "item_count": 41,
-    "cluster_count": 5
+    "cluster_count": 5,
+    "topic_mode": "curated",
+    "topic_source": "zylatent.com editorial taxonomy"
   }
 }

@@ -26,6 +26,7 @@ jobs:
             --cache .latent-garden/zylatent-embeddings.json \
             --max-pages 6 \
             --skip-if-unchanged
+          python scripts/curate_zylatent_topics.py frontend/garden.json
           cp frontend/garden.json examples/zylatent-garden.json
           python scripts/render_map_preview.py \
             frontend/garden.json \
