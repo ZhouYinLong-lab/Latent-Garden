@@ -10,6 +10,7 @@ from core.models import ContentItem
 from pipeline.cache import EmbeddingCache
 from pipeline.runner import build_garden
 from pipeline.runner import _normalize_points
+from pipeline.cli import _same_garden
 from providers.hash_provider import HashEmbeddingProvider
 
 
@@ -124,6 +125,11 @@ class PipelineTests(unittest.TestCase):
         points = _normalize_points([[100, 200], [150, 500], [300, 250]])
         self.assertTrue(all(-1 <= value <= 1 for point in points for value in point))
         self.assertEqual(len(points), 3)
+
+    def test_skip_if_unchanged_ignores_generation_timestamp(self):
+        left = {"generated_at": "2026-01-01", "nodes": [], "clusters": []}
+        right = {"generated_at": "2026-02-01", "nodes": [], "clusters": []}
+        self.assertTrue(_same_garden(left, right))
 
 
 if __name__ == "__main__":

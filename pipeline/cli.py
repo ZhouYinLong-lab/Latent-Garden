@@ -27,6 +27,7 @@ def main() -> None:
     parser.add_argument("--umap-neighbors", type=int, default=15)
     parser.add_argument("--umap-min-dist", type=float, default=0.1)
     parser.add_argument("--clusters", type=int, default=None)
+    parser.add_argument("--skip-if-unchanged", action="store_true", help="Keep an existing output if only generated_at changed")
     args = parser.parse_args()
     if args.input:
         items = load_content(args.input)
@@ -44,8 +45,25 @@ def main() -> None:
     )
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(garden.to_dict(), ensure_ascii=False, indent=2), encoding="utf-8")
+    payload = garden.to_dict()
+    if args.skip_if_unchanged and output.exists():
+        try:
+            previous = json.loads(output.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            previous = None
+        if isinstance(previous, dict) and _same_garden(previous, payload):
+            print(f"Garden unchanged -> {output}")
+            return
+    output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Generated {len(garden.nodes)} nodes and {len(garden.clusters)} clusters -> {output}")
+
+
+def _same_garden(left: dict, right: dict) -> bool:
+    left = dict(left)
+    right = dict(right)
+    left.pop("generated_at", None)
+    right.pop("generated_at", None)
+    return left == right
 
 
 if __name__ == "__main__":

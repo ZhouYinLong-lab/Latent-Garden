@@ -24,7 +24,8 @@ jobs:
             --website https://zylatent.com \
             --output frontend/garden.json \
             --cache .latent-garden/zylatent-embeddings.json \
-            --max-pages 6
+            --max-pages 6 \
+            --skip-if-unchanged
           cp frontend/garden.json examples/zylatent-garden.json
       - name: Commit only when the map changed
         run: |
