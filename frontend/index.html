@@ -10,27 +10,27 @@
     <main class="shell">
       <header class="masthead">
         <div>
-          <p class="eyebrow">PERSONAL SEMANTIC GARDEN</p>
+          <p class="eyebrow">COURTYARD · PERSONAL SEMANTIC GARDEN</p>
           <h1>Latent Garden<span class="dot">.</span></h1>
-          <p class="intro">A small map for ideas that live close together, even when they were written far apart.</p>
+          <p class="intro">把寒柳别苑留下的文字放在一张温柔的地图上，让相隔很远的念头重新靠近。</p>
         </div>
         <div class="meta">
-          <span id="item-count">— nodes</span>
-          <span id="cluster-count">— clusters</span>
+          <span id="item-count">— 篇文字</span>
+          <span id="cluster-count">— 个主题</span>
         </div>
       </header>
 
       <section class="toolbar" aria-label="Garden controls">
         <label class="search">
           <span>⌕</span>
-          <input id="search" type="search" placeholder="Search the garden…" />
+          <input id="search" type="search" placeholder="搜索庭院里的文字…" />
         </label>
         <div id="legend" class="legend"></div>
-        <button id="reset" type="button">Reset view</button>
+        <button id="reset" type="button">重置视图</button>
       </section>
 
       <section class="map-card">
-        <div id="status" class="status">Loading garden.json…</div>
+        <div id="status" class="status">正在载入庭院地图…</div>
         <svg id="map" viewBox="-1.08 -1.08 2.16 2.16" role="img" aria-label="Interactive semantic map">
           <defs>
             <filter id="glow"><feGaussianBlur stdDeviation=".018" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
@@ -44,12 +44,12 @@
           <h2 id="detail-title"></h2>
           <p id="detail-description"></p>
           <div id="detail-tags" class="tags"></div>
-          <a id="detail-link" target="_blank" rel="noreferrer">Open original ↗</a>
+          <a id="detail-link" target="_blank" rel="noreferrer">打开原文 ↗</a>
         </aside>
       </section>
 
       <footer>
-        <span>Demo content from <a href="https://zylatent.com" target="_blank" rel="noreferrer">zylatent.com</a></span>
+        <span>文字来自 <a href="https://zylatent.com" target="_blank" rel="noreferrer">寒柳别苑</a></span>
         <span id="generated"></span>
       </footer>
     </main>

@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "generated_at": "2026-08-03T09:06:50.301078+00:00",
+  "generated_at": "2026-08-03T09:24:24.788035+00:00",
   "dimensions": 64,
   "reducer": "umap",
   "clusterer": "kmeans",
@@ -79,7 +79,7 @@
         "quiet-tools",
         "maps-are-questions"
       ],
-      "color": "#d6ff5f"
+      "color": "#a8bd72"
     },
     {
       "id": 1,
@@ -87,7 +87,7 @@
       "node_ids": [
         "thinking-in-gardens"
       ],
-      "color": "#ff8a65"
+      "color": "#d5a36c"
     }
   ],
   "metadata": {

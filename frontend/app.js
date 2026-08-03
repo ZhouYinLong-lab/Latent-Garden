@@ -12,9 +12,9 @@ function esc(value) {
 function render() {
   const nodes = state.garden.nodes;
   const clusters = state.garden.clusters;
-  document.querySelector("#item-count").textContent = nodes.length + " nodes";
-  document.querySelector("#cluster-count").textContent = clusters.length + " clusters";
-  document.querySelector("#generated").textContent = "Generated " + new Date(state.garden.generated_at).toLocaleDateString();
+  document.querySelector("#item-count").textContent = nodes.length + " 篇文字";
+  document.querySelector("#cluster-count").textContent = clusters.length + " 个主题";
+  document.querySelector("#generated").textContent = "生成于 " + new Date(state.garden.generated_at).toLocaleDateString();
   document.querySelector("#legend").innerHTML = clusters.map(cluster =>
     '<button type="button" data-cluster="' + cluster.id + '" class="' +
     (state.cluster === cluster.id ? "active" : "") + '"><i style="background:' +

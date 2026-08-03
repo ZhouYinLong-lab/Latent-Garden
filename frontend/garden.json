@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "generated_at": "2026-08-03T09:16:12.664881+00:00",
+  "generated_at": "2026-08-03T09:24:40.581635+00:00",
   "dimensions": 64,
   "reducer": "umap",
   "clusterer": "kmeans",
@@ -22,7 +22,7 @@
       "content_type": "article",
       "x": -0.0961947496186949,
       "y": 0.6198453288745492,
-      "cluster_id": 3,
+      "cluster_id": 0,
       "content_hash": "5ae1063710d7a5f018093293ee52c2693a68400fa613aabbb42a071f94b628c9"
     },
     {
@@ -41,7 +41,7 @@
       "content_type": "article",
       "x": 0.20477210927081269,
       "y": 0.1263362274935812,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "8d259864e90bb761c12559d30e291ea466d4f297fda9704af4a86c339cc943b2"
     },
     {
@@ -60,7 +60,7 @@
       "content_type": "article",
       "x": 0.03196959086656459,
       "y": -0.5864488724735915,
-      "cluster_id": 1,
+      "cluster_id": 2,
       "content_hash": "6c506b2f665fa39d5bdc53bd80653684973e2f81b9ff20a0310ca82428303043"
     },
     {
@@ -79,7 +79,7 @@
       "content_type": "article",
       "x": 0.20689200386555784,
       "y": 0.2910402869905736,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "f71ec9ab75aa35b0077355cadea43169282ff1ee0213fb38c89c779b68798158"
     },
     {
@@ -117,7 +117,7 @@
       "content_type": "article",
       "x": -0.5688936967693314,
       "y": -0.23565465605552005,
-      "cluster_id": 0,
+      "cluster_id": 1,
       "content_hash": "4ff75703512984073f31cec42dd37979c92fa13e7a07ca4512a455fb759d7d68"
     },
     {
@@ -136,7 +136,7 @@
       "content_type": "article",
       "x": 0.09886976237415712,
       "y": 0.06738619073078744,
-      "cluster_id": 3,
+      "cluster_id": 2,
       "content_hash": "e0fdff6c12db2ff600e9960fa0552980cdb08bd50e6497a0375a326c56263e2a"
     },
     {
@@ -155,7 +155,7 @@
       "content_type": "article",
       "x": -0.21604858053168363,
       "y": 0.16003033096599106,
-      "cluster_id": 0,
+      "cluster_id": 2,
       "content_hash": "45d89fb58eb57ab4f4563d1c1661ef141346c31b21e6f64b0f308b7d38e561d2"
     },
     {
@@ -174,7 +174,7 @@
       "content_type": "article",
       "x": 0.5876297930379469,
       "y": -0.2162860837199595,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "6271efc7ac385b19ba61c2b294804fbce6992880f6349314ad7c19a78f8de97b"
     },
     {
@@ -193,7 +193,7 @@
       "content_type": "article",
       "x": 0.13700670467232057,
       "y": 0.053595853772132274,
-      "cluster_id": 3,
+      "cluster_id": 2,
       "content_hash": "6cc37055561ed055420ad0d15ee74a8efa8eb6b4b6c5b10c580f95f6247916c6"
     },
     {
@@ -208,7 +208,7 @@
       "content_type": "article",
       "x": -0.453632563567825,
       "y": -0.1273263189547872,
-      "cluster_id": 0,
+      "cluster_id": 1,
       "content_hash": "5e43104559d715440df6c498e879b48b344cc58ff65ea91983f7198a683c28fc"
     },
     {
@@ -225,7 +225,7 @@
       "content_type": "article",
       "x": 0.25130836904455867,
       "y": 0.39983206333226573,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "aba498102086e5ecd6bdc9db793306527aa87ecb9ea4563b9b4d604b7cd2907d"
     },
     {
@@ -259,7 +259,7 @@
       "content_type": "article",
       "x": 0.07105169319673343,
       "y": -0.92,
-      "cluster_id": 1,
+      "cluster_id": 2,
       "content_hash": "02349e9d83491d771ef62db43acd6c95914f5292d626934219c23da7ed8be3c5"
     },
     {
@@ -277,7 +277,7 @@
       "content_type": "article",
       "x": -0.92,
       "y": -0.059151430385601445,
-      "cluster_id": 0,
+      "cluster_id": 1,
       "content_hash": "d1288b07f6c2f1446f671cab278f19bf2e572f6efc0057e259f539adf620c382"
     },
     {
@@ -295,7 +295,7 @@
       "content_type": "article",
       "x": 0.02711136560331484,
       "y": 0.92,
-      "cluster_id": 3,
+      "cluster_id": 0,
       "content_hash": "4964e88eb402ad37b0a4d2c83dd9e05ae88d37ede3b7e758a89a9a1ec7a1b24c"
     },
     {
@@ -312,7 +312,7 @@
       "content_type": "article",
       "x": 0.92,
       "y": -0.5905031360527184,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "a158749c2ae5be982ebf641ed7d6d671ec01320048709abd6fb4666313f7dddd"
     },
     {
@@ -328,8 +328,24 @@
       "content_type": "article",
       "x": -0.5757720396915642,
       "y": -0.36158621627476295,
-      "cluster_id": 0,
+      "cluster_id": 1,
       "content_hash": "ddf5455533e8a40508dc7e4085ee6f40018220bd0bdce001cca688cc901bf3c1"
+    },
+    {
+      "id": "游记-济南",
+      "title": "游记 济南",
+      "description": "说是游记，其实只是一篇流水账，记录我们一家三口到泉城济南游玩的两天半。",
+      "tags": [
+        "游记",
+        "济南"
+      ],
+      "date": "2026-02-28",
+      "url": "https://zylatent.com/blog/%E6%B8%B8%E8%AE%B0-%E6%B5%8E%E5%8D%97",
+      "content_type": "article",
+      "x": -0.24886774538116452,
+      "y": 0.04275225534057148,
+      "cluster_id": 1,
+      "content_hash": "6c4e993959a3a09b13f276e93e696b9cf0d842d0ef5647e11c07d1e1aa12278a"
     },
     {
       "id": "七王国的骑士-第一季",
@@ -345,7 +361,7 @@
       "content_type": "article",
       "x": 0.303153106242937,
       "y": 0.07434160939103063,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "cd90eed9bf432decac4e3b6990d1821670b61c5ea8c3ac3c3daebebc9b7183b3"
     },
     {
@@ -361,7 +377,7 @@
       "content_type": "article",
       "x": -0.01126749433051355,
       "y": -0.08485588445249137,
-      "cluster_id": 3,
+      "cluster_id": 2,
       "content_hash": "ff4856fd6e896c709a000c12b10d8d63ad31e86878826b34d514b755c5f6f02b"
     },
     {
@@ -377,7 +393,7 @@
       "content_type": "article",
       "x": 0.6082334566632973,
       "y": -0.056520403770288,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "dd71a95966741eadddba18a0ade1e5e437f871da320d4c5b706e3e25623fd131"
     },
     {
@@ -392,7 +408,7 @@
       "content_type": "article",
       "x": 0.6818646440631578,
       "y": -0.8047486136323504,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "9962c258a38ec0986d2d1dc5774eac1d2d5bdbe75bdec5e44739611f1ade6613"
     },
     {
@@ -408,7 +424,7 @@
       "content_type": "article",
       "x": 0.587109612796077,
       "y": 0.7036518774218156,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "6610132bac53af52fff4b4f4df7af10dece6c7615bf0523337ced065c99c837d"
     },
     {
@@ -424,7 +440,7 @@
       "content_type": "article",
       "x": 0.08213127295754552,
       "y": 0.3739947988493494,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "02ef3ef5a9308d5291ade1ca592b2b649ebac608e2a26d33cf161a4ba1309716"
     },
     {
@@ -440,7 +456,7 @@
       "content_type": "article",
       "x": 0.2155223061878765,
       "y": 0.45315614540647264,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "b9805595d5f6924a5959f13c1ce1ead62132d9f934353cff77aaf5004c096454"
     },
     {
@@ -456,7 +472,7 @@
       "content_type": "article",
       "x": 0.5087499482509618,
       "y": -0.2039425706240262,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "4cb678e67e82970f77bed41c809bc3824d85ac1e844859a3d810669388c85b54"
     },
     {
@@ -488,7 +504,7 @@
       "content_type": "article",
       "x": 0.3342047554001547,
       "y": 0.0021484790771942874,
-      "cluster_id": 3,
+      "cluster_id": 2,
       "content_hash": "7349b73e6750505ad6da953a9d66bd86b09519e9783c13880fcab65bcb56ddf5"
     },
     {
@@ -504,7 +520,7 @@
       "content_type": "article",
       "x": 0.7385369331290678,
       "y": -0.4536947945991686,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "98f2296bdde74bed71bd652b0c858e8c552be04261860043b0f69943e8017785"
     },
     {
@@ -520,7 +536,7 @@
       "content_type": "article",
       "x": 0.8063444711524491,
       "y": -0.014039763261806004,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "22fe9026217dcccc9b18e996e9a658b1db0a42c7d8b759a77d2f25395dba0c6f"
     },
     {
@@ -536,7 +552,7 @@
       "content_type": "article",
       "x": 0.24988468232305971,
       "y": 0.2617032318431781,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "2571ebfdd4b7e76734323e4b051fe881d4a5e6957ad6c59fb6665a1261322d0b"
     },
     {
@@ -553,7 +569,7 @@
       "content_type": "article",
       "x": 0.5165357909517093,
       "y": -0.04362336319572835,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "f6f49b3ce7847a24e4e5f7149eb6cf38b6ad66f5a450375727d85e35c820ccdb"
     },
     {
@@ -569,7 +585,7 @@
       "content_type": "article",
       "x": 0.33219793352827354,
       "y": 0.24819752404964646,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "59b8398a7dc92167873d410f18ff244bc25ac2108075081ac4db1ebb114a3a5a"
     },
     {
@@ -585,7 +601,7 @@
       "content_type": "article",
       "x": 0.42181799995109925,
       "y": 0.7575594452350171,
-      "cluster_id": 3,
+      "cluster_id": 0,
       "content_hash": "8f452feaff1c2b124643b521c5d5d81c2dd77c585271416e642d98ee5b2b78a0"
     },
     {
@@ -601,7 +617,7 @@
       "content_type": "article",
       "x": 0.07392254031792467,
       "y": 0.5926575033056342,
-      "cluster_id": 3,
+      "cluster_id": 0,
       "content_hash": "5fa280ad23f73e7f635938b66383354aa5c6327c4e2320c672623e7a26537880"
     },
     {
@@ -617,7 +633,7 @@
       "content_type": "article",
       "x": 0.46770509609441013,
       "y": 0.35715859094244806,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "c6aa643787d95c600f85879bd5bffbd1867fe01b0ae240ecb96f8469c26424b1"
     },
     {
@@ -633,7 +649,7 @@
       "content_type": "article",
       "x": 0.4335019661267977,
       "y": 0.3970524879608809,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "15d763e79af2135f807658f4619adcf13acf2e3d6a6989c5ab7fb24b28a3add5"
     },
     {
@@ -649,7 +665,7 @@
       "content_type": "article",
       "x": 0.1420536829254887,
       "y": 0.05837591594703895,
-      "cluster_id": 3,
+      "cluster_id": 2,
       "content_hash": "4cf575e9b639e31fd2d4e05df5c836b485220bdfcb9d8d13b094209846df18ed"
     },
     {
@@ -665,7 +681,7 @@
       "content_type": "article",
       "x": 0.6927064649099305,
       "y": 0.054298805442810405,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "14d679d8606cccfde23c7305a051dc30f5051d45d6509dc56c173b74b0fa43a6"
     },
     {
@@ -681,83 +697,91 @@
       "content_type": "article",
       "x": 0.28619600839716164,
       "y": 0.25716605897265665,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "62fcfde27a61f35405b517152ec1e97e101acdf46945d281c279b5206660c5b1"
     }
   ],
   "clusters": [
     {
       "id": 0,
-      "label": "JavaScript",
+      "label": "兰波",
       "node_ids": [
-        "dog-babble加密实验",
-        "nannahelper教程文档",
-        "2026上半年-代码与项目回顾",
-        "my-compile",
-        "如何在数字时代活成一棵树"
+        "五子棋搜索实验",
+        "smartagent",
+        "兰波-醉舟",
+        "兰波-巴黎狂欢节"
       ],
-      "color": "#d6ff5f"
+      "color": "#a8bd72"
     },
     {
       "id": 1,
-      "label": "Python",
+      "label": "JavaScript",
       "node_ids": [
-        "fastapi-basics",
+        "dog-babble加密实验",
+        "2026上半年-代码与项目回顾",
         "海子-以梦为马",
-        "we-are-the-world"
+        "my-compile",
+        "如何在数字时代活成一棵树",
+        "游记-济南"
       ],
-      "color": "#ff8a65"
+      "color": "#d5a36c"
     },
     {
       "id": 2,
       "label": "兰波",
       "node_ids": [
+        "fastapi-basics",
         "dog-littletools工具集",
-        "绘出七彩的七天",
-        "cpp-memory-ownership-raii",
-        "兰波-第一次夜晚",
-        "互动网页-夜空为你闪烁",
-        "大庚剑阵",
+        "miniarena自走棋",
+        "nannahelper教程文档",
+        "dog-skills-48-claude-code技能库",
+        "we-are-the-world",
+        "兰波-地狱之夜",
         "兰波-告别",
-        "兰波-我的饥饿",
-        "兰波-奥菲利娅",
-        "ghost-in-shell",
-        "兰波-我的流浪"
+        "兰波-七岁智者",
+        "兰波-感觉"
       ],
-      "color": "#7dd3fc"
+      "color": "#86a8a1"
     },
     {
       "id": 3,
       "label": "兰波",
       "node_ids": [
-        "五子棋搜索实验",
+        "绘出七彩的七天",
+        "cpp-memory-ownership-raii",
+        "兰波-第一次夜晚",
+        "互动网页-夜空为你闪烁",
+        "大庚剑阵",
+        "兰波-我的饥饿",
+        "兰波-奥菲利娅",
+        "ghost-in-shell",
+        "兰波-我的流浪"
+      ],
+      "color": "#b7a5c8"
+    },
+    {
+      "id": 4,
+      "label": "兰波",
+      "node_ids": [
         "我和埃隆马斯克之间真的只隔五个人吗",
         "在概率的雾里行走-贝叶斯与mcmc学习记录",
-        "miniarena自走棋",
-        "dog-skills-48-claude-code技能库",
         "当奇迹遇到奇迹",
-        "smartagent",
         "七王国的骑士-第一季",
-        "兰波-地狱之夜",
         "兰波-被囚禁者",
         "兰波-致一位理性的人",
         "兰波-母狼",
-        "兰波-七岁智者",
         "兰波-黎明",
         "兰波-邪恶",
-        "兰波-醉舟",
-        "兰波-巴黎狂欢节",
         "兰波-永恒",
         "兰波-山谷睡者",
-        "兰波-感觉",
         "我的2025"
       ],
-      "color": "#c4b5fd"
+      "color": "#d5a5a1"
     }
   ],
   "metadata": {
     "provider": "hash",
-    "item_count": 40,
-    "cluster_count": 4
+    "item_count": 41,
+    "cluster_count": 5
   }
 }

@@ -13,7 +13,7 @@ from .embed import embed_items
 from .reduce import UMAPReducer
 
 
-PALETTE = ["#d6ff5f", "#ff8a65", "#7dd3fc", "#c4b5fd", "#f9a8d4", "#facc15", "#5eead4", "#fdba74"]
+PALETTE = ["#a8bd72", "#d5a36c", "#86a8a1", "#b7a5c8", "#d5a5a1", "#c7b46b", "#87a995", "#c7976c"]
 
 
 def build_garden(
