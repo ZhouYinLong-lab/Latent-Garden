@@ -107,8 +107,9 @@ input::placeholder { color: #9ba08f; }
   background: radial-gradient(ellipse at 12% 12%, rgba(150,171,117,.16), transparent 22%), radial-gradient(ellipse at 88% 76%, rgba(205,185,139,.18), transparent 25%), repeating-linear-gradient(90deg, rgba(255,255,255,.12) 0 1px, transparent 1px 7px);
 }
 .map-stage { position: relative; min-width: 0; min-height: 0; padding: 14px 12px 12px 18px; }
-#map { display: block; width: 100%; height: 100%; min-height: 0; cursor: grab; overflow: hidden; }
-#map:active { cursor: grabbing; }
+#map { display: block; width: 100%; height: 100%; min-height: 0; cursor: default; overflow: hidden; }
+#map.can-pan { cursor: grab; }
+#map.can-pan:active { cursor: grabbing; }
 .map-surface { fill: rgba(251,248,235,.54); stroke: rgba(174,185,154,.72); stroke-width: .012; }
 #grid circle { fill: none; stroke: #87986a; stroke-opacity: .22; stroke-width: .004; }
 #grid path { fill: none; stroke: #87986a; stroke-opacity: .13; stroke-width: .0025; stroke-dasharray: .012 .014; }
@@ -118,12 +119,14 @@ input::placeholder { color: #9ba08f; }
 #edges .edge.dim { stroke-opacity: .035; }
 #edges .edge.focus { stroke-opacity: .8; stroke-width: .006; }
 .node { cursor: pointer; transition: opacity .18s, r .18s; }
+.node-link { outline: none; }
 .node.dim { opacity: .14; }
 .node circle { stroke: var(--paper); stroke-width: .008; }
-.node:hover circle, .node:focus circle { stroke: #566946; stroke-width: .012; filter: url(#glow); }
-.node:focus { outline: none; }
-.node text { pointer-events: none; fill: #3f4738; font-size: .037px; font-weight: 650; opacity: 0; paint-order: stroke fill; stroke: rgba(251,248,235,.98); stroke-width: .018px; stroke-linejoin: round; transition: opacity .16s ease; }
-.node:hover text, .node:focus text, .node.show-label text { opacity: 1; }
+.node-link:hover .node circle, .node-link:focus .node circle, .node-fallback:hover .node circle, .node-fallback:focus .node circle { stroke: #566946; stroke-width: .012; filter: url(#glow); }
+.node-link:focus, .node-fallback:focus { outline: none; }
+.node-label { pointer-events: none; opacity: 0; transition: opacity .16s ease; }
+.node-label.hover-label, .node-label.show-label { opacity: 1; }
+.node-label text { fill: #3f4738; font-size: .037px; font-weight: 650; paint-order: stroke fill; stroke: rgba(251,248,235,.98); stroke-width: .018px; stroke-linejoin: round; }
 .map-note { position: absolute; left: 36px; bottom: 19px; display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 10px; pointer-events: none; }
 .note-mark { display: inline-block; width: 7px; height: 7px; border: 1px solid var(--accent-dark); border-radius: 50%; background: rgba(164,185,111,.55); }
 .status { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); color: var(--muted); font-size: 13px; z-index: 1; }

@@ -4,6 +4,7 @@ const requestedCluster = params.get("cluster");
 if (params.get("embed") === "1") document.documentElement.dataset.embed = "true";
 const state = { garden: null, query: "", cluster: null };
 const nodeLayer = document.querySelector("#nodes");
+const labelLayer = document.querySelector("#labels");
 const gridLayer = document.querySelector("#grid");
 const edgeLayer = document.querySelector("#edges");
 const detail = document.querySelector("#detail");
@@ -11,7 +12,6 @@ const status = document.querySelector("#status");
 const defaultView = { x: -1.08, y: -1.08, width: 2.16, height: 2.16 };
 const view = { ...defaultView };
 let drag = null;
-let suppressClick = false;
 
 function esc(value) {
   const replacements = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" };
@@ -49,10 +49,19 @@ function renderGrid() {
 }
 
 function applyView() {
-  document.querySelector("#map").setAttribute(
+  const map = document.querySelector("#map");
+  map.setAttribute(
     "viewBox",
     view.x + " " + view.y + " " + view.width + " " + view.height
   );
+  map.classList.toggle("can-pan", view.width < defaultView.width - .001);
+}
+
+function constrainView() {
+  const maxX = defaultView.x + defaultView.width - view.width;
+  const maxY = defaultView.y + defaultView.height - view.height;
+  view.x = Math.max(defaultView.x, Math.min(maxX, view.x));
+  view.y = Math.max(defaultView.y, Math.min(maxY, view.y));
 }
 
 function zoomAt(clientX, clientY, scale) {
@@ -66,6 +75,7 @@ function zoomAt(clientX, clientY, scale) {
   view.y = focusY - (focusY - view.y) * (nextHeight / view.height);
   view.width = nextWidth;
   view.height = nextHeight;
+  constrainView();
   applyView();
 }
 
@@ -158,49 +168,67 @@ function renderGraph() {
 function renderNodes() {
   const nodes = state.garden.nodes;
   const clusters = state.garden.clusters;
+  labelLayer.innerHTML = nodes.map(node => {
+    const { matches, visibleCluster } = nodeVisibility(node);
+    const x = safeCoordinate(node.x);
+    const y = safeCoordinate(node.y);
+    const label = x > 0.65
+      ? '<text x="-0.045" y=".012" text-anchor="end">' + esc(node.title) + "</text>"
+      : '<text x=".045" y=".012">' + esc(node.title) + "</text>";
+    const showLabel = Boolean(state.query) && matches && visibleCluster;
+    return '<g class="node-label' + (showLabel ? " show-label" : "") + '" transform="translate(' + x + " " +
+      (-y) + ')" data-id="' + esc(node.id) + '">' + label + "</g>";
+  }).join("");
   nodeLayer.innerHTML = nodes.map(node => {
     const cluster = clusters.find(item => item.id === node.cluster_id);
     const { matches, visibleCluster } = nodeVisibility(node);
     const radius = matches && visibleCluster ? ".028" : ".018";
     const x = safeCoordinate(node.x);
     const y = safeCoordinate(node.y);
-    const label = x > 0.65
-      ? '<text x="-0.045" y=".012" text-anchor="end">' + esc(node.title) + "</text>"
-      : '<text x=".045" y=".012">' + esc(node.title) + "</text>";
-    const showLabels = Boolean(state.query) && matches && visibleCluster;
-    return '<g class="node ' + (matches && visibleCluster ? "" : "dim") + (showLabels ? " show-label" : "") +
-      '" transform="translate(' + x + " " + (-y) + ')" data-id="' + esc(node.id) + '" tabindex="0" role="link" aria-label="打开：' + esc(node.title) + '">' +
+    const content = '<g class="node ' + (matches && visibleCluster ? "" : "dim") +
+      '" transform="translate(' + x + " " + (-y) + ')">' +
       '<title>' + esc(node.title) + '</title>' +
-      '<circle r="' + radius + '" fill="' + safeColor(cluster && cluster.color) + '"></circle>' +
-      label + "</g>";
+      '<circle r="' + radius + '" fill="' + safeColor(cluster && cluster.color) + '"></circle></g>';
+    const url = safeExternalUrl(node.url);
+    if (url) {
+      return '<a class="node-link" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer" data-id="' +
+        esc(node.id) + '" aria-label="打开原文：' + esc(node.title) + '">' + content + "</a>";
+    }
+    return '<g class="node-fallback" data-id="' + esc(node.id) + '" tabindex="0" role="button" aria-label="查看：' +
+      esc(node.title) + '">' + content + "</g>";
   }).join("");
-  nodeLayer.querySelectorAll(".node").forEach(node => {
-    node.addEventListener("pointerenter", () => {
-      nodeLayer.appendChild(node);
-      highlightEdges(node.dataset.id, true);
+  function toggleLabel(id, visible) {
+    labelLayer.querySelectorAll(".node-label").forEach(label => {
+      if (label.dataset.id === id) label.classList.toggle("hover-label", visible);
     });
-    node.addEventListener("pointerleave", () => highlightEdges(node.dataset.id, false));
-    node.addEventListener("click", () => {
-      if (!suppressClick) openNode(node.dataset.id);
+  }
+  nodeLayer.querySelectorAll(".node-link, .node-fallback").forEach(item => {
+    item.addEventListener("pointerenter", () => {
+      highlightEdges(item.dataset.id, true);
+      toggleLabel(item.dataset.id, true);
     });
-    node.addEventListener("keydown", event => {
+    item.addEventListener("pointerleave", () => {
+      highlightEdges(item.dataset.id, false);
+      toggleLabel(item.dataset.id, false);
+    });
+    item.addEventListener("focus", () => {
+      highlightEdges(item.dataset.id, true);
+      toggleLabel(item.dataset.id, true);
+    });
+    item.addEventListener("blur", () => {
+      highlightEdges(item.dataset.id, false);
+      toggleLabel(item.dataset.id, false);
+    });
+  });
+  nodeLayer.querySelectorAll(".node-fallback").forEach(item => {
+    item.addEventListener("click", () => showDetail(item.dataset.id));
+    item.addEventListener("keydown", event => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
-        openNode(node.dataset.id);
+        showDetail(item.dataset.id);
       }
     });
   });
-}
-
-function openNode(id) {
-  const node = state.garden.nodes.find(item => String(item.id) === String(id));
-  if (!node) return;
-  const url = safeExternalUrl(node.url);
-  if (url) {
-    window.open(url, "_blank", "noopener,noreferrer");
-    return;
-  }
-  showDetail(id);
 }
 
 function showDetail(id) {
@@ -236,7 +264,7 @@ document.querySelector("#map").addEventListener("wheel", event => {
   zoomAt(event.clientX, event.clientY, event.deltaY > 0 ? 1.12 : .89);
 }, { passive: false });
 document.querySelector("#map").addEventListener("pointerdown", event => {
-  suppressClick = false;
+  if (event.button !== 0 || view.width >= defaultView.width - .001 || event.target.closest(".node-link, .node-fallback")) return;
   drag = { pointerId: event.pointerId, x: event.clientX, y: event.clientY, moved: false };
   event.currentTarget.setPointerCapture(event.pointerId);
 });
@@ -246,16 +274,15 @@ document.querySelector("#map").addEventListener("pointermove", event => {
   if (Math.abs(event.clientX - drag.x) + Math.abs(event.clientY - drag.y) > 3) drag.moved = true;
   view.x -= ((event.clientX - drag.x) / rect.width) * view.width;
   view.y -= ((event.clientY - drag.y) / rect.height) * view.height;
+  constrainView();
   drag.x = event.clientX;
   drag.y = event.clientY;
   applyView();
 });
 document.querySelector("#map").addEventListener("pointerup", () => {
-  suppressClick = Boolean(drag && drag.moved);
   drag = null;
-  setTimeout(() => { suppressClick = false; }, 0);
 });
-document.querySelector("#map").addEventListener("pointercancel", () => { drag = null; suppressClick = false; });
+document.querySelector("#map").addEventListener("pointercancel", () => { drag = null; });
 
 renderGrid();
 

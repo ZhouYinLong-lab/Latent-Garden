@@ -26,7 +26,7 @@
           <input id="search" type="search" placeholder="搜索庭院里的文字…" />
         </label>
         <button id="reset" type="button">重置视图</button>
-        <span class="hint">滚轮缩放 · 拖拽移动 · 点击节点查看原文</span>
+        <span class="hint">滚轮缩放 · 放大后拖拽 · 点击节点打开原文</span>
       </section>
 
       <section class="map-card">
@@ -41,6 +41,7 @@
             <g id="grid" clip-path="url(#map-clip)"></g>
             <g id="edges" clip-path="url(#map-clip)"></g>
             <g id="nodes" clip-path="url(#map-clip)"></g>
+            <g id="labels" clip-path="url(#map-clip)" aria-hidden="true"></g>
           </svg>
           <div class="map-note"><span class="note-mark"></span><span>相近的点，代表相近的内容语义</span></div>
           <aside id="detail" class="detail" hidden>
