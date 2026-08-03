@@ -10,7 +10,7 @@ Latent Garden 是一个独立的语义地图生成工具。它读取 Markdown、
 
 ## 在线交互地图
 
-**[打开 Latent Garden 交互语义地图 ↗](https://zhouyinlong-lab.github.io/Latent-Garden/)**
+**[打开 Latent Garden 交互语义地图 ↗](https://latent-garden.zylatent.com/)**
 
 这是由 `frontend/` 自动部署的 GitHub Pages 实例，支持搜索、主题筛选、缩放、拖拽和点击文章节点。README 中的静态图适合快速预览，在线页面提供完整交互。
 
