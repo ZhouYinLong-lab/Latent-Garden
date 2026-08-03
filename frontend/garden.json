@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "generated_at": "2026-08-03T10:10:37.169118+00:00",
+  "generated_at": "2026-08-03T13:28:56.883788+00:00",
   "dimensions": 64,
   "reducer": "umap",
   "clusterer": "curated-keywords",
@@ -20,10 +20,10 @@
       "date": "2026-07-31",
       "url": "https://zylatent.com/blog/%E4%BA%94%E5%AD%90%E6%A3%8B%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C",
       "content_type": "article",
-      "x": -0.48555607010134627,
-      "y": 0.052066466290200175,
+      "x": 0.34636251221861347,
+      "y": -0.09975218728787705,
       "cluster_id": 0,
-      "content_hash": "5ae1063710d7a5f018093293ee52c2693a68400fa613aabbb42a071f94b628c9"
+      "content_hash": "55899c882fdcecc825fe3fdea3c5a82937d9013e1c9a9b74b4c3eb8c47c73fb6"
     },
     {
       "id": "我和埃隆马斯克之间真的只隔五个人吗",
@@ -39,10 +39,10 @@
       "date": "2026-07-30",
       "url": "https://zylatent.com/blog/%E6%88%91%E5%92%8C%E5%9F%83%E9%9A%86%E9%A9%AC%E6%96%AF%E5%85%8B%E4%B9%8B%E9%97%B4%E7%9C%9F%E7%9A%84%E5%8F%AA%E9%9A%94%E4%BA%94%E4%B8%AA%E4%BA%BA%E5%90%97",
       "content_type": "article",
-      "x": -0.509501546015916,
-      "y": 0.3470584869884029,
+      "x": 0.17657371199682614,
+      "y": -0.48830174399874354,
       "cluster_id": 0,
-      "content_hash": "8d259864e90bb761c12559d30e291ea466d4f297fda9704af4a86c339cc943b2"
+      "content_hash": "6d9b04ac36b78e2b85b80058855d71893f282581a15bf9259d6f18f13d15a28d"
     },
     {
       "id": "fastapi-basics",
@@ -58,10 +58,10 @@
       "date": "2026-07-29",
       "url": "https://zylatent.com/blog/fastapi-basics",
       "content_type": "article",
-      "x": 0.5838604501130603,
-      "y": 0.5632530715682794,
+      "x": -0.7721510160867456,
+      "y": -0.2638959836633433,
       "cluster_id": 1,
-      "content_hash": "6c506b2f665fa39d5bdc53bd80653684973e2f81b9ff20a0310ca82428303043"
+      "content_hash": "9650dedd7a9d56d6964572489876140cc1346a7e4fc4937b7cb05f603de62137"
     },
     {
       "id": "在概率的雾里行走-贝叶斯与mcmc学习记录",
@@ -77,10 +77,10 @@
       "date": "2026-07-27",
       "url": "https://zylatent.com/blog/%E5%9C%A8%E6%A6%82%E7%8E%87%E7%9A%84%E9%9B%BE%E9%87%8C%E8%A1%8C%E8%B5%B0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%B8%8Emcmc%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95",
       "content_type": "article",
-      "x": 0.524916244598625,
-      "y": 0.3112097748901236,
+      "x": -0.3859013668117366,
+      "y": -0.6232583274002629,
       "cluster_id": 0,
-      "content_hash": "f71ec9ab75aa35b0077355cadea43169282ff1ee0213fb38c89c779b68798158"
+      "content_hash": "8270e48c294b5a11752475efcb731505eff6db16cb731b71ace193474a870cfe"
     },
     {
       "id": "dog-littletools工具集",
@@ -96,10 +96,10 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/dog-littletools%E5%B7%A5%E5%85%B7%E9%9B%86",
       "content_type": "article",
-      "x": 0.3839556069006035,
-      "y": -0.3513494617187095,
+      "x": 0.10331588192696806,
+      "y": 0.612399022682688,
       "cluster_id": 1,
-      "content_hash": "5ccd88d9d3474564e5647dbd60d7f98c342c2bb3f47fd4050a69dfd98b2105eb"
+      "content_hash": "732e151240ff2dd30900f60cdd7ac36b4e88b05bc49ae4f6de20f3dcccb7fa6c"
     },
     {
       "id": "dog-babble加密实验",
@@ -115,10 +115,10 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/dog-babble%E5%8A%A0%E5%AF%86%E5%AE%9E%E9%AA%8C",
       "content_type": "article",
-      "x": 0.442756128178622,
-      "y": 0.5708399909446406,
+      "x": -0.5895830638666026,
+      "y": -0.09833486465731045,
       "cluster_id": 2,
-      "content_hash": "4ff75703512984073f31cec42dd37979c92fa13e7a07ca4512a455fb759d7d68"
+      "content_hash": "2f2b78b0b96f9cc2bd35cff9983ffdcc38fd78d16d4395bd5d63f23d12b12a36"
     },
     {
       "id": "miniarena自走棋",
@@ -134,10 +134,10 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/miniarena%E8%87%AA%E8%B5%B0%E6%A3%8B",
       "content_type": "article",
-      "x": -0.8522021425514912,
-      "y": -0.7463471041046201,
+      "x": 0.45533050841381495,
+      "y": -0.5584825819133057,
       "cluster_id": 2,
-      "content_hash": "e0fdff6c12db2ff600e9960fa0552980cdb08bd50e6497a0375a326c56263e2a"
+      "content_hash": "7c407e4bda8588e805d3a5b0249a0ffa1ce573c9cf7d5070d9904679198ad6c7"
     },
     {
       "id": "nannahelper教程文档",
@@ -153,10 +153,10 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/nannahelper%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3",
       "content_type": "article",
-      "x": 0.026400585463265624,
-      "y": -0.19122817460338148,
+      "x": 0.12535486199240486,
+      "y": 0.08356600040898654,
       "cluster_id": 1,
-      "content_hash": "45d89fb58eb57ab4f4563d1c1661ef141346c31b21e6f64b0f308b7d38e561d2"
+      "content_hash": "ff1813ad80cc89715e1557c4d77a25416eb63f4d4683133a3c60ac95efacb6a0"
     },
     {
       "id": "绘出七彩的七天",
@@ -172,10 +172,10 @@
       "date": "2026-07-14",
       "url": "https://zylatent.com/blog/%E7%BB%98%E5%87%BA%E4%B8%83%E5%BD%A9%E7%9A%84%E4%B8%83%E5%A4%A9",
       "content_type": "article",
-      "x": 0.7681354833179083,
-      "y": 0.26449154733565183,
+      "x": -0.7835522096271919,
+      "y": -0.4952471971587612,
       "cluster_id": 4,
-      "content_hash": "6271efc7ac385b19ba61c2b294804fbce6992880f6349314ad7c19a78f8de97b"
+      "content_hash": "0c95cf0cccd3dadd2cb019bee8d4d13e7c350f0bb6e2579b2919c0b6b44f6062"
     },
     {
       "id": "dog-skills-48-claude-code技能库",
@@ -191,10 +191,10 @@
       "date": "2026-07-03",
       "url": "https://zylatent.com/blog/dog-skills-48-claude-code%E6%8A%80%E8%83%BD%E5%BA%93",
       "content_type": "article",
-      "x": 0.0908460478314107,
-      "y": 0.41042673477919267,
+      "x": -0.1710236198642987,
+      "y": -0.4915870520747777,
       "cluster_id": 1,
-      "content_hash": "6cc37055561ed055420ad0d15ee74a8efa8eb6b4b6c5b10c580f95f6247916c6"
+      "content_hash": "5ac4a7bc1675fd0ed96202603083f07fe6307c7bb43547e64b80d1960c4db125"
     },
     {
       "id": "2026上半年-代码与项目回顾",
@@ -206,10 +206,10 @@
       "date": "2026-06-22",
       "url": "https://zylatent.com/blog/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4-%E4%BB%A3%E7%A0%81%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%9B%9E%E9%A1%BE",
       "content_type": "article",
-      "x": 0.23804390916505358,
-      "y": 0.4102498868340768,
+      "x": -0.4162289857774145,
+      "y": -0.3748310468009757,
       "cluster_id": 1,
-      "content_hash": "5e43104559d715440df6c498e879b48b344cc58ff65ea91983f7198a683c28fc"
+      "content_hash": "3403ff4807e25c4bfd08dfe2f4664985e004c8ace4a71933a6fd926e7a4d8572"
     },
     {
       "id": "当奇迹遇到奇迹",
@@ -223,15 +223,15 @@
       "date": "2026-03-24",
       "url": "https://zylatent.com/blog/%E5%BD%93%E5%A5%87%E8%BF%B9%E9%81%87%E5%88%B0%E5%A5%87%E8%BF%B9",
       "content_type": "article",
-      "x": 0.44421739212092903,
-      "y": 0.8656972651304148,
+      "x": -0.7255414118383725,
+      "y": 0.17556416437529643,
       "cluster_id": 3,
-      "content_hash": "aba498102086e5ecd6bdc9db793306527aa87ecb9ea4563b9b4d604b7cd2907d"
+      "content_hash": "708fdf3051f94641ba45ffb80c24b6e7fed7ae9d72bf0f008ecdefd07deb9308"
     },
     {
       "id": "海子-以梦为马",
-      "title": "每日诗语：海子 《以梦为马》",
-      "description": "终于春天",
+      "title": "海子 《以梦为马》",
+      "description": "终于春天 我要做远方的忠诚的儿子 和物质的共同性",
       "tags": [
         "海子",
         "诗歌"
@@ -239,15 +239,15 @@
       "date": "2026-03-24",
       "url": "https://zylatent.com/blog/%E6%B5%B7%E5%AD%90-%E4%BB%A5%E6%A2%A6%E4%B8%BA%E9%A9%AC",
       "content_type": "article",
-      "x": 0.3177688623010283,
-      "y": 0.08602181994817848,
+      "x": -0.44910517925811205,
+      "y": -0.3134941685714264,
       "cluster_id": 3,
-      "content_hash": "75c04b6285796bc2c185c6b84075c53da5b266c9dcf856a159c58024ff749021"
+      "content_hash": "9e2df1b44d965e1c266be5f08cc770b9f910e1861baa40cffe80992aabd052b0"
     },
     {
       "id": "we-are-the-world",
       "title": "奔跑在残酷与纯真之间——《小鞋子》影评",
-      "description": "伊朗经典电影《小鞋子》",
+      "description": "伊朗经典电影《小鞋子》 在世界电影的璀璨星河中，伊朗导演马基德·马基迪（Majid Majidi）于1997年执导的《小鞋子》（Children of Heaven）是一颗散发着微小却恒久光芒的珍珠。影片没有宏大的叙事，没有炫目的特技，仅仅围绕着德黑兰贫民窟里一对兄妹和一双丢失的旧皮鞋展开。然而，正是这种极简的叙事，为影片腾出了巨大的情感空间。导演以一种近乎虔诚的平视视角，极其细腻地体察了儿童在物质匮乏的世界中如何艰难而又高贵地拔节生长。影片超越了对贫穷的简单控诉，成为了一部关于童真、责任、同理心以及成长阵痛的伟大影像史诗。",
       "tags": [
         "影评",
         "小鞋子",
@@ -257,10 +257,10 @@
       "date": "2026-03-23",
       "url": "https://zylatent.com/blog/we-are-the-world",
       "content_type": "article",
-      "x": 0.92,
-      "y": 0.39689024705707154,
+      "x": -0.6312215076275217,
+      "y": -0.7913898935727677,
       "cluster_id": 4,
-      "content_hash": "02349e9d83491d771ef62db43acd6c95914f5292d626934219c23da7ed8be3c5"
+      "content_hash": "2de2ae8f666b87995aa9f58755722773b889f66411f2d73b1db77447ff03c162"
     },
     {
       "id": "my-compile",
@@ -275,10 +275,10 @@
       "date": "2026-03-21",
       "url": "https://zylatent.com/blog/my-compile",
       "content_type": "article",
-      "x": 0.22948118224431957,
-      "y": 0.7621611806598868,
+      "x": -0.778009373379316,
+      "y": -0.009843763485478219,
       "cluster_id": 1,
-      "content_hash": "d1288b07f6c2f1446f671cab278f19bf2e572f6efc0057e259f539adf620c382"
+      "content_hash": "27d8a8dcdaa2aa3abfc0d98636a4f429103bfa0dd11884654c7ed369805d8031"
     },
     {
       "id": "smartagent",
@@ -293,10 +293,10 @@
       "date": "2026-03-18",
       "url": "https://zylatent.com/blog/smartagent",
       "content_type": "article",
-      "x": -0.27524633053772285,
-      "y": 0.45717818299539437,
+      "x": -0.2381383541378379,
+      "y": 0.0485745365142366,
       "cluster_id": 2,
-      "content_hash": "4964e88eb402ad37b0a4d2c83dd9e05ae88d37ede3b7e758a89a9a1ec7a1b24c"
+      "content_hash": "65bafd9806f5a2f18ddaaeba2e1d75d96fb9e7a87b9bc1af116e5e77ce1bd5f8"
     },
     {
       "id": "cpp-memory-ownership-raii",
@@ -310,10 +310,10 @@
       "date": "2026-03-08",
       "url": "https://zylatent.com/blog/cpp-memory-ownership-raii",
       "content_type": "article",
-      "x": -0.16638489351688734,
-      "y": 0.3578662756044836,
+      "x": 0.09199538261885809,
+      "y": -0.7926484112114168,
       "cluster_id": 0,
-      "content_hash": "a158749c2ae5be982ebf641ed7d6d671ec01320048709abd6fb4666313f7dddd"
+      "content_hash": "96bcf9e69da082673acd56996b7eaabf7ba6567905e65b6aeae0828242dd7ff9"
     },
     {
       "id": "如何在数字时代活成一棵树",
@@ -326,10 +326,10 @@
       "date": "2026-03-02",
       "url": "https://zylatent.com/blog/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3%E6%B4%BB%E6%88%90%E4%B8%80%E6%A3%B5%E6%A0%91",
       "content_type": "article",
-      "x": 0.8294139649173696,
-      "y": 0.5638822906364876,
+      "x": -0.7985833243710252,
+      "y": -0.6327799504291638,
       "cluster_id": 1,
-      "content_hash": "ddf5455533e8a40508dc7e4085ee6f40018220bd0bdce001cca688cc901bf3c1"
+      "content_hash": "072303061a38d32a9d4287895a91ce64e54f78dc75195c7824ad97c8a31975cd"
     },
     {
       "id": "游记-济南",
@@ -342,15 +342,15 @@
       "date": "2026-02-28",
       "url": "https://zylatent.com/blog/%E6%B8%B8%E8%AE%B0-%E6%B5%8E%E5%8D%97",
       "content_type": "article",
-      "x": 0.21807156320038523,
-      "y": 0.13608645356639848,
+      "x": -0.3827243887108377,
+      "y": 0.14081114641435633,
       "cluster_id": 4,
-      "content_hash": "6c4e993959a3a09b13f276e93e696b9cf0d842d0ef5647e11c07d1e1aa12278a"
+      "content_hash": "3765fba416004c60eb54bdbeb5ccb199f18b94f278975080e7e42cad3d05e3a2"
     },
     {
       "id": "七王国的骑士-第一季",
       "title": "一只脚与王子的性命孰重？——《七王国的骑士》影评",
-      "description": "七王国的骑士,高个邓肯与蛋总的羁绊开始",
+      "description": "七王国的骑士,高个邓肯与蛋总的羁绊开始 《七王国的骑士》第一季改编自乔治·R·R·马丁的“邓肯与伊戈”中篇小说系列，时间早于《冰与火之歌》主线百年。它与权力的游戏共享同一段历史，却呈现出另一种气压：铁王座仍在塔格利安家族手中，贵族秩序尚未全面崩塌，骑士制度还没有完全沦为权力的装饰。对看过《权游》的观众来说，这是一段前尘旧事；对没有接触原著的人来说，它是一个关于成长与荣誉的独立叙事。",
       "tags": [
         "影评",
         "《冰与火之歌》",
@@ -359,14 +359,14 @@
       "date": "2026-02-24",
       "url": "https://zylatent.com/blog/%E4%B8%83%E7%8E%8B%E5%9B%BD%E7%9A%84%E9%AA%91%E5%A3%AB-%E7%AC%AC%E4%B8%80%E5%AD%A3",
       "content_type": "article",
-      "x": -0.3509097144165626,
-      "y": 0.2459026684127693,
-      "cluster_id": 4,
-      "content_hash": "cd90eed9bf432decac4e3b6990d1821670b61c5ea8c3ac3c3daebebc9b7183b3"
+      "x": -0.020143215293760508,
+      "y": -0.674714959916461,
+      "cluster_id": 2,
+      "content_hash": "f7cf46141759641f41699257b79125fda5bb4073f12ed0df3ed85ddbf3845800"
     },
     {
       "id": "兰波-地狱之夜",
-      "title": "【每日诗语】兰波：地狱之夜",
+      "title": "兰波：地狱之夜",
       "description": "我吞下了一大口毒药。毒液的烈火扭曲了我的肢体,这就是地狱,永恒的痛苦！",
       "tags": [
         "兰波",
@@ -375,14 +375,14 @@
       "date": "2026-02-19",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%9C%B0%E7%8B%B1%E4%B9%8B%E5%A4%9C",
       "content_type": "article",
-      "x": -0.92,
-      "y": -0.191913419276025,
+      "x": 0.7290501817556087,
+      "y": 0.02088619468021946,
       "cluster_id": 3,
-      "content_hash": "ff4856fd6e896c709a000c12b10d8d63ad31e86878826b34d514b755c5f6f02b"
+      "content_hash": "7e0332d72761a48acde5abc6ec8efe0605a0d9e640f6f738edb101a46d07334c"
     },
     {
       "id": "兰波-第一次夜晚",
-      "title": "【每日诗语】兰波：第一次夜晚",
+      "title": "兰波：第一次夜晚",
       "description": "这首诗作于 1870 年,是少年兰波笔下最温存、最具有官能美感的作品之一。",
       "tags": [
         "兰波",
@@ -391,29 +391,29 @@
       "date": "2026-02-18",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A4%9C%E6%99%9A",
       "content_type": "article",
-      "x": -0.001768637955484098,
-      "y": -0.8318510983585754,
+      "x": 0.4382756614780877,
+      "y": 0.5397340550296931,
       "cluster_id": 3,
-      "content_hash": "dd71a95966741eadddba18a0ade1e5e437f871da320d4c5b706e3e25623fd131"
+      "content_hash": "95a1a67c8ad3f92ffb64838e8806c0d0380bb5045cb010d8ab9c8b726c6784e1"
     },
     {
       "id": "互动网页-夜空为你闪烁",
       "title": "夜空为你闪烁",
-      "description": "点击上方封面,进入这片夜空",
+      "description": "一个可交互的星空网页实验，访客可以通过点击和动画进入个人化的夜空场景。",
       "tags": [
         "互动网页"
       ],
       "date": "2026-02-17",
       "url": "https://zylatent.com/blog/%E4%BA%92%E5%8A%A8%E7%BD%91%E9%A1%B5-%E5%A4%9C%E7%A9%BA%E4%B8%BA%E4%BD%A0%E9%97%AA%E7%83%81",
       "content_type": "article",
-      "x": 0.6539864189763859,
-      "y": 0.05810012786218699,
+      "x": -0.2521197842354196,
+      "y": -0.8165888598578085,
       "cluster_id": 2,
-      "content_hash": "9962c258a38ec0986d2d1dc5774eac1d2d5bdbe75bdec5e44739611f1ade6613"
+      "content_hash": "1a655583c8416990e33746d27a92884205df9ea5e4a410abc0db0d75028a6f02"
     },
     {
       "id": "兰波-被囚禁者",
-      "title": "【每日诗语】兰波：被囚禁者",
+      "title": "兰波：被囚禁者",
       "description": "厌恶那些整日坐在阅览室里、神情呆滞、思想僵化的职员和学者,这是一种精神上的自我囚禁。",
       "tags": [
         "兰波",
@@ -422,14 +422,14 @@
       "date": "2026-02-17",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E8%A2%AB%E5%9B%9A%E7%A6%81%E8%80%85",
       "content_type": "article",
-      "x": -0.32771372013782496,
-      "y": -0.4718559320149097,
+      "x": 0.5091753290362054,
+      "y": 0.6527869949514257,
       "cluster_id": 3,
-      "content_hash": "6610132bac53af52fff4b4f4df7af10dece6c7615bf0523337ced065c99c837d"
+      "content_hash": "b9c79fd954fdcfdb51145a23dfcb57cbb97dc5f5c6e7bb6c38247252ef58fe53"
     },
     {
       "id": "兰波-致一位理性的人",
-      "title": "【每日诗语】兰波：致一位理性的人",
+      "title": "兰波：致一位理性的人",
       "description": "当那一记指尖敲响宇宙的鼓面,所有的旧疾都将痊愈。",
       "tags": [
         "兰波",
@@ -438,14 +438,14 @@
       "date": "2026-02-15",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E8%87%B4%E4%B8%80%E4%BD%8D%E7%90%86%E6%80%A7%E7%9A%84%E4%BA%BA",
       "content_type": "article",
-      "x": -0.07098579216833667,
-      "y": -0.6748475785695212,
+      "x": 0.23795739677213523,
+      "y": 0.7804547630482409,
       "cluster_id": 3,
-      "content_hash": "02ef3ef5a9308d5291ade1ca592b2b649ebac608e2a26d33cf161a4ba1309716"
+      "content_hash": "06de5968f072ea1db735a4016049ba9f66343cc61dfde9c89a9dd971947aa38d"
     },
     {
       "id": "兰波-母狼",
-      "title": "【每日诗语】兰波：母狼",
+      "title": "兰波：母狼",
       "description": "在兰波的笔下,“母狼”不仅是荒野中的掠食者,更象征着一种被文明放逐、却在苦难中保持尊严的原始生命力。",
       "tags": [
         "兰波",
@@ -454,15 +454,15 @@
       "date": "2026-02-13",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%AF%8D%E7%8B%BC",
       "content_type": "article",
-      "x": -0.7727513394128055,
-      "y": -0.4340530665689726,
+      "x": 0.92,
+      "y": -0.10660321585810606,
       "cluster_id": 3,
-      "content_hash": "b9805595d5f6924a5959f13c1ce1ead62132d9f934353cff77aaf5004c096454"
+      "content_hash": "cb4bc22c6f310e1ea5f4e3159b5d40bfd47aaaa9395ccdb75105ee88f962ac7b"
     },
     {
       "id": "大庚剑阵",
       "title": "大庚剑阵",
-      "description": "点击此老魔开始操纵青竹蜂云剑",
+      "description": "一个以《凡人修仙传》意象为主题的互动网页实验，使用点击操作控制青竹蜂云剑阵。",
       "tags": [
         "凡人修仙传",
         "互动网页"
@@ -470,15 +470,15 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%A4%A7%E5%BA%9A%E5%89%91%E9%98%B5",
       "content_type": "article",
-      "x": 0.8625715920489544,
-      "y": 0.07172827391172099,
+      "x": -0.3889919339226948,
+      "y": -0.92,
       "cluster_id": 2,
-      "content_hash": "4cb678e67e82970f77bed41c809bc3824d85ac1e844859a3d810669388c85b54"
+      "content_hash": "97c3c8a827e28cb27a55afb569ccac5f487e7ee1711fc5df99e63f65c4bd9285"
     },
     {
       "id": "兰波-告别",
-      "title": "【每日诗语】兰波：告别",
-      "description": "这不仅是一首诗的结束,是一个文学时代的断裂。",
+      "title": "兰波：告别",
+      "description": "这不仅是一首诗的结束,是一个文学时代的断裂。 秋天。我们的船升起在浓雾里： 向着苦难的港口,那座宏大的城市, 天空布满了火焰和泥土。 啊！腐烂的帆布,浸透了红色的雨！",
       "tags": [
         "兰波",
         "诗歌"
@@ -486,14 +486,14 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%91%8A%E5%88%AB",
       "content_type": "article",
-      "x": -0.7046159662703368,
-      "y": -0.8579490802727936,
+      "x": 0.6683153489683785,
+      "y": -0.5425810994793845,
       "cluster_id": 3,
-      "content_hash": "57a174941090f802c5157d76e6a4851fd4bdb143113ab40450db7e4575cb66c2"
+      "content_hash": "3fcb15d4f92ee20fe95c4ead57f9b5594bdebfe51a00bf9b825b6259f3cb8ecb"
     },
     {
       "id": "兰波-七岁智者",
-      "title": "【每日诗语】兰波：七岁智者",
+      "title": "兰波：七岁智者",
       "description": "在顺从的假面下,一颗七岁的灵魂正躲在阴影里,用厌恶与幻想,秘密地解构整个平庸的世界。",
       "tags": [
         "兰波",
@@ -502,14 +502,14 @@
       "date": "2026-02-11",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E4%B8%83%E5%B2%81%E6%99%BA%E8%80%85",
       "content_type": "article",
-      "x": -0.2868651927147232,
-      "y": -0.26461716638904076,
+      "x": 0.33415811423477415,
+      "y": 0.14163044664292734,
       "cluster_id": 3,
-      "content_hash": "7349b73e6750505ad6da953a9d66bd86b09519e9783c13880fcab65bcb56ddf5"
+      "content_hash": "d9b3c0ad6abe6ac0b10e8ea8930e30f5e7a1119f4d39296fb6e40d9a1a663fb9"
     },
     {
       "id": "兰波-我的饥饿",
-      "title": "【每日诗语】兰波：我的饥饿",
+      "title": "兰波：我的饥饿",
       "description": "放弃平庸的谷物,去啃食岩石、煤炭与毒液。这是少年通灵者对物质世界最决绝的冒犯,一场关于匮乏的狂欢",
       "tags": [
         "兰波",
@@ -518,14 +518,14 @@
       "date": "2026-02-10",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%88%91%E7%9A%84%E9%A5%A5%E9%A5%BF",
       "content_type": "article",
-      "x": 0.2578464895962652,
-      "y": -0.6165184008230564,
+      "x": 0.12374383572447722,
+      "y": 0.4554510476977397,
       "cluster_id": 3,
-      "content_hash": "98f2296bdde74bed71bd652b0c858e8c552be04261860043b0f69943e8017785"
+      "content_hash": "9b70a593fe29192d928f598b367a85c6eaefbe37f758b8fecec56e1d3630f110"
     },
     {
       "id": "兰波-奥菲利娅",
-      "title": "【每日诗语】兰波：奥菲利娅",
+      "title": "兰波：奥菲利娅",
       "description": "一首受象征主义影响的优美哀歌,通过对莎士比亚笔下悲剧人物的重塑,将水、死亡、爱情与自然融为一体",
       "tags": [
         "兰波",
@@ -534,14 +534,14 @@
       "date": "2026-02-09",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%A5%A5%E8%8F%B2%E5%88%A9%E5%A8%85",
       "content_type": "article",
-      "x": -0.160748843778024,
-      "y": -0.8543187088167021,
+      "x": 0.6508726420167344,
+      "y": 0.7339139319034699,
       "cluster_id": 3,
-      "content_hash": "22fe9026217dcccc9b18e996e9a658b1db0a42c7d8b759a77d2f25395dba0c6f"
+      "content_hash": "3ddf01b99266d8937cfef5cfbb2bd07c2da05c3d574bcb7a0a2d91a54e163f11"
     },
     {
       "id": "兰波-黎明",
-      "title": "【每日诗语】兰波：黎明",
+      "title": "兰波：黎明",
       "description": "他把宫殿写成寂静无声,把花写成睁眼凝望,把阳光写成高悬的瀑布...",
       "tags": [
         "兰波",
@@ -550,15 +550,15 @@
       "date": "2026-02-08",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%BB%8E%E6%98%8E",
       "content_type": "article",
-      "x": -0.28889111673793333,
-      "y": -0.92,
+      "x": 0.8233115991386625,
+      "y": 0.49751767934049995,
       "cluster_id": 3,
-      "content_hash": "2571ebfdd4b7e76734323e4b051fe881d4a5e6957ad6c59fb6665a1261322d0b"
+      "content_hash": "61a034c47fa60a0ace80dc27c793197baf3ce367eb7271246aebe2fb99f9c363"
     },
     {
       "id": "ghost-in-shell",
       "title": "“接下来我们将要面对面”——《攻壳机动队》影评",
-      "description": "“《攻壳机动队》影评”",
+      "description": "“《攻壳机动队》影评” 企业的网络覆盖星系,电子和光穿梭其间,但在国家和民族消失之前 ——那是还没被信息化抹去的近未来。",
       "tags": [
         "影评",
         "科幻",
@@ -567,15 +567,15 @@
       "date": "2026-02-07",
       "url": "https://zylatent.com/blog/ghost-in-shell",
       "content_type": "article",
-      "x": 0.7911067042367063,
-      "y": -0.07872514280536225,
+      "x": -0.1468635028524039,
+      "y": -0.25856814771829273,
       "cluster_id": 4,
-      "content_hash": "f6f49b3ce7847a24e4e5f7149eb6cf38b6ad66f5a450375727d85e35c820ccdb"
+      "content_hash": "ffba97f789fdef490e9d2a5005e2d932b4adfe68aaadcc3d95fd5688963a3199"
     },
     {
       "id": "兰波-邪恶",
-      "title": "【每日诗语】兰波：邪恶",
-      "description": "此诗尖锐地体现了兰波的反教权思想",
+      "title": "兰波：邪恶",
+      "description": "此诗尖锐地体现了兰波的反教权思想 当机枪喷吐的猩红唾沫",
       "tags": [
         "兰波",
         "诗歌"
@@ -583,15 +583,15 @@
       "date": "2026-02-07",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%82%AA%E6%81%B6",
       "content_type": "article",
-      "x": -0.3740189291069691,
-      "y": -0.6584633236270412,
+      "x": 0.7250198676446337,
+      "y": 0.3961752961200439,
       "cluster_id": 3,
-      "content_hash": "59b8398a7dc92167873d410f18ff244bc25ac2108075081ac4db1ebb114a3a5a"
+      "content_hash": "de3eb16f644a92c9cc887c52e3fa2ee036d0c178d37068d2ad50a2a9764aa630"
     },
     {
       "id": "兰波-醉舟",
-      "title": "【每日诗语】兰波：醉舟",
-      "description": "死亡,诞生,未来,过去,创世,虚无",
+      "title": "兰波：醉舟",
+      "description": "死亡,诞生,未来,过去,创世,虚无 当我循着沉沉的河水顺流而下,",
       "tags": [
         "兰波",
         "诗歌"
@@ -599,14 +599,14 @@
       "date": "2026-02-06",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%86%89%E8%88%9F",
       "content_type": "article",
-      "x": 0.07644039906575106,
-      "y": -0.48879616707498563,
+      "x": -0.1626021762874057,
+      "y": 0.54566372851168,
       "cluster_id": 3,
-      "content_hash": "8f452feaff1c2b124643b521c5d5d81c2dd77c585271416e642d98ee5b2b78a0"
+      "content_hash": "d6c2fb46be199113f926e86aa3fe24a8ed95891fd117c3914d4b905af17ef9f0"
     },
     {
       "id": "兰波-巴黎狂欢节",
-      "title": "【每日诗语】兰波：巴黎狂欢节",
+      "title": "兰波：巴黎狂欢节",
       "description": "兰波对那些在公社烈士血迹未干时就迫不及待寻欢作乐者的愤怒控诉",
       "tags": [
         "兰波",
@@ -615,15 +615,15 @@
       "date": "2026-02-05",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%B7%B4%E9%BB%8E%E7%8B%82%E6%AC%A2%E8%8A%82",
       "content_type": "article",
-      "x": -0.6009694845925286,
-      "y": -0.607359502757864,
+      "x": 0.6310548421558296,
+      "y": -0.22630021327952055,
       "cluster_id": 3,
-      "content_hash": "5fa280ad23f73e7f635938b66383354aa5c6327c4e2320c672623e7a26537880"
+      "content_hash": "0a66832bbc19d1d156e7b74f8702280795d26881cf2fc8b31d18f86d474c6e6a"
     },
     {
       "id": "兰波-永恒",
-      "title": "【每日诗语】兰波：永恒",
-      "description": "兰波从早期的感官骚动转向纯粹精神探索的转折点",
+      "title": "兰波：永恒",
+      "description": "兰波从早期的感官骚动转向纯粹精神探索的转折点 又找到了。 什么？——永恒。 那是太阳 与海交融。",
       "tags": [
         "兰波",
         "诗歌"
@@ -631,14 +631,14 @@
       "date": "2026-02-04",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%B0%B8%E6%81%92",
       "content_type": "article",
-      "x": -0.12903244541056635,
-      "y": -0.47979440931812395,
+      "x": 0.43826246896053955,
+      "y": 0.92,
       "cluster_id": 3,
-      "content_hash": "c6aa643787d95c600f85879bd5bffbd1867fe01b0ae240ecb96f8469c26424b1"
+      "content_hash": "b6a2d7ece90382a1cf77e16025cc391c72c6734009323d897c17a6782efc2690"
     },
     {
       "id": "兰波-山谷睡者",
-      "title": "【每日诗语】兰波：山谷睡者",
+      "title": "兰波：山谷睡者",
       "description": "这是一个绿色的穴,河在那儿歌唱。一位年轻的士兵睡着,他右肋上有两个红色的洞。",
       "tags": [
         "兰波",
@@ -647,15 +647,15 @@
       "date": "2026-02-03",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%B1%B1%E8%B0%B7%E7%9D%A1%E8%80%85",
       "content_type": "article",
-      "x": -0.6201135715491708,
-      "y": -0.28574238253345885,
+      "x": 0.9038400455046257,
+      "y": 0.07313542148040197,
       "cluster_id": 3,
-      "content_hash": "15d763e79af2135f807658f4619adcf13acf2e3d6a6989c5ab7fb24b28a3add5"
+      "content_hash": "93f75a222bee78f5a51933aebb7f7a9fd11e7d95018b88ffe9acde899d5c32dc"
     },
     {
       "id": "兰波-感觉",
-      "title": "【每日诗语】兰波：感觉",
-      "description": "在蓝色的夏晚,我将走上小径...",
+      "title": "兰波：感觉",
+      "description": "在蓝色的夏晚,我将走上小径... 在蓝色的夏晚,我将走上小径, 不顾麦茎刺肤,踏着细草潜行。 恍惚中我觉得脚底阵阵清凉, 风儿会吹拂我的光头,沐浴着晚晴。",
       "tags": [
         "兰波",
         "诗歌"
@@ -663,14 +663,14 @@
       "date": "2026-02-02",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%84%9F%E8%A7%89",
       "content_type": "article",
-      "x": -0.5006400696927307,
-      "y": -0.9113095214881334,
+      "x": 0.39852616635477844,
+      "y": -0.3070938028160983,
       "cluster_id": 3,
-      "content_hash": "4cf575e9b639e31fd2d4e05df5c836b485220bdfcb9d8d13b094209846df18ed"
+      "content_hash": "df034365ccc7af9cc48d0b92ea2559804e57e8143c5866ef9b9936ef1af6c829"
     },
     {
       "id": "兰波-我的流浪",
-      "title": "【每日诗语】兰波：我的流浪",
+      "title": "兰波：我的流浪",
       "description": "穿破洞裤子,以星空为被,把旧鞋当作竖琴弹奏。这是兰波最自由、最浪漫的波希米亚宣言,一曲青春与流浪的赞歌。",
       "tags": [
         "兰波",
@@ -679,15 +679,15 @@
       "date": "2026-02-01",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%88%91%E7%9A%84%E6%B5%81%E6%B5%AA",
       "content_type": "article",
-      "x": -0.6921502917990074,
-      "y": -0.060948032131480256,
+      "x": 0.5409868863507633,
+      "y": 0.23857111792525088,
       "cluster_id": 3,
-      "content_hash": "14d679d8606cccfde23c7305a051dc30f5051d45d6509dc56c173b74b0fa43a6"
+      "content_hash": "bb07c94382966b8c08c4f1f22006a663a383ea6659ee47cbaea0536490e5a0a4"
     },
     {
       "id": "我的2025",
       "title": "我的2025:三年,三日和三个月",
-      "description": "“在岁末追忆一生中相当重要的一年”",
+      "description": "“在岁末追忆一生中相当重要的一年” 2025年岁末已至,回望这一场浩荡的奔赴,心中竟有一种洗尽铅华的沉静。这一年,曾是我生命地图上标注得最深刻的坐标,如今它已化作身后一串渐行渐远的足迹。",
       "tags": [
         "回忆",
         "年度总结"
@@ -695,10 +695,10 @@
       "date": "2025-12-31",
       "url": "https://zylatent.com/blog/%E6%88%91%E7%9A%842025",
       "content_type": "article",
-      "x": 0.17682920819198855,
-      "y": 0.92,
+      "x": -0.92,
+      "y": 0.1764864732472734,
       "cluster_id": 4,
-      "content_hash": "62fcfde27a61f35405b517152ec1e97e101acdf46945d281c279b5206660c5b1"
+      "content_hash": "4bea0f027ea028272eff75c0aa6152bb457d6255abe7e5a567d616173ae69e83"
     }
   ],
   "clusters": [
@@ -734,6 +734,7 @@
         "dog-babble加密实验",
         "miniarena自走棋",
         "smartagent",
+        "七王国的骑士-第一季",
         "互动网页-夜空为你闪烁",
         "大庚剑阵"
       ],
@@ -772,7 +773,6 @@
         "绘出七彩的七天",
         "we-are-the-world",
         "游记-济南",
-        "七王国的骑士-第一季",
         "ghost-in-shell",
         "我的2025"
       ],
@@ -783,12 +783,44 @@
     "provider": "hash",
     "item_count": 41,
     "cluster_count": 5,
-    "topic_mode": "curated",
-    "topic_source": "zylatent.com editorial taxonomy",
     "reducer_config": {
       "n_neighbors": 15,
       "min_dist": 0.1,
       "random_state": 42
+    },
+    "clusterer_config": {
+      "clusters": null,
+      "iterations": 30
+    },
+    "topic_mode": "curated",
+    "topic_source": "寒柳别苑 editorial taxonomy",
+    "case_profile": "寒柳别苑",
+    "view": "full",
+    "view_label": "完整花园",
+    "available_views": [
+      {
+        "id": "full",
+        "label": "完整花园",
+        "data": "./garden.json"
+      },
+      {
+        "id": "engineering",
+        "label": "Engineering Garden",
+        "data": "./engineering-garden.json"
+      }
+    ],
+    "presentation": {
+      "theme": "zylatent",
+      "page_title": "Latent Garden · 寒柳别苑",
+      "eyebrow": "COURTYARD · PERSONAL SEMANTIC GARDEN",
+      "title": "Latent Garden",
+      "intro": "把寒柳别苑留下的文字放在一张温柔的地图上，让相隔很远的念头重新靠近。",
+      "topic_heading": "精选主题",
+      "topic_copy": "颜色代表博客策展主题。选择一个主题，地图会留下相关内容。",
+      "source_prefix": "文字来自",
+      "source_label": "寒柳别苑",
+      "source_url": "https://zylatent.com",
+      "source_icon": "./assets/zylatent-icon.png"
     },
     "edge_config": {
       "neighbors": 2,

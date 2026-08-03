@@ -1,0 +1,402 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-08-03T13:28:56.883788+00:00",
+  "dimensions": 64,
+  "reducer": "umap",
+  "clusterer": "curated-keywords",
+  "nodes": [
+    {
+      "id": "五子棋搜索实验",
+      "title": "从五子棋作业到搜索实验：用第五章的方法拆开一个 Agent",
+      "description": "以《人工智能：一种现代方法》第五章的对抗搜索为主线，把一次五子棋课程作业重构成可比较、可复现的搜索实验。",
+      "tags": [
+        "Python",
+        "人工智能",
+        "对抗搜索",
+        "Minimax",
+        "Alpha-Beta",
+        "MCTS"
+      ],
+      "date": "2026-07-31",
+      "url": "https://zylatent.com/blog/%E4%BA%94%E5%AD%90%E6%A3%8B%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C",
+      "content_type": "article",
+      "x": 0.34636251221861347,
+      "y": -0.09975218728787705,
+      "cluster_id": 0,
+      "content_hash": "55899c882fdcecc825fe3fdea3c5a82937d9013e1c9a9b74b4c3eb8c47c73fb6"
+    },
+    {
+      "id": "我和埃隆马斯克之间真的只隔五个人吗",
+      "title": "从一门必修课出发，我和马斯克之间真的只有五跳？",
+      "description": "从自己的必修课开始，我用公开资料重新查了一遍到埃隆·马斯克的关系链：这次不凑同场嘉宾，只保留能找到直接授课、共同署名或面对面会见依据的五条边。",
+      "tags": [
+        "六人定律",
+        "社会网络",
+        "人物关系",
+        "南京大学",
+        "互联网观察"
+      ],
+      "date": "2026-07-30",
+      "url": "https://zylatent.com/blog/%E6%88%91%E5%92%8C%E5%9F%83%E9%9A%86%E9%A9%AC%E6%96%AF%E5%85%8B%E4%B9%8B%E9%97%B4%E7%9C%9F%E7%9A%84%E5%8F%AA%E9%9A%94%E4%BA%94%E4%B8%AA%E4%BA%BA%E5%90%97",
+      "content_type": "article",
+      "x": 0.17657371199682614,
+      "y": -0.48830174399874354,
+      "cluster_id": 0,
+      "content_hash": "6d9b04ac36b78e2b85b80058855d71893f282581a15bf9259d6f18f13d15a28d"
+    },
+    {
+      "id": "fastapi-basics",
+      "title": "FastAPI 入门：给寒柳别苑搭一个小型 API",
+      "description": "从一个最小接口开始，使用 FastAPI 为 zylatent.com 设计站点资料、文章查询和留言接口，理解路由、参数校验、自动文档与跨域配置。",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "后端",
+        "API",
+        "编程学习"
+      ],
+      "date": "2026-07-29",
+      "url": "https://zylatent.com/blog/fastapi-basics",
+      "content_type": "article",
+      "x": -0.7721510160867456,
+      "y": -0.2638959836633433,
+      "cluster_id": 1,
+      "content_hash": "9650dedd7a9d56d6964572489876140cc1346a7e4fc4937b7cb05f603de62137"
+    },
+    {
+      "id": "在概率的雾里行走-贝叶斯与mcmc学习记录",
+      "title": "在概率的雾里行走：从贝叶斯更新到 MCMC",
+      "description": "记录阅读《Probabilistic Programming and Bayesian Methods for Hackers》前 3 章的收获：如何用概率描述不确定性，用 PyMC 构造模型，再用 MCMC 从后验分布中取出答案。",
+      "tags": [
+        "贝叶斯推断",
+        "MCMC",
+        "PyMC",
+        "数学建模",
+        "概率编程"
+      ],
+      "date": "2026-07-27",
+      "url": "https://zylatent.com/blog/%E5%9C%A8%E6%A6%82%E7%8E%87%E7%9A%84%E9%9B%BE%E9%87%8C%E8%A1%8C%E8%B5%B0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%B8%8Emcmc%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95",
+      "content_type": "article",
+      "x": -0.3859013668117366,
+      "y": -0.6232583274002629,
+      "cluster_id": 0,
+      "content_hash": "8270e48c294b5a11752475efcb731505eff6db16cb731b71ace193474a870cfe"
+    },
+    {
+      "id": "dog-littletools工具集",
+      "title": "Dog-LittleTools：九个 Bash 脚本和我不想再敲第二遍的命令",
+      "description": "9 个纯 Bash CLI 工具：GPU 选择、进程锁、Token 统计、Git 目录树、条件等待。零依赖，跨平台。",
+      "tags": [
+        "Bash",
+        "CLI",
+        "工具",
+        "自动化",
+        "Claude Code"
+      ],
+      "date": "2026-07-23",
+      "url": "https://zylatent.com/blog/dog-littletools%E5%B7%A5%E5%85%B7%E9%9B%86",
+      "content_type": "article",
+      "x": 0.10331588192696806,
+      "y": 0.612399022682688,
+      "cluster_id": 1,
+      "content_hash": "732e151240ff2dd30900f60cdd7ac36b4e88b05bc49ae4f6de20f3dcccb7fa6c"
+    },
+    {
+      "id": "dog-babble加密实验",
+      "title": "Dog-Babble：把 AES 密文伪装成一串哈基米",
+      "description": "PBKDF2 密钥派生 + AES-256-GCM 加密 + 自定义字典编码，零依赖纯前端密码学实验。用「发疯文学」隐藏信息。",
+      "tags": [
+        "JavaScript",
+        "密码学",
+        "Web Crypto",
+        "加密",
+        "零依赖"
+      ],
+      "date": "2026-07-23",
+      "url": "https://zylatent.com/blog/dog-babble%E5%8A%A0%E5%AF%86%E5%AE%9E%E9%AA%8C",
+      "content_type": "article",
+      "x": -0.5895830638666026,
+      "y": -0.09833486465731045,
+      "cluster_id": 2,
+      "content_hash": "2f2b78b0b96f9cc2bd35cff9983ffdcc38fd78d16d4395bd5d63f23d12b12a36"
+    },
+    {
+      "id": "miniarena自走棋",
+      "title": "MiniArena 自走棋",
+      "description": "基于 Qt6 / C++17 的 PvE 自走棋游戏。17 个可玩单位，8×8 六边形棋盘，BFS 寻路，羁绊组合，装备系统，随机事件，存档读档。",
+      "tags": [
+        "C++",
+        "Qt6",
+        "自走棋",
+        "游戏",
+        "算法"
+      ],
+      "date": "2026-07-23",
+      "url": "https://zylatent.com/blog/miniarena%E8%87%AA%E8%B5%B0%E6%A3%8B",
+      "content_type": "article",
+      "x": 0.45533050841381495,
+      "y": -0.5584825819133057,
+      "cluster_id": 2,
+      "content_hash": "7c407e4bda8588e805d3a5b0249a0ffa1ce573c9cf7d5070d9904679198ad6c7"
+    },
+    {
+      "id": "nannahelper教程文档",
+      "title": "nannahelper docs：给完全不会编程的人写一份不会跳步的教程",
+      "description": "覆盖 20+ 主题的零基础编程教程。MkDocs + GitHub Actions 自动部署，Build in Public。",
+      "tags": [
+        "教程",
+        "MkDocs",
+        "文档",
+        "CI/CD",
+        "开源"
+      ],
+      "date": "2026-07-23",
+      "url": "https://zylatent.com/blog/nannahelper%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3",
+      "content_type": "article",
+      "x": 0.12535486199240486,
+      "y": 0.08356600040898654,
+      "cluster_id": 1,
+      "content_hash": "ff1813ad80cc89715e1557c4d77a25416eb63f4d4683133a3c60ac95efacb6a0"
+    },
+    {
+      "id": "dog-skills-48-claude-code技能库",
+      "title": "Dog-Skills：我整理的 48 个 Claude Code 技能库，从写代码到 AI 唱歌全涵盖",
+      "description": "从开发流程、品牌设计、深度思考到健康管理和AI音乐生成，48个Claude Code技能的完整指南——含元技能架构图、安装方式和组合推荐。",
+      "tags": [
+        "Claude Code",
+        "AI",
+        "Skill",
+        "效率工具",
+        "开源"
+      ],
+      "date": "2026-07-03",
+      "url": "https://zylatent.com/blog/dog-skills-48-claude-code%E6%8A%80%E8%83%BD%E5%BA%93",
+      "content_type": "article",
+      "x": -0.1710236198642987,
+      "y": -0.4915870520747777,
+      "cluster_id": 1,
+      "content_hash": "5ac4a7bc1675fd0ed96202603083f07fe6307c7bb43547e64b80d1960c4db125"
+    },
+    {
+      "id": "2026上半年-代码与项目回顾",
+      "title": "消失的半年：代码、项目与一个智科人的大一春季学期",
+      "description": "智科大一下学期忙得博客长草，但代码仓库没闲着——NanE、Dog-Skills一次迟到的项目回顾。",
+      "tags": [
+        "项目回顾"
+      ],
+      "date": "2026-06-22",
+      "url": "https://zylatent.com/blog/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4-%E4%BB%A3%E7%A0%81%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%9B%9E%E9%A1%BE",
+      "content_type": "article",
+      "x": -0.4162289857774145,
+      "y": -0.3748310468009757,
+      "cluster_id": 1,
+      "content_hash": "3403ff4807e25c4bfd08dfe2f4664985e004c8ace4a71933a6fd926e7a4d8572"
+    },
+    {
+      "id": "my-compile",
+      "title": "自然语言加密器: 自定义 Base-N 文本隐写实验",
+      "description": "一个基于 AES-256-GCM 与大数进制转换的纯前端高隐蔽性文本加密工具。",
+      "tags": [
+        "JavaScript",
+        "密码学",
+        "算法",
+        "互动网页"
+      ],
+      "date": "2026-03-21",
+      "url": "https://zylatent.com/blog/my-compile",
+      "content_type": "article",
+      "x": -0.778009373379316,
+      "y": -0.009843763485478219,
+      "cluster_id": 1,
+      "content_hash": "27d8a8dcdaa2aa3abfc0d98636a4f429103bfa0dd11884654c7ed369805d8031"
+    },
+    {
+      "id": "smartagent",
+      "title": "Smart Agent: 迷宫寻路实验",
+      "description": "一个基于 A* 算法与空间折跃机制的交互式路径规划实验。",
+      "tags": [
+        "Godot",
+        "算法",
+        "路径规划",
+        "互动网页"
+      ],
+      "date": "2026-03-18",
+      "url": "https://zylatent.com/blog/smartagent",
+      "content_type": "article",
+      "x": -0.2381383541378379,
+      "y": 0.0485745365142366,
+      "cluster_id": 2,
+      "content_hash": "65bafd9806f5a2f18ddaaeba2e1d75d96fb9e7a87b9bc1af116e5e77ce1bd5f8"
+    },
+    {
+      "id": "cpp-memory-ownership-raii",
+      "title": "谁拥有这块内存：一次 C++ 资源管理实验",
+      "description": "以一个动态栈为实验对象，追踪 C++ 堆内存从分配、复制、移动到释放的完整生命周期，并与 C、Go、Java 和 Rust 的资源管理方式进行对照。",
+      "tags": [
+        "C++",
+        "编程学习",
+        "内存管理"
+      ],
+      "date": "2026-03-08",
+      "url": "https://zylatent.com/blog/cpp-memory-ownership-raii",
+      "content_type": "article",
+      "x": 0.09199538261885809,
+      "y": -0.7926484112114168,
+      "cluster_id": 0,
+      "content_hash": "96bcf9e69da082673acd56996b7eaabf7ba6567905e65b6aeae0828242dd7ff9"
+    },
+    {
+      "id": "如何在数字时代活成一棵树",
+      "title": "如何在网络时代退化成一棵树",
+      "description": "在网络时代成为一棵树，并不意味着逃离世界，而是在世界之中保持定力。我们仍然使用工具，仍然获取信息，但不再让它们决定我们的节奏。年轮缓慢增加，根系向下延伸。安静。清醒。足够了。",
+      "tags": [
+        "社评",
+        "社交媒体"
+      ],
+      "date": "2026-03-02",
+      "url": "https://zylatent.com/blog/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3%E6%B4%BB%E6%88%90%E4%B8%80%E6%A3%B5%E6%A0%91",
+      "content_type": "article",
+      "x": -0.7985833243710252,
+      "y": -0.6327799504291638,
+      "cluster_id": 1,
+      "content_hash": "072303061a38d32a9d4287895a91ce64e54f78dc75195c7824ad97c8a31975cd"
+    },
+    {
+      "id": "七王国的骑士-第一季",
+      "title": "一只脚与王子的性命孰重？——《七王国的骑士》影评",
+      "description": "七王国的骑士,高个邓肯与蛋总的羁绊开始 《七王国的骑士》第一季改编自乔治·R·R·马丁的“邓肯与伊戈”中篇小说系列，时间早于《冰与火之歌》主线百年。它与权力的游戏共享同一段历史，却呈现出另一种气压：铁王座仍在塔格利安家族手中，贵族秩序尚未全面崩塌，骑士制度还没有完全沦为权力的装饰。对看过《权游》的观众来说，这是一段前尘旧事；对没有接触原著的人来说，它是一个关于成长与荣誉的独立叙事。",
+      "tags": [
+        "影评",
+        "《冰与火之歌》",
+        "《七王国的骑士》"
+      ],
+      "date": "2026-02-24",
+      "url": "https://zylatent.com/blog/%E4%B8%83%E7%8E%8B%E5%9B%BD%E7%9A%84%E9%AA%91%E5%A3%AB-%E7%AC%AC%E4%B8%80%E5%AD%A3",
+      "content_type": "article",
+      "x": -0.020143215293760508,
+      "y": -0.674714959916461,
+      "cluster_id": 2,
+      "content_hash": "f7cf46141759641f41699257b79125fda5bb4073f12ed0df3ed85ddbf3845800"
+    },
+    {
+      "id": "互动网页-夜空为你闪烁",
+      "title": "夜空为你闪烁",
+      "description": "一个可交互的星空网页实验，访客可以通过点击和动画进入个人化的夜空场景。",
+      "tags": [
+        "互动网页"
+      ],
+      "date": "2026-02-17",
+      "url": "https://zylatent.com/blog/%E4%BA%92%E5%8A%A8%E7%BD%91%E9%A1%B5-%E5%A4%9C%E7%A9%BA%E4%B8%BA%E4%BD%A0%E9%97%AA%E7%83%81",
+      "content_type": "article",
+      "x": -0.2521197842354196,
+      "y": -0.8165888598578085,
+      "cluster_id": 2,
+      "content_hash": "1a655583c8416990e33746d27a92884205df9ea5e4a410abc0db0d75028a6f02"
+    },
+    {
+      "id": "大庚剑阵",
+      "title": "大庚剑阵",
+      "description": "一个以《凡人修仙传》意象为主题的互动网页实验，使用点击操作控制青竹蜂云剑阵。",
+      "tags": [
+        "凡人修仙传",
+        "互动网页"
+      ],
+      "date": "2026-02-12",
+      "url": "https://zylatent.com/blog/%E5%A4%A7%E5%BA%9A%E5%89%91%E9%98%B5",
+      "content_type": "article",
+      "x": -0.3889919339226948,
+      "y": -0.92,
+      "cluster_id": 2,
+      "content_hash": "97c3c8a827e28cb27a55afb569ccac5f487e7ee1711fc5df99e63f65c4bd9285"
+    }
+  ],
+  "clusters": [
+    {
+      "id": 0,
+      "label": "智能与计算",
+      "node_ids": [
+        "五子棋搜索实验",
+        "我和埃隆马斯克之间真的只隔五个人吗",
+        "在概率的雾里行走-贝叶斯与mcmc学习记录",
+        "cpp-memory-ownership-raii"
+      ],
+      "color": "#9fb46b"
+    },
+    {
+      "id": 1,
+      "label": "工具与开源",
+      "node_ids": [
+        "fastapi-basics",
+        "dog-littletools工具集",
+        "nannahelper教程文档",
+        "dog-skills-48-claude-code技能库",
+        "2026上半年-代码与项目回顾",
+        "my-compile",
+        "如何在数字时代活成一棵树"
+      ],
+      "color": "#86a8a1"
+    },
+    {
+      "id": 2,
+      "label": "互动实验",
+      "node_ids": [
+        "dog-babble加密实验",
+        "miniarena自走棋",
+        "smartagent",
+        "七王国的骑士-第一季",
+        "互动网页-夜空为你闪烁",
+        "大庚剑阵"
+      ],
+      "color": "#d5a36c"
+    }
+  ],
+  "metadata": {
+    "provider": "hash",
+    "item_count": 17,
+    "cluster_count": 3,
+    "reducer_config": {
+      "n_neighbors": 15,
+      "min_dist": 0.1,
+      "random_state": 42
+    },
+    "clusterer_config": {
+      "clusters": null,
+      "iterations": 30
+    },
+    "topic_mode": "curated",
+    "topic_source": "寒柳别苑 editorial taxonomy",
+    "case_profile": "寒柳别苑",
+    "view": "engineering",
+    "view_label": "Engineering Garden",
+    "available_views": [
+      {
+        "id": "full",
+        "label": "完整花园",
+        "data": "./garden.json"
+      },
+      {
+        "id": "engineering",
+        "label": "Engineering Garden",
+        "data": "./engineering-garden.json"
+      }
+    ],
+    "presentation": {
+      "theme": "zylatent",
+      "page_title": "Latent Garden · 寒柳别苑",
+      "eyebrow": "COURTYARD · PERSONAL SEMANTIC GARDEN",
+      "title": "Latent Garden",
+      "intro": "把寒柳别苑留下的文字放在一张温柔的地图上，让相隔很远的念头重新靠近。",
+      "topic_heading": "精选主题",
+      "topic_copy": "颜色代表博客策展主题。选择一个主题，地图会留下相关内容。",
+      "source_prefix": "文字来自",
+      "source_label": "寒柳别苑",
+      "source_url": "https://zylatent.com",
+      "source_icon": "./assets/zylatent-icon.png"
+    },
+    "edge_config": {
+      "neighbors": 2,
+      "max_second_distance": 0.48,
+      "metric": "euclidean-2d"
+    }
+  }
+}

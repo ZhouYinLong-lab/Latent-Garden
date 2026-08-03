@@ -10,9 +10,9 @@
     <main class="shell">
       <header class="masthead">
         <div>
-          <p class="eyebrow">COURTYARD · PERSONAL SEMANTIC GARDEN</p>
-          <h1>Latent Garden<span class="dot">.</span></h1>
-          <p class="intro">把寒柳别苑留下的文字放在一张温柔的地图上，让相隔很远的念头重新靠近。</p>
+          <p id="brand-eyebrow" class="eyebrow">CONTENT COLLECTION · SEMANTIC MAP</p>
+          <h1><span id="brand-title">Latent Garden</span><span class="dot">.</span></h1>
+          <p id="brand-intro" class="intro">Project a collection into a searchable, interactive semantic map.</p>
         </div>
         <div class="meta">
           <span id="item-count">— 篇文字</span>
@@ -21,6 +21,7 @@
       </header>
 
       <section class="toolbar" aria-label="Garden controls">
+        <nav id="view-switch" class="view-switch" aria-label="地图视图" hidden></nav>
         <label class="search">
           <span aria-hidden="true">⌕</span>
           <input id="search" type="search" placeholder="搜索庭院里的文字…" />
@@ -56,15 +57,15 @@
         <aside class="topic-panel" aria-label="主题分组">
           <div class="topic-heading">
             <p class="eyebrow">EDITOR'S INDEX</p>
-            <h2>精选主题</h2>
-            <p>颜色代表博客策展主题。选择一个主题，地图会留下相关内容。</p>
+            <h2 id="topic-heading">Topics</h2>
+            <p id="topic-copy">Colors identify groups in the loaded collection.</p>
           </div>
           <div id="legend" class="legend"></div>
         </aside>
       </section>
 
       <footer>
-        <span class="source-credit">文字来自 <a class="blog-link" href="https://zylatent.com" target="_blank" rel="noreferrer"><img src="./assets/zylatent-icon.png" alt="" />寒柳别苑</a></span>
+        <span class="source-credit"><span id="source-prefix">Source</span> <a id="source-link" class="blog-link" href="#" target="_blank" rel="noreferrer"><img id="source-icon" alt="" hidden /><span id="source-label">content collection</span></a></span>
         <span id="generated"></span>
       </footer>
     </main>

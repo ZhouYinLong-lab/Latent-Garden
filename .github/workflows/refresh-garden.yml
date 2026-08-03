@@ -22,12 +22,20 @@ jobs:
         run: |
           python -m pipeline.cli \
             --website https://zylatent.com \
-            --output frontend/garden.json \
+            --website-config examples/zylatent/config.json \
+            --output .latent-garden/zylatent-raw.json \
             --cache .latent-garden/zylatent-embeddings.json \
             --max-pages 6 \
             --skip-if-unchanged
-          python scripts/curate_zylatent_topics.py frontend/garden.json
+          python scripts/apply_case_profile.py \
+            .latent-garden/zylatent-raw.json examples/zylatent/config.json \
+            --view full --output frontend/garden.json
+          python scripts/apply_case_profile.py \
+            .latent-garden/zylatent-raw.json examples/zylatent/config.json \
+            --view engineering --output frontend/engineering-garden.json
+          cp frontend/garden.json examples/zylatent/garden.json
           cp frontend/garden.json examples/zylatent-garden.json
+          cp frontend/engineering-garden.json examples/zylatent/engineering-garden.json
           python scripts/render_map_preview.py \
             frontend/garden.json \
             docs/assets/zylatent-garden-map.svg
@@ -35,7 +43,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add frontend/garden.json examples/zylatent-garden.json docs/assets/zylatent-garden-map.svg
+          git add \
+            frontend/garden.json frontend/engineering-garden.json \
+            examples/zylatent/garden.json examples/zylatent/engineering-garden.json \
+            examples/zylatent-garden.json docs/assets/zylatent-garden-map.svg
           if git diff --cached --quiet; then
             echo "Garden is unchanged."
             exit 0

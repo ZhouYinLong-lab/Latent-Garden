@@ -1,5 +1,6 @@
 const params = new URLSearchParams(location.search);
-const dataUrl = params.get("data") || "./garden.json";
+const requestedView = params.get("view") === "engineering" ? "engineering" : "full";
+const dataUrl = params.get("data") || (requestedView === "engineering" ? "./engineering-garden.json" : "./garden.json");
 const requestedCluster = params.get("cluster");
 if (params.get("embed") === "1") document.documentElement.dataset.embed = "true";
 const state = { garden: null, query: "", cluster: null };
@@ -109,6 +110,13 @@ function render() {
   document.querySelector("#item-count").textContent = nodes.length + " 篇文字";
   document.querySelector("#cluster-count").textContent = clusters.length + " 个主题";
   document.querySelector("#generated").textContent = "生成于 " + new Date(state.garden.generated_at).toLocaleDateString();
+  renderPresentation();
+  const activeView = state.garden.metadata && state.garden.metadata.view || requestedView;
+  document.querySelectorAll("[data-view]").forEach(link => {
+    const active = link.dataset.view === activeView;
+    link.classList.toggle("active", active);
+    link.setAttribute("aria-current", active ? "page" : "false");
+  });
   document.querySelector("#legend").innerHTML = clusters.map((cluster, index) =>
     '<button type="button" aria-pressed="' + (state.cluster === cluster.id) + '" data-cluster="' + Number(cluster.id) + '" class="' +
     (state.cluster === cluster.id ? "active" : "") + '"><i style="background:' +
@@ -120,6 +128,39 @@ function render() {
     render();
   }));
   renderGraph();
+}
+
+function renderPresentation() {
+  const metadata = state.garden.metadata || {};
+  const presentation = metadata.presentation || {};
+  const theme = /^[a-z0-9-]+$/i.test(String(presentation.theme || "")) ? presentation.theme : "default";
+  document.documentElement.dataset.theme = theme;
+  document.title = presentation.page_title || "Latent Garden";
+  document.querySelector("#brand-eyebrow").textContent = presentation.eyebrow || "CONTENT COLLECTION · SEMANTIC MAP";
+  document.querySelector("#brand-title").textContent = presentation.title || "Latent Garden";
+  document.querySelector("#brand-intro").textContent = presentation.intro || "Project a collection into a searchable, interactive semantic map.";
+  document.querySelector("#topic-heading").textContent = presentation.topic_heading || "Topics";
+  document.querySelector("#topic-copy").textContent = presentation.topic_copy || "Colors identify groups in the loaded collection.";
+  document.querySelector("#source-prefix").textContent = presentation.source_prefix || "Source";
+  document.querySelector("#source-label").textContent = presentation.source_label || "content collection";
+  const sourceLink = document.querySelector("#source-link");
+  const sourceUrl = presentation.source_url ? safeExternalUrl(presentation.source_url) : null;
+  if (sourceUrl) sourceLink.href = sourceUrl;
+  else sourceLink.removeAttribute("href");
+  const sourceIcon = document.querySelector("#source-icon");
+  const iconPath = String(presentation.source_icon || "");
+  const safeIcon = /^\.\/assets\/[a-z0-9._/-]+$/i.test(iconPath);
+  sourceIcon.hidden = !safeIcon;
+  if (safeIcon) sourceIcon.src = iconPath;
+
+  const views = Array.isArray(metadata.available_views) ? metadata.available_views : [];
+  const switcher = document.querySelector("#view-switch");
+  switcher.hidden = views.length < 2;
+  switcher.innerHTML = views.map(view => {
+    const id = String(view.id || "");
+    const href = id === "full" ? "./" : "./?view=" + encodeURIComponent(id);
+    return '<a href="' + href + '" data-view="' + esc(id) + '">' + esc(view.label || id) + "</a>";
+  }).join("");
 }
 
 function nodeVisibility(node) {

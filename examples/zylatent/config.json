@@ -1,0 +1,82 @@
+{
+  "name": "寒柳别苑",
+  "source": "https://zylatent.com",
+  "presentation": {
+    "theme": "zylatent",
+    "page_title": "Latent Garden · 寒柳别苑",
+    "eyebrow": "COURTYARD · PERSONAL SEMANTIC GARDEN",
+    "title": "Latent Garden",
+    "intro": "把寒柳别苑留下的文字放在一张温柔的地图上，让相隔很远的念头重新靠近。",
+    "topic_heading": "精选主题",
+    "topic_copy": "颜色代表博客策展主题。选择一个主题，地图会留下相关内容。",
+    "source_prefix": "文字来自",
+    "source_label": "寒柳别苑",
+    "source_url": "https://zylatent.com",
+    "source_icon": "./assets/zylatent-icon.png"
+  },
+  "website": {
+    "title_prefixes": ["【每日诗语】", "每日诗语："],
+    "boilerplate_patterns": ["^正在加载评论", "^评论\\s*[（(].*GitHub"],
+    "min_description_length": 24,
+    "description_overrides": {
+      "互动网页-夜空为你闪烁": "一个可交互的星空网页实验，访客可以通过点击和动画进入个人化的夜空场景。",
+      "大庚剑阵": "一个以《凡人修仙传》意象为主题的互动网页实验，使用点击操作控制青竹蜂云剑阵。"
+    }
+  },
+  "topics": [
+    {
+      "id": 0,
+      "label": "智能与计算",
+      "color": "#9fb46b",
+      "keywords": [
+        "python", "fastapi", "人工智能", "对抗搜索", "minimax", "alpha-beta", "mcts",
+        "贝叶斯", "mcmc", "pymc", "数学建模", "概率编程", "c++", "内存管理",
+        "六人定律", "社会网络"
+      ]
+    },
+    {
+      "id": 1,
+      "label": "工具与开源",
+      "color": "#86a8a1",
+      "keywords": [
+        "bash", "cli", "工具", "自动化", "claude code", "skill", "mkdocs", "文档",
+        "ci/cd", "开源", "项目回顾", "教程"
+      ]
+    },
+    {
+      "id": 2,
+      "label": "互动实验",
+      "color": "#d5a36c",
+      "keywords": [
+        "javascript", "密码学", "web crypto", "加密", "互动网页", "godot", "自走棋",
+        "游戏", "凡人修仙传", "夜空", "大庚剑阵"
+      ]
+    },
+    {
+      "id": 3,
+      "label": "诗歌与文学",
+      "color": "#b7a5c8",
+      "keywords": ["兰波", "海子", "诗歌", "书评", "挽救计划"]
+    },
+    {
+      "id": 4,
+      "label": "影像与见闻",
+      "color": "#d5a5a1",
+      "keywords": []
+    }
+  ],
+  "match_order": [1, 2, 0, 3],
+  "default_topic_id": 4,
+  "views": {
+    "full": {
+      "label": "完整花园",
+      "topic_ids": [0, 1, 2, 3, 4],
+      "data": "./garden.json"
+    },
+    "engineering": {
+      "label": "Engineering Garden",
+      "topic_ids": [0, 1, 2],
+      "data": "./engineering-garden.json"
+    }
+  }
+}
