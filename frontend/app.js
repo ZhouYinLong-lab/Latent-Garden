@@ -4,6 +4,7 @@ const requestedCluster = params.get("cluster");
 if (params.get("embed") === "1") document.documentElement.dataset.embed = "true";
 const state = { garden: null, query: "", cluster: null };
 const nodeLayer = document.querySelector("#nodes");
+const gridLayer = document.querySelector("#grid");
 const detail = document.querySelector("#detail");
 const status = document.querySelector("#status");
 const defaultView = { x: -1.08, y: -1.08, width: 2.16, height: 2.16 };
@@ -21,7 +22,19 @@ function safeColor(value) {
 
 function safeCoordinate(value) {
   const number = Number(value);
-  return Number.isFinite(number) ? Math.max(-1, Math.min(1, number)) : 0;
+  return Number.isFinite(number) ? Math.max(-.9, Math.min(.9, number)) : 0;
+}
+
+function renderGrid() {
+  const rings = [.18, .36, .54, .72, .88];
+  const spokes = Array.from({ length: 12 }, (_, index) => {
+    const angle = (Math.PI * 2 * index) / 12;
+    const x = Math.cos(angle) * .9;
+    const y = Math.sin(angle) * .9;
+    return '<path d="M 0 0 L ' + x.toFixed(3) + " " + y.toFixed(3) + '"></path>';
+  }).join("");
+  gridLayer.innerHTML = rings.map(radius => '<circle cx="0" cy="0" r="' + radius + '"></circle>').join("") +
+    spokes + '<circle class="center" cx="0" cy="0" r=".045"></circle>';
 }
 
 function applyView() {
@@ -54,10 +67,11 @@ function render() {
   document.querySelector("#item-count").textContent = nodes.length + " 篇文字";
   document.querySelector("#cluster-count").textContent = clusters.length + " 个主题";
   document.querySelector("#generated").textContent = "生成于 " + new Date(state.garden.generated_at).toLocaleDateString();
-  document.querySelector("#legend").innerHTML = clusters.map(cluster =>
-    '<button type="button" data-cluster="' + Number(cluster.id) + '" class="' +
+  document.querySelector("#legend").innerHTML = clusters.map((cluster, index) =>
+    '<button type="button" aria-pressed="' + (state.cluster === cluster.id) + '" data-cluster="' + Number(cluster.id) + '" class="' +
     (state.cluster === cluster.id ? "active" : "") + '"><i style="background:' +
-    safeColor(cluster.color) + '"></i>' + esc(cluster.label) + "</button>"
+    safeColor(cluster.color) + '"></i><span class="cluster-name">主题 ' + (index + 1) + ' · ' + esc(cluster.label || "未命名") +
+    '</span><span class="cluster-count">' + (cluster.node_ids || []).length + ' 篇</span></button>'
   ).join("");
   document.querySelectorAll("[data-cluster]").forEach(button => button.addEventListener("click", () => {
     state.cluster = state.cluster === Number(button.dataset.cluster) ? null : Number(button.dataset.cluster);
@@ -136,6 +150,8 @@ document.querySelector("#map").addEventListener("pointermove", event => {
 });
 document.querySelector("#map").addEventListener("pointerup", () => { drag = null; });
 document.querySelector("#map").addEventListener("pointercancel", () => { drag = null; });
+
+renderGrid();
 
 fetch(dataUrl)
   .then(response => { if (!response.ok) throw new Error("Could not load " + dataUrl); return response.json(); })

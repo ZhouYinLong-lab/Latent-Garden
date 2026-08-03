@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,30 +22,46 @@
 
       <section class="toolbar" aria-label="Garden controls">
         <label class="search">
-          <span>⌕</span>
+          <span aria-hidden="true">⌕</span>
           <input id="search" type="search" placeholder="搜索庭院里的文字…" />
         </label>
-        <div id="legend" class="legend"></div>
         <button id="reset" type="button">重置视图</button>
-        <span class="hint">滚轮缩放 · 拖拽移动</span>
+        <span class="hint">滚轮缩放 · 拖拽移动 · 点击节点查看原文</span>
       </section>
 
       <section class="map-card">
-        <div id="status" class="status">正在载入庭院地图…</div>
-        <svg id="map" viewBox="-1.08 -1.08 2.16 2.16" role="img" aria-label="Interactive semantic map">
-          <defs>
-            <filter id="glow"><feGaussianBlur stdDeviation=".018" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
-          </defs>
-          <g id="grid"></g>
-          <g id="nodes"></g>
-        </svg>
-        <aside id="detail" class="detail" hidden>
-          <button id="close-detail" class="close" type="button" aria-label="Close">×</button>
-          <p id="detail-type" class="eyebrow"></p>
-          <h2 id="detail-title"></h2>
-          <p id="detail-description"></p>
-          <div id="detail-tags" class="tags"></div>
-          <a id="detail-link" target="_blank" rel="noreferrer">打开原文 ↗</a>
+        <div class="map-stage">
+          <div id="status" class="status">正在载入庭院地图…</div>
+          <svg id="map" viewBox="-1.08 -1.08 2.16 2.16" role="img" aria-label="Interactive semantic map">
+            <defs>
+              <clipPath id="map-clip"><rect x="-.94" y="-.94" width="1.88" height="1.88" rx=".08" /></clipPath>
+              <filter id="glow"><feGaussianBlur stdDeviation=".018" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+            </defs>
+            <rect class="map-surface" x="-.96" y="-.96" width="1.92" height="1.92" rx=".09" />
+            <g id="grid" clip-path="url(#map-clip)"></g>
+            <g id="nodes" clip-path="url(#map-clip)"></g>
+          </svg>
+          <div class="map-note"><span class="note-mark"></span><span>相近的点，代表相近的内容语义</span></div>
+          <aside id="detail" class="detail" hidden>
+            <button id="close-detail" class="close" type="button" aria-label="关闭详情">×</button>
+            <p id="detail-type" class="eyebrow"></p>
+            <h2 id="detail-title"></h2>
+            <p id="detail-description"></p>
+            <div id="detail-tags" class="tags"></div>
+            <a id="detail-link" target="_blank" rel="noreferrer">打开原文 ↗</a>
+          </aside>
+        </div>
+        <aside class="topic-panel" aria-label="主题分组">
+          <div class="topic-heading">
+            <p class="eyebrow">MAP INDEX</p>
+            <h2>主题簇</h2>
+            <p>颜色代表聚类结果。选择一个主题，地图会留下相关内容。</p>
+          </div>
+          <div id="legend" class="legend"></div>
+          <div class="topic-footnote">
+            <span class="footnote-line"></span>
+            <span>坐标来自 embedding 的二维投影，方向本身没有固定含义。</span>
+          </div>
         </aside>
       </section>
 

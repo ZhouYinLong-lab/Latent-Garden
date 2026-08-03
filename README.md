@@ -183,6 +183,7 @@ latent-garden/
 
 - [`docs/architecture.md`](docs/architecture.md)：模块边界与扩展点
 - [`docs/deployment.md`](docs/deployment.md)：静态、API、Docker 和定时刷新
+- [`frontend/README.md`](frontend/README.md)：交互地图、主题簇、数据契约和 iframe 参数
 - [`CONTRIBUTING.md`](CONTRIBUTING.md)：开发、测试和 Pull Request 流程
 - [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)：社区参与准则
 - [`SECURITY.md`](SECURITY.md)：漏洞报告方式
