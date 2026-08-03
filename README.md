@@ -10,6 +10,7 @@ zylatent.com 是这个项目的展示示例，也是仓库名字的来源。它�
 - pipeline/：内容处理、hash 缓存、embedding、UMAP、聚类与 CLI
 - providers/：可替换 EmbeddingProvider；内置离线 hash provider 与显式调用的 OpenAI provider
 - adapters/：Markdown、MDX、JSON 读取适配器
+- adapters/website.py：抓取 Astro 风格公开博客的文章元数据与正文
 - frontend/：零构建依赖的独立交互式语义地图
 - examples/：来自 zylatent.com 的脱钩示例内容与生成输出
 - tests/：适配器、缓存与输出契约测试
@@ -26,6 +27,17 @@ zylatent.com 是这个项目的展示示例，也是仓库名字的来源。它�
     python -m http.server 8000 --directory frontend
 
 浏览器访问 http://localhost:8000，点击节点可以跳转到示例文章 URL。也可以通过 ?data=https://example.com/garden.json 指向任意允许 CORS 的远程输出。
+
+## 用 zylatent.com 练手
+
+仓库已经包含一份由 zylatent.com 当前公开博客生成的 examples/zylatent-garden.json，并作为 frontend/ 的默认数据。它包含文章标题、摘要、日期、标签、URL、embedding 坐标和主题簇，不把博客源码作为 Python 依赖。
+
+重新抓取并生成：
+
+    python -m pipeline.cli --website https://zylatent.com --output examples/zylatent-garden.json --cache .latent-garden/zylatent-embeddings.json --max-pages 6
+    Copy-Item examples/zylatent-garden.json frontend/garden.json -Force
+
+这个适配器只面向公开页面，抓取到的正文仅用于生成 embedding；garden.json 不保存正文。博客更新后重新运行命令即可刷新地图。
 
 生产环境可安装可选分析依赖，让 reducer 使用真正的 UMAP：
 
