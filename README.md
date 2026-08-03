@@ -26,7 +26,7 @@ zylatent.com 是这个项目的展示示例，也是仓库名字的来源。它�
 
     python -m http.server 8000 --directory frontend
 
-浏览器访问 http://localhost:8000，点击节点可以跳转到示例文章 URL。也可以通过 ?data=https://example.com/garden.json 指向任意允许 CORS 的远程输出。
+浏览器访问 http://localhost:8000，点击节点可以跳转到示例文章 URL；滚轮可以缩放地图，拖拽可以移动视野。也可以通过 ?data=https://example.com/garden.json 指向任意允许 CORS 的远程输出。
 
 ## 用 zylatent.com 练手
 
@@ -81,6 +81,12 @@ JSON 可以是单个对象、对象数组，或 { "items": [...] }。常用字�
     }
 
 这使得博客无需知道 embedding、UMAP 或聚类实现，只需展示输出。
+
+Embedding 缓存的 key 同时包含内容 hash、provider、模型和向量维度，避免切换模型后误用旧向量；缓存文件使用临时文件原子替换写入。
+
+## 持续集成
+
+GitHub Actions 会在 main 分支 push 和 pull request 上运行 Python 测试、编译检查和前端 JavaScript 语法检查。
 
 ## 远程仓库
 

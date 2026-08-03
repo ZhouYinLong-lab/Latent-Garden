@@ -39,6 +39,7 @@ input { width: 100%; border: 0; outline: 0; background: transparent; color: var(
 .legend i { display: inline-block; width: 7px; height: 7px; margin-right: 5px; border-radius: 50%; }
 .legend button.active { color: var(--ink); border-color: var(--accent-dark); background: rgba(164,185,111,.22); }
 #reset { margin-left: 8px; }
+.hint { color: var(--muted); font-size: 11px; white-space: nowrap; }
 .map-card { position: relative; min-height: min(72vh, 760px); margin-top: 22px; overflow: hidden; border: 1px solid rgba(199,205,180,.9); border-radius: 22px; background: linear-gradient(135deg, rgba(247,243,226,.78), rgba(224,231,207,.60)); box-shadow: 0 18px 50px var(--shadow); backdrop-filter: blur(10px); }
 .map-card::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .55; background: radial-gradient(ellipse at 14% 15%, rgba(150,171,117,.17), transparent 22%), radial-gradient(ellipse at 88% 76%, rgba(205,185,139,.20), transparent 25%), repeating-linear-gradient(90deg, rgba(255,255,255,.12) 0 1px, transparent 1px 7px); }
 #map { display: block; width: 100%; min-height: min(72vh, 760px); cursor: grab; }
@@ -49,7 +50,8 @@ input { width: 100%; border: 0; outline: 0; background: transparent; color: var(
 .node.dim { opacity: .16; }
 .node circle { stroke: var(--paper); stroke-width: .008; }
 .node:hover circle { stroke: #566946; stroke-width: .012; filter: url(#glow); }
-.node text { pointer-events: none; fill: var(--ink); font-size: .035px; paint-order: stroke; stroke: rgba(247,243,226,.95); stroke-width: .012px; }
+.node text { pointer-events: none; fill: var(--ink); font-size: .035px; opacity: 0; paint-order: stroke; stroke: rgba(247,243,226,.95); stroke-width: .012px; transition: opacity .18s ease; }
+.node:hover text, .node.show-label text { opacity: .92; }
 .detail { position: absolute; right: 18px; bottom: 18px; width: min(340px, calc(100% - 36px)); padding: 24px; border: 1px solid #abb995; border-radius: 16px; background: rgba(247,243,226,.91); backdrop-filter: blur(14px); box-shadow: 0 16px 50px var(--shadow); }
 .detail h2 { margin: 4px 0 10px; color: #59654b; font: 700 28px/1.05 Georgia, "Songti SC", serif; }
 .detail p:not(.eyebrow) { color: var(--muted); line-height: 1.55; font-size: 13px; }
@@ -65,6 +67,7 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding-top: 
   .toolbar { flex-wrap: wrap; padding: 12px 0; }
   .legend { order: 3; width: 100%; margin-left: 0; }
   #reset { margin-left: auto; }
+  .hint { display: none; }
   footer { display: block; }
   footer span { display: block; margin-top: 6px; }
 }

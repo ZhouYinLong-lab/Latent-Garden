@@ -14,6 +14,10 @@ class HashEmbeddingProvider:
     def __init__(self, dimensions: int = 64) -> None:
         self.dimensions = dimensions
 
+    @property
+    def cache_key(self) -> str:
+        return f"{self.name}:{self.dimensions}"
+
     def embed(self, texts: Sequence[str]) -> list[list[float]]:
         return [self._embed_one(text) for text in texts]
 

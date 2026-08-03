@@ -15,6 +15,11 @@ class UMAPReducer:
     def fit_transform(self, vectors: Sequence[Sequence[float]]) -> list[list[float]]:
         if not vectors:
             return []
+        dimensions = len(vectors[0])
+        if dimensions == 0 or any(len(vector) != dimensions for vector in vectors):
+            raise ValueError("All embedding vectors must have the same non-zero dimensions")
+        if any(not math.isfinite(float(value)) for vector in vectors for value in vector):
+            raise ValueError("Embedding vectors must contain finite numbers")
         if len(vectors) < 3:
             return _fallback_projection(vectors)
         try:

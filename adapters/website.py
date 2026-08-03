@@ -3,6 +3,7 @@ from __future__ import annotations
 from html.parser import HTMLParser
 from pathlib import PurePosixPath
 import re
+import warnings
 from urllib.parse import quote, unquote, urljoin, urlparse
 from urllib.request import Request, urlopen
 
@@ -150,12 +151,21 @@ def _item_from_page(url: str, html: str) -> ContentItem:
 
 def load_website(base_url: str, max_pages: int = 6) -> list[ContentItem]:
     """Load public article metadata and text from a blog with Astro-style routes."""
+    parsed_base = urlparse(base_url)
+    if parsed_base.scheme not in {"http", "https"} or not parsed_base.netloc:
+        raise ValueError("Website source must be an http(s) URL")
+    if max_pages < 1:
+        raise ValueError("max_pages must be at least 1")
     items = []
+    failures = 0
     for article_url in discover_article_paths(base_url, max_pages=max_pages):
         try:
             items.append(_item_from_page(article_url, _fetch(article_url)))
-        except OSError:
+        except (OSError, UnicodeError):
+            failures += 1
             continue
     if not items:
         raise ValueError(f"No public article pages found at {base_url}")
+    if failures:
+        warnings.warn(f"Skipped {failures} article page(s) that could not be fetched", RuntimeWarning, stacklevel=2)
     return sorted(items, key=lambda item: item.date or "", reverse=True)

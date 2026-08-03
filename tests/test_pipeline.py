@@ -64,6 +64,27 @@ class PipelineTests(unittest.TestCase):
             build_garden(items, provider=provider, cache=EmbeddingCache(cache_path))
             self.assertEqual(provider.calls, 1)
 
+    def test_cache_key_includes_embedding_dimensions(self):
+        items = [ContentItem(id="a", title="A", body="same")]
+        with tempfile.TemporaryDirectory() as directory:
+            cache_path = Path(directory) / "embeddings.json"
+            first = CountingProvider()
+            build_garden(items, provider=first, cache=EmbeddingCache(cache_path))
+            second = CountingProvider()
+            second.dimensions = 16
+            build_garden(items, provider=second, cache=EmbeddingCache(cache_path))
+            self.assertEqual(first.calls, 1)
+            self.assertEqual(second.calls, 1)
+
+    def test_corrupt_cache_is_ignored_and_rebuilt(self):
+        items = [ContentItem(id="a", title="A", body="same")]
+        with tempfile.TemporaryDirectory() as directory:
+            cache_path = Path(directory) / "embeddings.json"
+            cache_path.write_text("{not-json", encoding="utf-8")
+            provider = CountingProvider()
+            build_garden(items, provider=provider, cache=EmbeddingCache(cache_path))
+            self.assertEqual(provider.calls, 1)
+
     def test_output_contract_is_frontend_ready(self):
         items = [ContentItem(id="a", title="A", body="text", url="https://example.com")]
         with tempfile.TemporaryDirectory() as directory:

@@ -18,6 +18,10 @@ class OpenAIEmbeddingProvider:
         if not self.api_key:
             raise ValueError("OPENAI_API_KEY is required for OpenAIEmbeddingProvider")
 
+    @property
+    def cache_key(self) -> str:
+        return f"{self.name}:{self.model}:{self.dimensions}"
+
     def embed(self, texts: Sequence[str]) -> list[list[float]]:
         request = Request(
             "https://api.openai.com/v1/embeddings",
