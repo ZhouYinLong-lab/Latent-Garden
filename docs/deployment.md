@@ -4,7 +4,7 @@
 
 The simplest deployment is to publish frontend/ on any static host. Copy a freshly generated garden.json into that directory:
 
-    python -m pipeline.cli --website https://zylatent.com --output frontend/garden.json
+    python -m pipeline.cli --input ./content --output frontend/garden.json
 
 Use the frontend directly or embed it with:
 
@@ -40,9 +40,9 @@ The service exposes:
 
 The API serves the existing garden file by default. To enable refresh from the public blog, configure:
 
-    LATENT_GARDEN_WEBSITE=https://zylatent.com
+    LATENT_GARDEN_WEBSITE=https://example.org
     LATENT_GARDEN_REFRESH_TOKEN=replace-me
-    LATENT_GARDEN_CORS_ORIGINS=https://zylatent.com
+    LATENT_GARDEN_CORS_ORIGINS=https://example.org
 
 Then refresh with:
 
@@ -63,4 +63,4 @@ To use real UMAP in the container, change the install line to install both API a
 
 ## Scheduled refresh
 
-The repository includes .github/workflows/refresh-garden.yml. It runs weekly and can also be started manually from GitHub Actions. It rebuilds the public zylatent.com map with the analysis extra and commits only when the generated JSON changes.
+The repository includes `.github/workflows/refresh-garden.yml` as a case-specific example. It runs weekly and can also be started manually from GitHub Actions. It rebuilds the public zylatent.com full and Engineering views with `examples/zylatent/config.json`, then commits only when generated JSON changes. Forks can remove this workflow or replace the source/profile with their own case.

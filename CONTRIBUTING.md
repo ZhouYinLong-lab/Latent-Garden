@@ -33,7 +33,7 @@ node --check frontend/app.js
 git diff --check
 ```
 
-如果修改了生成流程，请同时检查 `examples/zylatent-garden.json` 和 `frontend/garden.json` 的输出契约。不要提交 API key、`.env` 或本地 `.latent-garden/` 缓存。
+如果修改了生成流程，请同时检查 `examples/zylatent/` 和 `frontend/` 中完整、Engineering 两个视图的输出契约。不要提交 API key、`.env` 或本地 `.latent-garden/` 缓存。
 
 ## 代码约定
 
@@ -53,7 +53,7 @@ git diff --check
 
 ## 内容与数据来源
 
-`examples/zylatent-garden.json` 是来自 zylatent.com 公开页面的示例快照。提交其他真实数据前，请确认拥有使用和再分发相关内容的权限，并优先提交脱敏的最小样例。
+`examples/zylatent/` 是来自 zylatent.com 公开页面的案例配置与示例快照。提交其他真实数据前，请确认拥有使用和再分发相关内容的权限，并优先提交脱敏的最小样例。
 
 ## 行为准则
 

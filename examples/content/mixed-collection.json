@@ -1,0 +1,32 @@
+[
+  {
+    "id": "local-research-assistant",
+    "title": "Local-first research assistant",
+    "description": "A small project that indexes private notes locally and exposes inspectable retrieval steps.",
+    "content": "The project combines local embeddings, a content-addressed cache, and a transparent retrieval log so every answer can be traced back to a source note.",
+    "tags": ["AI", "local-first", "retrieval"],
+    "date": "2026-05-20",
+    "url": "https://example.org/projects/local-research-assistant",
+    "type": "project"
+  },
+  {
+    "id": "garden-parser-repository",
+    "title": "garden-parser",
+    "description": "An example repository that normalizes Markdown, JSON, and feed entries into one content contract.",
+    "content": "The repository focuses on adapters, deterministic tests, and a deliberately small public API.",
+    "tags": ["Python", "parser", "open-source"],
+    "date": "2026-05-08",
+    "url": "https://github.com/example/garden-parser",
+    "type": "repository"
+  },
+  {
+    "id": "after-the-index",
+    "title": "After the index",
+    "description": "A short poem about finding an unexpected path between two distant notes.",
+    "content": "After the index closes, a small path remains between the rain and an unfinished machine.",
+    "tags": ["poetry", "memory"],
+    "date": "2026-04-17",
+    "url": "https://example.org/poems/after-the-index",
+    "type": "poem"
+  }
+]

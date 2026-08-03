@@ -4,7 +4,7 @@ title: Thinking in gardens
 description: A personal knowledge garden grows through links, questions, and patient revisiting.
 tags: [writing, knowledge]
 date: 2026-01-18
-url: https://zylatent.com/notes/thinking-in-gardens
+url: https://example.org/articles/thinking-in-gardens
 type: article
 ---
 

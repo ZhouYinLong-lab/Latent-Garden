@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "generated_at": "2026-08-03T10:10:12.744839+00:00",
+  "generated_at": "2026-08-03T13:30:02.399598+00:00",
   "dimensions": 64,
   "reducer": "umap",
   "clusterer": "kmeans",
@@ -14,12 +14,12 @@
         "systems"
       ],
       "date": "2026-02-02",
-      "url": "https://zylatent.com/essays/building-with-agents",
+      "url": "https://example.org/essays/building-with-agents",
       "content_type": "essay",
-      "x": -0.92,
-      "y": -0.16910640767658347,
+      "x": -0.13333950956351603,
+      "y": -0.7553279922835688,
       "cluster_id": 0,
-      "content_hash": "2c4515d3ae3202239226139581f7248e57d7cbcbc42f8da4a4b79e38f15a8e5c"
+      "content_hash": "bfd36a505df5965224ebbcee753ed67e1dafed4ce36b2387c59d8e3ad9cb8b1e"
     },
     {
       "id": "quiet-tools",
@@ -30,12 +30,12 @@
         "attention"
       ],
       "date": "2026-03-12",
-      "url": "https://zylatent.com/notes/quiet-tools",
+      "url": "https://example.org/notes/quiet-tools",
       "content_type": "note",
-      "x": 0.20059319502029138,
-      "y": -0.92,
+      "x": 0.011745579421862162,
+      "y": 0.6073130266269625,
       "cluster_id": 0,
-      "content_hash": "2f2646c35f52033423a0d395a200fd4eda7783bd1d2a6df9edaee951a597770c"
+      "content_hash": "95912f1a7596af861a00014f557cbd25f9e847f5eaf4ecb72e8d1e96524f428e"
     },
     {
       "id": "maps-are-questions",
@@ -46,12 +46,62 @@
         "design"
       ],
       "date": "2026-04-05",
-      "url": "https://zylatent.com/notes/maps-are-questions",
+      "url": "https://example.org/notes/maps-are-questions",
       "content_type": "note",
-      "x": 0.92,
-      "y": 0.18008032476871694,
+      "x": 0.7708091308868738,
+      "y": 0.92,
       "cluster_id": 1,
-      "content_hash": "f51561973879a9272c0c768d52fdea0baa1883eb3768a01c8b3b1037cf9b5add"
+      "content_hash": "7e6782cd0388106dab2ff44e2cb35bea4c91403e181dc0c7c56a38d2aa0976d4"
+    },
+    {
+      "id": "local-research-assistant",
+      "title": "Local-first research assistant",
+      "description": "A small project that indexes private notes locally and exposes inspectable retrieval steps.",
+      "tags": [
+        "AI",
+        "local-first",
+        "retrieval"
+      ],
+      "date": "2026-05-20",
+      "url": "https://example.org/projects/local-research-assistant",
+      "content_type": "project",
+      "x": 0.7357609928490546,
+      "y": -0.1582291895612159,
+      "cluster_id": 1,
+      "content_hash": "3c95abad4237af73ce7f05ea157d9bf0a036b61a43fdd309b5b18ab70ae00b53"
+    },
+    {
+      "id": "garden-parser-repository",
+      "title": "garden-parser",
+      "description": "An example repository that normalizes Markdown, JSON, and feed entries into one content contract.",
+      "tags": [
+        "Python",
+        "parser",
+        "open-source"
+      ],
+      "date": "2026-05-08",
+      "url": "https://github.com/example/garden-parser",
+      "content_type": "repository",
+      "x": -0.92,
+      "y": 0.04113998214068171,
+      "cluster_id": 0,
+      "content_hash": "2b0e938bdf56c5f8b3ed15cf59d3ba019f3d1cd6a8c30ca813255b720edfdee4"
+    },
+    {
+      "id": "after-the-index",
+      "title": "After the index",
+      "description": "A short poem about finding an unexpected path between two distant notes.",
+      "tags": [
+        "poetry",
+        "memory"
+      ],
+      "date": "2026-04-17",
+      "url": "https://example.org/poems/after-the-index",
+      "content_type": "poem",
+      "x": -0.8705518301246707,
+      "y": -0.92,
+      "cluster_id": 0,
+      "content_hash": "55003bafaf844758f76b7c6af062e17570eda7d9414b1d4768cf64677b96e157"
     },
     {
       "id": "thinking-in-gardens",
@@ -62,12 +112,12 @@
         "knowledge"
       ],
       "date": "2026-01-18",
-      "url": "https://zylatent.com/notes/thinking-in-gardens",
+      "url": "https://example.org/articles/thinking-in-gardens",
       "content_type": "article",
-      "x": -0.03383108048742589,
-      "y": 0.92,
+      "x": 0.92,
+      "y": -0.8780015146510463,
       "cluster_id": 1,
-      "content_hash": "f0c20dfbeb9dbf31bd4fd5f1c00044ee2634e19080e4d66b903c4de2ee9c7054"
+      "content_hash": "d35ceaf3b42c129706fa45cd473b7b2ea3ccbeed9d7f414027b0268403fd7eb6"
     }
   ],
   "clusters": [
@@ -76,7 +126,9 @@
       "label": "software",
       "node_ids": [
         "building-with-agents",
-        "quiet-tools"
+        "quiet-tools",
+        "garden-parser-repository",
+        "after-the-index"
       ],
       "color": "#a8bd72"
     },
@@ -85,6 +137,7 @@
       "label": "knowledge",
       "node_ids": [
         "maps-are-questions",
+        "local-research-assistant",
         "thinking-in-gardens"
       ],
       "color": "#d5a36c"
@@ -92,7 +145,16 @@
   ],
   "metadata": {
     "provider": "hash",
-    "item_count": 4,
-    "cluster_count": 2
+    "item_count": 7,
+    "cluster_count": 2,
+    "reducer_config": {
+      "n_neighbors": 15,
+      "min_dist": 0.1,
+      "random_state": 42
+    },
+    "clusterer_config": {
+      "clusters": null,
+      "iterations": 30
+    }
   }
 }
