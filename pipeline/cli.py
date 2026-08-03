@@ -4,7 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
-from adapters import load_content, load_rss, load_website
+from adapters import load_content, load_rss, load_website, load_website_config
 from providers.hash_provider import HashEmbeddingProvider
 from providers.openai_provider import OpenAIEmbeddingProvider
 from .cache import EmbeddingCache
@@ -24,6 +24,7 @@ def main() -> None:
     parser.add_argument("--cache", default=".latent-garden/embeddings.json")
     parser.add_argument("--openai-model", default="text-embedding-3-small")
     parser.add_argument("--max-pages", type=int, default=6, help="Maximum /blog/N archive pages for --website")
+    parser.add_argument("--website-config", help="Optional JSON cleanup/profile config for --website")
     parser.add_argument("--umap-neighbors", type=int, default=15)
     parser.add_argument("--umap-min-dist", type=float, default=0.1)
     parser.add_argument("--clusters", type=int, default=None)
@@ -32,7 +33,8 @@ def main() -> None:
     if args.input:
         items = load_content(args.input)
     elif args.website:
-        items = load_website(args.website, max_pages=args.max_pages)
+        website_config = load_website_config(args.website_config) if args.website_config else None
+        items = load_website(args.website, max_pages=args.max_pages, config=website_config)
     else:
         items = load_rss(args.rss)
     provider = HashEmbeddingProvider() if args.provider == "hash" else OpenAIEmbeddingProvider(model=args.openai_model)

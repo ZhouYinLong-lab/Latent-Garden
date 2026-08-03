@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 from adapters import load_content
-from adapters.website import _item_from_page, discover_article_paths
+from adapters.website import WebsiteAdapterConfig, _item_from_page, discover_article_paths
 from adapters.rss import load_rss_text
 from core.models import ContentItem
 from pipeline.cache import EmbeddingCache
@@ -73,10 +73,56 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(item.date, "2026-08-03")
         self.assertEqual(item.tags, ["Python"])
 
+    def test_website_adapter_cleans_site_prefixes_components_and_short_descriptions(self):
+        html = """
+        <html><head><meta name="description" content="太短"></head><body>
+        <nav><h1>导航标题</h1><p>导航组件文本</p></nav>
+        <main><article>
+          <h1>\u200b【每日诗语】<em>兰波：地狱之夜</em></h1>
+          <p>短句</p>
+          <p>这是足够长的正文摘要，不应带有任何 HTML 标签或组件文本。</p>
+          <p>这是足够长的正文摘要，不应带有任何 HTML 标签或组件文本。</p>
+          <p>🔗 查看源代码 (GitHub) ↗</p>
+          <div class="comments"><p>正在加载评论...</p></div>
+        </article></main>
+        <footer><p>版权所有</p></footer>
+        </body></html>
+        """
+        config = WebsiteAdapterConfig(title_prefixes=("【每日诗语】",), min_description_length=24)
+
+        item = _item_from_page("https://example.com/blog/rimbaud", html, config=config)
+
+        self.assertEqual(item.title, "兰波：地狱之夜")
+        self.assertGreaterEqual(len(item.description), 24)
+        self.assertNotIn("<", item.description)
+        self.assertNotIn("正在加载评论", item.body)
+        self.assertNotIn("版权所有", item.body)
+        self.assertNotIn("查看源代码", item.body)
+        self.assertEqual(item.body.count("这是足够长的正文摘要"), 1)
+
+    def test_website_adapter_rejects_content_without_a_useful_description(self):
+        html = "<html><body><h1>标题</h1><p>太短</p></body></html>"
+        config = WebsiteAdapterConfig(min_description_length=20)
+        with self.assertRaisesRegex(ValueError, "description"):
+            _item_from_page("https://example.com/blog/short", html, config=config)
+
+    def test_website_adapter_accepts_case_description_override(self):
+        html = "<html><body><h1>互动实验</h1><p>点击开始</p><p>查看源代码 (GitHub)</p></body></html>"
+        override = "一个由案例配置补充的完整互动实验摘要，用来替代页面组件文本。"
+        config = WebsiteAdapterConfig(
+            min_description_length=20,
+            description_overrides=(("interactive", override),),
+        )
+
+        item = _item_from_page("https://example.com/blog/interactive", html, config=config)
+
+        self.assertEqual(item.description, override)
+        self.assertNotIn("查看源代码", item.body)
+
     def test_markdown_and_json_are_normalized(self):
         items = load_content("examples/content")
-        self.assertEqual(len(items), 4)
-        self.assertIn("article", {item.content_type for item in items})
+        self.assertEqual(len(items), 7)
+        self.assertTrue({"article", "project", "note", "repository", "poem"}.issubset({item.content_type for item in items}))
         self.assertTrue(all(item.title for item in items))
 
     def test_hash_cache_prevents_duplicate_embedding(self):
