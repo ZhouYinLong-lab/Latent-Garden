@@ -60,10 +60,17 @@
             <p>颜色代表博客策展主题。选择一个主题，地图会留下相关内容。</p>
           </div>
           <div id="legend" class="legend"></div>
-          <div class="topic-footnote">
-            <span class="footnote-line"></span>
-            <span>坐标来自 embedding 的二维投影，方向本身没有固定含义。</span>
-          </div>
+          <details class="method-card">
+            <summary><span>如何衡量？</span><small id="method-summary">载入参数…</small></summary>
+            <div class="method-body">
+              <p><strong>输入</strong>　标题、摘要、正文与标签共同生成向量。</p>
+              <p><strong>位置</strong>　UMAP 保留局部邻域后压到二维；越近通常越相关，但方向、同心圆和绝对距离没有固定数值含义。</p>
+              <p><strong>连线</strong>　连接投影平面里最近的 1–2 篇文章，过远的第二近邻会被省略。</p>
+              <p><strong>主题</strong>　<span id="topic-method"></span></p>
+              <div id="method-params" class="method-params"></div>
+              <p id="provider-note" class="method-note"></p>
+            </div>
+          </details>
         </aside>
       </section>
 

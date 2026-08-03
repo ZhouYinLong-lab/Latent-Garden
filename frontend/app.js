@@ -36,6 +36,27 @@ function safeExternalUrl(value) {
   }
 }
 
+function compactLabel(value, maxCharacters) {
+  const characters = Array.from(String(value || ""));
+  if (characters.length <= maxCharacters) return characters.join("");
+  return characters.slice(0, Math.max(1, maxCharacters - 1)).join("") + "…";
+}
+
+function labelLayout(title, x) {
+  const mapEdge = .88;
+  const gap = .045;
+  const rightSpace = mapEdge - x - gap;
+  const leftSpace = x - gap + mapEdge;
+  const placeRight = rightSpace >= leftSpace;
+  const available = Math.max(.2, placeRight ? rightSpace : leftSpace);
+  const maxCharacters = Math.max(5, Math.min(28, Math.floor(available / .04)));
+  return {
+    anchor: placeRight ? "start" : "end",
+    offset: placeRight ? gap : -gap,
+    text: compactLabel(title, maxCharacters),
+  };
+}
+
 function renderGrid() {
   const rings = [.18, .36, .54, .72, .88];
   const spokes = Array.from({ length: 12 }, (_, index) => {
@@ -88,6 +109,7 @@ function render() {
   document.querySelector("#item-count").textContent = nodes.length + " 篇文字";
   document.querySelector("#cluster-count").textContent = clusters.length + " 个主题";
   document.querySelector("#generated").textContent = "生成于 " + new Date(state.garden.generated_at).toLocaleDateString();
+  renderMethod();
   document.querySelector("#legend").innerHTML = clusters.map((cluster, index) =>
     '<button type="button" aria-pressed="' + (state.cluster === cluster.id) + '" data-cluster="' + Number(cluster.id) + '" class="' +
     (state.cluster === cluster.id ? "active" : "") + '"><i style="background:' +
@@ -99,6 +121,29 @@ function render() {
     render();
   }));
   renderGraph();
+}
+
+function renderMethod() {
+  const garden = state.garden;
+  const metadata = garden.metadata || {};
+  const reducerConfig = metadata.reducer_config || {};
+  const provider = String(metadata.provider || "unknown");
+  const providerLabel = provider === "hash" ? "Hash（演示）" : provider;
+  const reducerLabel = String(garden.reducer || "projection").toUpperCase();
+  document.querySelector("#method-summary").textContent = providerLabel + " " + garden.dimensions + "D → " + reducerLabel + " 2D";
+  const parameters = [
+    "向量 " + garden.dimensions + "D",
+    reducerConfig.n_neighbors != null ? "邻域 " + reducerConfig.n_neighbors : null,
+    reducerConfig.min_dist != null ? "最小距 " + reducerConfig.min_dist : null,
+    "连线 1–2 近邻",
+  ].filter(Boolean);
+  document.querySelector("#method-params").innerHTML = parameters.map(value => "<span>" + esc(value) + "</span>").join("");
+  document.querySelector("#provider-note").textContent = provider === "hash"
+    ? "当前 Hash provider 侧重零密钥、可复现演示；接入真实 embedding provider 后，语义相似度会更可靠。"
+    : "当前地图使用 " + provider + " embedding；二维距离是高维关系的近似，不是绝对分数。";
+  document.querySelector("#topic-method").textContent = metadata.topic_mode === "curated"
+    ? "颜色来自博客关键词策展，不代表坐标轴数值。"
+    : "颜色来自 " + String(garden.clusterer || "聚类算法") + " 分组。";
 }
 
 function nodeVisibility(node) {
@@ -172,9 +217,9 @@ function renderNodes() {
     const { matches, visibleCluster } = nodeVisibility(node);
     const x = safeCoordinate(node.x);
     const y = safeCoordinate(node.y);
-    const label = x > 0.65
-      ? '<text x="-0.045" y=".012" text-anchor="end">' + esc(node.title) + "</text>"
-      : '<text x=".045" y=".012">' + esc(node.title) + "</text>";
+    const layout = labelLayout(node.title, x);
+    const label = '<text x="' + layout.offset + '" y=".012" text-anchor="' + layout.anchor + '">' +
+      esc(layout.text) + "</text>";
     const showLabel = Boolean(state.query) && matches && visibleCluster;
     return '<g class="node-label' + (showLabel ? " show-label" : "") + '" transform="translate(' + x + " " +
       (-y) + ')" data-id="' + esc(node.id) + '">' + label + "</g>";
