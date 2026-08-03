@@ -28,7 +28,7 @@ python -m http.server 8000 --directory frontend
 
 ```bash
 python -m unittest discover -v
-python -m compileall -q api core pipeline providers adapters tests
+python -m compileall -q api core pipeline providers adapters scripts tests
 node --check frontend/app.js
 git diff --check
 ```

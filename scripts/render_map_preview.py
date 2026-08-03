@@ -68,6 +68,7 @@ def render(garden: dict) -> str:
         "<defs>",
         '<linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f4e5"/><stop offset="1" stop-color="#e0e7cf"/></linearGradient>',
         '<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#697653" flood-opacity=".18"/></filter>',
+        f'<clipPath id="map-clip"><rect x="{MAP_LEFT}" y="{MAP_TOP}" width="{MAP_WIDTH}" height="{MAP_HEIGHT}" rx="18"/></clipPath>',
         "</defs>",
         '<rect width="1200" height="720" rx="26" fill="#e8ead8"/>',
         '<rect x="20" y="20" width="1160" height="680" rx="22" fill="url(#paper)" stroke="#c7cdb4" filter="url(#shadow)"/>',
@@ -76,26 +77,29 @@ def render(garden: dict) -> str:
         f'<text x="1110" y="72" text-anchor="end" fill="#718650" font-family="Segoe UI, sans-serif" font-size="13">{len(nodes)} nodes · {cluster_count} clusters</text>',
         f'<text x="1110" y="98" text-anchor="end" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">UMAP · {escape(metadata.get("provider", garden.get("reducer", "embedding")))} provider</text>',
         f'<rect x="{MAP_LEFT}" y="{MAP_TOP}" width="{MAP_WIDTH}" height="{MAP_HEIGHT}" rx="18" fill="#f7f3e2" fill-opacity=".64" stroke="#c7cdb4"/>',
+        '<g clip-path="url(#map-clip)">',
     ]
 
     cx = MAP_LEFT + MAP_WIDTH / 2
     cy = MAP_TOP + MAP_HEIGHT / 2
-    for radius in (100, 185, 270):
-        parts.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{radius}" fill="none" stroke="#87986a" stroke-opacity=".18" stroke-width="1"/>')
+    for rx, ry in ((90, 54), (180, 108), (270, 162), (370, 222)):
+        parts.append(f'<ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="{rx}" ry="{ry}" fill="none" stroke="#87986a" stroke-opacity=".18" stroke-width="1"/>')
     parts.extend(
         [
-            f'<path d="M {MAP_LEFT + MAP_WIDTH / 2:.1f} {MAP_TOP + 18} V {MAP_TOP + MAP_HEIGHT - 18}" stroke="#87986a" stroke-opacity=".12"/>',
-            f'<path d="M {MAP_LEFT + 18} {MAP_TOP + MAP_HEIGHT / 2:.1f} H {MAP_LEFT + MAP_WIDTH - 18}" stroke="#87986a" stroke-opacity=".12"/>',
+            f'<path d="M {cx:.1f} {MAP_TOP + 18} V {MAP_TOP + MAP_HEIGHT - 18}" stroke="#87986a" stroke-opacity=".12"/>',
+            f'<path d="M {MAP_LEFT + 18} {cy:.1f} H {MAP_LEFT + MAP_WIDTH - 18}" stroke="#87986a" stroke-opacity=".12"/>',
         ]
     )
 
     for node in nodes:
         cluster_id = node.get("cluster_id", 0)
         fill = colors.get(cluster_id, PALETTE[int(cluster_id) % len(PALETTE)] if isinstance(cluster_id, int) else PALETTE[0])
-        x = map_point(node.get("x"), MAP_LEFT, MAP_WIDTH)
-        y = MAP_TOP + MAP_HEIGHT - map_point(node.get("y"), 0, MAP_HEIGHT)
+        x = map_point(node.get("x"), MAP_LEFT + 28, MAP_WIDTH - 56)
+        y = MAP_TOP + MAP_HEIGHT - 28 - map_point(node.get("y"), 0, MAP_HEIGHT - 56)
         title = escape(node.get("title", node.get("id", "untitled")))
         parts.append(f'<g><title>{title}</title><circle cx="{x:.2f}" cy="{y:.2f}" r="7" fill="{fill}" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="{x:.2f}" cy="{y:.2f}" r="12" fill="none" stroke="{fill}" stroke-opacity=".18"/></g>')
+
+    parts.append('</g>')
 
     parts.extend(
         [
