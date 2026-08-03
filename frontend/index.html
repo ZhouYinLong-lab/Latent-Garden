@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Latent Garden</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">PERSONAL SEMANTIC GARDEN</p>
+          <h1>Latent Garden<span class="dot">.</span></h1>
+          <p class="intro">A small map for ideas that live close together, even when they were written far apart.</p>
+        </div>
+        <div class="meta">
+          <span id="item-count">— nodes</span>
+          <span id="cluster-count">— clusters</span>
+        </div>
+      </header>
+
+      <section class="toolbar" aria-label="Garden controls">
+        <label class="search">
+          <span>⌕</span>
+          <input id="search" type="search" placeholder="Search the garden…" />
+        </label>
+        <div id="legend" class="legend"></div>
+        <button id="reset" type="button">Reset view</button>
+      </section>
+
+      <section class="map-card">
+        <div id="status" class="status">Loading garden.json…</div>
+        <svg id="map" viewBox="-1.08 -1.08 2.16 2.16" role="img" aria-label="Interactive semantic map">
+          <defs>
+            <filter id="glow"><feGaussianBlur stdDeviation=".018" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+          </defs>
+          <g id="grid"></g>
+          <g id="nodes"></g>
+        </svg>
+        <aside id="detail" class="detail" hidden>
+          <button id="close-detail" class="close" type="button" aria-label="Close">×</button>
+          <p id="detail-type" class="eyebrow"></p>
+          <h2 id="detail-title"></h2>
+          <p id="detail-description"></p>
+          <div id="detail-tags" class="tags"></div>
+          <a id="detail-link" target="_blank" rel="noreferrer">Open original ↗</a>
+        </aside>
+      </section>
+
+      <footer>
+        <span>Demo content from <a href="https://zylatent.com" target="_blank" rel="noreferrer">zylatent.com</a></span>
+        <span id="generated"></span>
+      </footer>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

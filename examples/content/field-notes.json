@@ -1,0 +1,22 @@
+[
+  {
+    "id": "quiet-tools",
+    "title": "Quiet tools",
+    "description": "Tools should make attention easier to keep, not compete for it.",
+    "content": "A good tool disappears into the rhythm of work. Its strongest feature may be the absence of interruption.",
+    "tags": ["design", "attention"],
+    "date": "2026-03-12",
+    "url": "https://zylatent.com/notes/quiet-tools",
+    "type": "note"
+  },
+  {
+    "id": "maps-are-questions",
+    "title": "Maps are questions",
+    "description": "A semantic map is useful when it helps us ask what belongs together.",
+    "content": "Coordinates are not the meaning of a collection. They are a prompt to look again, compare distant ideas, and make a new connection.",
+    "tags": ["knowledge", "design"],
+    "date": "2026-04-05",
+    "url": "https://zylatent.com/notes/maps-are-questions",
+    "type": "note"
+  }
+]
