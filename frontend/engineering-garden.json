@@ -1,10 +1,29 @@
 {
   "version": "0.1",
-  "generated_at": "2026-08-10T04:09:29.596502+00:00",
+  "generated_at": "2026-08-17T03:15:15.299419+00:00",
   "dimensions": 64,
   "reducer": "umap",
   "clusterer": "curated-keywords",
   "nodes": [
+    {
+      "id": "ohmystyle视觉风格工程",
+      "title": "我为什么开始做 OhMyStyle：把“风格”变成可复用的工程对象",
+      "description": "从寒柳别苑的背景图开始，我尝试把一句“保持原来的画风”拆成可追溯、可组合、可校验的视觉风格系统。",
+      "tags": [
+        "图像生成",
+        "视觉风格",
+        "Prompt 编译",
+        "开源",
+        "AI 工具"
+      ],
+      "date": "2026-08-11",
+      "url": "https://zylatent.com/blog/ohmystyle%E8%A7%86%E8%A7%89%E9%A3%8E%E6%A0%BC%E5%B7%A5%E7%A8%8B",
+      "content_type": "article",
+      "x": 0.5132269685413261,
+      "y": -0.12484206042525248,
+      "cluster_id": 1,
+      "content_hash": "554efc6a2477ce9ff36467ec38cff864a6fba6874b8758e1efc4652d4d16f867"
+    },
     {
       "id": "五子棋搜索实验",
       "title": "从五子棋作业到搜索实验：用第五章的方法拆开一个 Agent",
@@ -20,8 +39,8 @@
       "date": "2026-07-31",
       "url": "https://zylatent.com/blog/%E4%BA%94%E5%AD%90%E6%A3%8B%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C",
       "content_type": "article",
-      "x": 0.26412182361441194,
-      "y": 0.170164345775066,
+      "x": -0.33286334618645774,
+      "y": 0.44894835886290985,
       "cluster_id": 0,
       "content_hash": "55899c882fdcecc825fe3fdea3c5a82937d9013e1c9a9b74b4c3eb8c47c73fb6"
     },
@@ -39,8 +58,8 @@
       "date": "2026-07-30",
       "url": "https://zylatent.com/blog/%E6%88%91%E5%92%8C%E5%9F%83%E9%9A%86%E9%A9%AC%E6%96%AF%E5%85%8B%E4%B9%8B%E9%97%B4%E7%9C%9F%E7%9A%84%E5%8F%AA%E9%9A%94%E4%BA%94%E4%B8%AA%E4%BA%BA%E5%90%97",
       "content_type": "article",
-      "x": 0.09876612956650799,
-      "y": 0.07580001011382287,
+      "x": -0.3317106037144085,
+      "y": 0.6591040065139876,
       "cluster_id": 0,
       "content_hash": "6d9b04ac36b78e2b85b80058855d71893f282581a15bf9259d6f18f13d15a28d"
     },
@@ -58,8 +77,8 @@
       "date": "2026-07-29",
       "url": "https://zylatent.com/blog/fastapi-basics",
       "content_type": "article",
-      "x": -0.4872820011699661,
-      "y": 0.6749774371380727,
+      "x": 0.6985857114385087,
+      "y": 0.5419123348277816,
       "cluster_id": 1,
       "content_hash": "9650dedd7a9d56d6964572489876140cc1346a7e4fc4937b7cb05f603de62137"
     },
@@ -77,29 +96,10 @@
       "date": "2026-07-27",
       "url": "https://zylatent.com/blog/%E5%9C%A8%E6%A6%82%E7%8E%87%E7%9A%84%E9%9B%BE%E9%87%8C%E8%A1%8C%E8%B5%B0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%B8%8Emcmc%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95",
       "content_type": "article",
-      "x": -0.7090718844543522,
-      "y": -0.12427334009767332,
+      "x": 0.3278637711621445,
+      "y": 0.21457021419496558,
       "cluster_id": 0,
       "content_hash": "8270e48c294b5a11752475efcb731505eff6db16cb731b71ace193474a870cfe"
-    },
-    {
-      "id": "dog-littletools工具集",
-      "title": "Dog-LittleTools：九个 Bash 脚本和我不想再敲第二遍的命令",
-      "description": "9 个纯 Bash CLI 工具：GPU 选择、进程锁、Token 统计、Git 目录树、条件等待。零依赖，跨平台。",
-      "tags": [
-        "Bash",
-        "CLI",
-        "工具",
-        "自动化",
-        "Claude Code"
-      ],
-      "date": "2026-07-23",
-      "url": "https://zylatent.com/blog/dog-littletools%E5%B7%A5%E5%85%B7%E9%9B%86",
-      "content_type": "article",
-      "x": 0.1886368777743056,
-      "y": -0.30017600743577477,
-      "cluster_id": 1,
-      "content_hash": "732e151240ff2dd30900f60cdd7ac36b4e88b05bc49ae4f6de20f3dcccb7fa6c"
     },
     {
       "id": "dog-babble加密实验",
@@ -115,10 +115,29 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/dog-babble%E5%8A%A0%E5%AF%86%E5%AE%9E%E9%AA%8C",
       "content_type": "article",
-      "x": -0.10906486397653936,
-      "y": 0.627143762222872,
+      "x": 0.8495142135815704,
+      "y": 0.48104020909985856,
       "cluster_id": 2,
       "content_hash": "2f2b78b0b96f9cc2bd35cff9983ffdcc38fd78d16d4395bd5d63f23d12b12a36"
+    },
+    {
+      "id": "dog-littletools工具集",
+      "title": "Dog-LittleTools：九个 Bash 脚本和我不想再敲第二遍的命令",
+      "description": "9 个纯 Bash CLI 工具：GPU 选择、进程锁、Token 统计、Git 目录树、条件等待。零依赖，跨平台。",
+      "tags": [
+        "Bash",
+        "CLI",
+        "工具",
+        "自动化",
+        "Claude Code"
+      ],
+      "date": "2026-07-23",
+      "url": "https://zylatent.com/blog/dog-littletools%E5%B7%A5%E5%85%B7%E9%9B%86",
+      "content_type": "article",
+      "x": -0.2826607530400761,
+      "y": -0.5428107204712846,
+      "cluster_id": 1,
+      "content_hash": "732e151240ff2dd30900f60cdd7ac36b4e88b05bc49ae4f6de20f3dcccb7fa6c"
     },
     {
       "id": "miniarena自走棋",
@@ -134,8 +153,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/miniarena%E8%87%AA%E8%B5%B0%E6%A3%8B",
       "content_type": "article",
-      "x": 0.3244661614978973,
-      "y": -0.08461437204985456,
+      "x": -0.684755029014919,
+      "y": 0.48117190961304235,
       "cluster_id": 2,
       "content_hash": "7c407e4bda8588e805d3a5b0249a0ffa1ce573c9cf7d5070d9904679198ad6c7"
     },
@@ -153,8 +172,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/nannahelper%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3",
       "content_type": "article",
-      "x": -0.5068811261647507,
-      "y": -0.3593755887312018,
+      "x": 0.043123791812542,
+      "y": -0.5502681382516342,
       "cluster_id": 1,
       "content_hash": "ff1813ad80cc89715e1557c4d77a25416eb63f4d4683133a3c60ac95efacb6a0"
     },
@@ -172,8 +191,8 @@
       "date": "2026-07-03",
       "url": "https://zylatent.com/blog/dog-skills-48-claude-code%E6%8A%80%E8%83%BD%E5%BA%93",
       "content_type": "article",
-      "x": -0.622951850700745,
-      "y": -0.06230463257308538,
+      "x": 0.32850947737884695,
+      "y": 0.4883174051253253,
       "cluster_id": 1,
       "content_hash": "5ac4a7bc1675fd0ed96202603083f07fe6307c7bb43547e64b80d1960c4db125"
     },
@@ -187,8 +206,8 @@
       "date": "2026-06-22",
       "url": "https://zylatent.com/blog/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4-%E4%BB%A3%E7%A0%81%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%9B%9E%E9%A1%BE",
       "content_type": "article",
-      "x": -0.18906986945596582,
-      "y": 0.4174525895328086,
+      "x": 0.350897122885654,
+      "y": 0.712324381937408,
       "cluster_id": 1,
       "content_hash": "3403ff4807e25c4bfd08dfe2f4664985e004c8ace4a71933a6fd926e7a4d8572"
     },
@@ -205,8 +224,8 @@
       "date": "2026-03-21",
       "url": "https://zylatent.com/blog/my-compile",
       "content_type": "article",
-      "x": -0.018440062227891296,
-      "y": 0.7465887325476469,
+      "x": 0.92,
+      "y": 0.23519075168772885,
       "cluster_id": 1,
       "content_hash": "27d8a8dcdaa2aa3abfc0d98636a4f429103bfa0dd11884654c7ed369805d8031"
     },
@@ -223,8 +242,8 @@
       "date": "2026-03-18",
       "url": "https://zylatent.com/blog/smartagent",
       "content_type": "article",
-      "x": 0.34447465133051713,
-      "y": 0.3624850624028634,
+      "x": 0.041262399356415846,
+      "y": 0.8082778605286075,
       "cluster_id": 2,
       "content_hash": "65bafd9806f5a2f18ddaaeba2e1d75d96fb9e7a87b9bc1af116e5e77ce1bd5f8"
     },
@@ -240,8 +259,8 @@
       "date": "2026-03-08",
       "url": "https://zylatent.com/blog/cpp-memory-ownership-raii",
       "content_type": "article",
-      "x": -0.37464738430831923,
-      "y": -0.05770746555868389,
+      "x": -0.16107682892036657,
+      "y": 0.7214602385887833,
       "cluster_id": 0,
       "content_hash": "96bcf9e69da082673acd56996b7eaabf7ba6567905e65b6aeae0828242dd7ff9"
     },
@@ -256,8 +275,8 @@
       "date": "2026-03-02",
       "url": "https://zylatent.com/blog/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3%E6%B4%BB%E6%88%90%E4%B8%80%E6%A3%B5%E6%A0%91",
       "content_type": "article",
-      "x": -0.92,
-      "y": 0.4243465710968096,
+      "x": 0.4610407751935456,
+      "y": 0.06804373854122248,
       "cluster_id": 1,
       "content_hash": "072303061a38d32a9d4287895a91ce64e54f78dc75195c7824ad97c8a31975cd"
     },
@@ -273,8 +292,8 @@
       "date": "2026-02-24",
       "url": "https://zylatent.com/blog/%E4%B8%83%E7%8E%8B%E5%9B%BD%E7%9A%84%E9%AA%91%E5%A3%AB-%E7%AC%AC%E4%B8%80%E5%AD%A3",
       "content_type": "article",
-      "x": -0.2392072854657682,
-      "y": -0.15186023389080494,
+      "x": -0.22321452872669867,
+      "y": 0.92,
       "cluster_id": 2,
       "content_hash": "f7cf46141759641f41699257b79125fda5bb4073f12ed0df3ed85ddbf3845800"
     },
@@ -288,8 +307,8 @@
       "date": "2026-02-17",
       "url": "https://zylatent.com/blog/%E4%BA%92%E5%8A%A8%E7%BD%91%E9%A1%B5-%E5%A4%9C%E7%A9%BA%E4%B8%BA%E4%BD%A0%E9%97%AA%E7%83%81",
       "content_type": "article",
-      "x": -0.3123841957504856,
-      "y": 0.08896388500006636,
+      "x": 0.1107234612419804,
+      "y": 0.4414582635116199,
       "cluster_id": 2,
       "content_hash": "1a655583c8416990e33746d27a92884205df9ea5e4a410abc0db0d75028a6f02"
     },
@@ -304,8 +323,8 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%A4%A7%E5%BA%9A%E5%89%91%E9%98%B5",
       "content_type": "article",
-      "x": -0.6147720744248306,
-      "y": 0.11349614280717801,
+      "x": 0.032833357375817496,
+      "y": 0.18996722152252887,
       "cluster_id": 2,
       "content_hash": "97c3c8a827e28cb27a55afb569ccac5f487e7ee1711fc5df99e63f65c4bd9285"
     }
@@ -326,6 +345,7 @@
       "id": 1,
       "label": "工具与开源",
       "node_ids": [
+        "ohmystyle视觉风格工程",
         "fastapi-basics",
         "dog-littletools工具集",
         "nannahelper教程文档",
@@ -352,7 +372,7 @@
   ],
   "metadata": {
     "provider": "hash",
-    "item_count": 17,
+    "item_count": 18,
     "cluster_count": 3,
     "reducer_config": {
       "n_neighbors": 15,
