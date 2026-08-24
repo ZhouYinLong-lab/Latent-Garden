@@ -1,10 +1,28 @@
 {
   "version": "0.1",
-  "generated_at": "2026-08-17T03:15:15.299419+00:00",
+  "generated_at": "2026-08-24T03:18:37.059575+00:00",
   "dimensions": 64,
   "reducer": "umap",
   "clusterer": "curated-keywords",
   "nodes": [
+    {
+      "id": "remembrance-of-things-past",
+      "title": "七夕，重走一遍上学路",
+      "description": "骑车回到初中时的家、学校和那些已经说不清的旧日片段，在一条改变了的路上重新辨认过去。",
+      "tags": [
+        "回忆",
+        "骑行",
+        "旧地重游",
+        "城市记忆"
+      ],
+      "date": "2026-08-19",
+      "url": "https://zylatent.com/blog/remembrance-of-things-past",
+      "content_type": "article",
+      "x": 0.19450554128587394,
+      "y": -0.2027806302982199,
+      "cluster_id": 4,
+      "content_hash": "46da7e8ed909e4f4a937aec9c6f794031a822719fb15816af2db51d214f133bb"
+    },
     {
       "id": "ohmystyle视觉风格工程",
       "title": "我为什么开始做 OhMyStyle：把“风格”变成可复用的工程对象",
@@ -19,8 +37,8 @@
       "date": "2026-08-11",
       "url": "https://zylatent.com/blog/ohmystyle%E8%A7%86%E8%A7%89%E9%A3%8E%E6%A0%BC%E5%B7%A5%E7%A8%8B",
       "content_type": "article",
-      "x": 0.5132269685413261,
-      "y": -0.12484206042525248,
+      "x": -0.5478207282301657,
+      "y": 0.4266346930755732,
       "cluster_id": 1,
       "content_hash": "554efc6a2477ce9ff36467ec38cff864a6fba6874b8758e1efc4652d4d16f867"
     },
@@ -38,8 +56,8 @@
       "date": "2026-08-03",
       "url": "https://zylatent.com/blog/latent-garden%E4%B8%AA%E4%BA%BA%E8%AF%AD%E4%B9%89%E8%8A%B1%E5%9B%AD",
       "content_type": "article",
-      "x": 0.4906169862808375,
-      "y": 0.6527511896543629,
+      "x": -0.08547287016879379,
+      "y": -0.4850095129647379,
       "cluster_id": 4,
       "content_hash": "40653752f74aed64faa238251a529703cd2f3a5342fb7d896380b68f75c55f94"
     },
@@ -58,8 +76,8 @@
       "date": "2026-07-31",
       "url": "https://zylatent.com/blog/%E4%BA%94%E5%AD%90%E6%A3%8B%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C",
       "content_type": "article",
-      "x": -0.33286334618645774,
-      "y": 0.44894835886290985,
+      "x": -0.17177124130597154,
+      "y": 0.344964353941947,
       "cluster_id": 0,
       "content_hash": "55899c882fdcecc825fe3fdea3c5a82937d9013e1c9a9b74b4c3eb8c47c73fb6"
     },
@@ -77,8 +95,8 @@
       "date": "2026-07-30",
       "url": "https://zylatent.com/blog/%E6%88%91%E5%92%8C%E5%9F%83%E9%9A%86%E9%A9%AC%E6%96%AF%E5%85%8B%E4%B9%8B%E9%97%B4%E7%9C%9F%E7%9A%84%E5%8F%AA%E9%9A%94%E4%BA%94%E4%B8%AA%E4%BA%BA%E5%90%97",
       "content_type": "article",
-      "x": -0.3317106037144085,
-      "y": 0.6591040065139876,
+      "x": -0.10203939063877832,
+      "y": 0.2102288169555141,
       "cluster_id": 0,
       "content_hash": "6d9b04ac36b78e2b85b80058855d71893f282581a15bf9259d6f18f13d15a28d"
     },
@@ -96,8 +114,8 @@
       "date": "2026-07-29",
       "url": "https://zylatent.com/blog/fastapi-basics",
       "content_type": "article",
-      "x": 0.6985857114385087,
-      "y": 0.5419123348277816,
+      "x": -0.3555368831204816,
+      "y": -0.6231790032591793,
       "cluster_id": 1,
       "content_hash": "9650dedd7a9d56d6964572489876140cc1346a7e4fc4937b7cb05f603de62137"
     },
@@ -115,8 +133,8 @@
       "date": "2026-07-27",
       "url": "https://zylatent.com/blog/%E5%9C%A8%E6%A6%82%E7%8E%87%E7%9A%84%E9%9B%BE%E9%87%8C%E8%A1%8C%E8%B5%B0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%B8%8Emcmc%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95",
       "content_type": "article",
-      "x": 0.3278637711621445,
-      "y": 0.21457021419496558,
+      "x": -0.708102216568327,
+      "y": -0.11165001627644278,
       "cluster_id": 0,
       "content_hash": "8270e48c294b5a11752475efcb731505eff6db16cb731b71ace193474a870cfe"
     },
@@ -134,8 +152,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/dog-babble%E5%8A%A0%E5%AF%86%E5%AE%9E%E9%AA%8C",
       "content_type": "article",
-      "x": 0.8495142135815704,
-      "y": 0.48104020909985856,
+      "x": -0.44618782550222785,
+      "y": -0.18224014864520766,
       "cluster_id": 2,
       "content_hash": "2f2b78b0b96f9cc2bd35cff9983ffdcc38fd78d16d4395bd5d63f23d12b12a36"
     },
@@ -153,8 +171,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/dog-littletools%E5%B7%A5%E5%85%B7%E9%9B%86",
       "content_type": "article",
-      "x": -0.2826607530400761,
-      "y": -0.5428107204712846,
+      "x": 0.7839872800549993,
+      "y": 0.009926010274261321,
       "cluster_id": 1,
       "content_hash": "732e151240ff2dd30900f60cdd7ac36b4e88b05bc49ae4f6de20f3dcccb7fa6c"
     },
@@ -172,8 +190,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/miniarena%E8%87%AA%E8%B5%B0%E6%A3%8B",
       "content_type": "article",
-      "x": -0.684755029014919,
-      "y": 0.48117190961304235,
+      "x": 0.2293921027642586,
+      "y": 0.28021878305814696,
       "cluster_id": 2,
       "content_hash": "7c407e4bda8588e805d3a5b0249a0ffa1ce573c9cf7d5070d9904679198ad6c7"
     },
@@ -191,8 +209,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/nannahelper%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3",
       "content_type": "article",
-      "x": 0.043123791812542,
-      "y": -0.5502681382516342,
+      "x": 0.08175361889716204,
+      "y": 0.4968064192733833,
       "cluster_id": 1,
       "content_hash": "ff1813ad80cc89715e1557c4d77a25416eb63f4d4683133a3c60ac95efacb6a0"
     },
@@ -210,8 +228,8 @@
       "date": "2026-07-14",
       "url": "https://zylatent.com/blog/%E7%BB%98%E5%87%BA%E4%B8%83%E5%BD%A9%E7%9A%84%E4%B8%83%E5%A4%A9",
       "content_type": "article",
-      "x": 0.51269514212529,
-      "y": 0.2152710490686932,
+      "x": -0.2003649925148394,
+      "y": -0.6934040245396015,
       "cluster_id": 4,
       "content_hash": "0c95cf0cccd3dadd2cb019bee8d4d13e7c350f0bb6e2579b2919c0b6b44f6062"
     },
@@ -229,8 +247,8 @@
       "date": "2026-07-03",
       "url": "https://zylatent.com/blog/dog-skills-48-claude-code%E6%8A%80%E8%83%BD%E5%BA%93",
       "content_type": "article",
-      "x": 0.32850947737884695,
-      "y": 0.4883174051253253,
+      "x": 0.01784027823050449,
+      "y": -0.32565403415848193,
       "cluster_id": 1,
       "content_hash": "5ac4a7bc1675fd0ed96202603083f07fe6307c7bb43547e64b80d1960c4db125"
     },
@@ -244,8 +262,8 @@
       "date": "2026-06-22",
       "url": "https://zylatent.com/blog/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4-%E4%BB%A3%E7%A0%81%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%9B%9E%E9%A1%BE",
       "content_type": "article",
-      "x": 0.350897122885654,
-      "y": 0.712324381937408,
+      "x": -0.35075437380054064,
+      "y": -0.3665834644311091,
       "cluster_id": 1,
       "content_hash": "3403ff4807e25c4bfd08dfe2f4664985e004c8ace4a71933a6fd926e7a4d8572"
     },
@@ -261,8 +279,8 @@
       "date": "2026-03-24",
       "url": "https://zylatent.com/blog/%E5%BD%93%E5%A5%87%E8%BF%B9%E9%81%87%E5%88%B0%E5%A5%87%E8%BF%B9",
       "content_type": "article",
-      "x": 0.7198273930328302,
-      "y": 0.13747367449517467,
+      "x": -0.92,
+      "y": 0.1970052728757513,
       "cluster_id": 3,
       "content_hash": "708fdf3051f94641ba45ffb80c24b6e7fed7ae9d72bf0f008ecdefd07deb9308"
     },
@@ -277,8 +295,8 @@
       "date": "2026-03-24",
       "url": "https://zylatent.com/blog/%E6%B5%B7%E5%AD%90-%E4%BB%A5%E6%A2%A6%E4%B8%BA%E9%A9%AC",
       "content_type": "article",
-      "x": 0.1654374762875409,
-      "y": -0.2082909218699568,
+      "x": -0.731142417047442,
+      "y": -0.5986139474199569,
       "cluster_id": 3,
       "content_hash": "9e2df1b44d965e1c266be5f08cc770b9f910e1861baa40cffe80992aabd052b0"
     },
@@ -295,8 +313,8 @@
       "date": "2026-03-23",
       "url": "https://zylatent.com/blog/we-are-the-world",
       "content_type": "article",
-      "x": 0.1914694690887947,
-      "y": -0.04567024741339565,
+      "x": -0.5733879184392483,
+      "y": -0.657952056041111,
       "cluster_id": 4,
       "content_hash": "2de2ae8f666b87995aa9f58755722773b889f66411f2d73b1db77447ff03c162"
     },
@@ -313,8 +331,8 @@
       "date": "2026-03-21",
       "url": "https://zylatent.com/blog/my-compile",
       "content_type": "article",
-      "x": 0.92,
-      "y": 0.23519075168772885,
+      "x": -0.7423565616109291,
+      "y": 0.045693772023453594,
       "cluster_id": 1,
       "content_hash": "27d8a8dcdaa2aa3abfc0d98636a4f429103bfa0dd11884654c7ed369805d8031"
     },
@@ -331,10 +349,26 @@
       "date": "2026-03-18",
       "url": "https://zylatent.com/blog/smartagent",
       "content_type": "article",
-      "x": 0.041262399356415846,
-      "y": 0.8082778605286075,
+      "x": -0.10405444948279796,
+      "y": 0.031876027545015284,
       "cluster_id": 2,
       "content_hash": "65bafd9806f5a2f18ddaaeba2e1d75d96fb9e7a87b9bc1af116e5e77ce1bd5f8"
+    },
+    {
+      "id": "鸳鸯",
+      "title": "片言成蝶",
+      "description": "追忆高中时促成的一场恋爱 毕业近一年后与友人闲谈，话题总会绕回到那个蝉鸣不止的高中。那时候我们总觉得自己能主宰世界，哪怕只是在堆叠如山的试卷与练习间，偷渡一点名为“情愫”的违禁品。",
+      "tags": [
+        "回忆",
+        "徐州一中"
+      ],
+      "date": "2026-03-15",
+      "url": "https://zylatent.com/blog/%E9%B8%B3%E9%B8%AF",
+      "content_type": "article",
+      "x": 0.41862952320537705,
+      "y": -0.2568242304139059,
+      "cluster_id": 4,
+      "content_hash": "10d1fd4b138d21e1adf558f28065b4dcac86986b84692fc36fca53c06a7ca564"
     },
     {
       "id": "cpp-memory-ownership-raii",
@@ -348,8 +382,8 @@
       "date": "2026-03-08",
       "url": "https://zylatent.com/blog/cpp-memory-ownership-raii",
       "content_type": "article",
-      "x": -0.16107682892036657,
-      "y": 0.7214602385887833,
+      "x": -0.4783382769598775,
+      "y": 0.036653891928743354,
       "cluster_id": 0,
       "content_hash": "96bcf9e69da082673acd56996b7eaabf7ba6567905e65b6aeae0828242dd7ff9"
     },
@@ -364,8 +398,8 @@
       "date": "2026-03-02",
       "url": "https://zylatent.com/blog/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3%E6%B4%BB%E6%88%90%E4%B8%80%E6%A3%B5%E6%A0%91",
       "content_type": "article",
-      "x": 0.4610407751935456,
-      "y": 0.06804373854122248,
+      "x": -0.04009961581913313,
+      "y": -0.7049539439355444,
       "cluster_id": 1,
       "content_hash": "072303061a38d32a9d4287895a91ce64e54f78dc75195c7824ad97c8a31975cd"
     },
@@ -380,8 +414,8 @@
       "date": "2026-02-28",
       "url": "https://zylatent.com/blog/%E6%B8%B8%E8%AE%B0-%E6%B5%8E%E5%8D%97",
       "content_type": "article",
-      "x": 0.19312673006549586,
-      "y": 0.8787653615057193,
+      "x": -0.23859571298605942,
+      "y": -0.0904831185404894,
       "cluster_id": 4,
       "content_hash": "3765fba416004c60eb54bdbeb5ccb199f18b94f278975080e7e42cad3d05e3a2"
     },
@@ -397,8 +431,8 @@
       "date": "2026-02-24",
       "url": "https://zylatent.com/blog/%E4%B8%83%E7%8E%8B%E5%9B%BD%E7%9A%84%E9%AA%91%E5%A3%AB-%E7%AC%AC%E4%B8%80%E5%AD%A3",
       "content_type": "article",
-      "x": -0.22321452872669867,
-      "y": 0.92,
+      "x": -0.40390579942960325,
+      "y": 0.1268124672795946,
       "cluster_id": 2,
       "content_hash": "f7cf46141759641f41699257b79125fda5bb4073f12ed0df3ed85ddbf3845800"
     },
@@ -413,8 +447,8 @@
       "date": "2026-02-19",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%9C%B0%E7%8B%B1%E4%B9%8B%E5%A4%9C",
       "content_type": "article",
-      "x": -0.4055029714878944,
-      "y": 0.10509837108605435,
+      "x": -0.0575644155328372,
+      "y": 0.8963520968511028,
       "cluster_id": 3,
       "content_hash": "7e0332d72761a48acde5abc6ec8efe0605a0d9e640f6f738edb101a46d07334c"
     },
@@ -429,8 +463,8 @@
       "date": "2026-02-18",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A4%9C%E6%99%9A",
       "content_type": "article",
-      "x": -0.5398389155315167,
-      "y": -0.6388944142315343,
+      "x": 0.72076342940244,
+      "y": 0.4593017946453314,
       "cluster_id": 3,
       "content_hash": "95a1a67c8ad3f92ffb64838e8806c0d0380bb5045cb010d8ab9c8b726c6784e1"
     },
@@ -444,8 +478,8 @@
       "date": "2026-02-17",
       "url": "https://zylatent.com/blog/%E4%BA%92%E5%8A%A8%E7%BD%91%E9%A1%B5-%E5%A4%9C%E7%A9%BA%E4%B8%BA%E4%BD%A0%E9%97%AA%E7%83%81",
       "content_type": "article",
-      "x": 0.1107234612419804,
-      "y": 0.4414582635116199,
+      "x": -0.16510698043026795,
+      "y": -0.2730295150484684,
       "cluster_id": 2,
       "content_hash": "1a655583c8416990e33746d27a92884205df9ea5e4a410abc0db0d75028a6f02"
     },
@@ -460,8 +494,8 @@
       "date": "2026-02-17",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E8%A2%AB%E5%9B%9A%E7%A6%81%E8%80%85",
       "content_type": "article",
-      "x": -0.7291926509257076,
-      "y": -0.5434340698927067,
+      "x": 0.7402739662930574,
+      "y": 0.579971009342635,
       "cluster_id": 3,
       "content_hash": "b9c79fd954fdcfdb51145a23dfcb57cbb97dc5f5c6e7bb6c38247252ef58fe53"
     },
@@ -476,8 +510,8 @@
       "date": "2026-02-15",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E8%87%B4%E4%B8%80%E4%BD%8D%E7%90%86%E6%80%A7%E7%9A%84%E4%BA%BA",
       "content_type": "article",
-      "x": -0.45579484794738323,
-      "y": -0.7325537788083101,
+      "x": 0.7241771112360055,
+      "y": 0.33869780676555294,
       "cluster_id": 3,
       "content_hash": "06de5968f072ea1db735a4016049ba9f66343cc61dfde9c89a9dd971947aa38d"
     },
@@ -492,8 +526,8 @@
       "date": "2026-02-13",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%AF%8D%E7%8B%BC",
       "content_type": "article",
-      "x": -0.5899298561182316,
-      "y": 0.07510803524086596,
+      "x": 0.13356799890989712,
+      "y": 0.8656071977758554,
       "cluster_id": 3,
       "content_hash": "cb4bc22c6f310e1ea5f4e3159b5d40bfd47aaaa9395ccdb75105ee88f962ac7b"
     },
@@ -508,8 +542,8 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%A4%A7%E5%BA%9A%E5%89%91%E9%98%B5",
       "content_type": "article",
-      "x": 0.032833357375817496,
-      "y": 0.18996722152252887,
+      "x": -0.5704495300581031,
+      "y": -0.36774084271768603,
       "cluster_id": 2,
       "content_hash": "97c3c8a827e28cb27a55afb569ccac5f487e7ee1711fc5df99e63f65c4bd9285"
     },
@@ -524,8 +558,8 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%91%8A%E5%88%AB",
       "content_type": "article",
-      "x": -0.782411122058438,
-      "y": 0.34613679884928883,
+      "x": 0.17768189665890322,
+      "y": 0.21170795436024947,
       "cluster_id": 3,
       "content_hash": "3fcb15d4f92ee20fe95c4ead57f9b5594bdebfe51a00bf9b825b6259f3cb8ecb"
     },
@@ -540,8 +574,8 @@
       "date": "2026-02-11",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E4%B8%83%E5%B2%81%E6%99%BA%E8%80%85",
       "content_type": "article",
-      "x": -0.15393106510169663,
-      "y": -0.33057212523011736,
+      "x": 0.0979857676093493,
+      "y": 0.6887824658832359,
       "cluster_id": 3,
       "content_hash": "d9b3c0ad6abe6ac0b10e8ea8930e30f5e7a1119f4d39296fb6e40d9a1a663fb9"
     },
@@ -556,8 +590,8 @@
       "date": "2026-02-10",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%88%91%E7%9A%84%E9%A5%A5%E9%A5%BF",
       "content_type": "article",
-      "x": -0.1804414305350005,
-      "y": -0.7550413938770725,
+      "x": 0.5185435564615489,
+      "y": 0.2893823554714571,
       "cluster_id": 3,
       "content_hash": "9b70a593fe29192d928f598b367a85c6eaefbe37f758b8fecec56e1d3630f110"
     },
@@ -572,10 +606,25 @@
       "date": "2026-02-09",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%A5%A5%E8%8F%B2%E5%88%A9%E5%A8%85",
       "content_type": "article",
-      "x": -0.44997603558154337,
-      "y": -0.37489875509594806,
+      "x": 0.92,
+      "y": 0.30047250534874614,
       "cluster_id": 3,
       "content_hash": "3ddf01b99266d8937cfef5cfbb2bd07c2da05c3d574bcb7a0a2d91a54e163f11"
+    },
+    {
+      "id": "烟火文沃康城新章",
+      "title": "烟火文沃,康城新章",
+      "description": "旧社区文沃的重访随想,记录高中迁离后的变迁与回忆。",
+      "tags": [
+        "回忆"
+      ],
+      "date": "2026-02-09",
+      "url": "https://zylatent.com/blog/%E7%83%9F%E7%81%AB%E6%96%87%E6%B2%83%E5%BA%B7%E5%9F%8E%E6%96%B0%E7%AB%A0",
+      "content_type": "article",
+      "x": -0.5148664603092171,
+      "y": -0.8728410109292098,
+      "cluster_id": 4,
+      "content_hash": "d99b2842e1337824363374afd61a6f78e5737d42e538d669f3be7029cc99f7ec"
     },
     {
       "id": "兰波-黎明",
@@ -588,8 +637,8 @@
       "date": "2026-02-08",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%BB%8E%E6%98%8E",
       "content_type": "article",
-      "x": -0.815484682534215,
-      "y": -0.27497594186492214,
+      "x": 0.5972440742903612,
+      "y": 0.6347834109112259,
       "cluster_id": 3,
       "content_hash": "61a034c47fa60a0ace80dc27c793197baf3ce367eb7271246aebe2fb99f9c363"
     },
@@ -605,8 +654,8 @@
       "date": "2026-02-07",
       "url": "https://zylatent.com/blog/ghost-in-shell",
       "content_type": "article",
-      "x": -0.02697077488251065,
-      "y": -0.058291711631737964,
+      "x": -0.30233668114919243,
+      "y": -0.92,
       "cluster_id": 4,
       "content_hash": "ffba97f789fdef490e9d2a5005e2d932b4adfe68aaadcc3d95fd5688963a3199"
     },
@@ -621,8 +670,8 @@
       "date": "2026-02-07",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%82%AA%E6%81%B6",
       "content_type": "article",
-      "x": -0.6351425578968193,
-      "y": -0.2143496405911186,
+      "x": 0.5025352050842836,
+      "y": 0.7745509582350371,
       "cluster_id": 3,
       "content_hash": "de3eb16f644a92c9cc887c52e3fa2ee036d0c178d37068d2ad50a2a9764aa630"
     },
@@ -637,8 +686,8 @@
       "date": "2026-02-06",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%86%89%E8%88%9F",
       "content_type": "article",
-      "x": -0.4091480934748628,
-      "y": -0.92,
+      "x": 0.4668293776224376,
+      "y": 0.0033174200303567325,
       "cluster_id": 3,
       "content_hash": "d6c2fb46be199113f926e86aa3fe24a8ed95891fd117c3914d4b905af17ef9f0"
     },
@@ -653,8 +702,8 @@
       "date": "2026-02-05",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%B7%B4%E9%BB%8E%E7%8B%82%E6%AC%A2%E8%8A%82",
       "content_type": "article",
-      "x": -0.7971195311089307,
-      "y": -0.0337157027110625,
+      "x": 0.29548051516233065,
+      "y": 0.5946156230505556,
       "cluster_id": 3,
       "content_hash": "0a66832bbc19d1d156e7b74f8702280795d26881cf2fc8b31d18f86d474c6e6a"
     },
@@ -669,8 +718,8 @@
       "date": "2026-02-04",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%B0%B8%E6%81%92",
       "content_type": "article",
-      "x": -0.5618002864783473,
-      "y": -0.5317345092666503,
+      "x": 0.8014143387980214,
+      "y": 0.1876460200098652,
       "cluster_id": 3,
       "content_hash": "b6a2d7ece90382a1cf77e16025cc391c72c6734009323d897c17a6782efc2690"
     },
@@ -685,8 +734,8 @@
       "date": "2026-02-03",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%B1%B1%E8%B0%B7%E7%9D%A1%E8%80%85",
       "content_type": "article",
-      "x": -0.44178840715796946,
-      "y": -0.036297725930058866,
+      "x": 0.3039627431462696,
+      "y": 0.92,
       "cluster_id": 3,
       "content_hash": "93f75a222bee78f5a51933aebb7f7a9fd11e7d95018b88ffe9acde899d5c32dc"
     },
@@ -701,8 +750,8 @@
       "date": "2026-02-02",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%84%9F%E8%A7%89",
       "content_type": "article",
-      "x": -0.92,
-      "y": 0.1667483220252991,
+      "x": 0.35121796975912367,
+      "y": 0.4192652558687059,
       "cluster_id": 3,
       "content_hash": "df034365ccc7af9cc48d0b92ea2559804e57e8143c5866ef9b9936ef1af6c829"
     },
@@ -717,10 +766,26 @@
       "date": "2026-02-01",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%88%91%E7%9A%84%E6%B5%81%E6%B5%AA",
       "content_type": "article",
-      "x": -0.22324203031121326,
-      "y": -0.07918183908475895,
+      "x": -0.3255407568957428,
+      "y": 0.6835686954506802,
       "cluster_id": 3,
       "content_hash": "bb07c94382966b8c08c4f1f22006a663a383ea6659ee47cbaea0536490e5a0a4"
+    },
+    {
+      "id": "2025-大雪",
+      "title": "今年雪照哪年影",
+      "description": "追忆寒假大雪，与朋友独享全校积雪之趣事 看到今年雪盖一中的场景，又想起上上个寒假的场景：全校覆盖齐脚踝的白雪，而全校只有我们100人左右，乐意玩雪的又更少，所以相当于是独享了。",
+      "tags": [
+        "回忆",
+        "徐州一中"
+      ],
+      "date": "2026-01-19",
+      "url": "https://zylatent.com/blog/2025-%E5%A4%A7%E9%9B%AA",
+      "content_type": "article",
+      "x": -0.829500242208413,
+      "y": -0.3629076946288604,
+      "cluster_id": 4,
+      "content_hash": "214abee49c2eafe116ad086ad9f566702560626b1bcab50d3bc46762b12b6229"
     },
     {
       "id": "我的2025",
@@ -733,8 +798,8 @@
       "date": "2025-12-31",
       "url": "https://zylatent.com/blog/%E6%88%91%E7%9A%842025",
       "content_type": "article",
-      "x": 0.8178550479769923,
-      "y": -0.0010222880999851691,
+      "x": -0.8362538895936267,
+      "y": 0.2688347147774969,
       "cluster_id": 4,
       "content_hash": "4bea0f027ea028272eff75c0aa6152bb457d6255abe7e5a567d616173ae69e83"
     }
@@ -809,11 +874,15 @@
       "id": 4,
       "label": "影像与见闻",
       "node_ids": [
+        "remembrance-of-things-past",
         "latent-garden个人语义花园",
         "绘出七彩的七天",
         "we-are-the-world",
+        "鸳鸯",
         "游记-济南",
+        "烟火文沃康城新章",
         "ghost-in-shell",
+        "2025-大雪",
         "我的2025"
       ],
       "color": "#d5a5a1"
@@ -821,7 +890,7 @@
   ],
   "metadata": {
     "provider": "hash",
-    "item_count": 43,
+    "item_count": 47,
     "cluster_count": 5,
     "reducer_config": {
       "n_neighbors": 15,
