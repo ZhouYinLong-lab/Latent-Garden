@@ -1,10 +1,30 @@
 {
   "version": "0.1",
-  "generated_at": "2026-08-24T03:18:37.059575+00:00",
+  "generated_at": "2026-08-31T08:41:50.697599+00:00",
   "dimensions": 64,
   "reducer": "umap",
   "clusterer": "curated-keywords",
   "nodes": [
+    {
+      "id": "point-allocation-credit-assignment",
+      "title": "谁该得到这 100 分？人工智能中的点数分配问题",
+      "description": "从概率统计中的点数分配问题出发，讨论强化学习、多智能体、反事实归因、Shapley Value 与神经网络中的点数分配。",
+      "tags": [
+        "概率统计",
+        "点数分配",
+        "强化学习",
+        "多智能体",
+        "Shapley Value",
+        "可解释人工智能"
+      ],
+      "date": "2026-08-25",
+      "url": "https://zylatent.com/blog/point-allocation-credit-assignment",
+      "content_type": "article",
+      "x": 0.6015685145847832,
+      "y": -0.4054945839931199,
+      "cluster_id": 0,
+      "content_hash": "8c129d697b11fda7256b042525acb681f91145b98ff54c17f9b0170b31172120"
+    },
     {
       "id": "ohmystyle视觉风格工程",
       "title": "我为什么开始做 OhMyStyle：把“风格”变成可复用的工程对象",
@@ -19,8 +39,8 @@
       "date": "2026-08-11",
       "url": "https://zylatent.com/blog/ohmystyle%E8%A7%86%E8%A7%89%E9%A3%8E%E6%A0%BC%E5%B7%A5%E7%A8%8B",
       "content_type": "article",
-      "x": -0.5478207282301657,
-      "y": 0.4266346930755732,
+      "x": 0.5607670528135867,
+      "y": 0.10079724484369212,
       "cluster_id": 1,
       "content_hash": "554efc6a2477ce9ff36467ec38cff864a6fba6874b8758e1efc4652d4d16f867"
     },
@@ -39,8 +59,8 @@
       "date": "2026-07-31",
       "url": "https://zylatent.com/blog/%E4%BA%94%E5%AD%90%E6%A3%8B%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C",
       "content_type": "article",
-      "x": -0.17177124130597154,
-      "y": 0.344964353941947,
+      "x": -0.04444680508727361,
+      "y": 0.4518901143255326,
       "cluster_id": 0,
       "content_hash": "55899c882fdcecc825fe3fdea3c5a82937d9013e1c9a9b74b4c3eb8c47c73fb6"
     },
@@ -58,8 +78,8 @@
       "date": "2026-07-30",
       "url": "https://zylatent.com/blog/%E6%88%91%E5%92%8C%E5%9F%83%E9%9A%86%E9%A9%AC%E6%96%AF%E5%85%8B%E4%B9%8B%E9%97%B4%E7%9C%9F%E7%9A%84%E5%8F%AA%E9%9A%94%E4%BA%94%E4%B8%AA%E4%BA%BA%E5%90%97",
       "content_type": "article",
-      "x": -0.10203939063877832,
-      "y": 0.2102288169555141,
+      "x": 0.028598630945386283,
+      "y": 0.7014058550063363,
       "cluster_id": 0,
       "content_hash": "6d9b04ac36b78e2b85b80058855d71893f282581a15bf9259d6f18f13d15a28d"
     },
@@ -77,8 +97,8 @@
       "date": "2026-07-29",
       "url": "https://zylatent.com/blog/fastapi-basics",
       "content_type": "article",
-      "x": -0.3555368831204816,
-      "y": -0.6231790032591793,
+      "x": 0.4445259783342782,
+      "y": -0.23348912619144635,
       "cluster_id": 1,
       "content_hash": "9650dedd7a9d56d6964572489876140cc1346a7e4fc4937b7cb05f603de62137"
     },
@@ -96,8 +116,8 @@
       "date": "2026-07-27",
       "url": "https://zylatent.com/blog/%E5%9C%A8%E6%A6%82%E7%8E%87%E7%9A%84%E9%9B%BE%E9%87%8C%E8%A1%8C%E8%B5%B0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%B8%8Emcmc%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95",
       "content_type": "article",
-      "x": -0.708102216568327,
-      "y": -0.11165001627644278,
+      "x": 0.9026966538094506,
+      "y": -0.36134108449964386,
       "cluster_id": 0,
       "content_hash": "8270e48c294b5a11752475efcb731505eff6db16cb731b71ace193474a870cfe"
     },
@@ -115,8 +135,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/dog-babble%E5%8A%A0%E5%AF%86%E5%AE%9E%E9%AA%8C",
       "content_type": "article",
-      "x": -0.44618782550222785,
-      "y": -0.18224014864520766,
+      "x": 0.5359111821622592,
+      "y": 0.42849885032586343,
       "cluster_id": 2,
       "content_hash": "2f2b78b0b96f9cc2bd35cff9983ffdcc38fd78d16d4395bd5d63f23d12b12a36"
     },
@@ -134,8 +154,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/dog-littletools%E5%B7%A5%E5%85%B7%E9%9B%86",
       "content_type": "article",
-      "x": 0.7839872800549993,
-      "y": 0.009926010274261321,
+      "x": -0.42659013459400347,
+      "y": 0.8802305389932733,
       "cluster_id": 1,
       "content_hash": "732e151240ff2dd30900f60cdd7ac36b4e88b05bc49ae4f6de20f3dcccb7fa6c"
     },
@@ -153,8 +173,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/miniarena%E8%87%AA%E8%B5%B0%E6%A3%8B",
       "content_type": "article",
-      "x": 0.2293921027642586,
-      "y": 0.28021878305814696,
+      "x": -0.25432802507221686,
+      "y": 0.2969282179407188,
       "cluster_id": 2,
       "content_hash": "7c407e4bda8588e805d3a5b0249a0ffa1ce573c9cf7d5070d9904679198ad6c7"
     },
@@ -172,8 +192,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/nannahelper%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3",
       "content_type": "article",
-      "x": 0.08175361889716204,
-      "y": 0.4968064192733833,
+      "x": -0.8285341064019639,
+      "y": 0.6459815301463762,
       "cluster_id": 1,
       "content_hash": "ff1813ad80cc89715e1557c4d77a25416eb63f4d4683133a3c60ac95efacb6a0"
     },
@@ -191,8 +211,8 @@
       "date": "2026-07-03",
       "url": "https://zylatent.com/blog/dog-skills-48-claude-code%E6%8A%80%E8%83%BD%E5%BA%93",
       "content_type": "article",
-      "x": 0.01784027823050449,
-      "y": -0.32565403415848193,
+      "x": 0.1572354218669091,
+      "y": -0.7044210637781297,
       "cluster_id": 1,
       "content_hash": "5ac4a7bc1675fd0ed96202603083f07fe6307c7bb43547e64b80d1960c4db125"
     },
@@ -206,8 +226,8 @@
       "date": "2026-06-22",
       "url": "https://zylatent.com/blog/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4-%E4%BB%A3%E7%A0%81%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%9B%9E%E9%A1%BE",
       "content_type": "article",
-      "x": -0.35075437380054064,
-      "y": -0.3665834644311091,
+      "x": 0.2689655675404149,
+      "y": -0.0803950911697664,
       "cluster_id": 1,
       "content_hash": "3403ff4807e25c4bfd08dfe2f4664985e004c8ace4a71933a6fd926e7a4d8572"
     },
@@ -224,8 +244,8 @@
       "date": "2026-03-21",
       "url": "https://zylatent.com/blog/my-compile",
       "content_type": "article",
-      "x": -0.7423565616109291,
-      "y": 0.045693772023453594,
+      "x": 0.758571418757417,
+      "y": 0.3741973174814114,
       "cluster_id": 1,
       "content_hash": "27d8a8dcdaa2aa3abfc0d98636a4f429103bfa0dd11884654c7ed369805d8031"
     },
@@ -242,8 +262,8 @@
       "date": "2026-03-18",
       "url": "https://zylatent.com/blog/smartagent",
       "content_type": "article",
-      "x": -0.10405444948279796,
-      "y": 0.031876027545015284,
+      "x": 0.1671565569864787,
+      "y": 0.5270806799079101,
       "cluster_id": 2,
       "content_hash": "65bafd9806f5a2f18ddaaeba2e1d75d96fb9e7a87b9bc1af116e5e77ce1bd5f8"
     },
@@ -259,8 +279,8 @@
       "date": "2026-03-08",
       "url": "https://zylatent.com/blog/cpp-memory-ownership-raii",
       "content_type": "article",
-      "x": -0.4783382769598775,
-      "y": 0.036653891928743354,
+      "x": 0.7939783559722781,
+      "y": -0.3536752977901706,
       "cluster_id": 0,
       "content_hash": "96bcf9e69da082673acd56996b7eaabf7ba6567905e65b6aeae0828242dd7ff9"
     },
@@ -275,8 +295,8 @@
       "date": "2026-03-02",
       "url": "https://zylatent.com/blog/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3%E6%B4%BB%E6%88%90%E4%B8%80%E6%A3%B5%E6%A0%91",
       "content_type": "article",
-      "x": -0.04009961581913313,
-      "y": -0.7049539439355444,
+      "x": 0.2628466408317115,
+      "y": -0.92,
       "cluster_id": 1,
       "content_hash": "072303061a38d32a9d4287895a91ce64e54f78dc75195c7824ad97c8a31975cd"
     },
@@ -292,8 +312,8 @@
       "date": "2026-02-24",
       "url": "https://zylatent.com/blog/%E4%B8%83%E7%8E%8B%E5%9B%BD%E7%9A%84%E9%AA%91%E5%A3%AB-%E7%AC%AC%E4%B8%80%E5%AD%A3",
       "content_type": "article",
-      "x": -0.40390579942960325,
-      "y": 0.1268124672795946,
+      "x": 0.6821481321740749,
+      "y": -0.694339606904101,
       "cluster_id": 2,
       "content_hash": "f7cf46141759641f41699257b79125fda5bb4073f12ed0df3ed85ddbf3845800"
     },
@@ -307,8 +327,8 @@
       "date": "2026-02-17",
       "url": "https://zylatent.com/blog/%E4%BA%92%E5%8A%A8%E7%BD%91%E9%A1%B5-%E5%A4%9C%E7%A9%BA%E4%B8%BA%E4%BD%A0%E9%97%AA%E7%83%81",
       "content_type": "article",
-      "x": -0.16510698043026795,
-      "y": -0.2730295150484684,
+      "x": 0.2568106848759625,
+      "y": -0.3161958941012406,
       "cluster_id": 2,
       "content_hash": "1a655583c8416990e33746d27a92884205df9ea5e4a410abc0db0d75028a6f02"
     },
@@ -323,8 +343,8 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%A4%A7%E5%BA%9A%E5%89%91%E9%98%B5",
       "content_type": "article",
-      "x": -0.5704495300581031,
-      "y": -0.36774084271768603,
+      "x": 0.42927095478710686,
+      "y": -0.6662980819181581,
       "cluster_id": 2,
       "content_hash": "97c3c8a827e28cb27a55afb569ccac5f487e7ee1711fc5df99e63f65c4bd9285"
     }
@@ -334,6 +354,7 @@
       "id": 0,
       "label": "智能与计算",
       "node_ids": [
+        "point-allocation-credit-assignment",
         "五子棋搜索实验",
         "我和埃隆马斯克之间真的只隔五个人吗",
         "在概率的雾里行走-贝叶斯与mcmc学习记录",
@@ -372,7 +393,7 @@
   ],
   "metadata": {
     "provider": "hash",
-    "item_count": 18,
+    "item_count": 19,
     "cluster_count": 3,
     "reducer_config": {
       "n_neighbors": 15,
