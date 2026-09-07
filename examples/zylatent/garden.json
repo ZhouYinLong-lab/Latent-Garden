@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "generated_at": "2026-08-31T08:41:50.697599+00:00",
+  "generated_at": "2026-09-07T07:22:12.055914+00:00",
   "dimensions": 64,
   "reducer": "umap",
   "clusterer": "curated-keywords",

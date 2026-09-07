@@ -137,5 +137,5 @@
 <circle cx="936" cy="389" r="7" fill="#b7a5c8"/><text x="956" y="394" fill="#4c5141" font-family="Segoe UI, sans-serif" font-size="14">主题 4 · 诗歌与文学</text><text x="956" y="413" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">19 篇内容</text>
 <circle cx="936" cy="441" r="7" fill="#d5a5a1"/><text x="956" y="446" fill="#4c5141" font-family="Segoe UI, sans-serif" font-size="14">主题 5 · 影像与见闻</text><text x="956" y="465" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">10 篇内容</text>
 <text x="66" y="666" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">position = reduced embedding coordinate · colors = topic clusters · hover/click in the interactive frontend</text>
-<text x="1110" y="666" text-anchor="end" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">snapshot: 2026-08-31</text>
+<text x="1110" y="666" text-anchor="end" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">snapshot: 2026-09-07</text>
 </svg>
