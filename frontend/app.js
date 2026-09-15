@@ -112,10 +112,11 @@ function showHoverCard(id, target) {
   const coverUrl = coverUrlFor(node);
   cover.classList.toggle("has-image", Boolean(coverUrl));
   image.hidden = !coverUrl;
-  image.alt = coverUrl ? node.title : "";
+  image.alt = "";
   image.onload = () => cover.classList.add("has-image");
   image.onerror = () => {
     image.hidden = true;
+    image.removeAttribute("src");
     cover.classList.remove("has-image");
   };
   if (coverUrl) image.src = coverUrl;

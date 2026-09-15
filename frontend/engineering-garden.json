@@ -23,7 +23,8 @@
       "x": -0.6162546014634258,
       "y": -0.5301900391142533,
       "cluster_id": 0,
-      "content_hash": "a9d6cbfd458efdf9e071a4c6043c56518cba9b5c0a6be8443a2732f7a601cbd8"
+      "content_hash": "a9d6cbfd458efdf9e071a4c6043c56518cba9b5c0a6be8443a2732f7a601cbd8",
+      "cover": "./assets/covers/804159a3e32e.png"
     },
     {
       "id": "我和埃隆马斯克之间真的只隔五个人吗",
@@ -42,7 +43,8 @@
       "x": -0.4759091423849629,
       "y": -0.5804455932233972,
       "cluster_id": 0,
-      "content_hash": "4d420ac58fe4e7fffc689de641652b8e2ac7af17978400757e79a201acd59159"
+      "content_hash": "4d420ac58fe4e7fffc689de641652b8e2ac7af17978400757e79a201acd59159",
+      "cover": "./assets/covers/0d72aa9e60f6.png"
     },
     {
       "id": "fastapi-basics",
@@ -61,7 +63,8 @@
       "x": -0.6369832915582819,
       "y": -0.8788591494711427,
       "cluster_id": 1,
-      "content_hash": "1319df7f34acd65a6be5132dd5699264408dbaf0e0d497fed8492e2567de36fb"
+      "content_hash": "1319df7f34acd65a6be5132dd5699264408dbaf0e0d497fed8492e2567de36fb",
+      "cover": "./assets/covers/ce60466f23ae.png"
     },
     {
       "id": "在概率的雾里行走-贝叶斯与mcmc学习记录",
@@ -80,7 +83,8 @@
       "x": -0.6979189177900574,
       "y": -0.6116378584696577,
       "cluster_id": 0,
-      "content_hash": "5b8921de89dff35cda7cbb343093715984f8cebd3ffec8beb9b6c6f9ab74b9ff"
+      "content_hash": "5b8921de89dff35cda7cbb343093715984f8cebd3ffec8beb9b6c6f9ab74b9ff",
+      "cover": "./assets/covers/c25ecf56892e.png"
     },
     {
       "id": "dog-littletools工具集",
@@ -99,7 +103,8 @@
       "x": -0.6641448458227174,
       "y": -0.7421754300577178,
       "cluster_id": 1,
-      "content_hash": "d902f8919faec71b0f803b8d97eec6c1cec35273312c51322004694fe306a98e"
+      "content_hash": "d902f8919faec71b0f803b8d97eec6c1cec35273312c51322004694fe306a98e",
+      "cover": "./assets/covers/2586437fefeb.png"
     },
     {
       "id": "dog-babble加密实验",
@@ -118,7 +123,8 @@
       "x": -0.92,
       "y": -0.7622667866144587,
       "cluster_id": 2,
-      "content_hash": "02b890bf93f69f1e9165c09bae8fa4e1c3d89dbc7c4e3b7a62173088f9062b2d"
+      "content_hash": "02b890bf93f69f1e9165c09bae8fa4e1c3d89dbc7c4e3b7a62173088f9062b2d",
+      "cover": "./assets/covers/834d30c34b05.png"
     },
     {
       "id": "miniarena自走棋",
@@ -137,7 +143,8 @@
       "x": -0.8374849538766401,
       "y": -0.92,
       "cluster_id": 2,
-      "content_hash": "802e88165b2fc08518f8090718febfd5dc9f63bd6b705f1ecf6e96cb5180c9d4"
+      "content_hash": "802e88165b2fc08518f8090718febfd5dc9f63bd6b705f1ecf6e96cb5180c9d4",
+      "cover": "./assets/covers/409d7f71180f.png"
     },
     {
       "id": "nannahelper教程文档",
@@ -156,7 +163,8 @@
       "x": -0.5919175889688029,
       "y": -0.7918216064385303,
       "cluster_id": 1,
-      "content_hash": "b8592b956fecc9569e9aa9c55de96cb461e52eebe5353f788c46e17184cdb231"
+      "content_hash": "b8592b956fecc9569e9aa9c55de96cb461e52eebe5353f788c46e17184cdb231",
+      "cover": "./assets/covers/75aebdab1d21.png"
     },
     {
       "id": "dog-skills-48-claude-code技能库",
@@ -175,7 +183,8 @@
       "x": -0.7539195189029776,
       "y": -0.725028758989188,
       "cluster_id": 1,
-      "content_hash": "11abdfa99730044881685cb019a98132948b43e156459954f5a67339c0c1c167"
+      "content_hash": "11abdfa99730044881685cb019a98132948b43e156459954f5a67339c0c1c167",
+      "cover": "./assets/covers/548da1fc2952.png"
     },
     {
       "id": "2026上半年-代码与项目回顾",
@@ -190,7 +199,8 @@
       "x": -0.38282880467662417,
       "y": -0.7386686958182747,
       "cluster_id": 1,
-      "content_hash": "4cb19c5f0d2a02680e2ac5e02419f8013e0490f65fab390c092363f3fdf8ea7f"
+      "content_hash": "4cb19c5f0d2a02680e2ac5e02419f8013e0490f65fab390c092363f3fdf8ea7f",
+      "cover": "./assets/covers/08c72ab3a720.png"
     },
     {
       "id": "my-compile",
@@ -208,7 +218,8 @@
       "x": -0.8036647305606067,
       "y": -0.7990506275413789,
       "cluster_id": 1,
-      "content_hash": "b7e32a2de4aaa68e0bbe1e2305ab507c08043f2ff5f3aece8584c39e61201609"
+      "content_hash": "b7e32a2de4aaa68e0bbe1e2305ab507c08043f2ff5f3aece8584c39e61201609",
+      "cover": "./assets/covers/961355e9baef.png"
     },
     {
       "id": "smartagent",
@@ -226,7 +237,8 @@
       "x": -0.46899872069735987,
       "y": -0.43581057136095863,
       "cluster_id": 2,
-      "content_hash": "6b4c5dac61901435f17b3da8cf668198de43517efc545c23fd1f11716f5adae3"
+      "content_hash": "6b4c5dac61901435f17b3da8cf668198de43517efc545c23fd1f11716f5adae3",
+      "cover": "./assets/covers/3cb56df131dd.png"
     },
     {
       "id": "cpp-memory-ownership-raii",
@@ -243,7 +255,8 @@
       "x": -0.9058281686853755,
       "y": -0.5899028145531684,
       "cluster_id": 0,
-      "content_hash": "b7fdfac99770b5ece59f50c71827c85c1ef1ba50623b453dc6ce070e02c6c363"
+      "content_hash": "b7fdfac99770b5ece59f50c71827c85c1ef1ba50623b453dc6ce070e02c6c363",
+      "cover": "./assets/covers/fe980845aabe.png"
     },
     {
       "id": "如何在数字时代活成一棵树",
@@ -259,7 +272,8 @@
       "x": -0.13770017469305995,
       "y": -0.08680875201360638,
       "cluster_id": 1,
-      "content_hash": "16afa367ef55ef89cb08be2b267cf08953a1d3a4d563e67b08cced81008b1eaf"
+      "content_hash": "16afa367ef55ef89cb08be2b267cf08953a1d3a4d563e67b08cced81008b1eaf",
+      "cover": "./assets/covers/d62b5442b01e.png"
     },
     {
       "id": "七王国的骑士-第一季",
@@ -276,7 +290,8 @@
       "x": 0.12010759749031064,
       "y": 0.538126491239293,
       "cluster_id": 2,
-      "content_hash": "44b4b9335504f417349adc4fa7f09b01fc1ba357df656a25c3956e6556741c98"
+      "content_hash": "44b4b9335504f417349adc4fa7f09b01fc1ba357df656a25c3956e6556741c98",
+      "cover": "./assets/covers/a2705e213389.png"
     },
     {
       "id": "互动网页-夜空为你闪烁",
@@ -291,7 +306,8 @@
       "x": -0.3450255020864561,
       "y": -0.27008479700506294,
       "cluster_id": 2,
-      "content_hash": "860d1057c200c7587da308295469e09164bc6b362f1e3c53dbd4b57a2e6f23dc"
+      "content_hash": "860d1057c200c7587da308295469e09164bc6b362f1e3c53dbd4b57a2e6f23dc",
+      "cover": "./assets/covers/1c0a00cfbec6.png"
     },
     {
       "id": "大庚剑阵",
@@ -307,7 +323,8 @@
       "x": -0.6136142689394706,
       "y": -0.3458982045258968,
       "cluster_id": 2,
-      "content_hash": "86c0313606c8a161e4f6b2e244409b26e2bf834fd4f56b224359644fcf106e91"
+      "content_hash": "86c0313606c8a161e4f6b2e244409b26e2bf834fd4f56b224359644fcf106e91",
+      "cover": "./assets/covers/a589afbbc9ea.png"
     }
   ],
   "clusters": [

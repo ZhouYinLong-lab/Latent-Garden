@@ -56,6 +56,7 @@ http://localhost:8000/?data=https://example.com/garden.json
   "title": "A document",
   "description": "Short summary",
   "tags": ["topic"],
+  "cover": "./assets/covers/example.png",
   "url": "https://example.com/document",
   "content_type": "article",
   "x": 0.12,
