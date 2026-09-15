@@ -12,6 +12,7 @@ from pipeline.runner import build_garden
 from pipeline.runner import _normalize_points
 from pipeline.cli import _same_garden
 from providers.hash_provider import HashEmbeddingProvider
+from providers.cjk_ngram_provider import CjkNgramEmbeddingProvider
 
 
 class CountingProvider(HashEmbeddingProvider):
@@ -27,6 +28,15 @@ class CountingProvider(HashEmbeddingProvider):
 
 
 class PipelineTests(unittest.TestCase):
+    def test_cjk_ngram_provider_is_deterministic_and_normalized(self):
+        provider = CjkNgramEmbeddingProvider()
+        first = provider.embed(["中文语义地图与文章关系", "FastAPI API 工具"])
+        second = provider.embed(["中文语义地图与文章关系", "FastAPI API 工具"])
+        self.assertEqual(first, second)
+        self.assertEqual(len(first[0]), 512)
+        self.assertAlmostEqual(sum(value * value for value in first[0]), 1.0, places=6)
+        self.assertNotEqual(first[0], provider.embed(["完全不同的诗歌内容"])[0])
+
     def test_website_adapter_recognizes_article_routes(self):
         html = """
         <a href="/blog/example">Example article</a>

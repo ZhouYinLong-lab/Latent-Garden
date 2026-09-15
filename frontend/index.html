@@ -23,35 +23,55 @@
       <section class="toolbar" aria-label="Garden controls">
         <nav id="view-switch" class="view-switch" aria-label="地图视图" hidden></nav>
         <label class="search">
-          <span aria-hidden="true">⌕</span>
-          <input id="search" type="search" placeholder="搜索庭院里的文字…" />
+          <span aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="17" height="17"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+          </span>
+          <input id="search" type="search" aria-label="搜索庭院里的文字" placeholder="搜索庭院里的文字…" />
         </label>
-        <button id="reset" type="button">重置视图</button>
-        <span class="hint">滚轮缩放 · 放大后拖拽 · 点击节点打开原文</span>
+        <button id="reset" type="button" aria-label="重置地图视图">
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg>
+          <span>重置视图</span>
+        </button>
+        <span class="hint"><span id="focus-status">全局视图</span> · 选择节点查看局部关系</span>
       </section>
 
       <section class="map-card">
         <div class="map-stage">
           <div id="status" class="status">正在载入庭院地图…</div>
-          <svg id="map" viewBox="-1.08 -1.08 2.16 2.16" role="img" aria-label="Interactive semantic map">
+          <svg id="map" viewBox="-1.08 -1.08 2.16 2.16" role="img" aria-label="可交互的文章语义地图">
             <defs>
-              <clipPath id="map-clip"><rect x="-.94" y="-.94" width="1.88" height="1.88" rx=".08" /></clipPath>
-              <filter id="glow"><feGaussianBlur stdDeviation=".018" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+              <clipPath id="map-clip"><rect x="-.99" y="-.99" width="1.98" height="1.98" rx=".035" /></clipPath>
+              <pattern id="paper-dots" width=".09" height=".09" patternUnits="userSpaceOnUse">
+                <circle cx=".008" cy=".008" r=".0025"></circle>
+              </pattern>
+              <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation=".016" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
             </defs>
-            <rect class="map-surface" x="-.96" y="-.96" width="1.92" height="1.92" rx=".09" />
+            <rect class="map-surface" x="-.99" y="-.99" width="1.98" height="1.98" rx=".035" />
             <g id="grid" clip-path="url(#map-clip)"></g>
+            <g id="regions" clip-path="url(#map-clip)" aria-hidden="true"></g>
             <g id="edges" clip-path="url(#map-clip)"></g>
             <g id="nodes" clip-path="url(#map-clip)"></g>
             <g id="labels" clip-path="url(#map-clip)" aria-hidden="true"></g>
           </svg>
-          <div class="map-note"><span class="note-mark"></span><span>相近的点，代表相近的内容语义</span></div>
+          <div class="map-note"><span class="note-mark"></span><span>距离越近，内容越相似</span><span id="trail-count" class="trail-count" hidden></span></div>
           <aside id="detail" class="detail" hidden>
             <button id="close-detail" class="close" type="button" aria-label="关闭详情">×</button>
             <p id="detail-type" class="eyebrow"></p>
             <h2 id="detail-title"></h2>
             <p id="detail-description"></p>
             <div id="detail-tags" class="tags"></div>
-            <a id="detail-link" target="_blank" rel="noreferrer">打开原文 ↗</a>
+            <div class="detail-actions">
+              <a id="detail-link" target="_blank" rel="noreferrer">打开原文 ↗</a>
+              <button id="detail-show-all" type="button">回到全局</button>
+            </div>
+            <div class="detail-section">
+              <p class="detail-section-title">附近的文章</p>
+              <div id="detail-related" class="detail-related"></div>
+            </div>
+            <div class="detail-section detail-trail-section">
+              <p class="detail-section-title">本次探索</p>
+              <div id="detail-trail" class="detail-trail" aria-live="polite"></div>
+            </div>
           </aside>
         </div>
         <aside class="topic-panel" aria-label="主题分组">

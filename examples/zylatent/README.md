@@ -15,6 +15,8 @@ python -m pipeline.cli \
   --website https://zylatent.com \
   --website-config examples/zylatent/config.json \
   --output .latent-garden/zylatent-raw.json \
+  --provider sentence-transformers \
+  --embedding-model BAAI/bge-small-zh-v1.5 \
   --cache .latent-garden/zylatent-embeddings.json
 python scripts/apply_case_profile.py \
   .latent-garden/zylatent-raw.json examples/zylatent/config.json \

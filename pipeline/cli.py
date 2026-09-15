@@ -5,8 +5,10 @@ import json
 from pathlib import Path
 
 from adapters import load_content, load_rss, load_website, load_website_config
+from providers.cjk_ngram_provider import CjkNgramEmbeddingProvider
 from providers.hash_provider import HashEmbeddingProvider
 from providers.openai_provider import OpenAIEmbeddingProvider
+from providers.sentence_transformer_provider import SentenceTransformerEmbeddingProvider
 from .cache import EmbeddingCache
 from .cluster import KMeansClusterer
 from .reduce import UMAPReducer
@@ -20,7 +22,12 @@ def main() -> None:
     source.add_argument("--website", help="A public blog URL, e.g. https://zylatent.com")
     source.add_argument("--rss", help="A local RSS/Atom file or feed URL")
     parser.add_argument("--output", required=True, help="Output garden.json path")
-    parser.add_argument("--provider", choices=["hash", "openai"], default="hash")
+    parser.add_argument(
+        "--provider",
+        choices=["cjk-ngram", "sentence-transformers", "hash", "openai"],
+        default="cjk-ngram",
+    )
+    parser.add_argument("--embedding-model", default="BAAI/bge-small-zh-v1.5")
     parser.add_argument("--cache", default=".latent-garden/embeddings.json")
     parser.add_argument("--openai-model", default="text-embedding-3-small")
     parser.add_argument("--max-pages", type=int, default=6, help="Maximum /blog/N archive pages for --website")
@@ -37,7 +44,14 @@ def main() -> None:
         items = load_website(args.website, max_pages=args.max_pages, config=website_config)
     else:
         items = load_rss(args.rss)
-    provider = HashEmbeddingProvider() if args.provider == "hash" else OpenAIEmbeddingProvider(model=args.openai_model)
+    if args.provider == "cjk-ngram":
+        provider = CjkNgramEmbeddingProvider()
+    elif args.provider == "sentence-transformers":
+        provider = SentenceTransformerEmbeddingProvider(model_name=args.embedding_model)
+    elif args.provider == "hash":
+        provider = HashEmbeddingProvider()
+    else:
+        provider = OpenAIEmbeddingProvider(model=args.openai_model)
     garden = build_garden(
         items,
         provider=provider,

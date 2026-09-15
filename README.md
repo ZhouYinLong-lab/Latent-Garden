@@ -55,21 +55,21 @@ Content source → Adapter → ContentItem → EmbeddingProvider
 
 需要区分两类信息：
 
-- **语义坐标**：标题、摘要、正文和标签生成高维向量，再由 UMAP 投影到二维。点越近通常表示内容关系越近，但二维距离不是绝对相似度分数，坐标方向和同心圆也没有固定量纲。
+- **语义坐标**：标题、摘要、正文和标签生成高维向量，再由 UMAP 投影到二维。点越近通常表示内容关系越近，但二维距离不是绝对相似度分数，坐标方向也没有固定量纲。前端的主题轮廓只帮助辨认内容分布，不代表严格分类边界。
 - **主题标签**：通用流程默认使用 K-Means；案例也可以在坐标生成后增加人工策展层。寒柳别苑的五个主题来自关键词辅助的编辑规则，不是模型自动发现的五个天然类别。
 
-当前在线案例使用离线、确定性的 **Hash 64D provider**，便于零密钥部署和复现。接入 OpenAI 或其他真实 embedding provider 后，可以获得更可靠的语义关系。
+当前仓库的寒柳别苑案例使用本地 **BAAI/bge-small-zh-v1.5**：中文语义和技术英文混合内容会先编码成 512 维向量，再用 UMAP 投影到二维。没有模型依赖时仍可使用离线、确定性的 CJK n-gram provider 作为透明工程基线；需要更深语义时也可以切换 OpenAI provider。
 
 ## 特性
 
 - 稳定的 `ContentItem`、`GardenNode`、`GardenCluster` 和 `Garden` 数据模型
-- 可替换的 `EmbeddingProvider`，内置离线 hash provider 与 OpenAI provider
+- 可替换的 `EmbeddingProvider`，内置本地 Sentence Transformers、中文感知 CJK n-gram、hash 和 OpenAI provider
 - 以内容 hash 和 provider cache key 为索引的 embedding 缓存
 - UMAP 二维投影；缺少科学计算依赖时提供确定性回退
 - K-Means 默认聚类，以及与核心解耦的可选案例 profile
 - Markdown、MDX、JSON、RSS、Atom 和公开网站适配器
 - 网站抓取清洗：HTML/组件文本过滤、标题规范化、重复标题去重、摘要质量门槛
-- 零构建依赖前端：搜索、主题筛选、近邻连线、缩放、受限平移和原文跳转
+- 零构建依赖前端：Obsidian 风格工作区、节点详情、局部近邻、探索路径、主题筛选、搜索、缩放、受限平移和原文跳转
 - 完整花园与命名子视图，可为个人表达和作品集提供不同入口
 - 可选 FastAPI、Docker、GitHub Pages 和定时刷新流程
 
@@ -83,6 +83,14 @@ cd Latent-Garden
 python -m venv .venv
 source .venv/bin/activate       # Windows PowerShell: .\.venv\Scripts\Activate.ps1
 pip install -e ".[analysis]"
+```
+
+如果要使用本地中文 BGE：
+
+```bash
+pip install -e ".[analysis,embeddings]"
+# CUDA 12.9 环境需保持三件套版本一致：
+pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu129
 ```
 
 仓库中的通用示例混合了 `article`、`project`、`note`、`repository` 和 `poem`：
@@ -106,6 +114,16 @@ python -m pipeline.cli \
   --input examples/content \
   --output examples/garden.json \
   --provider openai
+```
+
+### 使用本地中文 BGE
+
+```bash
+python -m pipeline.cli \
+  --input examples/content \
+  --output examples/garden.json \
+  --provider sentence-transformers \
+  --embedding-model BAAI/bge-small-zh-v1.5
 ```
 
 ### 读取公开网站
@@ -178,7 +196,7 @@ JSON 可以是对象、对象数组或 `{ "items": [...] }`。支持字段包括
 | 来源 | [zylatent.com](https://zylatent.com) 公开文章 |
 | 完整视图 | 41 个节点、5 个编辑主题 |
 | Engineering 视图 | 17 个节点、3 个编辑主题 |
-| Embedding | Hash 64D（可替换） |
+| Embedding | BAAI/bge-small-zh-v1.5 512D |
 | 坐标 | UMAP 2D |
 | 最终主题方式 | `curated-keywords` |
 | 完整输出 | [`examples/zylatent/garden.json`](examples/zylatent/garden.json) |
