@@ -11,6 +11,8 @@ const gridLayer = document.querySelector("#grid");
 const regionLayer = document.querySelector("#regions");
 const edgeLayer = document.querySelector("#edges");
 const detail = document.querySelector("#detail");
+const hoverCard = document.querySelector("#hover-card");
+const mapStage = document.querySelector(".map-stage");
 const status = document.querySelector("#status");
 const defaultView = { x: -1.08, y: -1.08, width: 2.16, height: 2.16 };
 const view = { ...defaultView };
@@ -45,6 +47,82 @@ function safeExternalUrl(value) {
   } catch (_) {
     return null;
   }
+}
+
+function formatHoverDate(value) {
+  if (!value) return "未标注日期";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return String(value);
+  return date.getFullYear() + "年" + String(date.getMonth() + 1).padStart(2, "0") + "月" +
+    String(date.getDate()).padStart(2, "0") + "日";
+}
+
+function coverUrlFor(node) {
+  const explicit = safeExternalUrl(node.cover);
+  if (explicit) return explicit;
+  const source = safeExternalUrl(node.url);
+  if (!source) return null;
+  const url = new URL(source);
+  if (!/(^|\.)zylatent\.com$/i.test(url.hostname)) return null;
+  const parts = url.pathname.split("/").filter(Boolean);
+  const slug = parts.at(-1);
+  if (!slug || parts.length < 2) return null;
+  return new URL("/og/" + decodeURIComponent(slug) + ".png", url.origin).href;
+}
+
+function hideHoverCard() {
+  if (!hoverCard) return;
+  hoverCard.classList.remove("is-visible");
+  hoverCard.hidden = true;
+}
+
+function positionHoverCard(target) {
+  if (!hoverCard || !mapStage || hoverCard.hidden) return;
+  const stageRect = mapStage.getBoundingClientRect();
+  const targetRect = target.getBoundingClientRect();
+  const cardRect = hoverCard.getBoundingClientRect();
+  const targetX = targetRect.left - stageRect.left + targetRect.width / 2;
+  const gap = 18;
+  const preferRight = targetX < stageRect.width * .58;
+  const preferredLeft = preferRight
+    ? targetRect.right - stageRect.left + gap
+    : targetRect.left - stageRect.left - cardRect.width - gap;
+  const left = Math.max(12, Math.min(stageRect.width - cardRect.width - 12, preferredLeft));
+  const preferredTop = targetRect.top - stageRect.top - 16;
+  const top = Math.max(12, Math.min(stageRect.height - cardRect.height - 12, preferredTop));
+  hoverCard.style.left = left + "px";
+  hoverCard.style.top = top + "px";
+}
+
+function showHoverCard(id, target) {
+  if (!hoverCard) return;
+  const node = state.garden && state.garden.nodes.find(item => String(item.id) === String(id));
+  if (!node) return;
+  const cluster = state.garden.clusters.find(item => item.id === node.cluster_id);
+  document.querySelector("#hover-date").textContent = formatHoverDate(node.date);
+  document.querySelector("#hover-kind").textContent = node.content_type === "article" ? "文章 · 语义节点" : String(node.content_type || "内容节点");
+  document.querySelector("#hover-title").textContent = node.title;
+  document.querySelector("#hover-description").textContent = node.description || "从语义地图继续探索这篇内容。";
+  document.querySelector("#hover-tags").innerHTML = (node.tags || []).slice(0, 5).map(tag =>
+    '<span>' + esc(tag) + "</span>"
+  ).join("");
+  hoverCard.style.setProperty("--hover-accent", safeColor(cluster && cluster.color));
+  const cover = document.querySelector("#hover-cover");
+  const image = document.querySelector("#hover-cover-image");
+  const coverUrl = coverUrlFor(node);
+  cover.classList.toggle("has-image", Boolean(coverUrl));
+  image.hidden = !coverUrl;
+  image.alt = coverUrl ? node.title : "";
+  image.onload = () => cover.classList.add("has-image");
+  image.onerror = () => {
+    image.hidden = true;
+    cover.classList.remove("has-image");
+  };
+  if (coverUrl) image.src = coverUrl;
+  else image.removeAttribute("src");
+  hoverCard.hidden = false;
+  hoverCard.classList.add("is-visible");
+  requestAnimationFrame(() => positionHoverCard(target));
 }
 
 function safeTheme(value) {
@@ -398,7 +476,6 @@ function renderNodes() {
     const color = safeColor(cluster && cluster.color);
     const content = '<g class="node ' + (visible ? "" : "dim") + (isSelected ? " selected" : "") +
       '" transform="translate(' + x + " " + (-y) + ')">' +
-      '<title>' + esc(node.title) + '</title>' +
       '<circle class="node-hit" r=".062"></circle>' +
       '<circle class="node-halo" r="' + (Number(radius) * 1.82).toFixed(3) + '" fill="' + color + '"></circle>' +
       '<g class="node-glyph" transform="rotate(' + angle + ')">' +
@@ -423,23 +500,28 @@ function renderNodes() {
     item.addEventListener("pointerenter", () => {
       highlightEdges(item.dataset.id, true);
       toggleLabel(item.dataset.id, true);
+      showHoverCard(item.dataset.id, item);
     });
     item.addEventListener("pointerleave", () => {
       highlightEdges(item.dataset.id, false);
       toggleLabel(item.dataset.id, false);
+      hideHoverCard();
     });
     item.addEventListener("focus", () => {
       highlightEdges(item.dataset.id, true);
       toggleLabel(item.dataset.id, true);
+      showHoverCard(item.dataset.id, item);
     });
     item.addEventListener("blur", () => {
       highlightEdges(item.dataset.id, false);
       toggleLabel(item.dataset.id, false);
+      hideHoverCard();
     });
   });
   nodeLayer.querySelectorAll(".node-link, .node-fallback").forEach(item => {
     item.addEventListener("click", event => {
       event.preventDefault();
+      hideHoverCard();
       showDetail(item.dataset.id);
     });
     item.addEventListener("keydown", event => {
@@ -452,6 +534,7 @@ function renderNodes() {
 }
 
 function showDetail(id) {
+  hideHoverCard();
   const node = state.garden.nodes.find(item => String(item.id) === String(id));
   if (!node) return;
   state.focusedId = String(node.id);
@@ -483,6 +566,7 @@ document.querySelector("#search").addEventListener("input", event => {
   renderGraph();
 });
 document.querySelector("#reset").addEventListener("click", () => {
+  hideHoverCard();
   state.query = "";
   state.cluster = null;
   state.focusedId = null;

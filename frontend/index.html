@@ -36,8 +36,8 @@
       </section>
 
       <section class="map-card">
-        <div class="map-stage">
-          <div id="status" class="status">正在载入庭院地图…</div>
+          <div class="map-stage">
+            <div id="status" class="status">正在载入庭院地图…</div>
           <svg id="map" viewBox="-1.08 -1.08 2.16 2.16" role="img" aria-label="可交互的文章语义地图">
             <defs>
               <clipPath id="map-clip"><rect x="-.99" y="-.99" width="1.98" height="1.98" rx=".035" /></clipPath>
@@ -53,6 +53,21 @@
             <g id="nodes" clip-path="url(#map-clip)"></g>
             <g id="labels" clip-path="url(#map-clip)" aria-hidden="true"></g>
           </svg>
+          <aside id="hover-card" class="hover-card" hidden role="status" aria-live="polite">
+            <div class="hover-card-body">
+              <div class="hover-card-meta">
+                <span id="hover-date"></span>
+                <span id="hover-kind"></span>
+              </div>
+              <h2 id="hover-title"></h2>
+              <p id="hover-description"></p>
+              <div id="hover-tags" class="hover-tags"></div>
+            </div>
+            <div id="hover-cover" class="hover-card-cover" aria-hidden="true">
+              <img id="hover-cover-image" alt="" loading="lazy" />
+              <span class="hover-cover-fallback"></span>
+            </div>
+          </aside>
           <div class="map-note"><span class="note-mark"></span><span>距离越近，内容越相似</span><span id="trail-count" class="trail-count" hidden></span></div>
           <aside id="detail" class="detail" hidden>
             <button id="close-detail" class="close" type="button" aria-label="关闭详情">×</button>
