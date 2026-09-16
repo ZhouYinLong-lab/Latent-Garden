@@ -110,20 +110,13 @@ function showHoverCard(id, target) {
   const cover = document.querySelector("#hover-cover");
   const image = document.querySelector("#hover-cover-image");
   const coverUrl = coverUrlFor(node);
-  const hoverNodeId = String(node.id);
-  hoverCard.dataset.nodeId = hoverNodeId;
   image.style.backgroundImage = "none";
   image.classList.remove("is-loaded");
   cover.classList.remove("has-image");
   if (coverUrl) {
-    const preload = new Image();
-    preload.onload = () => {
-      if (hoverCard.dataset.nodeId !== hoverNodeId) return;
-      image.style.backgroundImage = 'url("' + coverUrl.replace(/"/g, "%22") + '")';
-      image.classList.add("is-loaded");
-      cover.classList.add("has-image");
-    };
-    preload.src = coverUrl;
+    image.style.backgroundImage = 'url("' + coverUrl.replace(/"/g, "%22") + '")';
+    image.classList.add("is-loaded");
+    cover.classList.add("has-image");
   }
   hoverCard.hidden = false;
   hoverCard.classList.add("is-visible");
