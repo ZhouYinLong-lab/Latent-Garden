@@ -232,6 +232,7 @@ input::placeholder { color: #929989; }
   min-height: 0;
   overflow: hidden;
   cursor: default;
+  touch-action: none;
 }
 #map.can-pan { cursor: grab; }
 #map.can-pan:active { cursor: grabbing; }
@@ -355,6 +356,8 @@ input::placeholder { color: #929989; }
   background: rgba(248, 245, 231, .97);
   box-shadow: 0 20px 54px rgba(39, 47, 38, .24), 0 0 0 1px rgba(255, 255, 255, .18) inset;
   pointer-events: none;
+  contain: layout paint;
+  will-change: opacity, transform;
   opacity: 0;
   transform: translateY(5px) scale(.985);
   transform-origin: center bottom;
@@ -606,6 +609,7 @@ input::placeholder { color: #929989; }
   background: rgba(248, 245, 231, .95);
   box-shadow: 0 18px 50px var(--shadow);
   backdrop-filter: blur(16px);
+  contain: layout paint;
 }
 .detail h2 {
   margin: 4px 0 10px;

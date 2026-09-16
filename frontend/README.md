@@ -11,7 +11,7 @@
 - 细线连接二维地图中最近的内容，悬停节点时会突出它的局部关系；
 - 主题栏中的颜色对应 `garden.json` 的分组；它可以来自默认聚类，也可以来自明确标记的案例策展层；
 - 淡色/深色网格只是阅读辅助，不是统计图，坐标轴方向没有固定含义；
-- 悬停或键盘聚焦节点时，会显示类似文章封面的预览卡片；有博客 OG 图时优先使用，没有时使用主题色抽象封面；
+- 悬停或键盘聚焦节点时，会按需加载本地 WebP 文章封面；没有封面时使用主题色抽象封面；
 - 点击节点会先打开详情卡片，并突出当前节点附近的 5 篇内容；原文链接位于详情卡片内。
 
 zylatent.com 的默认展示在语义坐标之上增加了一层示例级编辑策展，右侧固定为五个更适合博客阅读的主题：智能与计算、工具与开源、互动实验、诗歌与文学、影像与见闻。规则位于 `examples/zylatent/config.json`，由通用的 `scripts/apply_case_profile.py` 读取，不进入 core，也不会把 Latent Garden 与博客源码耦合。
@@ -56,7 +56,7 @@ http://localhost:8000/?data=https://example.com/garden.json
   "title": "A document",
   "description": "Short summary",
   "tags": ["topic"],
-  "cover": "./assets/covers/example.png",
+  "cover": "./assets/covers/example.webp",
   "url": "https://example.com/document",
   "content_type": "article",
   "x": 0.12,

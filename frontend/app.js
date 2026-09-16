@@ -4,7 +4,20 @@ const dataUrl = params.get("data") || (requestedView === "engineering" ? "./engi
 const requestedCluster = params.get("cluster");
 const requestedTheme = params.get("theme");
 if (params.get("embed") === "1") document.documentElement.dataset.embed = "true";
-const state = { garden: null, query: "", cluster: null, focusedId: null, trail: [] };
+const state = {
+  garden: null,
+  query: "",
+  cluster: null,
+  focusedId: null,
+  trail: [],
+  nodeById: new Map(),
+  clusterById: new Map(),
+  nodesByCluster: new Map(),
+  points: new Map(),
+  searchTextById: new Map(),
+  edges: [],
+  focusedSet: null,
+};
 const nodeLayer = document.querySelector("#nodes");
 const labelLayer = document.querySelector("#labels");
 const gridLayer = document.querySelector("#grid");
@@ -17,6 +30,8 @@ const status = document.querySelector("#status");
 const defaultView = { x: -1.08, y: -1.08, width: 2.16, height: 2.16 };
 const view = { ...defaultView };
 let drag = null;
+let viewFrame = 0;
+let graphFrame = 0;
 const trailStorageKey = "latent-garden:trail:" + requestedView;
 
 try {
@@ -58,22 +73,29 @@ function formatHoverDate(value) {
 }
 
 function coverUrlFor(node) {
-  const explicit = safeExternalUrl(node.cover);
-  if (explicit) return explicit;
-  const source = safeExternalUrl(node.url);
-  if (!source) return null;
-  const url = new URL(source);
-  if (!/(^|\.)zylatent\.com$/i.test(url.hostname)) return null;
-  const parts = url.pathname.split("/").filter(Boolean);
-  const slug = parts.at(-1);
-  if (!slug || parts.length < 2) return null;
-  return new URL("/og/" + decodeURIComponent(slug) + ".png", url.origin).href;
+  return safeExternalUrl(node.cover);
 }
 
 function hideHoverCard() {
   if (!hoverCard) return;
   hoverCard.classList.remove("is-visible");
   hoverCard.hidden = true;
+}
+
+function scheduleViewApply() {
+  if (viewFrame) return;
+  viewFrame = requestAnimationFrame(() => {
+    viewFrame = 0;
+    applyView();
+  });
+}
+
+function scheduleGraphRender() {
+  if (graphFrame) return;
+  graphFrame = requestAnimationFrame(() => {
+    graphFrame = 0;
+    if (state.garden) renderGraph();
+  });
 }
 
 function positionHoverCard(target) {
@@ -96,9 +118,9 @@ function positionHoverCard(target) {
 
 function showHoverCard(id, target) {
   if (!hoverCard) return;
-  const node = state.garden && state.garden.nodes.find(item => String(item.id) === String(id));
+  const node = state.nodeById.get(String(id));
   if (!node) return;
-  const cluster = state.garden.clusters.find(item => item.id === node.cluster_id);
+  const cluster = state.clusterById.get(String(node.cluster_id));
   document.querySelector("#hover-date").textContent = formatHoverDate(node.date);
   document.querySelector("#hover-kind").textContent = node.content_type === "article" ? "文章 · 语义节点" : String(node.content_type || "内容节点");
   document.querySelector("#hover-title").textContent = node.title;
@@ -164,11 +186,11 @@ function pointFor(node) {
 
 function semanticNeighbors(node, limit = 5) {
   if (!state.garden || !node) return [];
-  const point = pointFor(node);
+  const point = state.points.get(String(node.id)) || pointFor(node);
   return state.garden.nodes
     .filter(candidate => String(candidate.id) !== String(node.id))
     .map(candidate => {
-      const candidatePoint = pointFor(candidate);
+      const candidatePoint = state.points.get(String(candidate.id)) || pointFor(candidate);
       return { node: candidate, distance: Math.hypot(candidatePoint.x - point.x, candidatePoint.y - point.y) };
     })
     .sort((left, right) => left.distance - right.distance)
@@ -177,9 +199,11 @@ function semanticNeighbors(node, limit = 5) {
 
 function focusSet() {
   if (!state.focusedId || !state.garden) return null;
-  const node = state.garden.nodes.find(item => String(item.id) === String(state.focusedId));
+  if (state.focusedSet) return state.focusedSet;
+  const node = state.nodeById.get(String(state.focusedId));
   if (!node) return null;
-  return new Set([String(node.id), ...semanticNeighbors(node, 5).map(item => String(item.node.id))]);
+  state.focusedSet = new Set([String(node.id), ...semanticNeighbors(node, 5).map(item => String(item.node.id))]);
+  return state.focusedSet;
 }
 
 function sharedTags(left, right) {
@@ -191,7 +215,7 @@ function relationshipReason(source, target) {
   const tags = sharedTags(source, target);
   if (tags.length) return "共同标签 · " + tags.slice(0, 2).join("、");
   if (source.cluster_id === target.cluster_id) {
-    const cluster = state.garden.clusters.find(item => item.id === source.cluster_id);
+    const cluster = state.clusterById.get(String(source.cluster_id));
     return "同一主题 · " + (cluster ? cluster.label : "相近内容");
   }
   return "语义邻近 · 适合继续探索";
@@ -209,7 +233,7 @@ function renderTrail() {
   const count = document.querySelector("#trail-count");
   if (!trail || !count || !state.garden) return;
   const items = state.trail
-    .map(id => state.garden.nodes.find(node => String(node.id) === id))
+    .map(id => state.nodeById.get(id))
     .filter(Boolean);
   count.hidden = items.length < 2;
   count.textContent = items.length < 2 ? "" : "探索过 " + items.length + " 篇";
@@ -266,9 +290,8 @@ function regionPath(nodes) {
 
 function renderRegions() {
   const clusters = state.garden.clusters;
-  const nodes = state.garden.nodes;
   regionLayer.innerHTML = clusters.map(cluster => {
-    const path = regionPath(nodes.filter(node => node.cluster_id === cluster.id));
+    const path = regionPath(state.nodesByCluster.get(String(cluster.id)) || []);
     const className = state.cluster === null ? "" : state.cluster === cluster.id ? " active" : " dim";
     return path ? '<path class="cluster-region' + className + '" d="' + path + '" style="--region-color:' +
       safeColor(cluster.color) + '"></path>' : "";
@@ -372,7 +395,7 @@ function renderPresentation() {
 }
 
 function nodeVisibility(node) {
-  const searchable = [node.title, node.description].concat(node.tags || []).join(" ").toLowerCase();
+  const searchable = state.searchTextById.get(String(node.id)) || "";
   const focused = focusSet();
   const isFocused = !focused || focused.has(String(node.id));
   return {
@@ -409,19 +432,17 @@ function semanticEdges(nodes) {
   return Array.from(edges.values());
 }
 
-function renderEdges() {
+function renderEdges(visibility) {
   const nodes = state.garden.nodes;
-  const byId = new Map(nodes.map(node => [String(node.id), node]));
-  const clusters = state.garden.clusters;
-  edgeLayer.innerHTML = semanticEdges(nodes).map(edge => {
-    const fromNode = byId.get(edge.from.id);
-    const toNode = byId.get(edge.to.id);
-    const fromState = nodeVisibility(fromNode);
-    const toState = nodeVisibility(toNode);
+  edgeLayer.innerHTML = (state.edges.length ? state.edges : semanticEdges(nodes)).map(edge => {
+    const fromNode = state.nodeById.get(edge.from.id);
+    const toNode = state.nodeById.get(edge.to.id);
+    const fromState = visibility.get(edge.from.id);
+    const toState = visibility.get(edge.to.id);
     const active = fromState.matches && fromState.visibleCluster && fromState.isFocused &&
       toState.matches && toState.visibleCluster && toState.isFocused;
     const sameTopic = fromNode.cluster_id === toNode.cluster_id;
-    const cluster = clusters.find(item => item.id === fromNode.cluster_id);
+    const cluster = state.clusterById.get(String(fromNode.cluster_id));
     const dx = edge.to.x - edge.from.x;
     const dy = edge.to.y - edge.from.y;
     const distance = Math.max(.001, Math.hypot(dx, dy));
@@ -444,16 +465,16 @@ function highlightEdges(id, highlighted) {
 }
 
 function renderGraph() {
+  const visibility = new Map(state.garden.nodes.map(node => [String(node.id), nodeVisibility(node)]));
   renderRegions();
-  renderEdges();
-  renderNodes();
+  renderEdges(visibility);
+  renderNodes(visibility);
 }
 
-function renderNodes() {
+function renderNodes(visibility) {
   const nodes = state.garden.nodes;
-  const clusters = state.garden.clusters;
   labelLayer.innerHTML = nodes.map(node => {
-    const { matches, visibleCluster, isFocused, isSelected } = nodeVisibility(node);
+    const { matches, visibleCluster, isFocused, isSelected } = visibility.get(String(node.id));
     const x = safeCoordinate(node.x);
     const y = safeCoordinate(node.y);
     const layout = labelLayout(node.title, x);
@@ -464,8 +485,8 @@ function renderNodes() {
       (-y) + ')" data-id="' + esc(node.id) + '">' + label + "</g>";
   }).join("");
   nodeLayer.innerHTML = nodes.map(node => {
-    const cluster = clusters.find(item => item.id === node.cluster_id);
-    const { matches, visibleCluster, isFocused, isSelected } = nodeVisibility(node);
+    const cluster = state.clusterById.get(String(node.cluster_id));
+    const { matches, visibleCluster, isFocused, isSelected } = visibility.get(String(node.id));
     const visible = matches && visibleCluster && isFocused;
     const radius = visible ? ".025" : ".018";
     const x = safeCoordinate(node.x);
@@ -533,9 +554,10 @@ function renderNodes() {
 
 function showDetail(id) {
   hideHoverCard();
-  const node = state.garden.nodes.find(item => String(item.id) === String(id));
+  const node = state.nodeById.get(String(id));
   if (!node) return;
   state.focusedId = String(node.id);
+  state.focusedSet = null;
   rememberTrail(node.id);
   const focusStatus = document.querySelector("#focus-status");
   if (focusStatus) focusStatus.textContent = "局部视图 · 6 篇文章";
@@ -561,13 +583,14 @@ function showDetail(id) {
 
 document.querySelector("#search").addEventListener("input", event => {
   state.query = event.target.value.trim().toLowerCase();
-  renderGraph();
+  scheduleGraphRender();
 });
 document.querySelector("#reset").addEventListener("click", () => {
   hideHoverCard();
   state.query = "";
   state.cluster = null;
   state.focusedId = null;
+  state.focusedSet = null;
   document.querySelector("#search").value = "";
   Object.assign(view, defaultView);
   applyView();
@@ -576,6 +599,7 @@ document.querySelector("#reset").addEventListener("click", () => {
 });
 document.querySelector("#detail-show-all").addEventListener("click", () => {
   state.focusedId = null;
+  state.focusedSet = null;
   detail.hidden = true;
   render();
 });
@@ -599,7 +623,7 @@ document.querySelector("#map").addEventListener("pointermove", event => {
   constrainView();
   drag.x = event.clientX;
   drag.y = event.clientY;
-  applyView();
+  scheduleViewApply();
 });
 document.querySelector("#map").addEventListener("pointerup", () => {
   drag = null;
@@ -610,5 +634,21 @@ renderGrid();
 
 fetch(dataUrl)
   .then(response => { if (!response.ok) throw new Error("Could not load " + dataUrl); return response.json(); })
-  .then(garden => { state.garden = garden; status.remove(); render(); })
+  .then(garden => {
+    state.garden = garden;
+    state.nodeById = new Map(garden.nodes.map(node => [String(node.id), node]));
+    state.clusterById = new Map(garden.clusters.map(cluster => [String(cluster.id), cluster]));
+    state.nodesByCluster = new Map(garden.clusters.map(cluster => [String(cluster.id), []]));
+    garden.nodes.forEach(node => {
+      const clusterNodes = state.nodesByCluster.get(String(node.cluster_id));
+      if (clusterNodes) clusterNodes.push(node);
+    });
+    state.points = new Map(garden.nodes.map(node => [String(node.id), pointFor(node)]));
+    state.searchTextById = new Map(garden.nodes.map(node => [
+      String(node.id), [node.title, node.description].concat(node.tags || []).join(" ").toLowerCase()
+    ]));
+    state.edges = semanticEdges(garden.nodes);
+    status.remove();
+    render();
+  })
   .catch(error => { status.textContent = error.message; });

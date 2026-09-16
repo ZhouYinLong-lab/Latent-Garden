@@ -24,7 +24,7 @@
       "y": -0.5301900391142533,
       "cluster_id": 0,
       "content_hash": "a9d6cbfd458efdf9e071a4c6043c56518cba9b5c0a6be8443a2732f7a601cbd8",
-      "cover": "./assets/covers/804159a3e32e.jpg"
+      "cover": "./assets/covers/804159a3e32e.webp"
     },
     {
       "id": "我和埃隆马斯克之间真的只隔五个人吗",
@@ -44,7 +44,7 @@
       "y": -0.5804455932233972,
       "cluster_id": 0,
       "content_hash": "4d420ac58fe4e7fffc689de641652b8e2ac7af17978400757e79a201acd59159",
-      "cover": "./assets/covers/0d72aa9e60f6.jpg"
+      "cover": "./assets/covers/0d72aa9e60f6.webp"
     },
     {
       "id": "fastapi-basics",
@@ -64,7 +64,7 @@
       "y": -0.8788591494711427,
       "cluster_id": 1,
       "content_hash": "1319df7f34acd65a6be5132dd5699264408dbaf0e0d497fed8492e2567de36fb",
-      "cover": "./assets/covers/ce60466f23ae.jpg"
+      "cover": "./assets/covers/ce60466f23ae.webp"
     },
     {
       "id": "在概率的雾里行走-贝叶斯与mcmc学习记录",
@@ -84,7 +84,7 @@
       "y": -0.6116378584696577,
       "cluster_id": 0,
       "content_hash": "5b8921de89dff35cda7cbb343093715984f8cebd3ffec8beb9b6c6f9ab74b9ff",
-      "cover": "./assets/covers/c25ecf56892e.jpg"
+      "cover": "./assets/covers/c25ecf56892e.webp"
     },
     {
       "id": "dog-littletools工具集",
@@ -219,7 +219,7 @@
       "y": -0.7990506275413789,
       "cluster_id": 1,
       "content_hash": "b7e32a2de4aaa68e0bbe1e2305ab507c08043f2ff5f3aece8584c39e61201609",
-      "cover": "./assets/covers/961355e9baef.png"
+      "cover": "./assets/covers/961355e9baef.webp"
     },
     {
       "id": "smartagent",
@@ -273,7 +273,7 @@
       "y": -0.08680875201360638,
       "cluster_id": 1,
       "content_hash": "16afa367ef55ef89cb08be2b267cf08953a1d3a4d563e67b08cced81008b1eaf",
-      "cover": "./assets/covers/d62b5442b01e.jpg"
+      "cover": "./assets/covers/d62b5442b01e.webp"
     },
     {
       "id": "七王国的骑士-第一季",
@@ -307,7 +307,7 @@
       "y": -0.27008479700506294,
       "cluster_id": 2,
       "content_hash": "860d1057c200c7587da308295469e09164bc6b362f1e3c53dbd4b57a2e6f23dc",
-      "cover": "./assets/covers/1c0a00cfbec6.jpg"
+      "cover": "./assets/covers/1c0a00cfbec6.webp"
     },
     {
       "id": "大庚剑阵",
@@ -324,7 +324,7 @@
       "y": -0.3458982045258968,
       "cluster_id": 2,
       "content_hash": "86c0313606c8a161e4f6b2e244409b26e2bf834fd4f56b224359644fcf106e91",
-      "cover": "./assets/covers/a589afbbc9ea.png"
+      "cover": "./assets/covers/a589afbbc9ea.webp"
     }
   ],
   "clusters": [
@@ -408,7 +408,7 @@
       "source_prefix": "文字来自",
       "source_label": "寒柳别苑",
       "source_url": "https://zylatent.com",
-      "source_icon": "./assets/zylatent-icon.png"
+      "source_icon": "./assets/zylatent-icon.webp"
     },
     "edge_config": {
       "neighbors": 2,
