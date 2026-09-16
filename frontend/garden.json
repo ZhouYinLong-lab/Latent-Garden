@@ -24,7 +24,7 @@
       "y": -0.5301900391142533,
       "cluster_id": 0,
       "content_hash": "a9d6cbfd458efdf9e071a4c6043c56518cba9b5c0a6be8443a2732f7a601cbd8",
-      "cover": "./assets/covers/804159a3e32e.png"
+      "cover": "./assets/covers/804159a3e32e.jpg"
     },
     {
       "id": "我和埃隆马斯克之间真的只隔五个人吗",
@@ -44,7 +44,7 @@
       "y": -0.5804455932233972,
       "cluster_id": 0,
       "content_hash": "4d420ac58fe4e7fffc689de641652b8e2ac7af17978400757e79a201acd59159",
-      "cover": "./assets/covers/0d72aa9e60f6.png"
+      "cover": "./assets/covers/0d72aa9e60f6.jpg"
     },
     {
       "id": "fastapi-basics",
@@ -64,7 +64,7 @@
       "y": -0.8788591494711427,
       "cluster_id": 1,
       "content_hash": "1319df7f34acd65a6be5132dd5699264408dbaf0e0d497fed8492e2567de36fb",
-      "cover": "./assets/covers/ce60466f23ae.png"
+      "cover": "./assets/covers/ce60466f23ae.jpg"
     },
     {
       "id": "在概率的雾里行走-贝叶斯与mcmc学习记录",
@@ -84,7 +84,7 @@
       "y": -0.6116378584696577,
       "cluster_id": 0,
       "content_hash": "5b8921de89dff35cda7cbb343093715984f8cebd3ffec8beb9b6c6f9ab74b9ff",
-      "cover": "./assets/covers/c25ecf56892e.png"
+      "cover": "./assets/covers/c25ecf56892e.jpg"
     },
     {
       "id": "dog-littletools工具集",
@@ -104,7 +104,7 @@
       "y": -0.7421754300577178,
       "cluster_id": 1,
       "content_hash": "d902f8919faec71b0f803b8d97eec6c1cec35273312c51322004694fe306a98e",
-      "cover": "./assets/covers/2586437fefeb.png"
+      "cover": "./assets/covers/2586437fefeb.webp"
     },
     {
       "id": "dog-babble加密实验",
@@ -124,7 +124,7 @@
       "y": -0.7622667866144587,
       "cluster_id": 2,
       "content_hash": "02b890bf93f69f1e9165c09bae8fa4e1c3d89dbc7c4e3b7a62173088f9062b2d",
-      "cover": "./assets/covers/834d30c34b05.png"
+      "cover": "./assets/covers/834d30c34b05.webp"
     },
     {
       "id": "miniarena自走棋",
@@ -144,7 +144,7 @@
       "y": -0.92,
       "cluster_id": 2,
       "content_hash": "802e88165b2fc08518f8090718febfd5dc9f63bd6b705f1ecf6e96cb5180c9d4",
-      "cover": "./assets/covers/409d7f71180f.png"
+      "cover": "./assets/covers/409d7f71180f.webp"
     },
     {
       "id": "nannahelper教程文档",
@@ -164,7 +164,7 @@
       "y": -0.7918216064385303,
       "cluster_id": 1,
       "content_hash": "b8592b956fecc9569e9aa9c55de96cb461e52eebe5353f788c46e17184cdb231",
-      "cover": "./assets/covers/75aebdab1d21.png"
+      "cover": "./assets/covers/75aebdab1d21.webp"
     },
     {
       "id": "绘出七彩的七天",
@@ -184,7 +184,7 @@
       "y": 0.027569334938402967,
       "cluster_id": 4,
       "content_hash": "2356caa0e77c848b0cc6d1927268df43f10f5a50eac7e9119836e5a379ebfa5c",
-      "cover": "./assets/covers/aebc28fea043.png"
+      "cover": "./assets/covers/aebc28fea043.jpg"
     },
     {
       "id": "dog-skills-48-claude-code技能库",
@@ -204,7 +204,7 @@
       "y": -0.725028758989188,
       "cluster_id": 1,
       "content_hash": "11abdfa99730044881685cb019a98132948b43e156459954f5a67339c0c1c167",
-      "cover": "./assets/covers/548da1fc2952.png"
+      "cover": "./assets/covers/548da1fc2952.webp"
     },
     {
       "id": "2026上半年-代码与项目回顾",
@@ -220,7 +220,7 @@
       "y": -0.7386686958182747,
       "cluster_id": 1,
       "content_hash": "4cb19c5f0d2a02680e2ac5e02419f8013e0490f65fab390c092363f3fdf8ea7f",
-      "cover": "./assets/covers/08c72ab3a720.png"
+      "cover": "./assets/covers/08c72ab3a720.webp"
     },
     {
       "id": "当奇迹遇到奇迹",
@@ -238,7 +238,7 @@
       "y": 0.2867284090619334,
       "cluster_id": 3,
       "content_hash": "98a2772b0a086f8047b6cff6bcf8f92d5d323e129c879076419fb2b76ab0cfa1",
-      "cover": "./assets/covers/1aa06fdfd357.png"
+      "cover": "./assets/covers/1aa06fdfd357.webp"
     },
     {
       "id": "海子-以梦为马",
@@ -255,7 +255,7 @@
       "y": 0.33759663334998946,
       "cluster_id": 3,
       "content_hash": "ab788dfb24067c8836cbfd3ce584cc56aad7fa22ade93eb39bafaaa94820fc53",
-      "cover": "./assets/covers/920aad709eab.png"
+      "cover": "./assets/covers/920aad709eab.webp"
     },
     {
       "id": "we-are-the-world",
@@ -312,7 +312,7 @@
       "y": -0.43581057136095863,
       "cluster_id": 2,
       "content_hash": "6b4c5dac61901435f17b3da8cf668198de43517efc545c23fd1f11716f5adae3",
-      "cover": "./assets/covers/3cb56df131dd.png"
+      "cover": "./assets/covers/3cb56df131dd.webp"
     },
     {
       "id": "cpp-memory-ownership-raii",
@@ -330,7 +330,7 @@
       "y": -0.5899028145531684,
       "cluster_id": 0,
       "content_hash": "b7fdfac99770b5ece59f50c71827c85c1ef1ba50623b453dc6ce070e02c6c363",
-      "cover": "./assets/covers/fe980845aabe.png"
+      "cover": "./assets/covers/fe980845aabe.webp"
     },
     {
       "id": "如何在数字时代活成一棵树",
@@ -347,7 +347,7 @@
       "y": -0.08680875201360638,
       "cluster_id": 1,
       "content_hash": "16afa367ef55ef89cb08be2b267cf08953a1d3a4d563e67b08cced81008b1eaf",
-      "cover": "./assets/covers/d62b5442b01e.png"
+      "cover": "./assets/covers/d62b5442b01e.jpg"
     },
     {
       "id": "游记-济南",
@@ -364,7 +364,7 @@
       "y": 0.18810058257586826,
       "cluster_id": 4,
       "content_hash": "1376f5c0e4a81e4606576ef2ace38054eb7724db3084caac071107309c86d81d",
-      "cover": "./assets/covers/49a65705cd30.png"
+      "cover": "./assets/covers/49a65705cd30.jpg"
     },
     {
       "id": "七王国的骑士-第一季",
@@ -382,7 +382,7 @@
       "y": 0.538126491239293,
       "cluster_id": 2,
       "content_hash": "44b4b9335504f417349adc4fa7f09b01fc1ba357df656a25c3956e6556741c98",
-      "cover": "./assets/covers/a2705e213389.png"
+      "cover": "./assets/covers/a2705e213389.webp"
     },
     {
       "id": "兰波-地狱之夜",
@@ -399,7 +399,7 @@
       "y": 0.7981812491062444,
       "cluster_id": 3,
       "content_hash": "7a738354bae8cc3c7355523df8a08cec30bc491db0bee887bc184a6ef24ff772",
-      "cover": "./assets/covers/bffe884dba48.png"
+      "cover": "./assets/covers/bffe884dba48.jpg"
     },
     {
       "id": "兰波-第一次夜晚",
@@ -416,7 +416,7 @@
       "y": 0.43384703614582876,
       "cluster_id": 3,
       "content_hash": "1f48f305f6d0a1dc120570d78b845cce59ca821a91254868e921b9dbac8f9949",
-      "cover": "./assets/covers/74d1b1667847.png"
+      "cover": "./assets/covers/74d1b1667847.jpg"
     },
     {
       "id": "互动网页-夜空为你闪烁",
@@ -432,7 +432,7 @@
       "y": -0.27008479700506294,
       "cluster_id": 2,
       "content_hash": "860d1057c200c7587da308295469e09164bc6b362f1e3c53dbd4b57a2e6f23dc",
-      "cover": "./assets/covers/1c0a00cfbec6.png"
+      "cover": "./assets/covers/1c0a00cfbec6.jpg"
     },
     {
       "id": "兰波-被囚禁者",
@@ -449,7 +449,7 @@
       "y": 0.8260132941639077,
       "cluster_id": 3,
       "content_hash": "604dd61a33b38f59c6b25eaf838d1fd31395c07f4eb3b85a68cb4d95c0690f22",
-      "cover": "./assets/covers/c11ea233514d.png"
+      "cover": "./assets/covers/c11ea233514d.jpg"
     },
     {
       "id": "兰波-致一位理性的人",
@@ -466,7 +466,7 @@
       "y": 0.7093202028972673,
       "cluster_id": 3,
       "content_hash": "e80b930f6b856beb4b39eaaa60758bda70510f5d69ab41c8768c478d3119d4d0",
-      "cover": "./assets/covers/6c94035a5119.png"
+      "cover": "./assets/covers/6c94035a5119.jpg"
     },
     {
       "id": "兰波-母狼",
@@ -568,7 +568,7 @@
       "y": 0.5758095484347364,
       "cluster_id": 3,
       "content_hash": "96514a877346be1027c7f205ae90bca0e85c7bff87c4fc74bf6f2274c56d2c8e",
-      "cover": "./assets/covers/5b47e8ae223f.png"
+      "cover": "./assets/covers/5b47e8ae223f.jpg"
     },
     {
       "id": "兰波-黎明",
@@ -585,7 +585,7 @@
       "y": 0.5465647677070246,
       "cluster_id": 3,
       "content_hash": "1b8aad21ccb452293504ba1fdeaa17fdce7e3bc30e565e2ddac7cdef5dcaddcf",
-      "cover": "./assets/covers/4cc74fde1ebb.png"
+      "cover": "./assets/covers/4cc74fde1ebb.jpg"
     },
     {
       "id": "ghost-in-shell",
@@ -620,7 +620,7 @@
       "y": 0.6991576426232778,
       "cluster_id": 3,
       "content_hash": "f3f5bbc5bef119f0228577aab7972d5400cc8628078dd1caa6a2ac3b836f931a",
-      "cover": "./assets/covers/986699180a10.png"
+      "cover": "./assets/covers/986699180a10.jpg"
     },
     {
       "id": "兰波-醉舟",
@@ -637,7 +637,7 @@
       "y": 0.5698233245370624,
       "cluster_id": 3,
       "content_hash": "9778e10b167d35d05100e54adfbea20063e6188b304846e0c6f23abfbb3e34e5",
-      "cover": "./assets/covers/99498a4e525e.png"
+      "cover": "./assets/covers/99498a4e525e.jpg"
     },
     {
       "id": "兰波-巴黎狂欢节",
@@ -671,7 +671,7 @@
       "y": 0.92,
       "cluster_id": 3,
       "content_hash": "c08156c5fdf7df5a137912fc2d7e0ee172177f044b4f785de90b0752b3bc78e8",
-      "cover": "./assets/covers/d1ec18593cb4.png"
+      "cover": "./assets/covers/d1ec18593cb4.jpg"
     },
     {
       "id": "兰波-山谷睡者",
@@ -722,7 +722,7 @@
       "y": 0.4457465012866356,
       "cluster_id": 3,
       "content_hash": "58e6e8eed591389271525219fdf1436dfdd772c13840e5a9eb940331fdff4d78",
-      "cover": "./assets/covers/3b1bc939b9ca.png"
+      "cover": "./assets/covers/3b1bc939b9ca.jpg"
     },
     {
       "id": "我的2025",
