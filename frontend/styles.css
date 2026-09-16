@@ -445,6 +445,7 @@ input::placeholder { color: #929989; }
   object-fit: cover;
   filter: saturate(.7) contrast(1.04);
 }
+.hover-card-cover img[hidden] { display: none !important; }
 .hover-card-cover.has-image::before {
   position: absolute;
   z-index: 1;
