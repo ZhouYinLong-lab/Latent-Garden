@@ -1,67 +1,10 @@
 {
   "version": "0.1",
-  "generated_at": "2026-09-28T08:44:32.508932+00:00",
+  "generated_at": "2026-10-05T09:09:02.900073+00:00",
   "dimensions": 512,
   "reducer": "umap",
   "clusterer": "curated-keywords",
   "nodes": [
-    {
-      "id": "在模拟器里重新打开两代主机游戏",
-      "title": "在模拟器里重新打开两代主机游戏",
-      "description": "记录我用 RetroArch 折腾《旺达与巨像》，以及用 shadPS4 尝试《血源诅咒》和《重力异想世界》的过程。",
-      "tags": [
-        "模拟器",
-        "RetroArch",
-        "shadPS4",
-        "游戏"
-      ],
-      "date": "2026-09-15",
-      "url": "https://zylatent.com/blog/%E5%9C%A8%E6%A8%A1%E6%8B%9F%E5%99%A8%E9%87%8C%E9%87%8D%E6%96%B0%E6%89%93%E5%BC%80%E4%B8%A4%E4%BB%A3%E4%B8%BB%E6%9C%BA%E6%B8%B8%E6%88%8F",
-      "content_type": "article",
-      "x": -0.5031551129027942,
-      "y": -0.5893032869410426,
-      "cluster_id": 2,
-      "content_hash": "b2f86e2d4ae499b10ec3581252e2e503d79592a42cb233266d553975b8068a10"
-    },
-    {
-      "id": "point-allocation-credit-assignment",
-      "title": "谁该得到这 100 分？人工智能中的点数分配问题",
-      "description": "从概率统计中的点数分配问题出发，讨论强化学习、多智能体、反事实归因、Shapley Value 与神经网络中的点数分配。",
-      "tags": [
-        "概率统计",
-        "点数分配",
-        "强化学习",
-        "多智能体",
-        "Shapley Value",
-        "可解释人工智能"
-      ],
-      "date": "2026-08-25",
-      "url": "https://zylatent.com/blog/point-allocation-credit-assignment",
-      "content_type": "article",
-      "x": -0.060527952772428284,
-      "y": -0.6368524120455131,
-      "cluster_id": 0,
-      "content_hash": "25744ca99ad5dcf0c544d601d364326779b48254f914e7bb832ac4e59a7cc514"
-    },
-    {
-      "id": "ohmystyle视觉风格工程",
-      "title": "我为什么开始做 OhMyStyle：把“风格”变成可复用的工程对象",
-      "description": "从寒柳别苑的背景图开始，我尝试把一句“保持原来的画风”拆成可追溯、可组合、可校验的视觉风格系统。",
-      "tags": [
-        "图像生成",
-        "视觉风格",
-        "Prompt 编译",
-        "开源",
-        "AI 工具"
-      ],
-      "date": "2026-08-11",
-      "url": "https://zylatent.com/blog/ohmystyle%E8%A7%86%E8%A7%89%E9%A3%8E%E6%A0%BC%E5%B7%A5%E7%A8%8B",
-      "content_type": "article",
-      "x": -0.26583931708123254,
-      "y": -0.4164135543588299,
-      "cluster_id": 1,
-      "content_hash": "133c68c02e6a6cb8853924b7b03911baa82868babf6aa0611356fd4838655051"
-    },
     {
       "id": "五子棋搜索实验",
       "title": "从五子棋作业到搜索实验：用第五章的方法拆开一个 Agent",
@@ -77,31 +20,11 @@
       "date": "2026-07-31",
       "url": "https://zylatent.com/blog/%E4%BA%94%E5%AD%90%E6%A3%8B%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C",
       "content_type": "article",
-      "x": -0.6619625365604633,
-      "y": -0.4977004868583871,
+      "x": -0.5999707347418543,
+      "y": -0.4599395664442668,
       "cluster_id": 0,
       "content_hash": "cd1e587bb952ccce28e234ac255009b150ec38e34c26cc31aa52791d644cfa20",
       "cover": "./assets/covers/804159a3e32e.webp"
-    },
-    {
-      "id": "我和埃隆马斯克之间真的只隔五个人吗",
-      "title": "从一门必修课出发，我和马斯克之间真的只有五跳？",
-      "description": "从自己的必修课开始，我用公开资料重新查了一遍到埃隆·马斯克的关系链：这次不凑同场嘉宾，只保留能找到直接授课、共同署名或面对面会见依据的五条边。",
-      "tags": [
-        "六人定律",
-        "社会网络",
-        "人物关系",
-        "南京大学",
-        "互联网观察"
-      ],
-      "date": "2026-07-30",
-      "url": "https://zylatent.com/blog/%E6%88%91%E5%92%8C%E5%9F%83%E9%9A%86%E9%A9%AC%E6%96%AF%E5%85%8B%E4%B9%8B%E9%97%B4%E7%9C%9F%E7%9A%84%E5%8F%AA%E9%9A%94%E4%BA%94%E4%B8%AA%E4%BA%BA%E5%90%97",
-      "content_type": "article",
-      "x": -0.6041037905254907,
-      "y": -0.35459148845526234,
-      "cluster_id": 0,
-      "content_hash": "d5a25d853eb66b3c22a5dbf4c908ad7905e2c4ec8601fe8c4b740489a7f1949b",
-      "cover": "./assets/covers/0d72aa9e60f6.webp"
     },
     {
       "id": "fastapi-basics",
@@ -117,8 +40,8 @@
       "date": "2026-07-29",
       "url": "https://zylatent.com/blog/fastapi-basics",
       "content_type": "article",
-      "x": -0.01672178037184502,
-      "y": -0.5608685808922325,
+      "x": -0.92,
+      "y": -0.15228446995124112,
       "cluster_id": 1,
       "content_hash": "a4c17a070c61517bfb786ab76120bc5be364071d076d3bf38eb294eec10fb253",
       "cover": "./assets/covers/ce60466f23ae.webp"
@@ -137,31 +60,11 @@
       "date": "2026-07-27",
       "url": "https://zylatent.com/blog/%E5%9C%A8%E6%A6%82%E7%8E%87%E7%9A%84%E9%9B%BE%E9%87%8C%E8%A1%8C%E8%B5%B0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%B8%8Emcmc%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95",
       "content_type": "article",
-      "x": 0.07224118775363586,
-      "y": -0.39361522393318715,
+      "x": -0.6327198591623955,
+      "y": -0.009924587300745524,
       "cluster_id": 0,
       "content_hash": "b03e9c85f9dafe0b1d3cc2ef3b4e16d3d2df8f487f91355d0d0a0120c67c6f54",
       "cover": "./assets/covers/c25ecf56892e.webp"
-    },
-    {
-      "id": "dog-babble加密实验",
-      "title": "Dog-Babble：把 AES 密文伪装成一串哈基米",
-      "description": "PBKDF2 密钥派生 + AES-256-GCM 加密 + 自定义字典编码，零依赖纯前端密码学实验。用「发疯文学」隐藏信息。",
-      "tags": [
-        "JavaScript",
-        "密码学",
-        "Web Crypto",
-        "加密",
-        "零依赖"
-      ],
-      "date": "2026-07-23",
-      "url": "https://zylatent.com/blog/dog-babble%E5%8A%A0%E5%AF%86%E5%AE%9E%E9%AA%8C",
-      "content_type": "article",
-      "x": 0.32466428480417686,
-      "y": -0.6433190650825642,
-      "cluster_id": 2,
-      "content_hash": "8a3735f236f43d08c9dc8665be675d43c156fe8123fb00a6242703f19e34b61c",
-      "cover": "./assets/covers/834d30c34b05.webp"
     },
     {
       "id": "dog-littletools工具集",
@@ -177,8 +80,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/dog-littletools%E5%B7%A5%E5%85%B7%E9%9B%86",
       "content_type": "article",
-      "x": -0.37525302426338103,
-      "y": -0.8726234006967354,
+      "x": -0.7376757246206473,
+      "y": -0.2624564356353851,
       "cluster_id": 1,
       "content_hash": "7e5d8c11cc77da6294b3588981c5cea75eaefc47a29f020d2cd66f47018048ef",
       "cover": "./assets/covers/2586437fefeb.webp"
@@ -197,8 +100,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/miniarena%E8%87%AA%E8%B5%B0%E6%A3%8B",
       "content_type": "article",
-      "x": -0.701399840976714,
-      "y": -0.7042677701926628,
+      "x": -0.7661339798752801,
+      "y": -0.6273407609916561,
       "cluster_id": 2,
       "content_hash": "3524f05c3ecaba85bb03ddd13ef2aa898277d09f7ef92d97c3db1332bed72e96",
       "cover": "./assets/covers/409d7f71180f.webp"
@@ -217,8 +120,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/nannahelper%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3",
       "content_type": "article",
-      "x": -0.92,
-      "y": -0.48504553426767394,
+      "x": -0.531430786350601,
+      "y": -0.5977408221767007,
       "cluster_id": 1,
       "content_hash": "20a2883c32597c89a2a829bff70432b86a509ebbc0d8eefc7c500c55ae9b3c8e",
       "cover": "./assets/covers/75aebdab1d21.webp"
@@ -237,8 +140,8 @@
       "date": "2026-07-03",
       "url": "https://zylatent.com/blog/dog-skills-48-claude-code%E6%8A%80%E8%83%BD%E5%BA%93",
       "content_type": "article",
-      "x": 0.3096922546115134,
-      "y": -0.22680712198491626,
+      "x": 0.017608028890699234,
+      "y": -0.7476111370638268,
       "cluster_id": 1,
       "content_hash": "62f44f27c9838aa02abfce307bd6028bdd4534c876fca1bc5c9d325ac789eb99",
       "cover": "./assets/covers/548da1fc2952.webp"
@@ -253,30 +156,11 @@
       "date": "2026-06-22",
       "url": "https://zylatent.com/blog/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4-%E4%BB%A3%E7%A0%81%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%9B%9E%E9%A1%BE",
       "content_type": "article",
-      "x": 0.634880076975101,
-      "y": -0.23513205672402004,
+      "x": 0.18382134043328457,
+      "y": -0.7022788604338756,
       "cluster_id": 1,
       "content_hash": "b5bc785261e0019c4233d04ceb3fe1933020f8a51204415afbca8492815ee2de",
       "cover": "./assets/covers/08c72ab3a720.webp"
-    },
-    {
-      "id": "my-compile",
-      "title": "自然语言加密器: 自定义 Base-N 文本隐写实验",
-      "description": "一个基于 AES-256-GCM 与大数进制转换的纯前端高隐蔽性文本加密工具。",
-      "tags": [
-        "JavaScript",
-        "密码学",
-        "算法",
-        "互动网页"
-      ],
-      "date": "2026-03-21",
-      "url": "https://zylatent.com/blog/my-compile",
-      "content_type": "article",
-      "x": 0.6418119059600796,
-      "y": -0.6790849639854324,
-      "cluster_id": 1,
-      "content_hash": "cf8b705dd789a07f388d1b15cf4918b740b1e6c6a470714f3e1a5057f6650e0e",
-      "cover": "./assets/covers/961355e9baef.webp"
     },
     {
       "id": "smartagent",
@@ -291,8 +175,8 @@
       "date": "2026-03-18",
       "url": "https://zylatent.com/blog/smartagent",
       "content_type": "article",
-      "x": 0.08694352614875245,
-      "y": 0.21684357670008703,
+      "x": 0.32580738951152155,
+      "y": -0.0528414830338082,
       "cluster_id": 2,
       "content_hash": "3b4c76efc491ef7c4becb1107356db442858e8d37e5a1c6859908e9ab4312677",
       "cover": "./assets/covers/3cb56df131dd.webp"
@@ -309,8 +193,8 @@
       "date": "2026-03-08",
       "url": "https://zylatent.com/blog/cpp-memory-ownership-raii",
       "content_type": "article",
-      "x": -0.36082555661405846,
-      "y": -0.7487570950515992,
+      "x": -0.8509833787304758,
+      "y": -0.3908884063134651,
       "cluster_id": 0,
       "content_hash": "544d970b23cdf8865f3a691f9d403266f8b1a0c049711ef4c9a5bb8da2a9ec9c",
       "cover": "./assets/covers/fe980845aabe.webp"
@@ -326,8 +210,8 @@
       "date": "2026-03-02",
       "url": "https://zylatent.com/blog/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3%E6%B4%BB%E6%88%90%E4%B8%80%E6%A3%B5%E6%A0%91",
       "content_type": "article",
-      "x": -0.007863769127461118,
-      "y": -0.8287363989100331,
+      "x": -0.296380228521155,
+      "y": -0.21242578715119398,
       "cluster_id": 1,
       "content_hash": "8cad8bce81cacf475ef8059ad65ee5470466c750b43042405f4f3421d0b72ba4",
       "cover": "./assets/covers/d62b5442b01e.webp"
@@ -344,8 +228,8 @@
       "date": "2026-02-24",
       "url": "https://zylatent.com/blog/%E4%B8%83%E7%8E%8B%E5%9B%BD%E7%9A%84%E9%AA%91%E5%A3%AB-%E7%AC%AC%E4%B8%80%E5%AD%A3",
       "content_type": "article",
-      "x": 0.5074611378285411,
-      "y": -0.46242444057344556,
+      "x": -0.8427834666581565,
+      "y": 0.05458069457283865,
       "cluster_id": 2,
       "content_hash": "5b5b847824ea71be839c0a769b2658bd4919747589fa35b82efc89ee0ae7a8f9",
       "cover": "./assets/covers/a2705e213389.webp"
@@ -360,8 +244,8 @@
       "date": "2026-02-17",
       "url": "https://zylatent.com/blog/%E4%BA%92%E5%8A%A8%E7%BD%91%E9%A1%B5-%E5%A4%9C%E7%A9%BA%E4%B8%BA%E4%BD%A0%E9%97%AA%E7%83%81",
       "content_type": "article",
-      "x": 0.2513129856287969,
-      "y": 0.15148470783643997,
+      "x": 0.04601647188038149,
+      "y": 0.14322850775379192,
       "cluster_id": 2,
       "content_hash": "a35f94804fc0c7e7e121e75cbbb104b2346f66c61acb070fadf22c1840e6741a",
       "cover": "./assets/covers/1c0a00cfbec6.webp"
@@ -377,8 +261,8 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%A4%A7%E5%BA%9A%E5%89%91%E9%98%B5",
       "content_type": "article",
-      "x": 0.457013544033516,
-      "y": 0.1443306315370051,
+      "x": 0.08581972462169707,
+      "y": 0.3293643497450135,
       "cluster_id": 2,
       "content_hash": "7631c89adc9f9ccdb1e785642ed8dafd352d3324830e9f9eea57036415a05961",
       "cover": "./assets/covers/a589afbbc9ea.webp"
@@ -389,9 +273,7 @@
       "id": 0,
       "label": "智能与计算",
       "node_ids": [
-        "point-allocation-credit-assignment",
         "五子棋搜索实验",
-        "我和埃隆马斯克之间真的只隔五个人吗",
         "在概率的雾里行走-贝叶斯与mcmc学习记录",
         "cpp-memory-ownership-raii"
       ],
@@ -401,13 +283,11 @@
       "id": 1,
       "label": "工具与开源",
       "node_ids": [
-        "ohmystyle视觉风格工程",
         "fastapi-basics",
         "dog-littletools工具集",
         "nannahelper教程文档",
         "dog-skills-48-claude-code技能库",
         "2026上半年-代码与项目回顾",
-        "my-compile",
         "如何在数字时代活成一棵树"
       ],
       "color": "#86a8a1"
@@ -416,8 +296,6 @@
       "id": 2,
       "label": "互动实验",
       "node_ids": [
-        "在模拟器里重新打开两代主机游戏",
-        "dog-babble加密实验",
         "miniarena自走棋",
         "smartagent",
         "七王国的骑士-第一季",
@@ -429,7 +307,7 @@
   ],
   "metadata": {
     "provider": "cjk-ngram",
-    "item_count": 20,
+    "item_count": 14,
     "cluster_count": 3,
     "reducer_config": {
       "n_neighbors": 15,

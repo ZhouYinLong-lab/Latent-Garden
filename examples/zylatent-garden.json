@@ -1,27 +1,29 @@
 {
   "version": "0.1",
-  "generated_at": "2026-09-28T08:44:32.508932+00:00",
+  "generated_at": "2026-10-05T09:09:02.900073+00:00",
   "dimensions": 512,
   "reducer": "umap",
   "clusterer": "curated-keywords",
   "nodes": [
     {
-      "id": "在模拟器里重新打开两代主机游戏",
-      "title": "在模拟器里重新打开两代主机游戏",
-      "description": "记录我用 RetroArch 折腾《旺达与巨像》，以及用 shadPS4 尝试《血源诅咒》和《重力异想世界》的过程。",
+      "id": "慢下来-你其实没有落下什么",
+      "title": "慢下来，你其实没有落下什么",
+      "description": "分享科研焦虑与成长感悟，讨论学生科研定位、AI 时代的学术噪音，以及慢科研的可能性。",
       "tags": [
-        "模拟器",
-        "RetroArch",
-        "shadPS4",
-        "游戏"
+        "科研",
+        "学术",
+        "AI",
+        "成长",
+        "焦虑",
+        "计算机视觉"
       ],
-      "date": "2026-09-15",
-      "url": "https://zylatent.com/blog/%E5%9C%A8%E6%A8%A1%E6%8B%9F%E5%99%A8%E9%87%8C%E9%87%8D%E6%96%B0%E6%89%93%E5%BC%80%E4%B8%A4%E4%BB%A3%E4%B8%BB%E6%9C%BA%E6%B8%B8%E6%88%8F",
+      "date": "2026-09-29",
+      "url": "https://zylatent.com/blog/%E6%85%A2%E4%B8%8B%E6%9D%A5-%E4%BD%A0%E5%85%B6%E5%AE%9E%E6%B2%A1%E6%9C%89%E8%90%BD%E4%B8%8B%E4%BB%80%E4%B9%88",
       "content_type": "article",
-      "x": -0.5031551129027942,
-      "y": -0.5893032869410426,
-      "cluster_id": 2,
-      "content_hash": "b2f86e2d4ae499b10ec3581252e2e503d79592a42cb233266d553975b8068a10"
+      "x": -0.4959788890969196,
+      "y": -0.1681325263800546,
+      "cluster_id": 4,
+      "content_hash": "fefbbe99799458a037f954eb9893699f75ccd2d468f40d2afac3089c289c168f"
     },
     {
       "id": "dog-map个人路线地图",
@@ -38,86 +40,10 @@
       "date": "2026-09-07",
       "url": "https://zylatent.com/blog/dog-map%E4%B8%AA%E4%BA%BA%E8%B7%AF%E7%BA%BF%E5%9C%B0%E5%9B%BE",
       "content_type": "article",
-      "x": -0.6168572984248359,
-      "y": -0.8738016800532509,
+      "x": -0.5844369324035693,
+      "y": -0.31474359708902033,
       "cluster_id": 4,
       "content_hash": "1dc2106b1b9251e750f0ed3a7e7232432e73303beae6ad0f8ed71e11c37bfcb9"
-    },
-    {
-      "id": "point-allocation-credit-assignment",
-      "title": "谁该得到这 100 分？人工智能中的点数分配问题",
-      "description": "从概率统计中的点数分配问题出发，讨论强化学习、多智能体、反事实归因、Shapley Value 与神经网络中的点数分配。",
-      "tags": [
-        "概率统计",
-        "点数分配",
-        "强化学习",
-        "多智能体",
-        "Shapley Value",
-        "可解释人工智能"
-      ],
-      "date": "2026-08-25",
-      "url": "https://zylatent.com/blog/point-allocation-credit-assignment",
-      "content_type": "article",
-      "x": -0.060527952772428284,
-      "y": -0.6368524120455131,
-      "cluster_id": 0,
-      "content_hash": "25744ca99ad5dcf0c544d601d364326779b48254f914e7bb832ac4e59a7cc514"
-    },
-    {
-      "id": "remembrance-of-things-past",
-      "title": "七夕，重走一遍上学路",
-      "description": "骑车回到初中时的家、学校和那些已经说不清的旧日片段，在一条改变了的路上重新辨认过去。",
-      "tags": [
-        "回忆",
-        "骑行",
-        "旧地重游",
-        "城市记忆"
-      ],
-      "date": "2026-08-19",
-      "url": "https://zylatent.com/blog/remembrance-of-things-past",
-      "content_type": "article",
-      "x": -0.40783896663682717,
-      "y": -0.14449851851407725,
-      "cluster_id": 4,
-      "content_hash": "84cae02f929998dc4bbbb88f6f51b75c358f72cc5615039ba45649cc573948b0"
-    },
-    {
-      "id": "ohmystyle视觉风格工程",
-      "title": "我为什么开始做 OhMyStyle：把“风格”变成可复用的工程对象",
-      "description": "从寒柳别苑的背景图开始，我尝试把一句“保持原来的画风”拆成可追溯、可组合、可校验的视觉风格系统。",
-      "tags": [
-        "图像生成",
-        "视觉风格",
-        "Prompt 编译",
-        "开源",
-        "AI 工具"
-      ],
-      "date": "2026-08-11",
-      "url": "https://zylatent.com/blog/ohmystyle%E8%A7%86%E8%A7%89%E9%A3%8E%E6%A0%BC%E5%B7%A5%E7%A8%8B",
-      "content_type": "article",
-      "x": -0.26583931708123254,
-      "y": -0.4164135543588299,
-      "cluster_id": 1,
-      "content_hash": "133c68c02e6a6cb8853924b7b03911baa82868babf6aa0611356fd4838655051"
-    },
-    {
-      "id": "latent-garden个人语义花园",
-      "title": "我给寒柳别苑做了一张语义地图",
-      "description": "Latent Garden 的一次真实试验：把博客、项目和学习记录变成一张可以走进去的地图。",
-      "tags": [
-        "Latent Garden",
-        "语义地图",
-        "Embedding",
-        "UMAP",
-        "个人网站"
-      ],
-      "date": "2026-08-03",
-      "url": "https://zylatent.com/blog/latent-garden%E4%B8%AA%E4%BA%BA%E8%AF%AD%E4%B9%89%E8%8A%B1%E5%9B%AD",
-      "content_type": "article",
-      "x": -0.8506177076256023,
-      "y": -0.8424388484644209,
-      "cluster_id": 4,
-      "content_hash": "1cbe51f32a2b6ed9a84adfa7776fcd57896a7dc83266c72d6209e1f1e8a10d6d"
     },
     {
       "id": "五子棋搜索实验",
@@ -134,31 +60,11 @@
       "date": "2026-07-31",
       "url": "https://zylatent.com/blog/%E4%BA%94%E5%AD%90%E6%A3%8B%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C",
       "content_type": "article",
-      "x": -0.6619625365604633,
-      "y": -0.4977004868583871,
+      "x": -0.5999707347418543,
+      "y": -0.4599395664442668,
       "cluster_id": 0,
       "content_hash": "cd1e587bb952ccce28e234ac255009b150ec38e34c26cc31aa52791d644cfa20",
       "cover": "./assets/covers/804159a3e32e.webp"
-    },
-    {
-      "id": "我和埃隆马斯克之间真的只隔五个人吗",
-      "title": "从一门必修课出发，我和马斯克之间真的只有五跳？",
-      "description": "从自己的必修课开始，我用公开资料重新查了一遍到埃隆·马斯克的关系链：这次不凑同场嘉宾，只保留能找到直接授课、共同署名或面对面会见依据的五条边。",
-      "tags": [
-        "六人定律",
-        "社会网络",
-        "人物关系",
-        "南京大学",
-        "互联网观察"
-      ],
-      "date": "2026-07-30",
-      "url": "https://zylatent.com/blog/%E6%88%91%E5%92%8C%E5%9F%83%E9%9A%86%E9%A9%AC%E6%96%AF%E5%85%8B%E4%B9%8B%E9%97%B4%E7%9C%9F%E7%9A%84%E5%8F%AA%E9%9A%94%E4%BA%94%E4%B8%AA%E4%BA%BA%E5%90%97",
-      "content_type": "article",
-      "x": -0.6041037905254907,
-      "y": -0.35459148845526234,
-      "cluster_id": 0,
-      "content_hash": "d5a25d853eb66b3c22a5dbf4c908ad7905e2c4ec8601fe8c4b740489a7f1949b",
-      "cover": "./assets/covers/0d72aa9e60f6.webp"
     },
     {
       "id": "fastapi-basics",
@@ -174,8 +80,8 @@
       "date": "2026-07-29",
       "url": "https://zylatent.com/blog/fastapi-basics",
       "content_type": "article",
-      "x": -0.01672178037184502,
-      "y": -0.5608685808922325,
+      "x": -0.92,
+      "y": -0.15228446995124112,
       "cluster_id": 1,
       "content_hash": "a4c17a070c61517bfb786ab76120bc5be364071d076d3bf38eb294eec10fb253",
       "cover": "./assets/covers/ce60466f23ae.webp"
@@ -194,31 +100,11 @@
       "date": "2026-07-27",
       "url": "https://zylatent.com/blog/%E5%9C%A8%E6%A6%82%E7%8E%87%E7%9A%84%E9%9B%BE%E9%87%8C%E8%A1%8C%E8%B5%B0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%B8%8Emcmc%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95",
       "content_type": "article",
-      "x": 0.07224118775363586,
-      "y": -0.39361522393318715,
+      "x": -0.6327198591623955,
+      "y": -0.009924587300745524,
       "cluster_id": 0,
       "content_hash": "b03e9c85f9dafe0b1d3cc2ef3b4e16d3d2df8f487f91355d0d0a0120c67c6f54",
       "cover": "./assets/covers/c25ecf56892e.webp"
-    },
-    {
-      "id": "dog-babble加密实验",
-      "title": "Dog-Babble：把 AES 密文伪装成一串哈基米",
-      "description": "PBKDF2 密钥派生 + AES-256-GCM 加密 + 自定义字典编码，零依赖纯前端密码学实验。用「发疯文学」隐藏信息。",
-      "tags": [
-        "JavaScript",
-        "密码学",
-        "Web Crypto",
-        "加密",
-        "零依赖"
-      ],
-      "date": "2026-07-23",
-      "url": "https://zylatent.com/blog/dog-babble%E5%8A%A0%E5%AF%86%E5%AE%9E%E9%AA%8C",
-      "content_type": "article",
-      "x": 0.32466428480417686,
-      "y": -0.6433190650825642,
-      "cluster_id": 2,
-      "content_hash": "8a3735f236f43d08c9dc8665be675d43c156fe8123fb00a6242703f19e34b61c",
-      "cover": "./assets/covers/834d30c34b05.webp"
     },
     {
       "id": "dog-littletools工具集",
@@ -234,8 +120,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/dog-littletools%E5%B7%A5%E5%85%B7%E9%9B%86",
       "content_type": "article",
-      "x": -0.37525302426338103,
-      "y": -0.8726234006967354,
+      "x": -0.7376757246206473,
+      "y": -0.2624564356353851,
       "cluster_id": 1,
       "content_hash": "7e5d8c11cc77da6294b3588981c5cea75eaefc47a29f020d2cd66f47018048ef",
       "cover": "./assets/covers/2586437fefeb.webp"
@@ -254,8 +140,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/miniarena%E8%87%AA%E8%B5%B0%E6%A3%8B",
       "content_type": "article",
-      "x": -0.701399840976714,
-      "y": -0.7042677701926628,
+      "x": -0.7661339798752801,
+      "y": -0.6273407609916561,
       "cluster_id": 2,
       "content_hash": "3524f05c3ecaba85bb03ddd13ef2aa898277d09f7ef92d97c3db1332bed72e96",
       "cover": "./assets/covers/409d7f71180f.webp"
@@ -274,8 +160,8 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/nannahelper%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3",
       "content_type": "article",
-      "x": -0.92,
-      "y": -0.48504553426767394,
+      "x": -0.531430786350601,
+      "y": -0.5977408221767007,
       "cluster_id": 1,
       "content_hash": "20a2883c32597c89a2a829bff70432b86a509ebbc0d8eefc7c500c55ae9b3c8e",
       "cover": "./assets/covers/75aebdab1d21.webp"
@@ -294,8 +180,8 @@
       "date": "2026-07-14",
       "url": "https://zylatent.com/blog/%E7%BB%98%E5%87%BA%E4%B8%83%E5%BD%A9%E7%9A%84%E4%B8%83%E5%A4%A9",
       "content_type": "article",
-      "x": 0.4584801912581219,
-      "y": -0.7587703755013968,
+      "x": -0.6073916439849578,
+      "y": -0.8632949372306999,
       "cluster_id": 4,
       "content_hash": "0d7590a8e201705ce02913e652fb7073db6ca1273c87c9be71069b3f2df5777a",
       "cover": "./assets/covers/aebc28fea043.webp"
@@ -314,8 +200,8 @@
       "date": "2026-07-03",
       "url": "https://zylatent.com/blog/dog-skills-48-claude-code%E6%8A%80%E8%83%BD%E5%BA%93",
       "content_type": "article",
-      "x": 0.3096922546115134,
-      "y": -0.22680712198491626,
+      "x": 0.017608028890699234,
+      "y": -0.7476111370638268,
       "cluster_id": 1,
       "content_hash": "62f44f27c9838aa02abfce307bd6028bdd4534c876fca1bc5c9d325ac789eb99",
       "cover": "./assets/covers/548da1fc2952.webp"
@@ -330,8 +216,8 @@
       "date": "2026-06-22",
       "url": "https://zylatent.com/blog/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4-%E4%BB%A3%E7%A0%81%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%9B%9E%E9%A1%BE",
       "content_type": "article",
-      "x": 0.634880076975101,
-      "y": -0.23513205672402004,
+      "x": 0.18382134043328457,
+      "y": -0.7022788604338756,
       "cluster_id": 1,
       "content_hash": "b5bc785261e0019c4233d04ceb3fe1933020f8a51204415afbca8492815ee2de",
       "cover": "./assets/covers/08c72ab3a720.webp"
@@ -348,8 +234,8 @@
       "date": "2026-03-24",
       "url": "https://zylatent.com/blog/%E5%BD%93%E5%A5%87%E8%BF%B9%E9%81%87%E5%88%B0%E5%A5%87%E8%BF%B9",
       "content_type": "article",
-      "x": 0.7459473759540441,
-      "y": -0.3843645673727615,
+      "x": 0.06013082798294467,
+      "y": -0.5066084911304337,
       "cluster_id": 3,
       "content_hash": "9e1688463ac2c13a180cd3eb121b7ed9ede3f3cf1bf52ed85d319c93fa170298",
       "cover": "./assets/covers/1aa06fdfd357.webp"
@@ -365,8 +251,8 @@
       "date": "2026-03-24",
       "url": "https://zylatent.com/blog/%E6%B5%B7%E5%AD%90-%E4%BB%A5%E6%A2%A6%E4%B8%BA%E9%A9%AC",
       "content_type": "article",
-      "x": -0.0007789679248427772,
-      "y": 0.6109936474417635,
+      "x": 0.45454906894320846,
+      "y": 0.41706091669373724,
       "cluster_id": 3,
       "content_hash": "653274e9352773b4fc2f88ef3abbfecc24fdbb395668fddc64994f0ac36ddc3f",
       "cover": "./assets/covers/920aad709eab.webp"
@@ -384,30 +270,11 @@
       "date": "2026-03-23",
       "url": "https://zylatent.com/blog/we-are-the-world",
       "content_type": "article",
-      "x": 0.8848290860958558,
-      "y": -0.7323897041251324,
+      "x": -0.33965153313754404,
+      "y": -0.6970303348308924,
       "cluster_id": 4,
       "content_hash": "c3551ed9e978b61716f9234fade62ade896cbc4c323a882aaaa920528b67dcbf",
       "cover": "./assets/covers/d5b09c0b8826.webp"
-    },
-    {
-      "id": "my-compile",
-      "title": "自然语言加密器: 自定义 Base-N 文本隐写实验",
-      "description": "一个基于 AES-256-GCM 与大数进制转换的纯前端高隐蔽性文本加密工具。",
-      "tags": [
-        "JavaScript",
-        "密码学",
-        "算法",
-        "互动网页"
-      ],
-      "date": "2026-03-21",
-      "url": "https://zylatent.com/blog/my-compile",
-      "content_type": "article",
-      "x": 0.6418119059600796,
-      "y": -0.6790849639854324,
-      "cluster_id": 1,
-      "content_hash": "cf8b705dd789a07f388d1b15cf4918b740b1e6c6a470714f3e1a5057f6650e0e",
-      "cover": "./assets/covers/961355e9baef.webp"
     },
     {
       "id": "smartagent",
@@ -422,8 +289,8 @@
       "date": "2026-03-18",
       "url": "https://zylatent.com/blog/smartagent",
       "content_type": "article",
-      "x": 0.08694352614875245,
-      "y": 0.21684357670008703,
+      "x": 0.32580738951152155,
+      "y": -0.0528414830338082,
       "cluster_id": 2,
       "content_hash": "3b4c76efc491ef7c4becb1107356db442858e8d37e5a1c6859908e9ab4312677",
       "cover": "./assets/covers/3cb56df131dd.webp"
@@ -439,8 +306,8 @@
       "date": "2026-03-15",
       "url": "https://zylatent.com/blog/%E9%B8%B3%E9%B8%AF",
       "content_type": "article",
-      "x": 0.92,
-      "y": -0.5310587038413193,
+      "x": -0.08008093871506128,
+      "y": -0.3254152068819318,
       "cluster_id": 4,
       "content_hash": "c86049e52ea597489c8dc1c599b0cfde77b5c0c6c6ad5b20ce4cf9cee8339754"
     },
@@ -456,8 +323,8 @@
       "date": "2026-03-08",
       "url": "https://zylatent.com/blog/cpp-memory-ownership-raii",
       "content_type": "article",
-      "x": -0.36082555661405846,
-      "y": -0.7487570950515992,
+      "x": -0.8509833787304758,
+      "y": -0.3908884063134651,
       "cluster_id": 0,
       "content_hash": "544d970b23cdf8865f3a691f9d403266f8b1a0c049711ef4c9a5bb8da2a9ec9c",
       "cover": "./assets/covers/fe980845aabe.webp"
@@ -473,8 +340,8 @@
       "date": "2026-03-02",
       "url": "https://zylatent.com/blog/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3%E6%B4%BB%E6%88%90%E4%B8%80%E6%A3%B5%E6%A0%91",
       "content_type": "article",
-      "x": -0.007863769127461118,
-      "y": -0.8287363989100331,
+      "x": -0.296380228521155,
+      "y": -0.21242578715119398,
       "cluster_id": 1,
       "content_hash": "8cad8bce81cacf475ef8059ad65ee5470466c750b43042405f4f3421d0b72ba4",
       "cover": "./assets/covers/d62b5442b01e.webp"
@@ -490,8 +357,8 @@
       "date": "2026-02-28",
       "url": "https://zylatent.com/blog/%E6%B8%B8%E8%AE%B0-%E6%B5%8E%E5%8D%97",
       "content_type": "article",
-      "x": -0.8222358344653882,
-      "y": 0.3123874905208922,
+      "x": 0.5427724609017522,
+      "y": -0.40605882238509217,
       "cluster_id": 4,
       "content_hash": "6cb5b48cd9af1eb3743919c5c5bbb2815af55b7dc73f8119dc4b1a181ad88617",
       "cover": "./assets/covers/49a65705cd30.webp"
@@ -508,8 +375,8 @@
       "date": "2026-02-24",
       "url": "https://zylatent.com/blog/%E4%B8%83%E7%8E%8B%E5%9B%BD%E7%9A%84%E9%AA%91%E5%A3%AB-%E7%AC%AC%E4%B8%80%E5%AD%A3",
       "content_type": "article",
-      "x": 0.5074611378285411,
-      "y": -0.46242444057344556,
+      "x": -0.8427834666581565,
+      "y": 0.05458069457283865,
       "cluster_id": 2,
       "content_hash": "5b5b847824ea71be839c0a769b2658bd4919747589fa35b82efc89ee0ae7a8f9",
       "cover": "./assets/covers/a2705e213389.webp"
@@ -525,8 +392,8 @@
       "date": "2026-02-19",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%9C%B0%E7%8B%B1%E4%B9%8B%E5%A4%9C",
       "content_type": "article",
-      "x": -0.3407964767020215,
-      "y": 0.052704288820986434,
+      "x": -0.5972209960589036,
+      "y": 0.1631286769986603,
       "cluster_id": 3,
       "content_hash": "111c7eaff03174695c812ab12a819b4c760721f38e32d9ea94d445a565b68d8c",
       "cover": "./assets/covers/bffe884dba48.webp"
@@ -542,8 +409,8 @@
       "date": "2026-02-18",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A4%9C%E6%99%9A",
       "content_type": "article",
-      "x": -0.3089100788306668,
-      "y": 0.6307826308431671,
+      "x": 0.6596796102715131,
+      "y": 0.11440231458546457,
       "cluster_id": 3,
       "content_hash": "fa132c6676a9916e7a6e019be4b60ed893370754d5d1cde7417f573d55904ce4",
       "cover": "./assets/covers/74d1b1667847.webp"
@@ -558,8 +425,8 @@
       "date": "2026-02-17",
       "url": "https://zylatent.com/blog/%E4%BA%92%E5%8A%A8%E7%BD%91%E9%A1%B5-%E5%A4%9C%E7%A9%BA%E4%B8%BA%E4%BD%A0%E9%97%AA%E7%83%81",
       "content_type": "article",
-      "x": 0.2513129856287969,
-      "y": 0.15148470783643997,
+      "x": 0.04601647188038149,
+      "y": 0.14322850775379192,
       "cluster_id": 2,
       "content_hash": "a35f94804fc0c7e7e121e75cbbb104b2346f66c61acb070fadf22c1840e6741a",
       "cover": "./assets/covers/1c0a00cfbec6.webp"
@@ -575,8 +442,8 @@
       "date": "2026-02-17",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E8%A2%AB%E5%9B%9A%E7%A6%81%E8%80%85",
       "content_type": "article",
-      "x": -0.20993311183331276,
-      "y": 0.8796269435477232,
+      "x": 0.8742943687247594,
+      "y": 0.543460946966477,
       "cluster_id": 3,
       "content_hash": "e69baeb58e7b2a4d8600847443a8c1cf454befc89673de850892e80a0ec240d8",
       "cover": "./assets/covers/c11ea233514d.webp"
@@ -592,8 +459,8 @@
       "date": "2026-02-15",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E8%87%B4%E4%B8%80%E4%BD%8D%E7%90%86%E6%80%A7%E7%9A%84%E4%BA%BA",
       "content_type": "article",
-      "x": 0.14060384570515094,
-      "y": 0.92,
+      "x": 0.17241814392275645,
+      "y": 0.6065133718369183,
       "cluster_id": 3,
       "content_hash": "9e77189ba187fc36d9d93c2594b71da4ece8abe3062f8978220fa9b6286556b5",
       "cover": "./assets/covers/6c94035a5119.webp"
@@ -609,8 +476,8 @@
       "date": "2026-02-13",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%AF%8D%E7%8B%BC",
       "content_type": "article",
-      "x": 0.22418990608367195,
-      "y": 0.7115013434393654,
+      "x": 0.6558399487341408,
+      "y": 0.4905162488131408,
       "cluster_id": 3,
       "content_hash": "95cb92cee669933488a9dd364b53b2e4546101c8937e9173c0f158fb66f737b9",
       "cover": "./assets/covers/0ec1cc41076c.webp"
@@ -626,8 +493,8 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%A4%A7%E5%BA%9A%E5%89%91%E9%98%B5",
       "content_type": "article",
-      "x": 0.457013544033516,
-      "y": 0.1443306315370051,
+      "x": 0.08581972462169707,
+      "y": 0.3293643497450135,
       "cluster_id": 2,
       "content_hash": "7631c89adc9f9ccdb1e785642ed8dafd352d3324830e9f9eea57036415a05961",
       "cover": "./assets/covers/a589afbbc9ea.webp"
@@ -643,8 +510,8 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%91%8A%E5%88%AB",
       "content_type": "article",
-      "x": 0.5447417967883715,
-      "y": 0.3307223347508056,
+      "x": 0.5038032840397274,
+      "y": 0.5943830210435516,
       "cluster_id": 3,
       "content_hash": "1b43a4d31e55103e9ce59b7d6333fd59edbe544dbb2f88f46f0e542266e24d25",
       "cover": "./assets/covers/f5c056bb867d.webp"
@@ -660,8 +527,8 @@
       "date": "2026-02-11",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E4%B8%83%E5%B2%81%E6%99%BA%E8%80%85",
       "content_type": "article",
-      "x": 0.43668315755030196,
-      "y": 0.49730486486230874,
+      "x": 0.2621469082740616,
+      "y": 0.47965978343798643,
       "cluster_id": 3,
       "content_hash": "e6f8a12cb947ea4d6757827fe24d4413aa3300450d9de811aec3f836afecd6f2",
       "cover": "./assets/covers/1241f6672d03.webp"
@@ -677,8 +544,8 @@
       "date": "2026-02-10",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%88%91%E7%9A%84%E9%A5%A5%E9%A5%BF",
       "content_type": "article",
-      "x": 0.5479886108508963,
-      "y": 0.7083724205080494,
+      "x": 0.4940082612544733,
+      "y": 0.8096461207322699,
       "cluster_id": 3,
       "content_hash": "6b5d74ab7ffc7f0f2c0d487e1d0114a2fd14a6a183f699f4e0464f5c549cf8a2",
       "cover": "./assets/covers/5ff49e28b538.webp"
@@ -694,8 +561,8 @@
       "date": "2026-02-09",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%A5%A5%E8%8F%B2%E5%88%A9%E5%A8%85",
       "content_type": "article",
-      "x": -0.3062592303052828,
-      "y": 0.4704612154030122,
+      "x": 0.7570036776220902,
+      "y": 0.2867676415323869,
       "cluster_id": 3,
       "content_hash": "cbfc5e2d0f0ce692fecee6498b771ba4f628366c475af3e5da067fdd77346b2a",
       "cover": "./assets/covers/5b47e8ae223f.webp"
@@ -710,8 +577,8 @@
       "date": "2026-02-09",
       "url": "https://zylatent.com/blog/%E7%83%9F%E7%81%AB%E6%96%87%E6%B2%83%E5%BA%B7%E5%9F%8E%E6%96%B0%E7%AB%A0",
       "content_type": "article",
-      "x": -0.7550177240765767,
-      "y": 0.09168377520445314,
+      "x": 0.4790888779557002,
+      "y": -0.21751397382740434,
       "cluster_id": 4,
       "content_hash": "ae904c11348c4af81e6013431e8f3426315a4012cc1b1a3a0e6efdce43a1dce2"
     },
@@ -726,8 +593,8 @@
       "date": "2026-02-08",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%BB%8E%E6%98%8E",
       "content_type": "article",
-      "x": 0.9084722022851478,
-      "y": 0.39595727730754027,
+      "x": -0.0448069424076315,
+      "y": 0.81961165084765,
       "cluster_id": 3,
       "content_hash": "d30de86174cb793dcc928f3f561698cda2ec1354580c4feaa7182b880982f857",
       "cover": "./assets/covers/4cc74fde1ebb.webp"
@@ -744,8 +611,8 @@
       "date": "2026-02-07",
       "url": "https://zylatent.com/blog/ghost-in-shell",
       "content_type": "article",
-      "x": 0.26882826589967157,
-      "y": -0.92,
+      "x": -0.18195129016152278,
+      "y": -0.7427470326186106,
       "cluster_id": 4,
       "content_hash": "b59b829de49c833d8958011072ed98e58b093484f98be1f035f0052f6ca48505",
       "cover": "./assets/covers/95a17e26b942.webp"
@@ -761,8 +628,8 @@
       "date": "2026-02-07",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%82%AA%E6%81%B6",
       "content_type": "article",
-      "x": 0.549231983567846,
-      "y": -0.004664650126238512,
+      "x": -0.32453767869009686,
+      "y": 0.2555035121441388,
       "cluster_id": 3,
       "content_hash": "36532a6f922e5be74997a1fedbcd5e111af54336f4f84516008db31a32abebf7",
       "cover": "./assets/covers/986699180a10.webp"
@@ -778,8 +645,8 @@
       "date": "2026-02-06",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%86%89%E8%88%9F",
       "content_type": "article",
-      "x": 0.3939787870649466,
-      "y": 0.4862310062051326,
+      "x": 0.92,
+      "y": 0.1799603416449237,
       "cluster_id": 3,
       "content_hash": "6014a26b9d818514bb1ec2d0b63db12c8b3ab3c0fe4e177abb28ac95aacd7fd0",
       "cover": "./assets/covers/99498a4e525e.webp"
@@ -795,8 +662,8 @@
       "date": "2026-02-05",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%B7%B4%E9%BB%8E%E7%8B%82%E6%AC%A2%E8%8A%82",
       "content_type": "article",
-      "x": -0.6081953142365079,
-      "y": 0.7416842732850012,
+      "x": 0.8884116347785148,
+      "y": -0.04605036946866281,
       "cluster_id": 3,
       "content_hash": "51aae451ad11210b5ffd349586f394d1091d76e786b719a66c3ae2dd1f6667b3",
       "cover": "./assets/covers/c3289b5c8001.webp"
@@ -812,8 +679,8 @@
       "date": "2026-02-04",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%B0%B8%E6%81%92",
       "content_type": "article",
-      "x": 0.7675646537790338,
-      "y": 0.630226164229971,
+      "x": 0.22188761916423994,
+      "y": 0.92,
       "cluster_id": 3,
       "content_hash": "bf823ced6ac1269c2f6e16c104afaff2d0b73869295ae8f694497162ccd5a629",
       "cover": "./assets/covers/d1ec18593cb4.webp"
@@ -829,8 +696,8 @@
       "date": "2026-02-03",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%B1%B1%E8%B0%B7%E7%9D%A1%E8%80%85",
       "content_type": "article",
-      "x": 0.06217795022454364,
-      "y": 0.7222864893737656,
+      "x": 0.7372496582079796,
+      "y": 0.7205138584392324,
       "cluster_id": 3,
       "content_hash": "cb28cd2f3196a244b264e8db9940cb660c2157ef9d27ca25aaeeff83a5fd9556",
       "cover": "./assets/covers/d988bb926d95.webp"
@@ -846,8 +713,8 @@
       "date": "2026-02-02",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%84%9F%E8%A7%89",
       "content_type": "article",
-      "x": -0.7814738014660608,
-      "y": 0.5642366075669866,
+      "x": 0.7176370446317183,
+      "y": -0.20645990420916327,
       "cluster_id": 3,
       "content_hash": "053109e2d5f3eb86ab86559cff3139c5af48aa560fdfb4fcc1d59148c8aa8f4e",
       "cover": "./assets/covers/5adf2c08be9b.webp"
@@ -863,11 +730,43 @@
       "date": "2026-02-01",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%88%91%E7%9A%84%E6%B5%81%E6%B5%AA",
       "content_type": "article",
-      "x": -0.664784831462161,
-      "y": 0.4821297088222162,
+      "x": 0.8401874407463729,
+      "y": -0.26939562979956844,
       "cluster_id": 3,
       "content_hash": "f94f0cb9f728ee1e8996290fcdb449a004e296355210a982f117a010590d9425",
       "cover": "./assets/covers/3b1bc939b9ca.webp"
+    },
+    {
+      "id": "2025-大雪",
+      "title": "今年雪照哪年影",
+      "description": "追忆寒假大雪，与朋友独享全校积雪之趣事 看到今年雪盖一中的场景，又想起上上个寒假的场景：全校覆盖齐脚踝的白雪，而全校只有我们100人左右，乐意玩雪的又更少，所以相当于是独享了。",
+      "tags": [
+        "回忆",
+        "徐州一中"
+      ],
+      "date": "2026-01-19",
+      "url": "https://zylatent.com/blog/2025-%E5%A4%A7%E9%9B%AA",
+      "content_type": "article",
+      "x": -0.15889664907718248,
+      "y": -0.008551164261325184,
+      "cluster_id": 4,
+      "content_hash": "aac7f3ae8ac2ac15c7829d14760aea1bcce745df5ba270c3e40e494a34c70cd3"
+    },
+    {
+      "id": "我的2025",
+      "title": "我的2025:三年,三日和三个月",
+      "description": "“在岁末追忆一生中相当重要的一年” 2025年岁末已至,回望这一场浩荡的奔赴,心中竟有一种洗尽铅华的沉静。这一年,曾是我生命地图上标注得最深刻的坐标,如今它已化作身后一串渐行渐远的足迹。",
+      "tags": [
+        "回忆",
+        "年度总结"
+      ],
+      "date": "2025-12-31",
+      "url": "https://zylatent.com/blog/%E6%88%91%E7%9A%842025",
+      "content_type": "article",
+      "x": -0.669094198236813,
+      "y": -0.92,
+      "cluster_id": 4,
+      "content_hash": "c53305fabb70a8e882121b8f663eb32f616c1a795b160126fc6c991c2723b46f"
     }
   ],
   "clusters": [
@@ -875,9 +774,7 @@
       "id": 0,
       "label": "智能与计算",
       "node_ids": [
-        "point-allocation-credit-assignment",
         "五子棋搜索实验",
-        "我和埃隆马斯克之间真的只隔五个人吗",
         "在概率的雾里行走-贝叶斯与mcmc学习记录",
         "cpp-memory-ownership-raii"
       ],
@@ -887,13 +784,11 @@
       "id": 1,
       "label": "工具与开源",
       "node_ids": [
-        "ohmystyle视觉风格工程",
         "fastapi-basics",
         "dog-littletools工具集",
         "nannahelper教程文档",
         "dog-skills-48-claude-code技能库",
         "2026上半年-代码与项目回顾",
-        "my-compile",
         "如何在数字时代活成一棵树"
       ],
       "color": "#86a8a1"
@@ -902,8 +797,6 @@
       "id": 2,
       "label": "互动实验",
       "node_ids": [
-        "在模拟器里重新打开两代主机游戏",
-        "dog-babble加密实验",
         "miniarena自走棋",
         "smartagent",
         "七王国的骑士-第一季",
@@ -942,22 +835,23 @@
       "id": 4,
       "label": "影像与见闻",
       "node_ids": [
+        "慢下来-你其实没有落下什么",
         "dog-map个人路线地图",
-        "remembrance-of-things-past",
-        "latent-garden个人语义花园",
         "绘出七彩的七天",
         "we-are-the-world",
         "鸳鸯",
         "游记-济南",
         "烟火文沃康城新章",
-        "ghost-in-shell"
+        "ghost-in-shell",
+        "2025-大雪",
+        "我的2025"
       ],
       "color": "#d5a5a1"
     }
   ],
   "metadata": {
     "provider": "cjk-ngram",
-    "item_count": 48,
+    "item_count": 43,
     "cluster_count": 5,
     "reducer_config": {
       "n_neighbors": 15,
