@@ -20,113 +20,110 @@
 <ellipse cx="474.0" cy="382.0" rx="370" ry="222" fill="none" stroke="#87986a" stroke-opacity=".18" stroke-width="1"/>
 <path d="M 474.0 150 V 614" stroke="#87986a" stroke-opacity=".12"/>
 <path d="M 82 382.0 H 866" stroke="#87986a" stroke-opacity=".12"/>
-<line x1="754.58" y1="504.39" x2="795.72" y2="474.28" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="754.58" y1="504.39" x2="730.37" y2="557.71" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="704.46" y1="442.92" x2="661.07" y2="411.85" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="704.46" y1="442.92" x2="759.00" y2="414.60" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="584.68" y1="459.65" x2="592.09" y2="512.89" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="584.68" y1="459.65" x2="656.84" y2="486.91" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="656.84" y1="486.91" x2="704.46" y2="442.92" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="656.84" y1="486.91" x2="658.42" y2="552.28" stroke="#9fb46b" stroke-opacity=".24" stroke-width="1"/>
-<line x1="795.72" y1="474.28" x2="856.00" y2="469.97" stroke="#d5a5a1" stroke-opacity=".24" stroke-width="1"/>
-<line x1="708.88" y1="571.16" x2="730.37" y2="557.71" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="708.88" y1="571.16" x2="658.42" y2="552.28" stroke="#9fb46b" stroke-opacity=".24" stroke-width="1"/>
-<line x1="526.34" y1="547.23" x2="525.70" y2="604.00" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="526.34" y1="547.23" x2="592.09" y2="512.89" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="592.09" y1="512.89" x2="656.84" y2="486.91" stroke="#9fb46b" stroke-opacity=".24" stroke-width="1"/>
-<line x1="525.70" y1="604.00" x2="595.64" y2="584.79" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="595.64" y1="584.79" x2="658.42" y2="552.28" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="595.64" y1="584.79" x2="592.09" y2="512.89" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="786.62" y1="562.62" x2="730.37" y2="557.71" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="786.62" y1="562.62" x2="754.58" y2="504.39" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="856.00" y1="469.97" x2="754.58" y2="504.39" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="469.97" y1="477.47" x2="414.69" y2="435.56" stroke="#86a8a1" stroke-opacity=".24" stroke-width="1"/>
-<line x1="469.97" y1="477.47" x2="501.84" y2="410.61" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="414.69" y1="435.56" x2="375.27" y2="368.50" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="684.60" y1="281.45" x2="696.80" y2="347.77" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="684.60" y1="281.45" x2="626.33" y2="315.71" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="146.28" y1="392.43" x2="171.23" y2="408.62" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="146.28" y1="392.43" x2="92.00" y2="349.69" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="814.79" y1="352.23" x2="767.34" y2="338.36" stroke="#d5a5a1" stroke-opacity=".24" stroke-width="1"/>
-<line x1="814.79" y1="352.23" x2="759.00" y2="414.60" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="390.14" y1="289.10" x2="334.61" y2="266.59" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="390.14" y1="289.10" x2="437.08" y2="336.04" stroke="#d5a36c" stroke-opacity=".24" stroke-width="1"/>
-<line x1="767.34" y1="338.36" x2="696.80" y2="347.77" stroke="#d5a5a1" stroke-opacity=".24" stroke-width="1"/>
-<line x1="661.07" y1="411.85" x2="618.85" y2="379.09" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="411.04" y1="172.81" x2="488.08" y2="209.35" stroke="#d5a5a1" stroke-opacity=".24" stroke-width="1"/>
-<line x1="411.04" y1="172.81" x2="324.53" y2="160.00" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="759.00" y1="414.60" x2="795.72" y2="474.28" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="435.12" y1="573.66" x2="526.34" y2="547.23" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="435.12" y1="573.66" x2="525.70" y2="604.00" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="146.76" y1="207.16" x2="190.94" y2="238.33" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="146.76" y1="207.16" x2="139.49" y2="301.18" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="437.08" y1="336.04" x2="375.27" y2="368.50" stroke="#d5a36c" stroke-opacity=".24" stroke-width="1"/>
-<line x1="245.09" y1="298.52" x2="247.54" y2="355.43" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="245.09" y1="298.52" x2="190.94" y2="238.33" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="286.90" y1="397.66" x2="247.54" y2="355.43" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="286.90" y1="397.66" x2="275.95" y2="468.03" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="139.49" y1="301.18" x2="92.00" y2="349.69" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="139.49" y1="301.18" x2="190.94" y2="238.33" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="526.52" y1="305.72" x2="509.70" y2="387.86" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="526.52" y1="305.72" x2="437.08" y2="336.04" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="171.23" y1="408.62" x2="247.54" y2="355.43" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="488.08" y1="209.35" x2="526.52" y2="305.72" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="332.77" y1="489.28" x2="275.95" y2="468.03" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="332.77" y1="489.28" x2="414.69" y2="435.56" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="509.70" y1="387.86" x2="501.84" y2="410.61" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
-<line x1="334.61" y1="266.59" x2="307.51" y2="219.72" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="307.51" y1="219.72" x2="324.53" y2="160.00" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="254.88" y1="172.72" x2="307.51" y2="219.72" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="254.88" y1="172.72" x2="324.53" y2="160.00" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
-<line x1="626.33" y1="315.71" x2="618.85" y2="379.09" stroke="#d5a5a1" stroke-opacity=".24" stroke-width="1"/>
-<g><title>《刀锋》书评——一把刀的锋刃不容易越过</title><circle cx="754.58" cy="504.39" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="754.58" cy="504.39" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>慢下来，你其实没有落下什么</title><circle cx="704.46" cy="442.92" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="704.46" cy="442.92" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
-<g><title>Dog-Map：我给自己做的一张路线地图</title><circle cx="584.68" cy="459.65" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="584.68" cy="459.65" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
-<g><title>谁该得到这 100 分？人工智能中的点数分配问题</title><circle cx="656.84" cy="486.91" r="7" fill="#9fb46b" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="656.84" cy="486.91" r="12" fill="none" stroke="#9fb46b" stroke-opacity=".18"/></g>
-<g><title>七夕，重走一遍上学路</title><circle cx="795.72" cy="474.28" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="795.72" cy="474.28" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
-<g><title>从五子棋作业到搜索实验：用第五章的方法拆开一个 Agent</title><circle cx="708.88" cy="571.16" r="7" fill="#9fb46b" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="708.88" cy="571.16" r="12" fill="none" stroke="#9fb46b" stroke-opacity=".18"/></g>
-<g><title>FastAPI 入门：给寒柳别苑搭一个小型 API</title><circle cx="526.34" cy="547.23" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="526.34" cy="547.23" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
-<g><title>在概率的雾里行走：从贝叶斯更新到 MCMC</title><circle cx="592.09" cy="512.89" r="7" fill="#9fb46b" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="592.09" cy="512.89" r="12" fill="none" stroke="#9fb46b" stroke-opacity=".18"/></g>
-<g><title>Dog-Babble：把 AES 密文伪装成一串哈基米</title><circle cx="525.70" cy="604.00" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="525.70" cy="604.00" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
-<g><title>Dog-LittleTools：九个 Bash 脚本和我不想再敲第二遍的命令</title><circle cx="595.64" cy="584.79" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="595.64" cy="584.79" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
-<g><title>MiniArena 自走棋</title><circle cx="786.62" cy="562.62" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="786.62" cy="562.62" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
-<g><title>nannahelper docs：给完全不会编程的人写一份不会跳步的教程</title><circle cx="730.37" cy="557.71" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="730.37" cy="557.71" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
-<g><title>“绘出七彩”的七天</title><circle cx="856.00" cy="469.97" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="856.00" cy="469.97" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
-<g><title>Dog-Skills：我整理的 48 个 Claude Code 技能库，从写代码到 AI 唱歌全涵盖</title><circle cx="469.97" cy="477.47" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="469.97" cy="477.47" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
-<g><title>消失的半年：代码、项目与一个智科人的大一春季学期</title><circle cx="414.69" cy="435.56" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="414.69" cy="435.56" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
-<g><title>当奇迹遇见奇迹——《挽救计划》书评</title><circle cx="684.60" cy="281.45" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="684.60" cy="281.45" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>海子 《以梦为马》</title><circle cx="146.28" cy="392.43" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="146.28" cy="392.43" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>奔跑在残酷与纯真之间——《小鞋子》影评</title><circle cx="814.79" cy="352.23" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="814.79" cy="352.23" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
-<g><title>Smart Agent: 迷宫寻路实验</title><circle cx="390.14" cy="289.10" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="390.14" cy="289.10" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
-<g><title>片言成蝶</title><circle cx="767.34" cy="338.36" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="767.34" cy="338.36" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
-<g><title>谁拥有这块内存：一次 C++ 资源管理实验</title><circle cx="658.42" cy="552.28" r="7" fill="#9fb46b" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="658.42" cy="552.28" r="12" fill="none" stroke="#9fb46b" stroke-opacity=".18"/></g>
-<g><title>如何在网络时代退化成一棵树</title><circle cx="661.07" cy="411.85" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="661.07" cy="411.85" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
-<g><title>游记 济南</title><circle cx="411.04" cy="172.81" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="411.04" cy="172.81" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
-<g><title>一只脚与王子的性命孰重？——《七王国的骑士》影评</title><circle cx="759.00" cy="414.60" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="759.00" cy="414.60" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
-<g><title>兰波：地狱之夜</title><circle cx="435.12" cy="573.66" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="435.12" cy="573.66" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>兰波：第一次夜晚</title><circle cx="146.76" cy="207.16" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="146.76" cy="207.16" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>夜空为你闪烁</title><circle cx="437.08" cy="336.04" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="437.08" cy="336.04" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
-<g><title>兰波：被囚禁者</title><circle cx="245.09" cy="298.52" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="245.09" cy="298.52" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>兰波：致一位理性的人</title><circle cx="286.90" cy="397.66" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="286.90" cy="397.66" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>兰波：母狼</title><circle cx="139.49" cy="301.18" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="139.49" cy="301.18" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>大庚剑阵</title><circle cx="375.27" cy="368.50" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="375.27" cy="368.50" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
-<g><title>兰波：告别</title><circle cx="526.52" cy="305.72" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="526.52" cy="305.72" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>兰波：七岁智者</title><circle cx="247.54" cy="355.43" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="247.54" cy="355.43" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>兰波：我的饥饿</title><circle cx="171.23" cy="408.62" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="171.23" cy="408.62" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>兰波：奥菲利娅</title><circle cx="190.94" cy="238.33" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="190.94" cy="238.33" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>烟火文沃,康城新章</title><circle cx="488.08" cy="209.35" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="488.08" cy="209.35" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
-<g><title>兰波：黎明</title><circle cx="332.77" cy="489.28" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="332.77" cy="489.28" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>“接下来我们将要面对面”——《攻壳机动队》影评</title><circle cx="696.80" cy="347.77" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="696.80" cy="347.77" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
-<g><title>兰波：邪恶</title><circle cx="509.70" cy="387.86" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="509.70" cy="387.86" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>兰波：醉舟</title><circle cx="334.61" cy="266.59" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="334.61" cy="266.59" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>兰波：巴黎狂欢节</title><circle cx="307.51" cy="219.72" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="307.51" cy="219.72" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>兰波：永恒</title><circle cx="275.95" cy="468.03" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="275.95" cy="468.03" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>兰波：山谷睡者</title><circle cx="92.00" cy="349.69" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="92.00" cy="349.69" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>兰波：感觉</title><circle cx="254.88" cy="172.72" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="254.88" cy="172.72" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>兰波：我的流浪</title><circle cx="324.53" cy="160.00" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="324.53" cy="160.00" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
-<g><title>为什么黄金时代总在过去？</title><circle cx="626.33" cy="315.71" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="626.33" cy="315.71" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
-<g><title>今年雪照哪年影</title><circle cx="618.85" cy="379.09" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="618.85" cy="379.09" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
-<g><title>?</title><circle cx="501.84" cy="410.61" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="501.84" cy="410.61" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<line x1="700.44" y1="468.53" x2="688.97" y2="507.87" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="700.44" y1="468.53" x2="679.19" y2="400.01" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="491.27" y1="522.97" x2="529.16" y2="480.92" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="491.27" y1="522.97" x2="528.83" y2="566.42" stroke="#d5a5a1" stroke-opacity=".24" stroke-width="1"/>
+<line x1="685.50" y1="564.47" x2="706.42" y2="604.00" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="685.50" y1="564.47" x2="688.97" y2="507.87" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="600.14" y1="536.39" x2="592.42" y2="477.08" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="600.14" y1="536.39" x2="574.44" y2="597.50" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="528.83" y1="566.42" x2="574.44" y2="597.50" stroke="#d5a5a1" stroke-opacity=".24" stroke-width="1"/>
+<line x1="706.42" y1="604.00" x2="773.73" y2="575.21" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="756.12" y1="518.93" x2="773.73" y2="575.21" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="756.12" y1="518.93" x2="688.97" y2="507.87" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="592.42" y1="477.08" x2="529.16" y2="480.92" stroke="#d5a36c" stroke-opacity=".24" stroke-width="1"/>
+<line x1="849.52" y1="520.47" x2="856.00" y2="556.13" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="849.52" y1="520.47" x2="815.40" y2="464.29" stroke="#86a8a1" stroke-opacity=".24" stroke-width="1"/>
+<line x1="815.40" y1="464.29" x2="828.19" y2="417.55" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="679.19" y1="400.01" x2="690.93" y2="318.45" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="567.06" y1="378.15" x2="484.65" y2="413.49" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="567.06" y1="378.15" x2="604.20" y2="292.55" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="484.65" y1="413.49" x2="426.51" y2="444.89" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="484.65" y1="413.49" x2="529.16" y2="480.92" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="690.93" y1="318.45" x2="604.20" y2="292.55" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="427.84" y1="588.63" x2="491.27" y2="522.97" stroke="#d5a5a1" stroke-opacity=".24" stroke-width="1"/>
+<line x1="427.84" y1="588.63" x2="359.12" y2="526.01" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="224.60" y1="329.76" x2="217.94" y2="379.17" stroke="#d5a36c" stroke-opacity=".24" stroke-width="1"/>
+<line x1="224.60" y1="329.76" x2="265.45" y2="286.55" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="426.51" y1="444.89" x2="424.71" y2="492.78" stroke="#d5a5a1" stroke-opacity=".24" stroke-width="1"/>
+<line x1="856.00" y1="556.13" x2="773.73" y2="575.21" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="359.12" y1="526.01" x2="286.26" y2="524.89" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="359.12" y1="526.01" x2="424.71" y2="492.78" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="270.61" y1="552.35" x2="286.26" y2="524.89" stroke="#d5a5a1" stroke-opacity=".24" stroke-width="1"/>
+<line x1="270.61" y1="552.35" x2="359.12" y2="526.01" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="828.19" y1="417.55" x2="849.52" y2="520.47" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="632.39" y1="198.55" x2="636.84" y2="242.45" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="632.39" y1="198.55" x2="576.87" y2="163.88" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="217.94" y1="379.17" x2="235.23" y2="454.46" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="417.25" y1="194.06" x2="456.41" y2="235.90" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="417.25" y1="194.06" x2="385.76" y2="253.49" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="456.41" y1="235.90" x2="514.32" y2="271.96" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="514.32" y1="271.96" x2="535.53" y2="190.98" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="128.42" y1="349.78" x2="92.00" y2="394.33" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="128.42" y1="349.78" x2="112.97" y2="432.04" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="335.94" y1="375.69" x2="357.28" y2="319.89" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="335.94" y1="375.69" x2="338.57" y2="446.44" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="398.40" y1="277.33" x2="385.76" y2="253.49" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="398.40" y1="277.33" x2="357.28" y2="319.89" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="636.84" y1="242.45" x2="604.20" y2="292.55" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="265.45" y1="286.55" x2="310.05" y2="256.08" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="424.71" y1="492.78" x2="491.27" y2="522.97" stroke="#d5a5a1" stroke-opacity=".24" stroke-width="1"/>
+<line x1="112.97" y1="432.04" x2="92.00" y2="394.33" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="477.03" y1="160.00" x2="535.53" y2="190.98" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="477.03" y1="160.00" x2="417.25" y2="194.06" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="310.05" y1="256.08" x2="385.76" y2="253.49" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="576.87" y1="163.88" x2="535.53" y2="190.98" stroke="#b7a5c8" stroke-opacity=".24" stroke-width="1"/>
+<line x1="338.57" y1="446.44" x2="359.12" y2="526.01" stroke="#879078" stroke-opacity=".12" stroke-width="1"/>
+<line x1="235.23" y1="454.46" x2="286.26" y2="524.89" stroke="#d5a5a1" stroke-opacity=".24" stroke-width="1"/>
+<g><title>《刀锋》书评——一把刀的锋刃不容易越过</title><circle cx="700.44" cy="468.53" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="700.44" cy="468.53" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>慢下来，你其实没有落下什么</title><circle cx="491.27" cy="522.97" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="491.27" cy="522.97" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>Dog-Map：我给自己做的一张路线地图</title><circle cx="685.50" cy="564.47" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="685.50" cy="564.47" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>谁该得到这 100 分？人工智能中的点数分配问题</title><circle cx="600.14" cy="536.39" r="7" fill="#9fb46b" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="600.14" cy="536.39" r="12" fill="none" stroke="#9fb46b" stroke-opacity=".18"/></g>
+<g><title>七夕，重走一遍上学路</title><circle cx="528.83" cy="566.42" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="528.83" cy="566.42" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>从五子棋作业到搜索实验：用第五章的方法拆开一个 Agent</title><circle cx="706.42" cy="604.00" r="7" fill="#9fb46b" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="706.42" cy="604.00" r="12" fill="none" stroke="#9fb46b" stroke-opacity=".18"/></g>
+<g><title>FastAPI 入门：给寒柳别苑搭一个小型 API</title><circle cx="688.97" cy="507.87" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="688.97" cy="507.87" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
+<g><title>在概率的雾里行走：从贝叶斯更新到 MCMC</title><circle cx="756.12" cy="518.93" r="7" fill="#9fb46b" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="756.12" cy="518.93" r="12" fill="none" stroke="#9fb46b" stroke-opacity=".18"/></g>
+<g><title>Dog-Babble：把 AES 密文伪装成一串哈基米</title><circle cx="592.42" cy="477.08" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="592.42" cy="477.08" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>Dog-LittleTools：九个 Bash 脚本和我不想再敲第二遍的命令</title><circle cx="849.52" cy="520.47" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="849.52" cy="520.47" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
+<g><title>MiniArena 自走棋</title><circle cx="773.73" cy="575.21" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="773.73" cy="575.21" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>nannahelper docs：给完全不会编程的人写一份不会跳步的教程</title><circle cx="815.40" cy="464.29" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="815.40" cy="464.29" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
+<g><title>“绘出七彩”的七天</title><circle cx="574.44" cy="597.50" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="574.44" cy="597.50" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>Dog-Skills：我整理的 48 个 Claude Code 技能库，从写代码到 AI 唱歌全涵盖</title><circle cx="679.19" cy="400.01" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="679.19" cy="400.01" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
+<g><title>消失的半年：代码、项目与一个智科人的大一春季学期</title><circle cx="567.06" cy="378.15" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="567.06" cy="378.15" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
+<g><title>当奇迹遇见奇迹——《挽救计划》书评</title><circle cx="484.65" cy="413.49" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="484.65" cy="413.49" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>海子 《以梦为马》</title><circle cx="690.93" cy="318.45" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="690.93" cy="318.45" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>奔跑在残酷与纯真之间——《小鞋子》影评</title><circle cx="427.84" cy="588.63" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="427.84" cy="588.63" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>Smart Agent: 迷宫寻路实验</title><circle cx="224.60" cy="329.76" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="224.60" cy="329.76" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>片言成蝶</title><circle cx="426.51" cy="444.89" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="426.51" cy="444.89" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>谁拥有这块内存：一次 C++ 资源管理实验</title><circle cx="856.00" cy="556.13" r="7" fill="#9fb46b" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="856.00" cy="556.13" r="12" fill="none" stroke="#9fb46b" stroke-opacity=".18"/></g>
+<g><title>如何在网络时代退化成一棵树</title><circle cx="359.12" cy="526.01" r="7" fill="#86a8a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="359.12" cy="526.01" r="12" fill="none" stroke="#86a8a1" stroke-opacity=".18"/></g>
+<g><title>游记 济南</title><circle cx="270.61" cy="552.35" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="270.61" cy="552.35" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>一只脚与王子的性命孰重？——《七王国的骑士》影评</title><circle cx="529.16" cy="480.92" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="529.16" cy="480.92" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>兰波：地狱之夜</title><circle cx="828.19" cy="417.55" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="828.19" cy="417.55" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>兰波：第一次夜晚</title><circle cx="632.39" cy="198.55" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="632.39" cy="198.55" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>夜空为你闪烁</title><circle cx="217.94" cy="379.17" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="217.94" cy="379.17" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>兰波：被囚禁者</title><circle cx="417.25" cy="194.06" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="417.25" cy="194.06" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>兰波：致一位理性的人</title><circle cx="456.41" cy="235.90" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="456.41" cy="235.90" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>兰波：母狼</title><circle cx="514.32" cy="271.96" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="514.32" cy="271.96" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>大庚剑阵</title><circle cx="128.42" cy="349.78" r="7" fill="#d5a36c" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="128.42" cy="349.78" r="12" fill="none" stroke="#d5a36c" stroke-opacity=".18"/></g>
+<g><title>兰波：告别</title><circle cx="335.94" cy="375.69" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="335.94" cy="375.69" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>兰波：七岁智者</title><circle cx="398.40" cy="277.33" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="398.40" cy="277.33" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>兰波：我的饥饿</title><circle cx="385.76" cy="253.49" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="385.76" cy="253.49" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>兰波：奥菲利娅</title><circle cx="636.84" cy="242.45" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="636.84" cy="242.45" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>烟火文沃,康城新章</title><circle cx="286.26" cy="524.89" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="286.26" cy="524.89" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>兰波：黎明</title><circle cx="265.45" cy="286.55" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="265.45" cy="286.55" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>“接下来我们将要面对面”——《攻壳机动队》影评</title><circle cx="424.71" cy="492.78" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="424.71" cy="492.78" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>兰波：邪恶</title><circle cx="112.97" cy="432.04" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="112.97" cy="432.04" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>兰波：醉舟</title><circle cx="357.28" cy="319.89" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="357.28" cy="319.89" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>兰波：巴黎狂欢节</title><circle cx="477.03" cy="160.00" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="477.03" cy="160.00" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>兰波：永恒</title><circle cx="310.05" cy="256.08" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="310.05" cy="256.08" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>兰波：山谷睡者</title><circle cx="604.20" cy="292.55" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="604.20" cy="292.55" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>兰波：感觉</title><circle cx="576.87" cy="163.88" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="576.87" cy="163.88" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>兰波：我的流浪</title><circle cx="535.53" cy="190.98" r="7" fill="#b7a5c8" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="535.53" cy="190.98" r="12" fill="none" stroke="#b7a5c8" stroke-opacity=".18"/></g>
+<g><title>为什么黄金时代总在过去？</title><circle cx="338.57" cy="446.44" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="338.57" cy="446.44" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>今年雪照哪年影</title><circle cx="235.23" cy="454.46" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="235.23" cy="454.46" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
+<g><title>?</title><circle cx="92.00" cy="394.33" r="7" fill="#d5a5a1" fill-opacity=".92" stroke="#f7f3e2" stroke-width="2"/><circle cx="92.00" cy="394.33" r="12" fill="none" stroke="#d5a5a1" stroke-opacity=".18"/></g>
 </g>
 <text x="930" y="168" fill="#586347" font-family="Georgia, serif" font-size="22" font-weight="700">精选主题</text>
 <text x="930" y="194" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="12">博客内容策展索引</text>
@@ -136,5 +133,5 @@
 <circle cx="936" cy="389" r="7" fill="#b7a5c8"/><text x="956" y="394" fill="#4c5141" font-family="Segoe UI, sans-serif" font-size="14">主题 4 · 诗歌与文学</text><text x="956" y="413" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">20 篇内容</text>
 <circle cx="936" cy="441" r="7" fill="#d5a5a1"/><text x="956" y="446" fill="#4c5141" font-family="Segoe UI, sans-serif" font-size="14">主题 5 · 影像与见闻</text><text x="956" y="465" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">12 篇内容</text>
 <text x="66" y="666" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">position = reduced embedding coordinate · colors = topic clusters · hover/click in the interactive frontend</text>
-<text x="1110" y="666" text-anchor="end" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">snapshot: 2026-10-19</text>
+<text x="1110" y="666" text-anchor="end" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">snapshot: 2026-10-26</text>
 </svg>
