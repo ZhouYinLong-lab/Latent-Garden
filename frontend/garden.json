@@ -1,12 +1,12 @@
 {
   "version": "0.1",
-  "generated_at": "2026-10-26T07:51:01.236030+00:00",
+  "generated_at": "2026-11-02T09:34:12.723557+00:00",
   "dimensions": 512,
   "reducer": "umap",
   "clusterer": "curated-keywords",
   "nodes": [
     {
-      "id": "刀锋书评",
+      "id": "刀锋-书评",
       "title": "《刀锋》书评——一把刀的锋刃不容易越过",
       "description": "读完《刀锋》后，对拉里、伊莎贝尔、格雷、苏菲和埃利奥特几种生活选择的杂谈。",
       "tags": [
@@ -15,15 +15,15 @@
         "生活选择"
       ],
       "date": "2026-10-18",
-      "url": "https://zylatent.com/blog/%E5%88%80%E9%94%8B%E4%B9%A6%E8%AF%84",
+      "url": "https://zylatent.com/blog/%E5%88%80%E9%94%8B-%E4%B9%A6%E8%AF%84",
       "content_type": "article",
-      "x": 0.5453419497532764,
-      "y": -0.35860883899578877,
+      "x": -0.10377899804116131,
+      "y": -0.2620884008028874,
       "cluster_id": 3,
-      "content_hash": "de95a6ad021dd94cd39e08fe73d7e6c4fa715bb97f3026c3efed73c2d1e82775"
+      "content_hash": "9ac64b0b9cb50011d867692bed6bc7a55a2a7fe061e9b015b9187ad337014d7e"
     },
     {
-      "id": "慢下来-你其实没有落下什么",
+      "id": "慢下来",
       "title": "慢下来，你其实没有落下什么",
       "description": "分享科研焦虑与成长感悟，讨论学生科研定位、AI 时代的学术噪音，以及慢科研的可能性。",
       "tags": [
@@ -35,15 +35,15 @@
         "计算机视觉"
       ],
       "date": "2026-09-29",
-      "url": "https://zylatent.com/blog/%E6%85%A2%E4%B8%8B%E6%9D%A5-%E4%BD%A0%E5%85%B6%E5%AE%9E%E6%B2%A1%E6%9C%89%E8%90%BD%E4%B8%8B%E4%BB%80%E4%B9%88",
+      "url": "https://zylatent.com/blog/%E6%85%A2%E4%B8%8B%E6%9D%A5",
       "content_type": "article",
-      "x": 0.04159009969017968,
-      "y": -0.58420004012304,
+      "x": -0.03143575983775049,
+      "y": -0.31839303677142594,
       "cluster_id": 4,
-      "content_hash": "fefbbe99799458a037f954eb9893699f75ccd2d468f40d2afac3089c289c168f"
+      "content_hash": "7328b0bb4a7a866dbc0d82b9f94e7ce179e6e720d45545cb849a69f49114be7a"
     },
     {
-      "id": "dog-map个人路线地图",
+      "id": "dog-map",
       "title": "Dog-Map：我给自己做的一张路线地图",
       "description": "记录我如何用一张地图保存去过的地方、走过的路线和留下的照片。",
       "tags": [
@@ -55,12 +55,12 @@
         "3D地图"
       ],
       "date": "2026-09-07",
-      "url": "https://zylatent.com/blog/dog-map%E4%B8%AA%E4%BA%BA%E8%B7%AF%E7%BA%BF%E5%9C%B0%E5%9B%BE",
+      "url": "https://zylatent.com/blog/dog-map",
       "content_type": "article",
-      "x": 0.509371162068036,
-      "y": -0.756165880142248,
+      "x": -0.062317972350024675,
+      "y": -0.5720625276870068,
       "cluster_id": 4,
-      "content_hash": "1dc2106b1b9251e750f0ed3a7e7232432e73303beae6ad0f8ed71e11c37bfcb9"
+      "content_hash": "d04e18cd5aa7f4d09a67a40be5e9f3f5bdedefaac79111dbaafb2733a4a527bb"
     },
     {
       "id": "point-allocation-credit-assignment",
@@ -77,13 +77,13 @@
       "date": "2026-08-25",
       "url": "https://zylatent.com/blog/point-allocation-credit-assignment",
       "content_type": "article",
-      "x": 0.30378902956483345,
-      "y": -0.6397992032429392,
+      "x": 0.09551426944371999,
+      "y": -0.5030579571439795,
       "cluster_id": 0,
       "content_hash": "25744ca99ad5dcf0c544d601d364326779b48254f914e7bb832ac4e59a7cc514"
     },
     {
-      "id": "remembrance-of-things-past",
+      "id": "七夕-重走上学路",
       "title": "七夕，重走一遍上学路",
       "description": "骑车回到初中时的家、学校和那些已经说不清的旧日片段，在一条改变了的路上重新辨认过去。",
       "tags": [
@@ -93,15 +93,15 @@
         "城市记忆"
       ],
       "date": "2026-08-19",
-      "url": "https://zylatent.com/blog/remembrance-of-things-past",
+      "url": "https://zylatent.com/blog/%E4%B8%83%E5%A4%95-%E9%87%8D%E8%B5%B0%E4%B8%8A%E5%AD%A6%E8%B7%AF",
       "content_type": "article",
-      "x": 0.13204520795039276,
-      "y": -0.7642789349145723,
+      "x": 0.2978799944057414,
+      "y": -0.21496007899475778,
       "cluster_id": 4,
-      "content_hash": "84cae02f929998dc4bbbb88f6f51b75c358f72cc5615039ba45649cc573948b0"
+      "content_hash": "b0d553430113b307fd5912d0fa7ac9303403d9edaf1d736d1b576a247c98042b"
     },
     {
-      "id": "五子棋搜索实验",
+      "id": "gomoku-search",
       "title": "从五子棋作业到搜索实验：用第五章的方法拆开一个 Agent",
       "description": "以《人工智能：一种现代方法》第五章的对抗搜索为主线，把一次五子棋课程作业重构成可比较、可复现的搜索实验。",
       "tags": [
@@ -113,13 +113,12 @@
         "MCTS"
       ],
       "date": "2026-07-31",
-      "url": "https://zylatent.com/blog/%E4%BA%94%E5%AD%90%E6%A3%8B%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C",
+      "url": "https://zylatent.com/blog/gomoku-search",
       "content_type": "article",
-      "x": 0.5597615547580389,
-      "y": -0.92,
+      "x": -0.09840715854388393,
+      "y": -0.7459792315264259,
       "cluster_id": 0,
-      "content_hash": "cd1e587bb952ccce28e234ac255009b150ec38e34c26cc31aa52791d644cfa20",
-      "cover": "./assets/covers/804159a3e32e.webp"
+      "content_hash": "2484b04a27d018efa6c3231ab4448d8da47a62b0cfbcd0b470c3b6b7435478f9"
     },
     {
       "id": "fastapi-basics",
@@ -135,14 +134,14 @@
       "date": "2026-07-29",
       "url": "https://zylatent.com/blog/fastapi-basics",
       "content_type": "article",
-      "x": 0.5177358739678265,
-      "y": -0.5216123741927098,
+      "x": -0.4085467974320871,
+      "y": -0.660410162718726,
       "cluster_id": 1,
       "content_hash": "a4c17a070c61517bfb786ab76120bc5be364071d076d3bf38eb294eec10fb253",
       "cover": "./assets/covers/ce60466f23ae.webp"
     },
     {
-      "id": "在概率的雾里行走-贝叶斯与mcmc学习记录",
+      "id": "bayesian-mcmc",
       "title": "在概率的雾里行走：从贝叶斯更新到 MCMC",
       "description": "记录阅读《Probabilistic Programming and Bayesian Methods for Hackers》前 3 章的收获：如何用概率描述不确定性，用 PyMC 构造模型，再用 MCMC 从后验分布中取出答案。",
       "tags": [
@@ -153,16 +152,15 @@
         "概率编程"
       ],
       "date": "2026-07-27",
-      "url": "https://zylatent.com/blog/%E5%9C%A8%E6%A6%82%E7%8E%87%E7%9A%84%E9%9B%BE%E9%87%8C%E8%A1%8C%E8%B5%B0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%B8%8Emcmc%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95",
+      "url": "https://zylatent.com/blog/bayesian-mcmc",
       "content_type": "article",
-      "x": 0.6794435960816819,
-      "y": -0.5674698644498026,
+      "x": -0.4091854964071888,
+      "y": -0.8303003345657742,
       "cluster_id": 0,
-      "content_hash": "b03e9c85f9dafe0b1d3cc2ef3b4e16d3d2df8f487f91355d0d0a0120c67c6f54",
-      "cover": "./assets/covers/c25ecf56892e.webp"
+      "content_hash": "4cae811f616c427b863c10b4a4d3258b64ca4f4fba2cdece157a25273b7d021c"
     },
     {
-      "id": "dog-babble加密实验",
+      "id": "dog-babble",
       "title": "Dog-Babble：把 AES 密文伪装成一串哈基米",
       "description": "PBKDF2 密钥派生 + AES-256-GCM 加密 + 自定义字典编码，零依赖纯前端密码学实验。用「发疯文学」隐藏信息。",
       "tags": [
@@ -173,15 +171,15 @@
         "零依赖"
       ],
       "date": "2026-07-23",
-      "url": "https://zylatent.com/blog/dog-babble%E5%8A%A0%E5%AF%86%E5%AE%9E%E9%AA%8C",
+      "url": "https://zylatent.com/blog/dog-babble",
       "content_type": "article",
-      "x": 0.2852040740072769,
-      "y": -0.3940440991966013,
+      "x": -0.3236105772911406,
+      "y": -0.47656237243070626,
       "cluster_id": 2,
-      "content_hash": "8a3735f236f43d08c9dc8665be675d43c156fe8123fb00a6242703f19e34b61c"
+      "content_hash": "7d614f7218a22a43431e3624618eca2bc1b63a3b00d0b244a207023425e93f81"
     },
     {
-      "id": "dog-littletools工具集",
+      "id": "dog-littletools",
       "title": "Dog-LittleTools：九个 Bash 脚本和我不想再敲第二遍的命令",
       "description": "9 个纯 Bash CLI 工具：GPU 选择、进程锁、Token 统计、Git 目录树、条件等待。零依赖，跨平台。",
       "tags": [
@@ -192,16 +190,15 @@
         "Claude Code"
       ],
       "date": "2026-07-23",
-      "url": "https://zylatent.com/blog/dog-littletools%E5%B7%A5%E5%85%B7%E9%9B%86",
+      "url": "https://zylatent.com/blog/dog-littletools",
       "content_type": "article",
-      "x": 0.9043934182775805,
-      "y": -0.5738470883439397,
+      "x": -0.15132231727471945,
+      "y": -0.92,
       "cluster_id": 1,
-      "content_hash": "7e5d8c11cc77da6294b3588981c5cea75eaefc47a29f020d2cd66f47018048ef",
-      "cover": "./assets/covers/2586437fefeb.webp"
+      "content_hash": "a7c8cfffbd9b8b3c124c5c9ed863c591da68da1704e5e2c4438189ae3d7c2c1f"
     },
     {
-      "id": "miniarena自走棋",
+      "id": "miniarena",
       "title": "MiniArena 自走棋",
       "description": "基于 Qt6 / C++17 的 PvE 自走棋游戏。17 个可玩单位，8×8 六边形棋盘，BFS 寻路，羁绊组合，装备系统，随机事件，存档读档。",
       "tags": [
@@ -212,16 +209,15 @@
         "算法"
       ],
       "date": "2026-07-23",
-      "url": "https://zylatent.com/blog/miniarena%E8%87%AA%E8%B5%B0%E6%A3%8B",
+      "url": "https://zylatent.com/blog/miniarena",
       "content_type": "article",
-      "x": 0.7218657455585943,
-      "y": -0.8007096489950387,
+      "x": -0.2207118355573695,
+      "y": -0.7068618619444691,
       "cluster_id": 2,
-      "content_hash": "3524f05c3ecaba85bb03ddd13ef2aa898277d09f7ef92d97c3db1332bed72e96",
-      "cover": "./assets/covers/409d7f71180f.webp"
+      "content_hash": "7aac409b2641c81562aa14d51589bba3455ff9de268fc337b39ced6c6c2d9ca4"
     },
     {
-      "id": "nannahelper教程文档",
+      "id": "nannahelper-docs",
       "title": "nannahelper docs：给完全不会编程的人写一份不会跳步的教程",
       "description": "覆盖 20+ 主题的零基础编程教程。MkDocs + GitHub Actions 自动部署，Build in Public。",
       "tags": [
@@ -232,13 +228,12 @@
         "开源"
       ],
       "date": "2026-07-23",
-      "url": "https://zylatent.com/blog/nannahelper%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3",
+      "url": "https://zylatent.com/blog/nannahelper-docs",
       "content_type": "article",
-      "x": 0.8222194525371181,
-      "y": -0.3410047105608276,
+      "x": -0.5257080749675279,
+      "y": -0.5191648949549735,
       "cluster_id": 1,
-      "content_hash": "20a2883c32597c89a2a829bff70432b86a509ebbc0d8eefc7c500c55ae9b3c8e",
-      "cover": "./assets/covers/75aebdab1d21.webp"
+      "content_hash": "952a644b850cb42ffce3bdaa14c3d7c40d195301648fe9df235951890c294bb5"
     },
     {
       "id": "绘出七彩的七天",
@@ -254,14 +249,14 @@
       "date": "2026-07-14",
       "url": "https://zylatent.com/blog/%E7%BB%98%E5%87%BA%E4%B8%83%E5%BD%A9%E7%9A%84%E4%B8%83%E5%A4%A9",
       "content_type": "article",
-      "x": 0.24188986998528927,
-      "y": -0.8930498194230786,
+      "x": -0.713331147471609,
+      "y": -0.6830310607229289,
       "cluster_id": 4,
       "content_hash": "0d7590a8e201705ce02913e652fb7073db6ca1273c87c9be71069b3f2df5777a",
       "cover": "./assets/covers/aebc28fea043.webp"
     },
     {
-      "id": "dog-skills-48-claude-code技能库",
+      "id": "dog-skills-48",
       "title": "Dog-Skills：我整理的 48 个 Claude Code 技能库，从写代码到 AI 唱歌全涵盖",
       "description": "从开发流程、品牌设计、深度思考到健康管理和AI音乐生成，48个Claude Code技能的完整指南——含元技能架构图、安装方式和组合推荐。",
       "tags": [
@@ -272,32 +267,30 @@
         "开源"
       ],
       "date": "2026-07-03",
-      "url": "https://zylatent.com/blog/dog-skills-48-claude-code%E6%8A%80%E8%83%BD%E5%BA%93",
+      "url": "https://zylatent.com/blog/dog-skills-48",
       "content_type": "article",
-      "x": 0.49418339898279207,
-      "y": -0.07465534311392363,
+      "x": -0.912417700230328,
+      "y": 0.027413742526296248,
       "cluster_id": 1,
-      "content_hash": "62f44f27c9838aa02abfce307bd6028bdd4534c876fca1bc5c9d325ac789eb99",
-      "cover": "./assets/covers/548da1fc2952.webp"
+      "content_hash": "a30480d2229c80875cb9c527caeb179142928ace2dae8b222b9d2d4e3d0b1ac5"
     },
     {
-      "id": "2026上半年-代码与项目回顾",
+      "id": "2026上半年-项目回顾",
       "title": "消失的半年：代码、项目与一个智科人的大一春季学期",
       "description": "智科大一下学期忙得博客长草，但代码仓库没闲着——NanE、Dog-Skills一次迟到的项目回顾。",
       "tags": [
         "项目回顾"
       ],
       "date": "2026-06-22",
-      "url": "https://zylatent.com/blog/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4-%E4%BB%A3%E7%A0%81%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%9B%9E%E9%A1%BE",
+      "url": "https://zylatent.com/blog/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4-%E9%A1%B9%E7%9B%AE%E5%9B%9E%E9%A1%BE",
       "content_type": "article",
-      "x": 0.22413040498986947,
-      "y": 0.015946355107278265,
+      "x": -0.6948637941348583,
+      "y": 0.18631355522844018,
       "cluster_id": 1,
-      "content_hash": "b5bc785261e0019c4233d04ceb3fe1933020f8a51204415afbca8492815ee2de",
-      "cover": "./assets/covers/08c72ab3a720.webp"
+      "content_hash": "d1480681e0b48392ed82bbb97fe617102482c921c61950620b9331d49bb0485d"
     },
     {
-      "id": "当奇迹遇到奇迹",
+      "id": "挽救计划-书评",
       "title": "当奇迹遇见奇迹——《挽救计划》书评",
       "description": "探讨《挽救计划》如何在冰冷的物理法则中，演奏出一支反其道而行之的、充满温情的宇宙赞歌。",
       "tags": [
@@ -306,13 +299,12 @@
         "《挽救计划》"
       ],
       "date": "2026-03-24",
-      "url": "https://zylatent.com/blog/%E5%BD%93%E5%A5%87%E8%BF%B9%E9%81%87%E5%88%B0%E5%A5%87%E8%BF%B9",
+      "url": "https://zylatent.com/blog/%E6%8C%BD%E6%95%91%E8%AE%A1%E5%88%92-%E4%B9%A6%E8%AF%84",
       "content_type": "article",
-      "x": 0.02565992955435037,
-      "y": -0.1304895090171979,
+      "x": -0.540335529983007,
+      "y": -0.009145742643371091,
       "cluster_id": 3,
-      "content_hash": "9e1688463ac2c13a180cd3eb121b7ed9ede3f3cf1bf52ed85d319c93fa170298",
-      "cover": "./assets/covers/1aa06fdfd357.webp"
+      "content_hash": "0dd9523524e73917d49f73fe49cd259413929eb6fdd5e2c0042b21d414e4426e"
     },
     {
       "id": "海子-以梦为马",
@@ -325,14 +317,14 @@
       "date": "2026-03-24",
       "url": "https://zylatent.com/blog/%E6%B5%B7%E5%AD%90-%E4%BB%A5%E6%A2%A6%E4%B8%BA%E9%A9%AC",
       "content_type": "article",
-      "x": 0.5224526852551853,
-      "y": 0.26335895577067825,
+      "x": -0.48218376246382,
+      "y": 0.7206303823926373,
       "cluster_id": 3,
       "content_hash": "653274e9352773b4fc2f88ef3abbfecc24fdbb395668fddc64994f0ac36ddc3f",
       "cover": "./assets/covers/920aad709eab.webp"
     },
     {
-      "id": "we-are-the-world",
+      "id": "小鞋子-影评",
       "title": "奔跑在残酷与纯真之间——《小鞋子》影评",
       "description": "伊朗经典电影《小鞋子》 在世界电影的璀璨星河中，伊朗导演马基德·马基迪（Majid Majidi）于1997年执导的《小鞋子》（Children of Heaven）是一颗散发着微小却恒久光芒的珍珠。影片没有宏大的叙事，没有炫目的特技，仅仅围绕着德黑兰贫民窟里一对兄妹和一双丢失的旧皮鞋展开。然而，正是这种极简的叙事，为影片腾出了巨大的情感空间。导演以一种近乎虔诚的平视视角，极其细腻地体察了儿童在物质匮乏的世界中如何艰难而又高贵地拔节生长。影片超越了对贫穷的简单控诉，成为了一部关于童真、责任、同理心以及成长阵痛的伟大影像史诗。",
       "tags": [
@@ -342,16 +334,15 @@
         "战争"
       ],
       "date": "2026-03-23",
-      "url": "https://zylatent.com/blog/we-are-the-world",
+      "url": "https://zylatent.com/blog/%E5%B0%8F%E9%9E%8B%E5%AD%90-%E5%BD%B1%E8%AF%84",
       "content_type": "article",
-      "x": -0.11117229768000436,
-      "y": -0.8562963852925243,
+      "x": -0.8682895190370626,
+      "y": -0.5437747637100336,
       "cluster_id": 4,
-      "content_hash": "c3551ed9e978b61716f9234fade62ade896cbc4c323a882aaaa920528b67dcbf",
-      "cover": "./assets/covers/d5b09c0b8826.webp"
+      "content_hash": "b32122667a6b62c4a33a603d2cb57b663b4cb404e287e02bde2ffcd197a4503e"
     },
     {
-      "id": "smartagent",
+      "id": "smart-agent",
       "title": "Smart Agent: 迷宫寻路实验",
       "description": "一个基于 A* 算法与空间折跃机制的交互式路径规划实验。",
       "tags": [
@@ -361,13 +352,12 @@
         "互动网页"
       ],
       "date": "2026-03-18",
-      "url": "https://zylatent.com/blog/smartagent",
+      "url": "https://zylatent.com/blog/smart-agent",
       "content_type": "article",
-      "x": -0.6006541902328287,
-      "y": 0.2164930313902772,
+      "x": 0.5566885728699266,
+      "y": 0.24904306882398475,
       "cluster_id": 2,
-      "content_hash": "3b4c76efc491ef7c4becb1107356db442858e8d37e5a1c6859908e9ab4312677",
-      "cover": "./assets/covers/3cb56df131dd.webp"
+      "content_hash": "c43a521702dafc96cb8cce4668e4dfd67d295ee497df1e0c94f010523afabc42"
     },
     {
       "id": "鸳鸯",
@@ -380,8 +370,8 @@
       "date": "2026-03-15",
       "url": "https://zylatent.com/blog/%E9%B8%B3%E9%B8%AF",
       "content_type": "article",
-      "x": -0.11436979820350124,
-      "y": -0.2606354692212344,
+      "x": -0.5605098917534193,
+      "y": -0.23439951462325104,
       "cluster_id": 4,
       "content_hash": "c86049e52ea597489c8dc1c599b0cfde77b5c0c6c6ad5b20ce4cf9cee8339754"
     },
@@ -397,14 +387,14 @@
       "date": "2026-03-08",
       "url": "https://zylatent.com/blog/cpp-memory-ownership-raii",
       "content_type": "article",
-      "x": 0.92,
-      "y": -0.7216109622029425,
+      "x": 0.13374480565821834,
+      "y": -0.833298367839257,
       "cluster_id": 0,
       "content_hash": "544d970b23cdf8865f3a691f9d403266f8b1a0c049711ef4c9a5bb8da2a9ec9c",
       "cover": "./assets/covers/fe980845aabe.webp"
     },
     {
-      "id": "如何在数字时代活成一棵树",
+      "id": "网络时代的一棵树",
       "title": "如何在网络时代退化成一棵树",
       "description": "在网络时代成为一棵树，并不意味着逃离世界，而是在世界之中保持定力。我们仍然使用工具，仍然获取信息，但不再让它们决定我们的节奏。年轮缓慢增加，根系向下延伸。安静。清醒。足够了。",
       "tags": [
@@ -412,16 +402,15 @@
         "社交媒体"
       ],
       "date": "2026-03-02",
-      "url": "https://zylatent.com/blog/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3%E6%B4%BB%E6%88%90%E4%B8%80%E6%A3%B5%E6%A0%91",
+      "url": "https://zylatent.com/blog/%E7%BD%91%E7%BB%9C%E6%97%B6%E4%BB%A3%E7%9A%84%E4%B8%80%E6%A3%B5%E6%A0%91",
       "content_type": "article",
-      "x": -0.2766795113747359,
-      "y": -0.5968022970700146,
+      "x": 0.3275695088627616,
+      "y": -0.5476166518379111,
       "cluster_id": 1,
-      "content_hash": "8cad8bce81cacf475ef8059ad65ee5470466c750b43042405f4f3421d0b72ba4",
-      "cover": "./assets/covers/d62b5442b01e.webp"
+      "content_hash": "9d781962403169668b5ca16ecc2ac2cec7ed8b9bcdd90c513c81efe8de61ec4b"
     },
     {
-      "id": "游记-济南",
+      "id": "济南游记",
       "title": "游记 济南",
       "description": "说是游记，其实只是一篇流水账，记录我们一家三口到泉城济南游玩的两天半。",
       "tags": [
@@ -429,13 +418,12 @@
         "济南"
       ],
       "date": "2026-02-28",
-      "url": "https://zylatent.com/blog/%E6%B8%B8%E8%AE%B0-%E6%B5%8E%E5%8D%97",
+      "url": "https://zylatent.com/blog/%E6%B5%8E%E5%8D%97%E6%B8%B8%E8%AE%B0",
       "content_type": "article",
-      "x": -0.48984459337956654,
-      "y": -0.7059384248324486,
+      "x": 0.92,
+      "y": 0.2778985317001236,
       "cluster_id": 4,
-      "content_hash": "6cb5b48cd9af1eb3743919c5c5bbb2815af55b7dc73f8119dc4b1a181ad88617",
-      "cover": "./assets/covers/49a65705cd30.webp"
+      "content_hash": "74abfbc2ba2ebacad607a62fd3efe1251f5bc73759e3d9f8197fb1b208d3763f"
     },
     {
       "id": "七王国的骑士-第一季",
@@ -449,8 +437,8 @@
       "date": "2026-02-24",
       "url": "https://zylatent.com/blog/%E4%B8%83%E7%8E%8B%E5%9B%BD%E7%9A%84%E9%AA%91%E5%A3%AB-%E7%AC%AC%E4%B8%80%E5%AD%A3",
       "content_type": "article",
-      "x": 0.1328439757456562,
-      "y": -0.4099254776190736,
+      "x": -0.39202742668706825,
+      "y": -0.3094722276077172,
       "cluster_id": 2,
       "content_hash": "5b5b847824ea71be839c0a769b2658bd4919747589fa35b82efc89ee0ae7a8f9",
       "cover": "./assets/covers/a2705e213389.webp"
@@ -466,8 +454,8 @@
       "date": "2026-02-19",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%9C%B0%E7%8B%B1%E4%B9%8B%E5%A4%9C",
       "content_type": "article",
-      "x": 0.8530298310049055,
-      "y": -0.14731633216353823,
+      "x": -0.92,
+      "y": -0.1812180324416347,
       "cluster_id": 3,
       "content_hash": "111c7eaff03174695c812ab12a819b4c760721f38e32d9ea94d445a565b68d8c",
       "cover": "./assets/covers/bffe884dba48.webp"
@@ -483,27 +471,11 @@
       "date": "2026-02-18",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A4%9C%E6%99%9A",
       "content_type": "article",
-      "x": 0.38147357047060326,
-      "y": 0.760256468090248,
+      "x": 0.6125367529436258,
+      "y": 0.8002993508724173,
       "cluster_id": 3,
       "content_hash": "fa132c6676a9916e7a6e019be4b60ed893370754d5d1cde7417f573d55904ce4",
       "cover": "./assets/covers/74d1b1667847.webp"
-    },
-    {
-      "id": "互动网页-夜空为你闪烁",
-      "title": "夜空为你闪烁",
-      "description": "一个可交互的星空网页实验，访客可以通过点击和动画进入个人化的夜空场景。",
-      "tags": [
-        "互动网页"
-      ],
-      "date": "2026-02-17",
-      "url": "https://zylatent.com/blog/%E4%BA%92%E5%8A%A8%E7%BD%91%E9%A1%B5-%E5%A4%9C%E7%A9%BA%E4%B8%BA%E4%BD%A0%E9%97%AA%E7%83%81",
-      "content_type": "article",
-      "x": -0.6166825058033558,
-      "y": 0.011741359895438341,
-      "cluster_id": 2,
-      "content_hash": "a35f94804fc0c7e7e121e75cbbb104b2346f66c61acb070fadf22c1840e6741a",
-      "cover": "./assets/covers/1c0a00cfbec6.webp"
     },
     {
       "id": "兰波-被囚禁者",
@@ -516,11 +488,26 @@
       "date": "2026-02-17",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E8%A2%AB%E5%9B%9A%E7%A6%81%E8%80%85",
       "content_type": "article",
-      "x": -0.13668379441108647,
-      "y": 0.778853635475811,
+      "x": 0.3588078026246321,
+      "y": 0.92,
       "cluster_id": 3,
       "content_hash": "e69baeb58e7b2a4d8600847443a8c1cf454befc89673de850892e80a0ec240d8",
       "cover": "./assets/covers/c11ea233514d.webp"
+    },
+    {
+      "id": "夜空为你闪烁",
+      "title": "夜空为你闪烁",
+      "description": "点击上方封面,进入这片夜空 LOCAL GRAPH · 继续探索",
+      "tags": [
+        "互动网页"
+      ],
+      "date": "2026-02-17",
+      "url": "https://zylatent.com/blog/%E5%A4%9C%E7%A9%BA%E4%B8%BA%E4%BD%A0%E9%97%AA%E7%83%81",
+      "content_type": "article",
+      "x": 0.5057677056920061,
+      "y": 0.1601058691723044,
+      "cluster_id": 2,
+      "content_hash": "6c94fef51fb7c20cde83f3f97003bc321d7ae130125900264d148ba3a9401694"
     },
     {
       "id": "兰波-致一位理性的人",
@@ -533,8 +520,8 @@
       "date": "2026-02-15",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E8%87%B4%E4%B8%80%E4%BD%8D%E7%90%86%E6%80%A7%E7%9A%84%E4%BA%BA",
       "content_type": "article",
-      "x": -0.04236991861438755,
-      "y": 0.6054462337456094,
+      "x": 0.3374341225395273,
+      "y": 0.7817163226417384,
       "cluster_id": 3,
       "content_hash": "9e77189ba187fc36d9d93c2594b71da4ece8abe3062f8978220fa9b6286556b5",
       "cover": "./assets/covers/6c94035a5119.webp"
@@ -550,8 +537,8 @@
       "date": "2026-02-13",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%AF%8D%E7%8B%BC",
       "content_type": "article",
-      "x": 0.0971000886445933,
-      "y": 0.45601887625793613,
+      "x": 0.012544907026253771,
+      "y": 0.8294054596961907,
       "cluster_id": 3,
       "content_hash": "95cb92cee669933488a9dd364b53b2e4546101c8937e9173c0f158fb66f737b9",
       "cover": "./assets/covers/0ec1cc41076c.webp"
@@ -567,8 +554,8 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%A4%A7%E5%BA%9A%E5%89%91%E9%98%B5",
       "content_type": "article",
-      "x": -0.8322934497798145,
-      "y": 0.13351938969011778,
+      "x": 0.3306988710016753,
+      "y": 0.22798516493588716,
       "cluster_id": 2,
       "content_hash": "7631c89adc9f9ccdb1e785642ed8dafd352d3324830e9f9eea57036415a05961",
       "cover": "./assets/covers/a589afbbc9ea.webp"
@@ -584,8 +571,8 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%91%8A%E5%88%AB",
       "content_type": "article",
-      "x": -0.3325121170055819,
-      "y": 0.026136450108432574,
+      "x": -0.34584029141926376,
+      "y": 0.2918508861712742,
       "cluster_id": 3,
       "content_hash": "1b43a4d31e55103e9ce59b7d6333fd59edbe544dbb2f88f46f0e542266e24d25",
       "cover": "./assets/covers/f5c056bb867d.webp"
@@ -601,8 +588,8 @@
       "date": "2026-02-11",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E4%B8%83%E5%B2%81%E6%99%BA%E8%80%85",
       "content_type": "article",
-      "x": -0.18206439711510303,
-      "y": 0.43375604781548593,
+      "x": 0.12132414759539512,
+      "y": 0.6724298304240292,
       "cluster_id": 3,
       "content_hash": "e6f8a12cb947ea4d6757827fe24d4413aa3300450d9de811aec3f836afecd6f2",
       "cover": "./assets/covers/1241f6672d03.webp"
@@ -618,8 +605,8 @@
       "date": "2026-02-10",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%88%91%E7%9A%84%E9%A5%A5%E9%A5%BF",
       "content_type": "article",
-      "x": -0.21252203506016454,
-      "y": 0.5325614612705071,
+      "x": -0.17185609506561128,
+      "y": 0.6875422828595944,
       "cluster_id": 3,
       "content_hash": "6b5d74ab7ffc7f0f2c0d487e1d0114a2fd14a6a183f699f4e0464f5c549cf8a2",
       "cover": "./assets/covers/5ff49e28b538.webp"
@@ -635,26 +622,26 @@
       "date": "2026-02-09",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%A5%A5%E8%8F%B2%E5%88%A9%E5%A8%85",
       "content_type": "article",
-      "x": 0.39217919674848367,
-      "y": 0.5783265804913599,
+      "x": 0.3926769842018444,
+      "y": 0.5586134897149028,
       "cluster_id": 3,
       "content_hash": "cbfc5e2d0f0ce692fecee6498b771ba4f628366c475af3e5da067fdd77346b2a",
       "cover": "./assets/covers/5b47e8ae223f.webp"
     },
     {
-      "id": "烟火文沃康城新章",
+      "id": "烟火文沃-康城新章",
       "title": "烟火文沃,康城新章",
       "description": "旧社区文沃的重访随想,记录高中迁离后的变迁与回忆。",
       "tags": [
         "回忆"
       ],
       "date": "2026-02-09",
-      "url": "https://zylatent.com/blog/%E7%83%9F%E7%81%AB%E6%96%87%E6%B2%83%E5%BA%B7%E5%9F%8E%E6%96%B0%E7%AB%A0",
+      "url": "https://zylatent.com/blog/%E7%83%9F%E7%81%AB%E6%96%87%E6%B2%83-%E5%BA%B7%E5%9F%8E%E6%96%B0%E7%AB%A0",
       "content_type": "article",
-      "x": -0.4521548029816482,
-      "y": -0.5921624636957443,
+      "x": 0.7820854411833046,
+      "y": -0.02816891973524338,
       "cluster_id": 4,
-      "content_hash": "ae904c11348c4af81e6013431e8f3426315a4012cc1b1a3a0e6efdce43a1dce2"
+      "content_hash": "45fd69d9ebb32885bfc6cb9ab97b3618823f59f3b6f5aa9ce745d9aae87ca52f"
     },
     {
       "id": "兰波-黎明",
@@ -667,14 +654,14 @@
       "date": "2026-02-08",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%BB%8E%E6%98%8E",
       "content_type": "article",
-      "x": -0.5022701941071018,
-      "y": 0.39555609633827904,
+      "x": 0.08785829259320088,
+      "y": 0.28026448367432144,
       "cluster_id": 3,
       "content_hash": "d30de86174cb793dcc928f3f561698cda2ec1354580c4feaa7182b880982f857",
       "cover": "./assets/covers/4cc74fde1ebb.webp"
     },
     {
-      "id": "ghost-in-shell",
+      "id": "攻壳机动队-影评",
       "title": "“接下来我们将要面对面”——《攻壳机动队》影评",
       "description": "“《攻壳机动队》影评” 企业的网络覆盖星系,电子和光穿梭其间,但在国家和民族消失之前 ——那是还没被信息化抹去的近未来。",
       "tags": [
@@ -683,13 +670,12 @@
         "赛博朋克"
       ],
       "date": "2026-02-07",
-      "url": "https://zylatent.com/blog/ghost-in-shell",
+      "url": "https://zylatent.com/blog/%E6%94%BB%E5%A3%B3%E6%9C%BA%E5%8A%A8%E9%98%9F-%E5%BD%B1%E8%AF%84",
       "content_type": "article",
-      "x": -0.11869742883148893,
-      "y": -0.4590795975872912,
+      "x": -0.35511920105132067,
+      "y": -0.11614524243419877,
       "cluster_id": 4,
-      "content_hash": "b59b829de49c833d8958011072ed98e58b093484f98be1f035f0052f6ca48505",
-      "cover": "./assets/covers/95a17e26b942.webp"
+      "content_hash": "375a36de951ec9f7ec4752aab6589d5697db0fa99eaf215557352a1f61ecbf3a"
     },
     {
       "id": "兰波-邪恶",
@@ -702,8 +688,8 @@
       "date": "2026-02-07",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%82%AA%E6%81%B6",
       "content_type": "article",
-      "x": -0.8695044167822145,
-      "y": -0.2073773282621646,
+      "x": 0.0386960817290275,
+      "y": -0.028003712067012576,
       "cluster_id": 3,
       "content_hash": "36532a6f922e5be74997a1fedbcd5e111af54336f4f84516008db31a32abebf7",
       "cover": "./assets/covers/986699180a10.webp"
@@ -719,8 +705,8 @@
       "date": "2026-02-06",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%86%89%E8%88%9F",
       "content_type": "article",
-      "x": -0.28110771677986435,
-      "y": 0.2573976027837087,
+      "x": -0.24621353488258113,
+      "y": 0.45146214464077483,
       "cluster_id": 3,
       "content_hash": "6014a26b9d818514bb1ec2d0b63db12c8b3ab3c0fe4e177abb28ac95aacd7fd0",
       "cover": "./assets/covers/99498a4e525e.webp"
@@ -736,8 +722,8 @@
       "date": "2026-02-05",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%B7%B4%E9%BB%8E%E7%8B%82%E6%AC%A2%E8%8A%82",
       "content_type": "article",
-      "x": 0.007302846317948641,
-      "y": 0.92,
+      "x": 0.6791171785117086,
+      "y": 0.5787364315786253,
       "cluster_id": 3,
       "content_hash": "51aae451ad11210b5ffd349586f394d1091d76e786b719a66c3ae2dd1f6667b3",
       "cover": "./assets/covers/c3289b5c8001.webp"
@@ -753,8 +739,8 @@
       "date": "2026-02-04",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%B0%B8%E6%81%92",
       "content_type": "article",
-      "x": -0.3948514734358005,
-      "y": 0.5218309252719181,
+      "x": 0.010402111390650393,
+      "y": 0.4423348258917775,
       "cluster_id": 3,
       "content_hash": "bf823ced6ac1269c2f6e16c104afaff2d0b73869295ae8f694497162ccd5a629",
       "cover": "./assets/covers/d1ec18593cb4.webp"
@@ -770,8 +756,8 @@
       "date": "2026-02-03",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%B1%B1%E8%B0%B7%E7%9D%A1%E8%80%85",
       "content_type": "article",
-      "x": 0.31357393505681086,
-      "y": 0.3706793084410983,
+      "x": -0.22666717782202372,
+      "y": 0.871896629012704,
       "cluster_id": 3,
       "content_hash": "cb28cd2f3196a244b264e8db9940cb660c2157ef9d27ca25aaeeff83a5fd9556",
       "cover": "./assets/covers/d988bb926d95.webp"
@@ -787,8 +773,8 @@
       "date": "2026-02-02",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%84%9F%E8%A7%89",
       "content_type": "article",
-      "x": 0.24773972658807042,
-      "y": 0.9039403193158534,
+      "x": 0.8446846431399201,
+      "y": 0.690280357008067,
       "cluster_id": 3,
       "content_hash": "053109e2d5f3eb86ab86559cff3139c5af48aa560fdfb4fcc1d59148c8aa8f4e",
       "cover": "./assets/covers/5adf2c08be9b.webp"
@@ -804,14 +790,14 @@
       "date": "2026-02-01",
       "url": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%88%91%E7%9A%84%E6%B5%81%E6%B5%AA",
       "content_type": "article",
-      "x": 0.14817701350899226,
-      "y": 0.7916106994372248,
+      "x": 0.8648839581959079,
+      "y": 0.7462023428626884,
       "cluster_id": 3,
       "content_hash": "f94f0cb9f728ee1e8996290fcdb449a004e296355210a982f117a010590d9425",
       "cover": "./assets/covers/3b1bc939b9ca.webp"
     },
     {
-      "id": "今不如昔",
+      "id": "黄金时代为何总在过去",
       "title": "为什么黄金时代总在过去？",
       "description": "分析为什么我们总认为自己处在最糟糕的时代？ 为何“末世感”是人类的心理刚需？",
       "tags": [
@@ -820,12 +806,12 @@
         "社评"
       ],
       "date": "2026-01-30",
-      "url": "https://zylatent.com/blog/%E4%BB%8A%E4%B8%8D%E5%A6%82%E6%98%94",
+      "url": "https://zylatent.com/blog/%E9%BB%84%E9%87%91%E6%97%B6%E4%BB%A3%E4%B8%BA%E4%BD%95%E6%80%BB%E5%9C%A8%E8%BF%87%E5%8E%BB",
       "content_type": "article",
-      "x": -0.3261749343087319,
-      "y": -0.26704881642910794,
+      "x": -0.2624042253525528,
+      "y": 0.08604464823499669,
       "cluster_id": 4,
-      "content_hash": "be702df6e2026cc272322dc91d8ea50c779d2bc16a9696868b9fc5f14482835c"
+      "content_hash": "ee18c26a3790fa3703b869c678412ef646e56b3ac0ed7dc3f704a86be61ee882"
     },
     {
       "id": "2025-大雪",
@@ -838,13 +824,13 @@
       "date": "2026-01-19",
       "url": "https://zylatent.com/blog/2025-%E5%A4%A7%E9%9B%AA",
       "content_type": "article",
-      "x": -0.5750508643574006,
-      "y": -0.30029977330236324,
+      "x": 0.470124885973236,
+      "y": -0.40365517564648135,
       "cluster_id": 4,
       "content_hash": "aac7f3ae8ac2ac15c7829d14760aea1bcce745df5ba270c3e40e494a34c70cd3"
     },
     {
-      "id": "question",
+      "id": "问号与聊天压力",
       "title": "?",
       "description": "分析批判社交媒体中?对正常聊天的倾轧 如果你在看到这篇文章标题的一瞬间感到困惑、被催促,甚至隐约有些被冒犯的不快,那么你已经理解了这篇文章想说的全部。",
       "tags": [
@@ -852,12 +838,12 @@
         "社交媒体"
       ],
       "date": "2026-01-02",
-      "url": "https://zylatent.com/blog/question",
+      "url": "https://zylatent.com/blog/%E9%97%AE%E5%8F%B7%E4%B8%8E%E8%81%8A%E5%A4%A9%E5%8E%8B%E5%8A%9B",
       "content_type": "article",
-      "x": -0.92,
-      "y": -0.051096905235061385,
+      "x": 0.15278191199274305,
+      "y": 0.033034042612187786,
       "cluster_id": 4,
-      "content_hash": "297af0560edb259b4b0beb9bce59d7e5c1b96e19ef1c11ccca972a0d97eb4d09"
+      "content_hash": "57f5fc051b02c784b12da2cfc32940d427dce4a5018650d246c63ecb66eb6b66"
     }
   ],
   "clusters": [
@@ -866,8 +852,8 @@
       "label": "智能与计算",
       "node_ids": [
         "point-allocation-credit-assignment",
-        "五子棋搜索实验",
-        "在概率的雾里行走-贝叶斯与mcmc学习记录",
+        "gomoku-search",
+        "bayesian-mcmc",
         "cpp-memory-ownership-raii"
       ],
       "color": "#9fb46b"
@@ -877,11 +863,11 @@
       "label": "工具与开源",
       "node_ids": [
         "fastapi-basics",
-        "dog-littletools工具集",
-        "nannahelper教程文档",
-        "dog-skills-48-claude-code技能库",
-        "2026上半年-代码与项目回顾",
-        "如何在数字时代活成一棵树"
+        "dog-littletools",
+        "nannahelper-docs",
+        "dog-skills-48",
+        "2026上半年-项目回顾",
+        "网络时代的一棵树"
       ],
       "color": "#86a8a1"
     },
@@ -889,11 +875,11 @@
       "id": 2,
       "label": "互动实验",
       "node_ids": [
-        "dog-babble加密实验",
-        "miniarena自走棋",
-        "smartagent",
+        "dog-babble",
+        "miniarena",
+        "smart-agent",
         "七王国的骑士-第一季",
-        "互动网页-夜空为你闪烁",
+        "夜空为你闪烁",
         "大庚剑阵"
       ],
       "color": "#d5a36c"
@@ -902,8 +888,8 @@
       "id": 3,
       "label": "诗歌与文学",
       "node_ids": [
-        "刀锋书评",
-        "当奇迹遇到奇迹",
+        "刀锋-书评",
+        "挽救计划-书评",
         "海子-以梦为马",
         "兰波-地狱之夜",
         "兰波-第一次夜晚",
@@ -929,18 +915,18 @@
       "id": 4,
       "label": "影像与见闻",
       "node_ids": [
-        "慢下来-你其实没有落下什么",
-        "dog-map个人路线地图",
-        "remembrance-of-things-past",
+        "慢下来",
+        "dog-map",
+        "七夕-重走上学路",
         "绘出七彩的七天",
-        "we-are-the-world",
+        "小鞋子-影评",
         "鸳鸯",
-        "游记-济南",
-        "烟火文沃康城新章",
-        "ghost-in-shell",
-        "今不如昔",
+        "济南游记",
+        "烟火文沃-康城新章",
+        "攻壳机动队-影评",
+        "黄金时代为何总在过去",
         "2025-大雪",
-        "question"
+        "问号与聊天压力"
       ],
       "color": "#d5a5a1"
     }
