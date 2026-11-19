@@ -8,6 +8,11 @@ const state = {
   garden: null,
   query: "",
   cluster: null,
+  typeFilter: null,
+  layoutMode: "2d",
+  colorBy: "topic",
+  showLabels: false,
+  showEdges: true,
   focusedId: null,
   trail: [],
   nodeById: new Map(),
@@ -53,6 +58,10 @@ function safeColor(value) {
 function safeCoordinate(value) {
   const number = Number(value);
   return Number.isFinite(number) ? Math.max(-.9, Math.min(.9, number)) : 0;
+}
+
+function stableNumber(value) {
+  return Array.from(String(value || "")).reduce((sum, char) => (sum * 31 + char.codePointAt(0)) % 10000, 17) / 10000;
 }
 
 function safeExternalUrl(value) {
@@ -181,7 +190,33 @@ function renderGrid() {
 }
 
 function pointFor(node) {
-  return { x: safeCoordinate(node.x), y: -safeCoordinate(node.y) };
+  const x = safeCoordinate(node.x);
+  const y = -safeCoordinate(node.y);
+  if (state.layoutMode !== "3d") return { x, y };
+  const depth = Number.isFinite(Number(node.z)) ? safeCoordinate(node.z) : stableNumber(node.id) * 1.6 - .8;
+  const yaw = .38;
+  const pitch = .22;
+  const rotatedX = x * Math.cos(yaw) - depth * Math.sin(yaw);
+  const rotatedZ = x * Math.sin(yaw) + depth * Math.cos(yaw);
+  return {
+    x: Math.max(-.9, Math.min(.9, rotatedX)),
+    y: Math.max(-.9, Math.min(.9, y * Math.cos(pitch) - rotatedZ * Math.sin(pitch))),
+  };
+}
+
+function colorForNode(node) {
+  if (state.colorBy === "type") {
+    const palette = ["#9fb46b", "#86a8a1", "#d5a36c", "#b7a5c8", "#d5a5a1"];
+    const types = Array.from(new Set(state.garden.nodes.map(item => item.content_type || "document"))).sort();
+    return palette[types.indexOf(node.content_type || "document") % palette.length] || palette[0];
+  }
+  if (state.colorBy === "year") {
+    const palette = ["#9fb46b", "#86a8a1", "#d5a36c", "#b7a5c8", "#d5a5a1", "#c7b46b"];
+    const years = Array.from(new Set(state.garden.nodes.map(item => String(item.date || "").slice(0, 4)).filter(Boolean))).sort();
+    return palette[years.indexOf(String(node.date || "").slice(0, 4)) % palette.length] || "#a4b96f";
+  }
+  const cluster = state.clusterById.get(String(node.cluster_id));
+  return safeColor(cluster && cluster.color);
 }
 
 function semanticNeighbors(node, limit = 5) {
@@ -339,7 +374,7 @@ function render() {
   document.querySelector("#cluster-count").textContent = clusters.length + " 个主题";
   document.querySelector("#generated").textContent = "生成于 " + new Date(state.garden.generated_at).toLocaleDateString();
   const focusStatus = document.querySelector("#focus-status");
-  if (focusStatus) focusStatus.textContent = state.focusedId ? "局部视图 · 6 篇文章" : "全局视图";
+  if (focusStatus) focusStatus.textContent = state.focusedId ? "局部视图" : "全局视图";
   renderTrail();
   renderPresentation();
   const activeView = state.garden.metadata && state.garden.metadata.view || requestedView;
@@ -358,7 +393,30 @@ function render() {
     state.cluster = state.cluster === Number(button.dataset.cluster) ? null : Number(button.dataset.cluster);
     render();
   }));
+  renderTypeFilters();
+  const metadata = state.garden.metadata || {};
+  document.querySelector("#meta-provider").textContent = metadata.provider || "—";
+  document.querySelector("#meta-reducer").textContent = state.garden.reducer || "—";
+  document.querySelector("#meta-dimensions").textContent = state.garden.dimensions ? state.garden.dimensions + "D" : "—";
+  document.querySelector("#meta-generated").textContent = new Date(state.garden.generated_at).toLocaleDateString();
   renderGraph();
+}
+
+function renderTypeFilters() {
+  const types = Array.from(new Set(state.garden.nodes.map(node => String(node.content_type || "document")))).sort();
+  const typeFilter = document.querySelector("#type-filter");
+  typeFilter.innerHTML = types.map(type => {
+    const active = state.typeFilter === null || state.typeFilter.has(type);
+    return '<button type="button" class="filter-chip ' + (active ? "is-active" : "") + '" data-type="' + esc(type) + '" aria-pressed="' + active + '">' + esc(type) + '</button>';
+  }).join("");
+  typeFilter.querySelectorAll("[data-type]").forEach(button => button.addEventListener("click", () => {
+    const type = button.dataset.type;
+    if (state.typeFilter === null) state.typeFilter = new Set(types);
+    if (state.typeFilter.has(type)) state.typeFilter.delete(type);
+    else state.typeFilter.add(type);
+    if (state.typeFilter.size === 0 || state.typeFilter.size === types.length) state.typeFilter = null;
+    render();
+  }));
 }
 
 function renderPresentation() {
@@ -401,6 +459,7 @@ function nodeVisibility(node) {
   return {
     matches: !state.query || searchable.includes(state.query),
     visibleCluster: state.cluster === null || node.cluster_id === state.cluster,
+    visibleType: state.typeFilter === null || state.typeFilter.has(String(node.content_type || "document")),
     isFocused,
     isSelected: state.focusedId !== null && String(node.id) === String(state.focusedId),
   };
@@ -439,8 +498,8 @@ function renderEdges(visibility) {
     const toNode = state.nodeById.get(edge.to.id);
     const fromState = visibility.get(edge.from.id);
     const toState = visibility.get(edge.to.id);
-    const active = fromState.matches && fromState.visibleCluster && fromState.isFocused &&
-      toState.matches && toState.visibleCluster && toState.isFocused;
+    const active = state.showEdges && fromState.matches && fromState.visibleCluster && fromState.visibleType && fromState.isFocused &&
+      toState.matches && toState.visibleCluster && toState.visibleType && toState.isFocused;
     const sameTopic = fromNode.cluster_id === toNode.cluster_id;
     const cluster = state.clusterById.get(String(fromNode.cluster_id));
     const dx = edge.to.x - edge.from.x;
@@ -466,6 +525,8 @@ function highlightEdges(id, highlighted) {
 
 function renderGraph() {
   const visibility = new Map(state.garden.nodes.map(node => [String(node.id), nodeVisibility(node)]));
+  const visibleCount = Array.from(visibility.values()).filter(item => item.matches && item.visibleCluster && item.visibleType && item.isFocused).length;
+  document.querySelector("#selection-count").textContent = visibleCount === state.garden.nodes.length ? "全部节点" : visibleCount + " 个节点";
   renderRegions();
   renderEdges(visibility);
   renderNodes(visibility);
@@ -474,25 +535,26 @@ function renderGraph() {
 function renderNodes(visibility) {
   const nodes = state.garden.nodes;
   labelLayer.innerHTML = nodes.map(node => {
-    const { matches, visibleCluster, isFocused, isSelected } = visibility.get(String(node.id));
-    const x = safeCoordinate(node.x);
-    const y = safeCoordinate(node.y);
+    const { matches, visibleCluster, visibleType, isFocused, isSelected } = visibility.get(String(node.id));
+    const point = state.points.get(String(node.id)) || pointFor(node);
+    const x = point.x;
+    const y = -point.y;
     const layout = labelLayout(node.title, x);
     const label = '<text x="' + layout.offset + '" y=".012" text-anchor="' + layout.anchor + '">' +
       esc(layout.text) + "</text>";
-    const showLabel = (Boolean(state.query) || isSelected) && matches && visibleCluster && isFocused;
+    const showLabel = (state.showLabels || Boolean(state.query) || isSelected) && matches && visibleCluster && visibleType && isFocused;
     return '<g class="node-label' + (showLabel ? " show-label" : "") + '" transform="translate(' + x + " " +
       (-y) + ')" data-id="' + esc(node.id) + '">' + label + "</g>";
   }).join("");
   nodeLayer.innerHTML = nodes.map(node => {
-    const cluster = state.clusterById.get(String(node.cluster_id));
-    const { matches, visibleCluster, isFocused, isSelected } = visibility.get(String(node.id));
-    const visible = matches && visibleCluster && isFocused;
-    const radius = visible ? ".025" : ".018";
-    const x = safeCoordinate(node.x);
-    const y = safeCoordinate(node.y);
+    const { matches, visibleCluster, visibleType, isFocused, isSelected } = visibility.get(String(node.id));
+    const visible = matches && visibleCluster && visibleType && isFocused;
+    const point = state.points.get(String(node.id)) || pointFor(node);
+    const radius = visible ? (state.layoutMode === "3d" ? ".028" : ".025") : ".018";
+    const x = point.x;
+    const y = -point.y;
     const angle = Array.from(String(node.id)).reduce((sum, char) => sum + char.codePointAt(0), 0) % 360;
-    const color = safeColor(cluster && cluster.color);
+    const color = colorForNode(node);
     const content = '<g class="node ' + (visible ? "" : "dim") + (isSelected ? " selected" : "") +
       '" transform="translate(' + x + " " + (-y) + ')">' +
       '<circle class="node-hit" r=".062"></circle>' +
@@ -560,7 +622,7 @@ function showDetail(id) {
   state.focusedSet = null;
   rememberTrail(node.id);
   const focusStatus = document.querySelector("#focus-status");
-  if (focusStatus) focusStatus.textContent = "局部视图 · 6 篇文章";
+  if (focusStatus) focusStatus.textContent = "局部视图";
   document.querySelector("#detail-type").textContent = node.content_type;
   document.querySelector("#detail-title").textContent = node.title;
   document.querySelector("#detail-description").textContent = node.description;
@@ -585,13 +647,57 @@ document.querySelector("#search").addEventListener("input", event => {
   state.query = event.target.value.trim().toLowerCase();
   scheduleGraphRender();
 });
+document.querySelectorAll("[data-layout]").forEach(button => button.addEventListener("click", () => {
+  state.layoutMode = button.dataset.layout === "3d" ? "3d" : "2d";
+  document.documentElement.dataset.layout = state.layoutMode;
+  document.querySelectorAll("[data-layout]").forEach(item => {
+    const active = item === button;
+    item.classList.toggle("is-active", active);
+    item.setAttribute("aria-pressed", active);
+  });
+  document.querySelector("#layout-note").textContent = state.layoutMode === "3d"
+    ? "将二维投影旋转为可探索的深度视角。"
+    : "当前使用已生成的 UMAP 二维坐标。";
+  if (state.garden) {
+    state.points = new Map(state.garden.nodes.map(node => [String(node.id), pointFor(node)]));
+    state.edges = semanticEdges(state.garden.nodes);
+    renderGraph();
+  }
+}));
+document.querySelector("#color-by").addEventListener("change", event => {
+  state.colorBy = event.target.value;
+  if (state.garden) renderGraph();
+});
+document.querySelector("#show-labels").addEventListener("change", event => {
+  state.showLabels = event.target.checked;
+  if (state.garden) renderGraph();
+});
+document.querySelector("#show-edges").addEventListener("change", event => {
+  state.showEdges = event.target.checked;
+  if (state.garden) renderGraph();
+});
 document.querySelector("#reset").addEventListener("click", () => {
   hideHoverCard();
   state.query = "";
   state.cluster = null;
+  state.typeFilter = null;
+  state.layoutMode = "2d";
+  document.documentElement.dataset.layout = "2d";
+  state.colorBy = "topic";
+  state.showLabels = false;
+  state.showEdges = true;
   state.focusedId = null;
   state.focusedSet = null;
   document.querySelector("#search").value = "";
+  document.querySelector("#color-by").value = "topic";
+  document.querySelector("#show-labels").checked = false;
+  document.querySelector("#show-edges").checked = true;
+  document.querySelectorAll("[data-layout]").forEach(button => {
+    const active = button.dataset.layout === "2d";
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", active);
+  });
+  document.querySelector("#layout-note").textContent = "当前使用已生成的 UMAP 二维坐标。";
   Object.assign(view, defaultView);
   applyView();
   detail.hidden = true;
