@@ -7,3 +7,6 @@ build/
 *.egg-info/
 .latent-garden/
 .env
+node_modules/
+playwright-report/
+test-results/

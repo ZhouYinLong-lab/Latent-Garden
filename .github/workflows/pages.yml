@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - "frontend/**"
+      - "package.json"
+      - "package-lock.json"
+      - "vite.config.js"
       - ".github/workflows/pages.yml"
   workflow_run:
     workflows: ["Refresh zylatent garden"]
@@ -40,10 +43,21 @@ jobs:
         with:
           enablement: true
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Build WebGL frontend
+        run: |
+          npm ci
+          npm run build
+
       - name: Upload frontend artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: frontend
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -51,7 +51,7 @@ class CategoryMetadataTests(unittest.TestCase):
         self.assertEqual(result["edges"], [{"source": "build", "target": "solve", "similarity": 0.9}])
 
     def test_published_blog_nodes_have_categories_and_safe_targets(self):
-        garden = json.loads(Path("frontend/garden.json").read_text(encoding="utf-8"))
+        garden = json.loads(Path("frontend/public/garden.json").read_text(encoding="utf-8"))
         self.assertTrue(garden["nodes"])
         self.assertTrue(all(node.get("categories") for node in garden["nodes"]))
         self.assertTrue(all(str(node.get("url", "")).startswith("https://zylatent.com/") for node in garden["nodes"]))

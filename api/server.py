@@ -32,7 +32,7 @@ def _configured_path(value: str | None, default: Path) -> Path:
 
 @dataclass(slots=True)
 class ApiSettings:
-    garden_path: Path = field(default_factory=lambda: PROJECT_ROOT / "frontend" / "garden.json")
+    garden_path: Path = field(default_factory=lambda: PROJECT_ROOT / "frontend" / "public" / "garden.json")
     input_path: str | None = None
     website: str | None = None
     provider: str = "hash"
@@ -42,7 +42,7 @@ class ApiSettings:
     umap_neighbors: int = 15
     umap_min_dist: float = 0.1
     clusters: int | None = None
-    frontend_path: Path | None = field(default_factory=lambda: PROJECT_ROOT / "frontend")
+    frontend_path: Path | None = field(default_factory=lambda: PROJECT_ROOT / "dist")
     refresh_token: str | None = None
     cors_origins: list[str] = field(default_factory=lambda: ["*"])
 
@@ -51,7 +51,7 @@ class ApiSettings:
         origins = [value.strip() for value in os.getenv("LATENT_GARDEN_CORS_ORIGINS", "*").split(",") if value.strip()]
         input_value = os.getenv("LATENT_GARDEN_INPUT")
         return cls(
-            garden_path=_configured_path(os.getenv("LATENT_GARDEN_GARDEN"), PROJECT_ROOT / "frontend" / "garden.json"),
+            garden_path=_configured_path(os.getenv("LATENT_GARDEN_GARDEN"), PROJECT_ROOT / "frontend" / "public" / "garden.json"),
             input_path=str(_configured_path(input_value, PROJECT_ROOT)) if input_value else None,
             website=os.getenv("LATENT_GARDEN_WEBSITE") or None,
             provider=os.getenv("LATENT_GARDEN_PROVIDER", "hash"),
@@ -61,7 +61,7 @@ class ApiSettings:
             umap_neighbors=int(os.getenv("LATENT_GARDEN_UMAP_NEIGHBORS", "15")),
             umap_min_dist=float(os.getenv("LATENT_GARDEN_UMAP_MIN_DIST", "0.1")),
             clusters=int(os.getenv("LATENT_GARDEN_CLUSTERS")) if os.getenv("LATENT_GARDEN_CLUSTERS") else None,
-            frontend_path=_configured_path(os.getenv("LATENT_GARDEN_FRONTEND"), PROJECT_ROOT / "frontend"),
+            frontend_path=_configured_path(os.getenv("LATENT_GARDEN_FRONTEND"), PROJECT_ROOT / "dist"),
             refresh_token=os.getenv("LATENT_GARDEN_REFRESH_TOKEN") or None,
             cors_origins=origins or ["*"],
         )

@@ -20,5 +20,16 @@ jobs:
         run: python -m unittest discover -v
       - name: Compile Python packages
         run: python -m compileall -q api core pipeline providers adapters scripts tests
-      - name: Check frontend JavaScript
-        run: node --check frontend/app.js
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Test and build frontend
+        run: |
+          npm ci
+          npm test
+          npm run build
+      - name: Run browser tests
+        run: |
+          npx playwright install --with-deps chromium
+          npm run test:e2e

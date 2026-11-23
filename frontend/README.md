@@ -1,97 +1,74 @@
 # Latent Garden Frontend
 
-这是一个零构建依赖的独立语义地图前端。它只消费一个符合 `garden.json` 契约的 JSON 文件，因此可以单独部署、嵌入博客，或作为其他内容集合的展示层。
-
-在线实例：[latent-garden.zylatent.com](https://latent-garden.zylatent.com/)
-
-## 地图如何阅读
-
-- 一个圆点代表一篇文章、一个项目或一条文档记录；
-- 点与点越接近，代表 embedding 在语义空间中越相似；
-- 细线连接二维地图中最近的内容，悬停节点时会突出它的局部关系；
-- 右侧索引使用节点的 `categories` 和 `tags`：分类负责主结构，标签负责交叉筛选；
-- 淡色/深色网格只是阅读辅助，不是统计图，坐标轴方向没有固定含义；
-- 悬停或键盘聚焦节点时，会按需加载本地 WebP 文章封面；没有封面时使用主题色抽象封面；
-- 点击节点会先打开详情卡片，并突出当前节点附近的 5 篇内容；原文链接位于详情卡片内。
-
-zylatent.com 的默认展示直接使用文章 frontmatter 中的五个分类：做东西、解问题、读作品、看人间、过日子。分类和标签随节点进入 `garden.json`，不再额外维护一套关键词主题。
-
-地图使用严格的 SVG clipping region：网格、节点光晕和标签都被限制在地图矩形内，缩放或拖拽时不会越过边界。
-
-节点标签会根据左右可用空间自动选择方向，并按空间截短；悬停卡片会根据节点位置自动避让，不会越过地图边界。算法参数继续由 `garden.json` 暴露，供外部页面或 API 使用。
+这是一个由 Vite 构建、以 `3d-force-graph` 和 Three.js 渲染的语义花园前端。它只消费 `garden.json`，可以独立部署，也可以通过 iframe 嵌入博客。
 
 ## 交互
 
-- 输入关键词：匹配标题、摘要、分类和标签；
-- 左侧投影控制：切换 2D 投影 / 3D 视角、颜色依据、分类、标签、内容类型和显示层；
-- 颜色依据可以切换为分类、标签、内容类型或年份；
-- 3D 视角是对现有二维投影的稳定深度预览；如果节点提供 `z` 字段，会优先使用该深度，否则使用节点 id 生成可复现的深度。它不是重新计算三维 UMAP；
-- 点击分类或标签：组合筛选节点；多个标签按“任一匹配”处理，分类与标签之间按“同时满足”处理；
-- 滚轮：以指针位置为中心缩放；
-- 拖拽：仅在放大后移动地图视野，并限制在初始地图边界内；
-- 重置视图：清空搜索、分类、标签筛选并恢复初始视野；
-- 悬停/聚焦节点：查看日期、摘要、标签和封面预览；
-- 点击节点：显示标题、摘要、标签和 4 篇附近文章，同时记录本次探索路径；从详情卡片打开原文。
-- 右侧 metadata index：查看分类、常用标签、provider、降维方法和数据集维度。
+- 默认使用真正的三维 UMAP 坐标；拖动旋转，滚轮缩放。
+- 2D 模式复用同一个 WebGL 场景，将节点切换到独立的二维 UMAP 坐标并使用俯视相机。
+- 节点位置固定，不运行会改变语义坐标的力导向布局。
+- 分类负责默认颜色，分类、标签、内容类型和搜索条件可以组合筛选。
+- 点击节点打开文章详情、封面、标签、原文链接和 embedding 近邻。
+- 缺少 `x3/y3/z3` 的旧数据自动进入 2D；WebGL 不可用时自动显示文章列表。
+- 初次加载会短暂缓慢环绕，首次交互后停止；系统要求减少动态效果时不会启动。
 
 ## 本地运行
 
-`frontend/` 不需要 npm 或构建步骤：
+在仓库根目录运行：
 
 ```bash
-python -m http.server 8000 --directory frontend
+npm install
+npm run dev
 ```
 
-访问 <http://localhost:8000/>。默认加载同目录的 `garden.json`。
+生产构建：
 
-## 数据源
-
-通过 `data` 参数加载其他允许 CORS 的地图数据：
-
-```text
-http://localhost:8000/?data=https://example.com/garden.json
+```bash
+npm test
+npm run build
+npm run test:e2e
 ```
 
-`garden.json` 的节点至少需要以下字段：
+静态产物位于 `dist/`。运行时数据和图片位于 `frontend/public/`，构建时会原样复制到产物根目录。
+
+## 数据契约
+
+新版节点同时提供二维和三维投影：
 
 ```json
 {
   "id": "unique-id",
   "title": "A document",
-  "description": "Short summary",
   "categories": ["做东西"],
   "tags": ["topic"],
-  "cover": "./assets/covers/example.webp",
-  "url": "https://example.com/document",
-  "content_type": "article",
   "x": 0.12,
   "y": -0.34,
-  "cluster_id": 0
+  "x3": 0.18,
+  "y3": -0.27,
+  "z3": 0.41
 }
 ```
 
-语义簇由顶层 `clusters` 提供；它只用于地图区域和近邻关系，不承担编辑分类：
+顶层 `edges` 来自原始 embedding 的余弦相似度：
 
 ```json
 {
-  "id": 0,
-  "label": "Python",
-  "node_ids": ["unique-id"],
-  "color": "#a8bd72"
+  "source": "article-a",
+  "target": "article-b",
+  "similarity": 0.83
 }
 ```
 
-前端会对外部数据的颜色和坐标做安全归一化：颜色只接受 `#RRGGBB`，点位限制在地图边界内。
+旧数据没有 `edges` 时，前端会根据二维投影生成兼容近邻；不会伪造三维深度。
 
 ## URL 参数
 
 | 参数 | 示例 | 作用 |
 | --- | --- | --- |
-| `data` | `?data=/api/garden` | 替换默认 `./garden.json` |
-| `embed` | `?embed=1` | 隐藏页面标题和页脚，适合 iframe |
-| `theme` | `?theme=obsidian` | 使用 Obsidian 风格深色工作区 |
-
-iframe 示例：
+| `data` | `?data=/api/garden` | 加载其他允许 CORS 的数据文件 |
+| `embed` | `?embed=1` | 使用紧凑 iframe 布局 |
+| `theme` | `?theme=obsidian` | 保留主题兼容参数 |
+| `view` | `?view=engineering` | 加载工程视图 |
 
 ```html
 <iframe
@@ -101,18 +78,3 @@ iframe 示例：
   loading="lazy">
 </iframe>
 ```
-
-## 设计原则
-
-前端默认使用中性的低饱和语义地图界面。案例可以通过 `garden.metadata.presentation` 提供标题、简介、来源和受支持的 theme id；寒柳别苑的庭院背景和品牌文案来自 `examples/zylatent/config.json`，不是通用前端的固定产品文案。地图网格与连线是辅助阅读层，不应抢过节点；分类和标签索引承担解释颜色和筛选的职责；独立标签层确保悬停标题不会被其他节点遮挡。
-
-桌面端以单个视口为排版边界，不需要上下滚动；移动端会压缩标题和主题索引，在同一个视口内保留主要交互。
-
-## 部署
-
-- 静态托管：发布整个 `frontend/` 目录；
-- GitHub Pages：仓库的 `.github/workflows/pages.yml` 会自动发布；
-- API：使用 `?data=/api/garden` 从同源 API 读取数据；
-- iframe：使用 `embed=1` 隐藏独立页面的品牌头部和页脚。
-
-完整部署说明见 [`../docs/deployment.md`](../docs/deployment.md)。

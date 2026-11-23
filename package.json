@@ -1,0 +1,20 @@
+{
+  "name": "latent-garden-frontend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.config.js",
+    "build": "vite build --config vite.config.js",
+    "preview": "vite preview --config vite.config.js",
+    "test": "node --test frontend/src/*.test.js",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "3d-force-graph": "1.80.2",
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "vite": "8.3.8"
+  }
+}

@@ -14,7 +14,7 @@
 
 - [ ] `python -m unittest discover -v`
 - [ ] `python -m compileall -q api core pipeline providers adapters tests`
-- [ ] `node --check frontend/app.js`
+- [ ] `npm test && npm run build`
 - [ ] `git diff --check`
 
 ## Data and security checklist

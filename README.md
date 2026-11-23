@@ -69,7 +69,7 @@ Content source → Adapter → ContentItem → EmbeddingProvider
 - K-Means 默认聚类，以及与核心解耦的可选案例 profile
 - Markdown、MDX、JSON、RSS、Atom 和公开网站适配器
 - 网站抓取清洗：HTML/组件文本过滤、标题规范化、重复标题去重、摘要质量门槛
-- 零构建依赖前端：Obsidian 风格工作区、节点详情、局部近邻、探索路径、分类与标签筛选、搜索、缩放、受限平移和原文跳转
+- WebGL 语义空间：真实 2D/3D UMAP、固定语义坐标、近邻高亮、分类与标签筛选、搜索、详情抽屉和无 WebGL 列表降级
 - 完整花园与命名子视图，可为个人表达和作品集提供不同入口
 - 可选 FastAPI、Docker、GitHub Pages 和定时刷新流程
 
@@ -100,8 +100,9 @@ python -m pipeline.cli \
   --input examples/content \
   --output examples/garden.json \
   --cache .latent-garden/examples-embeddings.json
-cp examples/garden.json frontend/garden.json
-python -m http.server 8000 --directory frontend
+cp examples/garden.json frontend/public/garden.json
+npm install
+npm run dev
 ```
 
 打开 <http://localhost:8000/>。

@@ -1,66 +1,42 @@
 # Deployment
 
-## Static-only deployment
+## Static hosting
 
-The simplest deployment is to publish frontend/ on any static host. Copy a freshly generated garden.json into that directory:
+Generate data into Vite's public directory, then build the frontend:
 
-    python -m pipeline.cli --input ./content --output frontend/garden.json
+```bash
+python -m pipeline.cli --input ./content --output frontend/public/garden.json
+npm ci
+npm run build
+```
 
-Use the frontend directly or embed it with:
+Publish `dist/` on any static host. The build uses relative asset URLs, so it works on GitHub Pages, custom domains, and iframe routes.
 
-    https://your-host.example/frontend/?embed=1&data=/garden.json
+The included `.github/workflows/pages.yml` uses Node.js 22, runs the production build, and publishes `dist/` after frontend changes or a successful garden refresh.
 
-## GitHub Pages
+## API and Docker
 
-The repository includes `.github/workflows/pages.yml`. It publishes the contents of `frontend/` as a static GitHub Pages site on pushes to `main`, manual runs, and successful blog refreshes.
+The API serves `/health`, `/garden.json`, `/api/garden`, `/api/refresh`, and the built frontend at `/frontend/`.
 
-The configured public URL is:
+The Docker image uses a Node build stage and copies `dist/` into the Python runtime image. Defaults:
 
-    https://latent-garden.zylatent.com/
+- `LATENT_GARDEN_GARDEN=/app/frontend/public/garden.json`
+- `LATENT_GARDEN_FRONTEND=/app/dist`
 
-The frontend is self-contained: `index.html`, `app.js`, `styles.css`, and `garden.json` are deployed together.
+Build and run:
 
-## API deployment
+```bash
+docker build -t latent-garden .
+docker run --rm -p 8000:8000 latent-garden
+```
 
-Install the API extra:
+To enable refreshes, configure exactly one of `LATENT_GARDEN_INPUT` or `LATENT_GARDEN_WEBSITE` and set `LATENT_GARDEN_REFRESH_TOKEN`.
 
-    pip install -e ".[api]"
+## Embedding
 
-Start the service:
+The frontend preserves these URL parameters:
 
-    uvicorn api.server:app --host 0.0.0.0 --port 8000
-
-The service exposes:
-
-- GET /health
-- GET /garden.json
-- GET /api/garden
-- POST /api/refresh
-- GET /frontend/
-
-The API serves the existing garden file by default. To enable refresh from the public blog, configure:
-
-    LATENT_GARDEN_WEBSITE=https://example.org
-    LATENT_GARDEN_REFRESH_TOKEN=replace-me
-    LATENT_GARDEN_CORS_ORIGINS=https://example.org
-
-Then refresh with:
-
-    curl -X POST https://garden.example.com/api/refresh -H "X-Latent-Garden-Key: replace-me"
-
-Without LATENT_GARDEN_REFRESH_TOKEN, the refresh endpoint is disabled. Put the API behind HTTPS and an ingress/rate limiter for public use.
-
-## Docker
-
-The repository includes a minimal Dockerfile:
-
-    docker build -t latent-garden .
-    docker run --rm -p 8000:8000 latent-garden
-
-To use real UMAP in the container, change the install line to install both API and analysis extras:
-
-    pip install --no-cache-dir ".[api,analysis]"
-
-## Scheduled refresh
-
-The repository includes `.github/workflows/refresh-garden.yml` as a case-specific example. It runs weekly and can also be started manually from GitHub Actions. It rebuilds the public zylatent.com full and Engineering views with `examples/zylatent/config.json`, then commits only when generated JSON changes. Forks can remove this workflow or replace the source/profile with their own case.
+```text
+https://your-host.example/?embed=1&view=engineering
+https://your-host.example/?embed=1&data=/api/garden
+```
