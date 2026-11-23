@@ -51,6 +51,9 @@ class GardenNode:
     content_type: str
     x: float
     y: float
+    x3: float
+    y3: float
+    z3: float
     cluster_id: int
     content_hash: str
     categories: list[str] = field(default_factory=list)
@@ -71,6 +74,16 @@ class GardenCluster:
 
 
 @dataclass(slots=True)
+class GardenEdge:
+    source: str
+    target: str
+    similarity: float
+
+    def to_dict(self) -> dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass(slots=True)
 class Garden:
     version: str
     generated_at: str
@@ -79,6 +92,7 @@ class Garden:
     clusterer: str
     nodes: list[GardenNode]
     clusters: list[GardenCluster]
+    edges: list[GardenEdge] = field(default_factory=list)
     metadata: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -90,5 +104,6 @@ class Garden:
             "clusterer": self.clusterer,
             "nodes": [node.to_dict() for node in self.nodes],
             "clusters": [cluster.to_dict() for cluster in self.clusters],
+            "edges": [edge.to_dict() for edge in self.edges],
             "metadata": self.metadata,
         }

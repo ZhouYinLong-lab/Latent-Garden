@@ -1,6 +1,6 @@
 {
-  "version": "0.1",
-  "generated_at": "2026-11-16T09:49:39.104913+00:00",
+  "version": "0.2",
+  "generated_at": "2026-11-23T10:01:06.853067+00:00",
   "dimensions": 512,
   "reducer": "umap",
   "clusterer": "kmeans",
@@ -20,9 +20,12 @@
       "date": "2026-09-07",
       "url": "https://zylatent.com/blog/dog-map",
       "content_type": "article",
-      "x": -0.062317972350024675,
-      "y": -0.5720625276870068,
-      "cluster_id": 0,
+      "x": -0.5906014481050279,
+      "y": -0.28488138189780743,
+      "x3": 0.6213861904276546,
+      "y3": -0.03892267554088302,
+      "z3": 0.056668721341877726,
+      "cluster_id": 1,
       "content_hash": "d04e18cd5aa7f4d09a67a40be5e9f3f5bdedefaac79111dbaafb2733a4a527bb",
       "categories": [
         "做东西"
@@ -43,8 +46,11 @@
       "date": "2026-08-25",
       "url": "https://zylatent.com/blog/point-allocation-credit-assignment",
       "content_type": "article",
-      "x": 0.09551426944371999,
-      "y": -0.5030579571439795,
+      "x": -0.4571844308070378,
+      "y": 0.42804899839540467,
+      "x3": 0.36687273148201294,
+      "y3": -0.30833357553434404,
+      "z3": 0.8858740294495046,
       "cluster_id": 0,
       "content_hash": "25744ca99ad5dcf0c544d601d364326779b48254f914e7bb832ac4e59a7cc514",
       "categories": [
@@ -66,9 +72,12 @@
       "date": "2026-07-31",
       "url": "https://zylatent.com/blog/gomoku-search",
       "content_type": "article",
-      "x": -0.09840715854388393,
-      "y": -0.7459792315264259,
-      "cluster_id": 1,
+      "x": -0.7382155854638053,
+      "y": 0.1803922557376959,
+      "x3": 0.712636947090122,
+      "y3": -0.47398727749869307,
+      "z3": 0.22061553990901583,
+      "cluster_id": 0,
       "content_hash": "2484b04a27d018efa6c3231ab4448d8da47a62b0cfbcd0b470c3b6b7435478f9",
       "categories": [
         "解问题"
@@ -88,14 +97,17 @@
       "date": "2026-07-29",
       "url": "https://zylatent.com/blog/fastapi-basics",
       "content_type": "article",
-      "x": -0.4085467974320871,
-      "y": -0.660410162718726,
+      "x": -0.6572496744829499,
+      "y": -0.0006608987104315123,
+      "x3": 0.7634303193561623,
+      "y3": 0.3547444571068833,
+      "z3": 0.31553701173467574,
       "cluster_id": 1,
       "content_hash": "a4c17a070c61517bfb786ab76120bc5be364071d076d3bf38eb294eec10fb253",
-      "cover": "./assets/covers/ce60466f23ae.webp",
       "categories": [
         "解问题"
-      ]
+      ],
+      "cover": "./assets/covers/ce60466f23ae.webp"
     },
     {
       "id": "bayesian-mcmc",
@@ -111,9 +123,12 @@
       "date": "2026-07-27",
       "url": "https://zylatent.com/blog/bayesian-mcmc",
       "content_type": "article",
-      "x": -0.4091854964071888,
-      "y": -0.8303003345657742,
-      "cluster_id": 1,
+      "x": -0.45491730123622337,
+      "y": 0.20963032644129254,
+      "x3": 0.607173634553568,
+      "y3": 0.15498397218203797,
+      "z3": 0.8049301413292335,
+      "cluster_id": 0,
       "content_hash": "4cae811f616c427b863c10b4a4d3258b64ca4f4fba2cdece157a25273b7d021c",
       "categories": [
         "解问题"
@@ -133,8 +148,11 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/dog-babble",
       "content_type": "article",
-      "x": -0.3236105772911406,
-      "y": -0.47656237243070626,
+      "x": -0.829661762837635,
+      "y": -0.12919135793164782,
+      "x3": 0.5700518188457738,
+      "y3": 0.7093797977210411,
+      "z3": 0.3733811768494527,
       "cluster_id": 1,
       "content_hash": "7d614f7218a22a43431e3624618eca2bc1b63a3b00d0b244a207023425e93f81",
       "categories": [
@@ -155,8 +173,11 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/dog-littletools",
       "content_type": "article",
-      "x": -0.15132231727471945,
-      "y": -0.92,
+      "x": -0.7284926266230266,
+      "y": -0.2643806001542933,
+      "x3": 0.8483524527895866,
+      "y3": 0.03867352126049084,
+      "z3": 0.34258407571148786,
       "cluster_id": 1,
       "content_hash": "a7c8cfffbd9b8b3c124c5c9ed863c591da68da1704e5e2c4438189ae3d7c2c1f",
       "categories": [
@@ -177,9 +198,12 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/miniarena",
       "content_type": "article",
-      "x": -0.2207118355573695,
-      "y": -0.7068618619444691,
-      "cluster_id": 1,
+      "x": -0.7859344413269794,
+      "y": 0.4198030499644413,
+      "x3": 0.6928057341634714,
+      "y3": -0.39944396393248116,
+      "z3": 0.6125589264181684,
+      "cluster_id": 0,
       "content_hash": "7aac409b2641c81562aa14d51589bba3455ff9de268fc337b39ced6c6c2d9ca4",
       "categories": [
         "做东西"
@@ -199,9 +223,12 @@
       "date": "2026-07-23",
       "url": "https://zylatent.com/blog/nannahelper-docs",
       "content_type": "article",
-      "x": -0.5257080749675279,
-      "y": -0.5191648949549735,
-      "cluster_id": 1,
+      "x": -0.6714965688959993,
+      "y": 0.5831950494601791,
+      "x3": 0.4875644368017943,
+      "y3": -0.6513359682074278,
+      "z3": 0.296859550089711,
+      "cluster_id": 0,
       "content_hash": "952a644b850cb42ffce3bdaa14c3d7c40d195301648fe9df235951890c294bb5",
       "categories": [
         "做东西"
@@ -221,9 +248,12 @@
       "date": "2026-07-03",
       "url": "https://zylatent.com/blog/dog-skills-48",
       "content_type": "article",
-      "x": -0.912417700230328,
-      "y": 0.027413742526296248,
-      "cluster_id": 2,
+      "x": -0.699012568224326,
+      "y": -0.6162592099800077,
+      "x3": 0.32669729781086854,
+      "y3": 0.4682410701887757,
+      "z3": 0.12149124397323419,
+      "cluster_id": 1,
       "content_hash": "a30480d2229c80875cb9c527caeb179142928ace2dae8b222b9d2d4e3d0b1ac5",
       "categories": [
         "做东西"
@@ -239,9 +269,12 @@
       "date": "2026-06-22",
       "url": "https://zylatent.com/blog/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4-%E9%A1%B9%E7%9B%AE%E5%9B%9E%E9%A1%BE",
       "content_type": "article",
-      "x": -0.6948637941348583,
-      "y": 0.18631355522844018,
-      "cluster_id": 2,
+      "x": -0.5030376702076457,
+      "y": -0.7861117543804358,
+      "x3": 0.04605148527120284,
+      "y3": 0.6323935036410407,
+      "z3": 0.1553358036406417,
+      "cluster_id": 1,
       "content_hash": "d1480681e0b48392ed82bbb97fe617102482c921c61950620b9331d49bb0485d",
       "categories": [
         "做东西"
@@ -260,8 +293,11 @@
       "date": "2026-03-18",
       "url": "https://zylatent.com/blog/smart-agent",
       "content_type": "article",
-      "x": 0.5566885728699266,
-      "y": 0.24904306882398475,
+      "x": 0.32209905096100166,
+      "y": -0.488731287143094,
+      "x3": -0.4308541707954357,
+      "y3": 0.29148860547480593,
+      "z3": 0.08569704441243198,
       "cluster_id": 3,
       "content_hash": "c43a521702dafc96cb8cce4668e4dfd67d295ee497df1e0c94f010523afabc42",
       "categories": [
@@ -280,14 +316,17 @@
       "date": "2026-03-08",
       "url": "https://zylatent.com/blog/cpp-memory-ownership-raii",
       "content_type": "article",
-      "x": 0.13374480565821834,
-      "y": -0.833298367839257,
+      "x": -0.92,
+      "y": 0.16561422019542904,
+      "x3": 0.92,
+      "y3": -0.22132541226508073,
+      "z3": 0.5044933530082661,
       "cluster_id": 0,
       "content_hash": "544d970b23cdf8865f3a691f9d403266f8b1a0c049711ef4c9a5bb8da2a9ec9c",
-      "cover": "./assets/covers/fe980845aabe.webp",
       "categories": [
         "解问题"
-      ]
+      ],
+      "cover": "./assets/covers/fe980845aabe.webp"
     },
     {
       "id": "夜空为你闪烁",
@@ -299,9 +338,12 @@
       "date": "2026-02-17",
       "url": "https://zylatent.com/blog/%E5%A4%9C%E7%A9%BA%E4%B8%BA%E4%BD%A0%E9%97%AA%E7%83%81",
       "content_type": "article",
-      "x": 0.5057677056920061,
-      "y": 0.1601058691723044,
-      "cluster_id": 3,
+      "x": 0.3639725543740714,
+      "y": -0.10391521268767667,
+      "x3": -0.29007932906702705,
+      "y3": 0.32181327799444215,
+      "z3": -0.17959753225888775,
+      "cluster_id": 4,
       "content_hash": "6c94fef51fb7c20cde83f3f97003bc321d7ae130125900264d148ba3a9401694",
       "categories": [
         "做东西"
@@ -318,14 +360,17 @@
       "date": "2026-02-12",
       "url": "https://zylatent.com/blog/%E5%A4%A7%E5%BA%9A%E5%89%91%E9%98%B5",
       "content_type": "article",
-      "x": 0.3306988710016753,
-      "y": 0.22798516493588716,
-      "cluster_id": 3,
+      "x": 0.269991203325023,
+      "y": -0.16965241532025443,
+      "x3": -0.5642606323782802,
+      "y3": 0.00884656266135131,
+      "z3": 0.27449465730028055,
+      "cluster_id": 4,
       "content_hash": "7631c89adc9f9ccdb1e785642ed8dafd352d3324830e9f9eea57036415a05961",
-      "cover": "./assets/covers/a589afbbc9ea.webp",
       "categories": [
         "做东西"
-      ]
+      ],
+      "cover": "./assets/covers/a589afbbc9ea.webp"
     }
   ],
   "clusters": [
@@ -333,8 +378,11 @@
       "id": 0,
       "label": "语义簇 01",
       "node_ids": [
-        "dog-map",
         "point-allocation-credit-assignment",
+        "gomoku-search",
+        "bayesian-mcmc",
+        "miniarena",
+        "nannahelper-docs",
         "cpp-memory-ownership-raii"
       ],
       "color": "#a8bd72"
@@ -343,34 +391,123 @@
       "id": 1,
       "label": "语义簇 02",
       "node_ids": [
-        "gomoku-search",
+        "dog-map",
         "fastapi-basics",
-        "bayesian-mcmc",
         "dog-babble",
         "dog-littletools",
-        "miniarena",
-        "nannahelper-docs"
+        "dog-skills-48",
+        "2026上半年-项目回顾"
       ],
       "color": "#d5a36c"
     },
     {
-      "id": 2,
+      "id": 3,
       "label": "语义簇 03",
       "node_ids": [
-        "dog-skills-48",
-        "2026上半年-项目回顾"
+        "smart-agent"
       ],
-      "color": "#86a8a1"
+      "color": "#b7a5c8"
     },
     {
-      "id": 3,
+      "id": 4,
       "label": "语义簇 04",
       "node_ids": [
-        "smart-agent",
         "夜空为你闪烁",
         "大庚剑阵"
       ],
-      "color": "#b7a5c8"
+      "color": "#d5a5a1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "2026上半年-项目回顾",
+      "target": "dog-skills-48",
+      "similarity": 0.204201
+    },
+    {
+      "source": "2026上半年-项目回顾",
+      "target": "大庚剑阵",
+      "similarity": 0.152079
+    },
+    {
+      "source": "bayesian-mcmc",
+      "target": "dog-littletools",
+      "similarity": 0.201528
+    },
+    {
+      "source": "bayesian-mcmc",
+      "target": "fastapi-basics",
+      "similarity": 0.19953
+    },
+    {
+      "source": "bayesian-mcmc",
+      "target": "point-allocation-credit-assignment",
+      "similarity": 0.163507
+    },
+    {
+      "source": "cpp-memory-ownership-raii",
+      "target": "dog-littletools",
+      "similarity": 0.199583
+    },
+    {
+      "source": "cpp-memory-ownership-raii",
+      "target": "miniarena",
+      "similarity": 0.188255
+    },
+    {
+      "source": "dog-babble",
+      "target": "dog-littletools",
+      "similarity": 0.190448
+    },
+    {
+      "source": "dog-babble",
+      "target": "fastapi-basics",
+      "similarity": 0.23704
+    },
+    {
+      "source": "dog-littletools",
+      "target": "dog-map",
+      "similarity": 0.214186
+    },
+    {
+      "source": "dog-littletools",
+      "target": "fastapi-basics",
+      "similarity": 0.255159
+    },
+    {
+      "source": "dog-littletools",
+      "target": "nannahelper-docs",
+      "similarity": 0.215213
+    },
+    {
+      "source": "dog-map",
+      "target": "gomoku-search",
+      "similarity": 0.183897
+    },
+    {
+      "source": "dog-skills-48",
+      "target": "nannahelper-docs",
+      "similarity": 0.137217
+    },
+    {
+      "source": "gomoku-search",
+      "target": "nannahelper-docs",
+      "similarity": 0.219567
+    },
+    {
+      "source": "miniarena",
+      "target": "nannahelper-docs",
+      "similarity": 0.226997
+    },
+    {
+      "source": "smart-agent",
+      "target": "大庚剑阵",
+      "similarity": 0.137375
+    },
+    {
+      "source": "夜空为你闪烁",
+      "target": "大庚剑阵",
+      "similarity": 0.228155
     }
   ],
   "metadata": {
@@ -380,11 +517,17 @@
     "reducer_config": {
       "n_neighbors": 15,
       "min_dist": 0.1,
-      "random_state": 42
+      "random_state": 42,
+      "components_2d": 2,
+      "components_3d": 3
     },
     "clusterer_config": {
       "clusters": null,
       "iterations": 30
+    },
+    "edge_config": {
+      "neighbors": 2,
+      "metric": "cosine-embedding"
     },
     "case_profile": "寒柳别苑",
     "view": "engineering",
@@ -411,19 +554,6 @@
       "source_label": "寒柳别苑",
       "source_url": "https://zylatent.com",
       "source_icon": "./assets/zylatent-icon.webp"
-    },
-    "edge_config": {
-      "neighbors": 2,
-      "max_second_distance": 0.48,
-      "metric": "euclidean-2d"
-    },
-    "category_source": "blog frontmatter",
-    "categories": [
-      "做东西",
-      "解问题",
-      "读作品",
-      "看人间",
-      "过日子"
-    ]
+    }
   }
 }

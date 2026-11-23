@@ -10,6 +10,7 @@ from core.models import ContentItem
 from pipeline.cache import EmbeddingCache
 from pipeline.runner import build_garden
 from pipeline.runner import _normalize_points
+from pipeline.reduce import _fallback_projection
 from pipeline.cli import _same_garden
 from providers.hash_provider import HashEmbeddingProvider
 from providers.cjk_ngram_provider import CjkNgramEmbeddingProvider
@@ -174,8 +175,11 @@ class PipelineTests(unittest.TestCase):
         payload = garden.to_dict()
         self.assertIn("nodes", payload)
         self.assertIn("clusters", payload)
+        self.assertIn("edges", payload)
+        self.assertEqual(payload["version"], "0.2")
         self.assertEqual(payload["nodes"][0]["url"], "https://example.com")
         self.assertEqual(payload["nodes"][0]["categories"], ["解问题"])
+        self.assertTrue({"x", "y", "x3", "y3", "z3"}.issubset(payload["nodes"][0]))
         self.assertIn("reducer_config", payload["metadata"])
         self.assertEqual(payload["metadata"]["reducer_config"]["random_state"], 42)
         self.assertEqual(payload["metadata"]["clusterer_config"]["iterations"], 30)
@@ -185,6 +189,24 @@ class PipelineTests(unittest.TestCase):
         points = _normalize_points([[100, 200], [150, 500], [300, 250]])
         self.assertTrue(all(-1 <= value <= 1 for point in points for value in point))
         self.assertEqual(len(points), 3)
+
+    def test_three_dimensional_fallback_is_deterministic_and_normalized(self):
+        vectors = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+        first = _fallback_projection(vectors, 3)
+        self.assertEqual(first, _fallback_projection(vectors, 3))
+        self.assertTrue(all(len(point) == 3 for point in first))
+        self.assertTrue(all(-0.92 <= value <= 0.92 for point in first for value in point))
+
+    def test_semantic_edges_are_deterministic_and_deduplicated(self):
+        items = [
+            ContentItem(id="a", title="A", body="alpha"),
+            ContentItem(id="b", title="B", body="alpha beta"),
+            ContentItem(id="c", title="C", body="gamma"),
+        ]
+        garden = build_garden(items, provider=HashEmbeddingProvider(dimensions=8))
+        pairs = [(edge.source, edge.target) for edge in garden.edges]
+        self.assertEqual(pairs, sorted(set(pairs)))
+        self.assertTrue(all(-1 <= edge.similarity <= 1 for edge in garden.edges))
 
     def test_skip_if_unchanged_ignores_generation_timestamp(self):
         left = {"generated_at": "2026-01-01", "nodes": [], "clusters": []}

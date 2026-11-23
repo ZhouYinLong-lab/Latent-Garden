@@ -36,6 +36,10 @@ class CategoryMetadataTests(unittest.TestCase):
                 {"id": "read", "title": "作品", "description": "", "categories": ["读作品"]},
             ],
             "clusters": [{"id": 0, "label": "语义簇 01", "node_ids": ["build", "solve", "read"], "color": "#a8bd72"}],
+            "edges": [
+                {"source": "build", "target": "solve", "similarity": 0.9},
+                {"source": "solve", "target": "read", "similarity": 0.8},
+            ],
             "metadata": {},
         }
 
@@ -44,6 +48,7 @@ class CategoryMetadataTests(unittest.TestCase):
         self.assertEqual({node["id"] for node in result["nodes"]}, {"build", "solve"})
         self.assertEqual(result["metadata"]["view"], "engineering")
         self.assertEqual(result["metadata"]["item_count"], 2)
+        self.assertEqual(result["edges"], [{"source": "build", "target": "solve", "similarity": 0.9}])
 
     def test_published_blog_nodes_have_categories_and_safe_targets(self):
         garden = json.loads(Path("frontend/garden.json").read_text(encoding="utf-8"))

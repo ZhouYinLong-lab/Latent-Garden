@@ -16,7 +16,9 @@ class UMAPReducer:
         self.n_neighbors = n_neighbors
         self.min_dist = min_dist
 
-    def fit_transform(self, vectors: Sequence[Sequence[float]]) -> list[list[float]]:
+    def fit_transform(self, vectors: Sequence[Sequence[float]], n_components: int = 2) -> list[list[float]]:
+        if n_components < 2:
+            raise ValueError("UMAP n_components must be at least 2")
         if not vectors:
             return []
         dimensions = len(vectors[0])
@@ -24,36 +26,38 @@ class UMAPReducer:
             raise ValueError("All embedding vectors must have the same non-zero dimensions")
         if any(not math.isfinite(float(value)) for vector in vectors for value in vector):
             raise ValueError("Embedding vectors must contain finite numbers")
-        if len(vectors) < 3:
-            return _fallback_projection(vectors)
+        if len(vectors) <= n_components + 1:
+            return _fallback_projection(vectors, n_components)
         try:
             import numpy as np
             import umap
 
             matrix = np.asarray(vectors, dtype=float)
             neighbors = max(2, min(self.n_neighbors, len(matrix) - 1))
-            reducer = umap.UMAP(n_components=2, n_neighbors=neighbors, min_dist=self.min_dist, random_state=self.random_state)
+            reducer = umap.UMAP(n_components=n_components, n_neighbors=neighbors, min_dist=self.min_dist, random_state=self.random_state)
             return reducer.fit_transform(matrix).tolist()
         except ImportError:
-            return _fallback_projection(vectors)
+            return _fallback_projection(vectors, n_components)
 
 
-def _fallback_projection(vectors: Sequence[Sequence[float]]) -> list[list[float]]:
+def _fallback_projection(vectors: Sequence[Sequence[float]], n_components: int = 2) -> list[list[float]]:
     """A deterministic projection fallback; production installs should use [analysis]."""
     if not vectors:
         return []
     dimensions = len(vectors[0])
-    weights_x = [math.sin(index * 12.9898 + 0.3) for index in range(dimensions)]
-    weights_y = [math.cos(index * 78.233 + 1.7) for index in range(dimensions)]
+    weights = [
+        [math.sin((axis + 1) * index * 12.9898 + axis * 1.7 + 0.3) for index in range(dimensions)]
+        for axis in range(n_components)
+    ]
     raw_points = [
         [
-            sum(float(value) * weights_x[index] for index, value in enumerate(vector)),
-            sum(float(value) * weights_y[index] for index, value in enumerate(vector)),
+            sum(float(value) * weights[axis][index] for index, value in enumerate(vector))
+            for axis in range(n_components)
         ]
         for vector in vectors
     ]
     ranges = []
-    for axis in range(2):
+    for axis in range(n_components):
         values = [point[axis] for point in raw_points]
         low, high = min(values), max(values)
         ranges.append((low, high))

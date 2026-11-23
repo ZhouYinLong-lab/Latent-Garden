@@ -33,9 +33,16 @@ def apply_profile(garden: dict, profile: dict, view: str = "full") -> dict:
             filtered_nodes.append(node)
     result["nodes"] = filtered_nodes
     allowed_ids = {str(node.get("id")) for node in filtered_nodes}
+    result["edges"] = [
+        edge
+        for edge in result.get("edges", [])
+        if str(edge.get("source")) in allowed_ids and str(edge.get("target")) in allowed_ids
+    ]
     for cluster in result.get("clusters", []):
         cluster["node_ids"] = [node_id for node_id in cluster.get("node_ids", []) if str(node_id) in allowed_ids]
     result["clusters"] = [cluster for cluster in result.get("clusters", []) if cluster.get("node_ids")]
+    for index, cluster in enumerate(result["clusters"], start=1):
+        cluster["label"] = f"语义簇 {index:02d}"
     metadata = result.setdefault("metadata", {})
     metadata.pop("topic_mode", None)
     metadata.pop("topic_source", None)
@@ -57,8 +64,11 @@ def apply_profile(garden: dict, profile: dict, view: str = "full") -> dict:
             "presentation": deepcopy(profile.get("presentation", {})),
         }
     )
-    metadata.setdefault("reducer_config", {"n_neighbors": 15, "min_dist": 0.1, "random_state": 42})
-    metadata["edge_config"] = {"neighbors": 2, "max_second_distance": 0.48, "metric": "euclidean-2d"}
+    metadata.setdefault(
+        "reducer_config",
+        {"n_neighbors": 15, "min_dist": 0.1, "random_state": 42, "components_2d": 2, "components_3d": 3},
+    )
+    metadata["edge_config"] = {"neighbors": 2, "metric": "cosine-embedding"}
     return result
 
 
