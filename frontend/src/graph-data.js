@@ -55,7 +55,7 @@ export function filterNodes(nodes, filters) {
   });
 }
 
-export function graphDataFor(garden, filteredNodes, mode = "3d", scale = 240) {
+export function graphDataFor(garden, filteredNodes, mode = "3d", scale = 300) {
   const ids = new Set(filteredNodes.map(node => node.id));
   const nodes = filteredNodes.map(node => {
     const position = mode === "3d"

@@ -6,9 +6,23 @@ test("loads the real 3D garden and supports core exploration", async ({ page }, 
   await page.goto("/");
   await expect(page.locator("#status")).toBeHidden();
   await expect(page.locator("#graph canvas")).toBeVisible();
+  await expect(page.locator(".article-node-card")).toHaveCount(48);
   await expect(page.locator("#result-count")).toHaveText("48/48");
   if (testInfo.project.name === "desktop") {
     await page.screenshot({ path: "test-results/semantic-garden-3d.png", fullPage: true });
+    const cards = page.locator(".article-node-card");
+    let cardBox = null;
+    for (let index = 0; index < await cards.count(); index += 1) {
+      const box = await cards.nth(index).boundingBox();
+      if (box && box.x > 350 && box.x + box.width < 950 && box.y > 90 && box.y + box.height < 620) {
+        cardBox = box;
+        break;
+      }
+    }
+    expect(cardBox).not.toBeNull();
+    await page.mouse.click(cardBox.x + cardBox.width / 2, cardBox.y + cardBox.height / 2);
+    await expect(page.locator("#detail")).toBeVisible();
+    await page.locator("#detail-close").click();
   }
 
   await page.locator('[data-mode="2d"]').click();

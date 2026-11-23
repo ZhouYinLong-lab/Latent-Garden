@@ -1,5 +1,6 @@
 import ForceGraph3D from "3d-force-graph";
 import * as THREE from "three";
+import { CSS2DObject, CSS2DRenderer } from "three/examples/jsm/renderers/CSS2DRenderer.js";
 import "./styles.css";
 import {
   categoryColor,
@@ -85,19 +86,61 @@ function currentFocusSet() {
 }
 
 function makeNodeObject(node) {
-  const color = new THREE.Color(colorFor(node, state.colorBy, state.garden));
+  const color = colorFor(node, state.colorBy, state.garden);
+  const anchor = document.createElement("div");
+  anchor.className = "article-node-anchor";
+  const card = document.createElement("article");
+  card.className = "article-node-card";
+  card.style.setProperty("--node-color", color);
+  card.setAttribute("role", "button");
+  card.setAttribute("aria-label", `打开文章：${node.title}`);
+  card.tabIndex = 0;
+  const top = document.createElement("div");
+  top.className = "article-node-top";
+  const category = document.createElement("span");
+  category.className = "article-node-category";
+  category.textContent = node.categories[0] || "未分类";
+  const date = document.createElement("span");
+  date.className = "article-node-date";
+  date.textContent = String(node.date || "").slice(0, 4) || "—";
+  top.append(category, date);
+  const title = document.createElement("strong");
+  title.className = "article-node-title";
+  title.textContent = node.title;
+  const tags = document.createElement("span");
+  tags.className = "article-node-tags";
+  tags.textContent = node.tags.slice(0, 2).map(tag => `#${tag}`).join("  ") || "查看文章";
+  card.append(top, title, tags);
+  anchor.append(card);
+  const activate = event => {
+    event.stopPropagation();
+    selectNode(node.id, true);
+  };
+  card.addEventListener("click", activate);
+  card.addEventListener("pointerdown", event => event.stopPropagation());
+  card.addEventListener("pointerenter", () => {
+    state.hoveredId = node.id;
+    refreshEmphasis();
+  });
+  card.addEventListener("pointerleave", () => {
+    if (state.hoveredId === node.id) state.hoveredId = null;
+    refreshEmphasis();
+  });
+  card.addEventListener("keydown", event => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      activate(event);
+    }
+  });
+
   const group = new THREE.Group();
-  const core = new THREE.Mesh(
-    new THREE.SphereGeometry(4.3, 20, 16),
-    new THREE.MeshBasicMaterial({ color, transparent: true, opacity: .96 }),
+  const label = new CSS2DObject(anchor);
+  const hitTarget = new THREE.Sprite(
+    new THREE.SpriteMaterial({ transparent: true, opacity: .001, depthWrite: false }),
   );
-  core.userData.role = "core";
-  const halo = new THREE.Mesh(
-    new THREE.SphereGeometry(8.2, 16, 12),
-    new THREE.MeshBasicMaterial({ color, transparent: true, opacity: .11, blending: THREE.AdditiveBlending, depthWrite: false }),
-  );
-  halo.userData.role = "halo";
-  group.add(halo, core);
+  hitTarget.scale.set(76, 43, 1);
+  group.add(label, hitTarget);
+  group.userData.card = card;
   state.objects.set(node.id, group);
   return group;
 }
@@ -107,13 +150,10 @@ function refreshEmphasis() {
   for (const [id, object] of state.objects) {
     const active = !focus || focus.has(id);
     const selected = id === state.selectedId || id === state.hoveredId;
-    object.scale.setScalar(selected ? 1.45 : 1);
-    object.traverse(child => {
-      if (!child.material) return;
-      child.material.opacity = child.userData.role === "halo"
-        ? selected ? .3 : active ? .11 : .025
-        : active ? .96 : .16;
-    });
+    const card = object.userData.card;
+    card?.classList.toggle("is-dimmed", !active);
+    card?.classList.toggle("is-selected", id === state.selectedId);
+    card?.classList.toggle("is-hovered", id === state.hoveredId);
   }
   if (state.graph) {
     state.graph
@@ -134,14 +174,15 @@ function initGraph() {
     return;
   }
   try {
-    state.graph = ForceGraph3D()(graphElement)
+    const cardRenderer = new CSS2DRenderer();
+    cardRenderer.domElement.classList.add("node-card-layer");
+    state.graph = ForceGraph3D({ extraRenderers: [cardRenderer] })(graphElement)
       .backgroundColor("rgba(0,0,0,0)")
       .showNavInfo(false)
       .enableNodeDrag(false)
       .warmupTicks(0)
       .cooldownTicks(0)
       .nodeThreeObject(makeNodeObject)
-      .nodeLabel(node => `<div class="scene-tooltip"><strong>${escapeHtml(node.title)}</strong><span>${escapeHtml((node.categories || ["未分类"])[0])} · 点击查看文章</span></div>`)
       .linkOpacity(1)
       .linkDirectionalParticles(0)
       .onNodeHover(node => {
@@ -190,7 +231,7 @@ function resetCamera(animate = true) {
   if (!state.graph) return;
   const controls = state.graph.controls();
   controls.enableRotate = state.mode === "3d";
-  const position = state.mode === "3d" ? { x: 430, y: 310, z: 510 } : { x: 0, y: 0, z: 650 };
+  const position = state.mode === "3d" ? { x: 520, y: 380, z: 700 } : { x: 0, y: 0, z: 760 };
   state.graph.cameraPosition(position, { x: 0, y: 0, z: 0 }, animate ? 700 : 0);
 }
 
@@ -212,6 +253,7 @@ function setMode(mode) {
   if (mode === "3d" && !state.canRender3D) return;
   stopAutoOrbit();
   state.mode = mode;
+  document.documentElement.dataset.layout = mode;
   document.querySelectorAll("[data-mode]").forEach(button => {
     const active = button.dataset.mode === mode;
     button.classList.toggle("is-active", active);
