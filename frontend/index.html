@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#06080d" />
+    <meta name="theme-color" content="#15110c" />
     <meta name="color-scheme" content="dark" />
-    <title>Latent Garden</title>
+    <title>语义花园</title>
   </head>
   <body>
     <main class="garden-shell">
       <div id="graph" class="graph" aria-label="可旋转和缩放的文章语义空间"></div>
 
       <header class="garden-brand glass-panel">
-        <p id="brand-eyebrow" class="eyebrow">PERSONAL SEMANTIC GARDEN</p>
+        <p id="brand-eyebrow" class="eyebrow">寒柳别苑 · 文脉图</p>
         <div class="brand-row">
-          <h1 id="brand-title">Latent Garden</h1>
+          <h1 id="brand-title">语义花园</h1>
           <span id="result-count" class="count-pill">—</span>
         </div>
-        <p id="brand-intro" class="brand-intro">在语义空间里浏览彼此靠近的文章。</p>
+        <p id="brand-intro" class="brand-intro">循文章之间的远近，寻另一条阅读路径。</p>
       </header>
 
       <section class="toolbar glass-panel" aria-label="花园工具">
@@ -26,8 +26,8 @@
           <input id="search" type="search" placeholder="搜索标题、分类或标签" autocomplete="off" />
         </label>
         <div class="mode-switch" role="group" aria-label="空间维度">
-          <button type="button" data-mode="3d" class="is-active" aria-pressed="true">3D</button>
-          <button type="button" data-mode="2d" aria-pressed="false">2D</button>
+          <button type="button" data-mode="3d" class="is-active" aria-pressed="true">立体</button>
+          <button type="button" data-mode="2d" aria-pressed="false">平面</button>
         </div>
         <button id="filter-toggle" class="icon-button" type="button" aria-expanded="false" aria-controls="filter-panel">
           筛选 <span id="filter-count" class="filter-count" hidden>0</span>
@@ -37,13 +37,13 @@
 
       <aside id="filter-panel" class="filter-panel glass-panel" hidden aria-label="筛选与显示设置">
         <div class="panel-head">
-          <div><p class="eyebrow">FILTERS</p><h2>缩小这片空间</h2></div>
+          <div><p class="eyebrow">筛选册</p><h2>筛选文章</h2></div>
           <button id="filter-close" class="close-button" type="button" aria-label="关闭筛选">×</button>
         </div>
         <section><h3>分类</h3><div id="category-filters" class="chip-grid"></div></section>
         <section><h3>标签</h3><div id="tag-filters" class="chip-grid scroll-chips"></div></section>
         <section><h3>内容类型</h3><div id="type-filters" class="chip-grid"></div></section>
-        <label class="select-row" for="color-by"><span>节点颜色</span><select id="color-by"><option value="category">分类</option><option value="tag">首个标签</option><option value="type">内容类型</option><option value="year">年份</option></select></label>
+        <label class="select-row" for="color-by"><span>着色依据</span><select id="color-by"><option value="category">分类</option><option value="tag">首个标签</option><option value="type">内容类型</option><option value="year">年份</option></select></label>
         <div class="panel-actions"><button id="clear-filters" type="button">清空筛选</button><span id="filter-summary">显示全部文章</span></div>
         <div class="accessible-results"><h3>当前文章</h3><div id="article-list" class="article-list"></div></div>
       </aside>
@@ -55,20 +55,20 @@
         <h2 id="detail-title"></h2>
         <p id="detail-description" class="detail-description"></p>
         <div id="detail-tags" class="detail-tags"></div>
-        <a id="detail-link" class="primary-link" target="_blank" rel="noopener noreferrer">打开原文 ↗</a>
-        <section class="neighbor-section"><h3>语义近邻</h3><div id="neighbor-list" class="neighbor-list"></div></section>
+        <a id="detail-link" class="primary-link" target="_blank" rel="noopener noreferrer">阅原文 ↗</a>
+        <section class="neighbor-section"><h3>相近文章</h3><div id="neighbor-list" class="neighbor-list"></div></section>
       </aside>
 
       <aside class="legend glass-panel" aria-label="分类图例">
         <div id="legend-items" class="legend-items"></div>
-        <p id="space-note">真实 3D UMAP · 拖动旋转 · 滚轮缩放</p>
+        <p id="space-note">立体语义坐标 · 拖动查看 · 滚轮远近</p>
       </aside>
 
       <nav id="view-switch" class="view-switch glass-panel" aria-label="数据视图" hidden></nav>
       <div id="status" class="status glass-panel" role="status">正在加载语义空间…</div>
 
       <section id="fallback" class="fallback glass-panel" hidden>
-        <p class="eyebrow">LIST VIEW</p>
+        <p class="eyebrow">文章册</p>
         <h2>此设备无法启动 WebGL</h2>
         <p>仍可以通过下面的文章列表浏览和搜索花园。</p>
         <div id="fallback-list" class="fallback-list"></div>

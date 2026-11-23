@@ -1,4 +1,4 @@
-const PALETTE = ["#9ee6b8", "#7ec8ff", "#e8b879", "#c9a8ff", "#ff9eac", "#8fe2d0", "#f0dc88", "#9ab4ff"];
+const PALETTE = ["#78937b", "#738898", "#ad895b", "#8b7793", "#a66f62", "#73958f", "#b29c62", "#7d88a2"];
 
 export function hasTrue3D(nodes) {
   return nodes.length > 0 && nodes.every(node => [node.x3, node.y3, node.z3].every(value => Number.isFinite(Number(value))));

@@ -1,5 +1,14 @@
 import { expect, test } from "@playwright/test";
 
+async function visibleCardOverlaps(page) {
+  return page.locator(".article-node-card:visible").evaluateAll(cards => {
+    const boxes = cards.map(card => card.getBoundingClientRect());
+    return boxes.flatMap((left, index) => boxes.slice(index + 1).filter(right => (
+      left.left < right.right && left.right > right.left && left.top < right.bottom && left.bottom > right.top
+    ))).length;
+  });
+}
+
 test("loads the real 3D garden and supports core exploration", async ({ page }, testInfo) => {
   const errors = [];
   page.on("pageerror", error => errors.push(error.message));
@@ -9,8 +18,12 @@ test("loads the real 3D garden and supports core exploration", async ({ page }, 
   await expect(page.locator(".article-node-card")).toHaveCount(48);
   await expect(page.locator("#result-count")).toHaveText("48/48");
   if (testInfo.project.name === "desktop") {
+    const visibleCards = page.locator(".article-node-card:visible");
+    await expect.poll(() => visibleCards.count()).toBeGreaterThan(4);
+    expect(await visibleCards.count()).toBeLessThan(48);
+    await expect.poll(() => visibleCardOverlaps(page)).toBe(0);
     await page.screenshot({ path: "test-results/semantic-garden-3d.png", fullPage: true });
-    const cards = page.locator(".article-node-card");
+    const cards = visibleCards;
     let cardBox = null;
     for (let index = 0; index < await cards.count(); index += 1) {
       const box = await cards.nth(index).boundingBox();
@@ -27,14 +40,19 @@ test("loads the real 3D garden and supports core exploration", async ({ page }, 
 
   await page.locator('[data-mode="2d"]').click();
   await expect(page.locator('[data-mode="2d"]')).toHaveAttribute("aria-pressed", "true");
-  await expect(page.locator("#space-note")).toContainText("二维 UMAP");
+  await expect(page.locator("#space-note")).toContainText("平面语义坐标");
 
   await page.locator("#filter-toggle").click();
   await page.locator('[data-filter-kind="category"][data-filter-value="看人间"]').click();
   await expect(page.locator("#filter-summary")).not.toHaveText("显示全部文章");
+  const filteredCount = Number((await page.locator("#result-count").textContent()).split("/")[0]);
+  await expect(page.locator(".article-node-card")).toHaveCount(48);
+  await expect.poll(() => page.locator(".article-node-card:visible").count()).toBeLessThanOrEqual(filteredCount);
   await page.locator("#article-list button").first().click();
   await expect(page.locator("#detail")).toBeVisible();
   await expect(page.locator("#detail-title")).not.toBeEmpty();
+  await page.waitForTimeout(900);
+  await expect.poll(() => visibleCardOverlaps(page)).toBe(0);
 
   await page.screenshot({ path: `test-results/semantic-garden-${testInfo.project.name}.png`, fullPage: true });
   expect(errors).toEqual([]);

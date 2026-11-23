@@ -40,6 +40,9 @@ const state = {
 const $ = selector => document.querySelector(selector);
 const graphElement = $("#graph");
 const statusElement = $("#status");
+const markerTextures = new Map();
+let cardLayoutFrame = 0;
+let cardLayoutUntil = 0;
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, character => ({
@@ -85,7 +88,91 @@ function currentFocusSet() {
   return new Set([id, ...neighborIds(state.garden.edges, id)]);
 }
 
+function markerTexture(color) {
+  if (markerTextures.has(color)) return markerTextures.get(color);
+  const canvas = document.createElement("canvas");
+  canvas.width = 16;
+  canvas.height = 16;
+  const context = canvas.getContext("2d");
+  context.imageSmoothingEnabled = false;
+  context.fillStyle = "#17120c";
+  context.fillRect(2, 2, 12, 12);
+  context.fillStyle = color;
+  context.fillRect(4, 0, 8, 16);
+  context.fillRect(0, 4, 16, 8);
+  context.fillStyle = "#d8c8a2";
+  context.fillRect(6, 6, 4, 4);
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.magFilter = THREE.NearestFilter;
+  texture.minFilter = THREE.NearestFilter;
+  texture.colorSpace = THREE.SRGBColorSpace;
+  markerTextures.set(color, texture);
+  return texture;
+}
+
+function overlaps(left, right, gap = 7) {
+  return left.left < right.right + gap
+    && left.right > right.left - gap
+    && left.top < right.bottom + gap
+    && left.bottom > right.top - gap;
+}
+
+function layoutArticleCards() {
+  cardLayoutFrame = 0;
+  if (!state.graph || !state.objects.size) return;
+  const graphRect = graphElement.getBoundingClientRect();
+  const occupied = [".garden-brand", ".toolbar", ".legend", ".view-switch", ".filter-panel:not([hidden])", ".detail-panel:not([hidden])"]
+    .map(selector => $(selector))
+    .filter(Boolean)
+    .filter(element => element.getClientRects().length)
+    .map(element => element.getBoundingClientRect());
+  const entries = [...state.objects.entries()].sort(([leftId], [rightId]) => {
+    const leftPriority = Number(leftId === state.selectedId) * 2 + Number(leftId === state.hoveredId);
+    const rightPriority = Number(rightId === state.selectedId) * 2 + Number(rightId === state.hoveredId);
+    return rightPriority - leftPriority || leftId.localeCompare(rightId);
+  }).filter(([id]) => state.filteredNodes.some(node => node.id === id));
+
+  const filteredIds = new Set(state.filteredNodes.map(node => node.id));
+  for (const [id, object] of state.objects) {
+    const filteredOut = !filteredIds.has(id);
+    object.userData.card?.classList.toggle("is-filtered-out", filteredOut);
+    if (filteredOut) object.userData.card?.setAttribute("aria-hidden", "true");
+  }
+  for (const [, object] of entries) object.userData.card?.classList.remove("is-collapsed");
+  for (const [id, object] of entries) {
+    const card = object.userData.card;
+    if (!card) continue;
+    const pinned = id === state.selectedId || id === state.hoveredId;
+    const distance = state.graph.camera().position.distanceTo(object.position);
+    const depthScale = state.mode === "3d" ? Math.min(1.08, Math.max(.72, 590 / Math.max(distance, 1))) : 1;
+    card.style.setProperty("--depth-scale", depthScale.toFixed(2));
+    card.style.zIndex = pinned ? "2000" : String(Math.max(1, Math.round(1600 - distance)));
+    const rect = card.getBoundingClientRect();
+    const outside = rect.right < graphRect.left || rect.left > graphRect.right || rect.bottom < graphRect.top || rect.top > graphRect.bottom;
+    const blocked = !pinned && (outside || occupied.some(item => overlaps(rect, item)));
+    card.classList.toggle("is-collapsed", blocked);
+    card.tabIndex = blocked ? -1 : 0;
+    card.setAttribute("aria-hidden", String(blocked));
+    if (!blocked) occupied.push(rect);
+  }
+  if (performance.now() < cardLayoutUntil) scheduleCardLayout();
+}
+
+function scheduleCardLayout() {
+  if (cardLayoutFrame) cancelAnimationFrame(cardLayoutFrame);
+  cardLayoutFrame = requestAnimationFrame(() => {
+    cardLayoutFrame = requestAnimationFrame(layoutArticleCards);
+  });
+}
+
+function keepCardLayoutFresh(duration = 850) {
+  cardLayoutUntil = Math.max(cardLayoutUntil, performance.now() + duration);
+  scheduleCardLayout();
+}
+
 function makeNodeObject(node) {
+  const existing = state.objects.get(node.id);
+  if (existing) return existing;
   const color = colorFor(node, state.colorBy, state.garden);
   const anchor = document.createElement("div");
   anchor.className = "article-node-anchor";
@@ -135,12 +222,16 @@ function makeNodeObject(node) {
 
   const group = new THREE.Group();
   const label = new CSS2DObject(anchor);
-  const hitTarget = new THREE.Sprite(
-    new THREE.SpriteMaterial({ transparent: true, opacity: .001, depthWrite: false }),
-  );
-  hitTarget.scale.set(76, 43, 1);
-  group.add(label, hitTarget);
+  const marker = new THREE.Sprite(new THREE.SpriteMaterial({
+    map: markerTexture(color),
+    transparent: true,
+    alphaTest: .05,
+    depthWrite: false,
+  }));
+  marker.scale.set(11, 11, 1);
+  group.add(label, marker);
   group.userData.card = card;
+  group.userData.marker = marker;
   state.objects.set(node.id, group);
   return group;
 }
@@ -154,16 +245,22 @@ function refreshEmphasis() {
     card?.classList.toggle("is-dimmed", !active);
     card?.classList.toggle("is-selected", id === state.selectedId);
     card?.classList.toggle("is-hovered", id === state.hoveredId);
+    if (object.userData.marker) {
+      object.userData.marker.material.opacity = active ? 1 : .22;
+      const markerSize = selected ? 15 : 11;
+      object.userData.marker.scale.set(markerSize, markerSize, 1);
+    }
   }
   if (state.graph) {
     state.graph
       .linkColor(link => {
         const active = focus && focus.has(idOf(link.source)) && focus.has(idOf(link.target));
-        return active ? "rgba(158,230,184,.72)" : "rgba(145,163,155,.16)";
+        return active ? "rgba(173,137,91,.78)" : "rgba(152,135,106,.23)";
       })
-      .linkWidth(link => focus && focus.has(idOf(link.source)) && focus.has(idOf(link.target)) ? 1.15 : .28)
+      .linkWidth(link => focus && focus.has(idOf(link.source)) && focus.has(idOf(link.target)) ? 1.2 : .4)
       .refresh();
   }
+  scheduleCardLayout();
 }
 
 function initGraph() {
@@ -198,7 +295,11 @@ function initGraph() {
     controls.enablePan = true;
     controls.minDistance = 150;
     controls.maxDistance = 1100;
-    new ResizeObserver(() => state.graph.width(graphElement.clientWidth).height(graphElement.clientHeight)).observe(graphElement);
+    controls.addEventListener("change", scheduleCardLayout);
+    new ResizeObserver(() => {
+      state.graph.width(graphElement.clientWidth).height(graphElement.clientHeight);
+      scheduleCardLayout();
+    }).observe(graphElement);
     const observer = new IntersectionObserver(entries => {
       if (!state.graph) return;
       if (entries[0]?.isIntersecting && !document.hidden) state.graph.resumeAnimation();
@@ -233,14 +334,45 @@ function resetCamera(animate = true) {
   controls.enableRotate = state.mode === "3d";
   const position = state.mode === "3d" ? { x: 520, y: 380, z: 700 } : { x: 0, y: 0, z: 760 };
   state.graph.cameraPosition(position, { x: 0, y: 0, z: 0 }, animate ? 700 : 0);
+  keepCardLayoutFresh(animate ? 850 : 100);
 }
 
 function updateGraph() {
   state.filteredNodes = filterNodes(state.garden.nodes, state);
-  state.objects.clear();
-  const data = graphDataFor(state.garden, state.filteredNodes, state.mode);
+  if (!state.filteredNodes.some(node => node.id === state.hoveredId)) state.hoveredId = null;
+  if (state.selectedId && !state.filteredNodes.some(node => node.id === state.selectedId)) {
+    state.selectedId = null;
+    $("#detail").hidden = true;
+  }
+  const data = graphDataFor(state.garden, state.garden.nodes, state.mode);
+  const filteredIds = new Set(state.filteredNodes.map(node => node.id));
   if (state.graph) {
-    state.graph.graphData(data);
+    const current = state.graph.graphData();
+    if (!current.nodes.length) {
+      state.graph.graphData(data);
+    } else {
+      const positions = new Map(data.nodes.map(node => [node.id, node]));
+      for (const node of current.nodes) {
+        const position = positions.get(node.id);
+        if (!position) continue;
+        Object.assign(node, { x: position.x, y: position.y, z: position.z, fx: position.fx, fy: position.fy, fz: position.fz });
+        state.objects.get(node.id)?.position.set(position.x, position.y, position.z);
+      }
+    }
+    state.graph
+      .nodeVisibility(node => filteredIds.has(node.id))
+      .linkVisibility(link => filteredIds.has(idOf(link.source)) && filteredIds.has(idOf(link.target)));
+    for (const node of state.garden.nodes) {
+      const object = state.objects.get(node.id);
+      if (!object) continue;
+      const color = colorFor(node, state.colorBy, state.garden);
+      object.userData.card?.style.setProperty("--node-color", color);
+      if (object.userData.marker) {
+        object.userData.marker.material.map = markerTexture(color);
+        object.userData.marker.material.needsUpdate = true;
+      }
+    }
+    state.graph.refresh();
     resetCamera(false);
     refreshEmphasis();
   }
@@ -262,8 +394,8 @@ function setMode(mode) {
   $("#space-note").textContent = !state.canRender3D
     ? "旧版数据仅提供二维坐标"
     : mode === "3d"
-      ? "真实 3D UMAP · 拖动旋转 · 滚轮缩放"
-      : "二维 UMAP 俯视 · 拖动平移 · 滚轮缩放";
+      ? "立体语义坐标 · 拖动查看 · 滚轮远近"
+      : "平面语义坐标 · 拖动平移 · 滚轮远近";
   updateGraph();
   resetCamera(true);
 }
@@ -271,6 +403,7 @@ function setMode(mode) {
 function selectNode(id, moveCamera = false) {
   const node = state.nodeById.get(String(id));
   if (!node) return;
+  state.hoveredId = null;
   if (matchMedia("(max-width: 760px)").matches) {
     $("#filter-panel").hidden = true;
     $("#filter-toggle").setAttribute("aria-expanded", "false");
@@ -311,6 +444,7 @@ function selectNode(id, moveCamera = false) {
         { x: plotted.x, y: plotted.y, z: plotted.z },
         700,
       );
+      keepCardLayoutFresh(850);
     }
   }
   refreshEmphasis();
@@ -381,17 +515,21 @@ function renderViewSwitch() {
     url.searchParams.delete("data");
     if (view.id === "engineering") url.searchParams.set("view", "engineering");
     else url.searchParams.delete("view");
-    return `<a class="${view.id === active ? "is-active" : ""}" href="${escapeHtml(url.href)}" aria-current="${view.id === active ? "page" : "false"}">${escapeHtml(view.label || view.id)}</a>`;
+    const label = /garden/i.test(view.label || "")
+      ? (view.id === "engineering" ? "工程花园" : "完整花园")
+      : (view.label || view.id);
+    return `<a class="${view.id === active ? "is-active" : ""}" href="${escapeHtml(url.href)}" aria-current="${view.id === active ? "page" : "false"}">${escapeHtml(label)}</a>`;
   }).join("");
   nav.hidden = false;
 }
 
 function applyPresentation() {
   const presentation = state.garden.metadata?.presentation || {};
-  if (presentation.page_title) document.title = presentation.page_title;
-  if (presentation.eyebrow) $("#brand-eyebrow").textContent = presentation.eyebrow;
-  if (presentation.title) $("#brand-title").textContent = presentation.title;
-  if (presentation.intro) $("#brand-intro").textContent = presentation.intro;
+  const genericTitle = !presentation.title || /latent garden/i.test(presentation.title);
+  document.title = genericTitle ? "语义花园" : (presentation.page_title || presentation.title);
+  $("#brand-eyebrow").textContent = genericTitle ? "寒柳别苑 · 文脉图" : (presentation.eyebrow || "文脉图");
+  $("#brand-title").textContent = genericTitle ? "语义花园" : presentation.title;
+  $("#brand-intro").textContent = genericTitle ? "循文章之间的远近，寻另一条阅读路径。" : (presentation.intro || "循文章之间的远近，寻另一条阅读路径。");
 }
 
 function bindEvents() {
