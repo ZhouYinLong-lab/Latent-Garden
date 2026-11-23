@@ -2,11 +2,11 @@
 
 This directory contains the first real Latent Garden case, not core product configuration.
 
-- `config.json` defines website cleanup, editorial topic rules, colors, and named views.
+- `config.json` defines website cleanup, source categories, and named views.
 - `garden.json` is the complete public-content snapshot.
-- `engineering-garden.json` keeps the AI, software/tooling, and interactive-project topics.
+- `engineering-garden.json` keeps the `做东西` and `解问题` categories for a technical view.
 
-The semantic coordinates still come from the provider and reducer selected by the generic pipeline. The five topic labels are an editorial layer applied afterward by `scripts/apply_case_profile.py`.
+The semantic coordinates and K-Means regions come from the generic pipeline. Categories and tags are source metadata carried into each node; `scripts/apply_case_profile.py` only applies presentation and named-view filtering.
 
 Generate both views:
 

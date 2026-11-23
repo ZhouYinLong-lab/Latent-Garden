@@ -9,53 +9,46 @@ from scripts.apply_case_profile import apply_profile, load_profile
 PROFILE = load_profile("examples/zylatent/config.json")
 
 
-class TopicCurationTests(unittest.TestCase):
-    def test_curated_topics_are_unique_and_cover_every_node(self):
+class CategoryMetadataTests(unittest.TestCase):
+    def test_source_categories_are_preserved_and_cover_every_node(self):
         garden = {
             "nodes": [
-                {"id": "ai", "title": "MCMC", "description": "", "tags": ["PyMC"]},
-                {"id": "tool", "title": "CLI", "description": "", "tags": ["开源"]},
-                {"id": "web", "title": "互动", "description": "", "tags": ["互动网页"]},
-                {"id": "poem", "title": "兰波", "description": "", "tags": ["诗歌"]},
-                {"id": "life", "title": "济南", "description": "", "tags": ["游记"]},
+                {"id": "ai", "title": "MCMC", "description": "", "categories": ["解问题"], "tags": ["PyMC"]},
+                {"id": "tool", "title": "CLI", "description": "", "categories": ["做东西"], "tags": ["开源"]},
+                {"id": "poem", "title": "兰波", "description": "", "categories": ["读作品"], "tags": ["诗歌"]},
             ],
-            "clusters": [],
+            "clusters": [{"id": 0, "label": "语义簇 01", "node_ids": ["ai", "tool", "poem"], "color": "#a8bd72"}],
             "metadata": {},
         }
 
-        result = apply_profile(garden, PROFILE)
+        result = apply_profile(deepcopy(garden), PROFILE)
 
-        labels = [cluster["label"] for cluster in result["clusters"]]
-        self.assertEqual(labels, [topic["label"] for topic in PROFILE["topics"]])
-        self.assertEqual(len(labels), len(set(labels)))
-        self.assertEqual({node["cluster_id"] for node in result["nodes"]}, {0, 1, 2, 3, 4})
-        self.assertEqual(result["clusterer"], "curated-keywords")
-        self.assertEqual(result["metadata"]["topic_mode"], "curated")
-        self.assertEqual(result["metadata"]["reducer_config"]["n_neighbors"], 15)
-        self.assertEqual(result["metadata"]["edge_config"]["metric"], "euclidean-2d")
+        self.assertEqual({node["id"] for node in result["nodes"]}, {"ai", "tool", "poem"})
+        self.assertEqual(result["nodes"][0]["categories"], ["解问题"])
+        self.assertNotIn("topic_mode", result["metadata"])
+        self.assertNotIn("topic_source", result["metadata"])
 
-    def test_engineering_view_excludes_literary_and_life_topics(self):
+    def test_engineering_view_filters_by_source_category(self):
         garden = {
             "nodes": [
-                {"id": "ai", "title": "MCMC", "description": "", "tags": ["PyMC"]},
-                {"id": "tool", "title": "CLI", "description": "", "tags": ["开源"]},
-                {"id": "web", "title": "互动", "description": "", "tags": ["互动网页"]},
-                {"id": "poem", "title": "兰波", "description": "", "tags": ["诗歌"]},
-                {"id": "life", "title": "济南", "description": "", "tags": ["游记"]},
+                {"id": "build", "title": "工具", "description": "", "categories": ["做东西"]},
+                {"id": "solve", "title": "问题", "description": "", "categories": ["解问题"]},
+                {"id": "read", "title": "作品", "description": "", "categories": ["读作品"]},
             ],
-            "clusters": [],
+            "clusters": [{"id": 0, "label": "语义簇 01", "node_ids": ["build", "solve", "read"], "color": "#a8bd72"}],
             "metadata": {},
         }
 
         result = apply_profile(deepcopy(garden), PROFILE, view="engineering")
 
-        self.assertEqual({node["id"] for node in result["nodes"]}, {"ai", "tool", "web"})
+        self.assertEqual({node["id"] for node in result["nodes"]}, {"build", "solve"})
         self.assertEqual(result["metadata"]["view"], "engineering")
-        self.assertEqual(result["metadata"]["item_count"], 3)
+        self.assertEqual(result["metadata"]["item_count"], 2)
 
-    def test_published_blog_nodes_all_have_safe_targets(self):
+    def test_published_blog_nodes_have_categories_and_safe_targets(self):
         garden = json.loads(Path("frontend/garden.json").read_text(encoding="utf-8"))
         self.assertTrue(garden["nodes"])
+        self.assertTrue(all(node.get("categories") for node in garden["nodes"]))
         self.assertTrue(all(str(node.get("url", "")).startswith("https://zylatent.com/") for node in garden["nodes"]))
         self.assertEqual(len({cluster["label"] for cluster in garden["clusters"]}), len(garden["clusters"]))
 

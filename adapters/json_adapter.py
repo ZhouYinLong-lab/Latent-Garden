@@ -13,13 +13,17 @@ def _item(data: dict[str, Any], index: int, source_path: Path) -> ContentItem:
     tags = data.get("tags") or data.get("labels") or []
     if isinstance(tags, str):
         tags = [tags]
-    reserved = {"id", "title", "name", "body", "content", "text", "description", "tags", "labels", "date", "url", "type", "content_type"}
+    categories = data.get("categories") or data.get("category") or []
+    if isinstance(categories, str):
+        categories = [categories]
+    reserved = {"id", "title", "name", "body", "content", "text", "description", "tags", "labels", "categories", "category", "date", "url", "type", "content_type"}
     return ContentItem(
         id=str(data.get("id") or source_path.stem + f"-{index + 1}"),
         title=title,
         description=str(data.get("description") or body[:240]),
         body=body,
         tags=[str(tag) for tag in tags],
+        categories=[str(category) for category in categories],
         date=str(data["date"]) if data.get("date") else None,
         url=str(data["url"]) if data.get("url") else None,
         content_type=str(data.get("type") or data.get("content_type") or "document"),

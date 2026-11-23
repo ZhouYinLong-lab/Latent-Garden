@@ -3,8 +3,31 @@
   "generated_at": "2026-11-16T09:49:39.104913+00:00",
   "dimensions": 512,
   "reducer": "umap",
-  "clusterer": "curated-keywords",
+  "clusterer": "kmeans",
   "nodes": [
+    {
+      "id": "dog-map",
+      "title": "Dog-Map：我给自己做的一张路线地图",
+      "description": "记录我如何用一张地图保存去过的地方、走过的路线和留下的照片。",
+      "tags": [
+        "React",
+        "TypeScript",
+        "MapLibre GL",
+        "地图",
+        "个人项目",
+        "3D地图"
+      ],
+      "date": "2026-09-07",
+      "url": "https://zylatent.com/blog/dog-map",
+      "content_type": "article",
+      "x": -0.062317972350024675,
+      "y": -0.5720625276870068,
+      "cluster_id": 0,
+      "content_hash": "d04e18cd5aa7f4d09a67a40be5e9f3f5bdedefaac79111dbaafb2733a4a527bb",
+      "categories": [
+        "做东西"
+      ]
+    },
     {
       "id": "point-allocation-credit-assignment",
       "title": "谁该得到这 100 分？人工智能中的点数分配问题",
@@ -23,7 +46,10 @@
       "x": 0.09551426944371999,
       "y": -0.5030579571439795,
       "cluster_id": 0,
-      "content_hash": "25744ca99ad5dcf0c544d601d364326779b48254f914e7bb832ac4e59a7cc514"
+      "content_hash": "25744ca99ad5dcf0c544d601d364326779b48254f914e7bb832ac4e59a7cc514",
+      "categories": [
+        "解问题"
+      ]
     },
     {
       "id": "gomoku-search",
@@ -42,8 +68,11 @@
       "content_type": "article",
       "x": -0.09840715854388393,
       "y": -0.7459792315264259,
-      "cluster_id": 0,
-      "content_hash": "2484b04a27d018efa6c3231ab4448d8da47a62b0cfbcd0b470c3b6b7435478f9"
+      "cluster_id": 1,
+      "content_hash": "2484b04a27d018efa6c3231ab4448d8da47a62b0cfbcd0b470c3b6b7435478f9",
+      "categories": [
+        "解问题"
+      ]
     },
     {
       "id": "fastapi-basics",
@@ -63,7 +92,10 @@
       "y": -0.660410162718726,
       "cluster_id": 1,
       "content_hash": "a4c17a070c61517bfb786ab76120bc5be364071d076d3bf38eb294eec10fb253",
-      "cover": "./assets/covers/ce60466f23ae.webp"
+      "cover": "./assets/covers/ce60466f23ae.webp",
+      "categories": [
+        "解问题"
+      ]
     },
     {
       "id": "bayesian-mcmc",
@@ -81,8 +113,11 @@
       "content_type": "article",
       "x": -0.4091854964071888,
       "y": -0.8303003345657742,
-      "cluster_id": 0,
-      "content_hash": "4cae811f616c427b863c10b4a4d3258b64ca4f4fba2cdece157a25273b7d021c"
+      "cluster_id": 1,
+      "content_hash": "4cae811f616c427b863c10b4a4d3258b64ca4f4fba2cdece157a25273b7d021c",
+      "categories": [
+        "解问题"
+      ]
     },
     {
       "id": "dog-babble",
@@ -100,8 +135,11 @@
       "content_type": "article",
       "x": -0.3236105772911406,
       "y": -0.47656237243070626,
-      "cluster_id": 2,
-      "content_hash": "7d614f7218a22a43431e3624618eca2bc1b63a3b00d0b244a207023425e93f81"
+      "cluster_id": 1,
+      "content_hash": "7d614f7218a22a43431e3624618eca2bc1b63a3b00d0b244a207023425e93f81",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "dog-littletools",
@@ -120,7 +158,10 @@
       "x": -0.15132231727471945,
       "y": -0.92,
       "cluster_id": 1,
-      "content_hash": "a7c8cfffbd9b8b3c124c5c9ed863c591da68da1704e5e2c4438189ae3d7c2c1f"
+      "content_hash": "a7c8cfffbd9b8b3c124c5c9ed863c591da68da1704e5e2c4438189ae3d7c2c1f",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "miniarena",
@@ -138,8 +179,11 @@
       "content_type": "article",
       "x": -0.2207118355573695,
       "y": -0.7068618619444691,
-      "cluster_id": 2,
-      "content_hash": "7aac409b2641c81562aa14d51589bba3455ff9de268fc337b39ced6c6c2d9ca4"
+      "cluster_id": 1,
+      "content_hash": "7aac409b2641c81562aa14d51589bba3455ff9de268fc337b39ced6c6c2d9ca4",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "nannahelper-docs",
@@ -158,7 +202,10 @@
       "x": -0.5257080749675279,
       "y": -0.5191648949549735,
       "cluster_id": 1,
-      "content_hash": "952a644b850cb42ffce3bdaa14c3d7c40d195301648fe9df235951890c294bb5"
+      "content_hash": "952a644b850cb42ffce3bdaa14c3d7c40d195301648fe9df235951890c294bb5",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "dog-skills-48",
@@ -176,8 +223,11 @@
       "content_type": "article",
       "x": -0.912417700230328,
       "y": 0.027413742526296248,
-      "cluster_id": 1,
-      "content_hash": "a30480d2229c80875cb9c527caeb179142928ace2dae8b222b9d2d4e3d0b1ac5"
+      "cluster_id": 2,
+      "content_hash": "a30480d2229c80875cb9c527caeb179142928ace2dae8b222b9d2d4e3d0b1ac5",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "2026上半年-项目回顾",
@@ -191,8 +241,11 @@
       "content_type": "article",
       "x": -0.6948637941348583,
       "y": 0.18631355522844018,
-      "cluster_id": 1,
-      "content_hash": "d1480681e0b48392ed82bbb97fe617102482c921c61950620b9331d49bb0485d"
+      "cluster_id": 2,
+      "content_hash": "d1480681e0b48392ed82bbb97fe617102482c921c61950620b9331d49bb0485d",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "smart-agent",
@@ -209,8 +262,11 @@
       "content_type": "article",
       "x": 0.5566885728699266,
       "y": 0.24904306882398475,
-      "cluster_id": 2,
-      "content_hash": "c43a521702dafc96cb8cce4668e4dfd67d295ee497df1e0c94f010523afabc42"
+      "cluster_id": 3,
+      "content_hash": "c43a521702dafc96cb8cce4668e4dfd67d295ee497df1e0c94f010523afabc42",
+      "categories": [
+        "解问题"
+      ]
     },
     {
       "id": "cpp-memory-ownership-raii",
@@ -228,41 +284,10 @@
       "y": -0.833298367839257,
       "cluster_id": 0,
       "content_hash": "544d970b23cdf8865f3a691f9d403266f8b1a0c049711ef4c9a5bb8da2a9ec9c",
-      "cover": "./assets/covers/fe980845aabe.webp"
-    },
-    {
-      "id": "网络时代的一棵树",
-      "title": "如何在网络时代退化成一棵树",
-      "description": "在网络时代成为一棵树，并不意味着逃离世界，而是在世界之中保持定力。我们仍然使用工具，仍然获取信息，但不再让它们决定我们的节奏。年轮缓慢增加，根系向下延伸。安静。清醒。足够了。",
-      "tags": [
-        "社评",
-        "社交媒体"
-      ],
-      "date": "2026-03-02",
-      "url": "https://zylatent.com/blog/%E7%BD%91%E7%BB%9C%E6%97%B6%E4%BB%A3%E7%9A%84%E4%B8%80%E6%A3%B5%E6%A0%91",
-      "content_type": "article",
-      "x": 0.3275695088627616,
-      "y": -0.5476166518379111,
-      "cluster_id": 1,
-      "content_hash": "9d781962403169668b5ca16ecc2ac2cec7ed8b9bcdd90c513c81efe8de61ec4b"
-    },
-    {
-      "id": "七王国的骑士-第一季",
-      "title": "一只脚与王子的性命孰重？——《七王国的骑士》影评",
-      "description": "七王国的骑士,高个邓肯与蛋总的羁绊开始 《七王国的骑士》第一季改编自乔治·R·R·马丁的“邓肯与伊戈”中篇小说系列，时间早于《冰与火之歌》主线百年。它与权力的游戏共享同一段历史，却呈现出另一种气压：铁王座仍在塔格利安家族手中，贵族秩序尚未全面崩塌，骑士制度还没有完全沦为权力的装饰。对看过《权游》的观众来说，这是一段前尘旧事；对没有接触原著的人来说，它是一个关于成长与荣誉的独立叙事。",
-      "tags": [
-        "影评",
-        "《冰与火之歌》",
-        "《七王国的骑士》"
-      ],
-      "date": "2026-02-24",
-      "url": "https://zylatent.com/blog/%E4%B8%83%E7%8E%8B%E5%9B%BD%E7%9A%84%E9%AA%91%E5%A3%AB-%E7%AC%AC%E4%B8%80%E5%AD%A3",
-      "content_type": "article",
-      "x": -0.39202742668706825,
-      "y": -0.3094722276077172,
-      "cluster_id": 2,
-      "content_hash": "5b5b847824ea71be839c0a769b2658bd4919747589fa35b82efc89ee0ae7a8f9",
-      "cover": "./assets/covers/a2705e213389.webp"
+      "cover": "./assets/covers/fe980845aabe.webp",
+      "categories": [
+        "解问题"
+      ]
     },
     {
       "id": "夜空为你闪烁",
@@ -276,8 +301,11 @@
       "content_type": "article",
       "x": 0.5057677056920061,
       "y": 0.1601058691723044,
-      "cluster_id": 2,
-      "content_hash": "6c94fef51fb7c20cde83f3f97003bc321d7ae130125900264d148ba3a9401694"
+      "cluster_id": 3,
+      "content_hash": "6c94fef51fb7c20cde83f3f97003bc321d7ae130125900264d148ba3a9401694",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "大庚剑阵",
@@ -292,54 +320,63 @@
       "content_type": "article",
       "x": 0.3306988710016753,
       "y": 0.22798516493588716,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "7631c89adc9f9ccdb1e785642ed8dafd352d3324830e9f9eea57036415a05961",
-      "cover": "./assets/covers/a589afbbc9ea.webp"
+      "cover": "./assets/covers/a589afbbc9ea.webp",
+      "categories": [
+        "做东西"
+      ]
     }
   ],
   "clusters": [
     {
       "id": 0,
-      "label": "智能与计算",
+      "label": "语义簇 01",
       "node_ids": [
+        "dog-map",
         "point-allocation-credit-assignment",
-        "gomoku-search",
-        "bayesian-mcmc",
         "cpp-memory-ownership-raii"
       ],
-      "color": "#9fb46b"
+      "color": "#a8bd72"
     },
     {
       "id": 1,
-      "label": "工具与开源",
+      "label": "语义簇 02",
       "node_ids": [
+        "gomoku-search",
         "fastapi-basics",
+        "bayesian-mcmc",
+        "dog-babble",
         "dog-littletools",
-        "nannahelper-docs",
+        "miniarena",
+        "nannahelper-docs"
+      ],
+      "color": "#d5a36c"
+    },
+    {
+      "id": 2,
+      "label": "语义簇 03",
+      "node_ids": [
         "dog-skills-48",
-        "2026上半年-项目回顾",
-        "网络时代的一棵树"
+        "2026上半年-项目回顾"
       ],
       "color": "#86a8a1"
     },
     {
-      "id": 2,
-      "label": "互动实验",
+      "id": 3,
+      "label": "语义簇 04",
       "node_ids": [
-        "dog-babble",
-        "miniarena",
         "smart-agent",
-        "七王国的骑士-第一季",
         "夜空为你闪烁",
         "大庚剑阵"
       ],
-      "color": "#d5a36c"
+      "color": "#b7a5c8"
     }
   ],
   "metadata": {
     "provider": "cjk-ngram",
-    "item_count": 16,
-    "cluster_count": 3,
+    "item_count": 15,
+    "cluster_count": 4,
     "reducer_config": {
       "n_neighbors": 15,
       "min_dist": 0.1,
@@ -349,8 +386,6 @@
       "clusters": null,
       "iterations": 30
     },
-    "topic_mode": "curated",
-    "topic_source": "寒柳别苑 editorial taxonomy",
     "case_profile": "寒柳别苑",
     "view": "engineering",
     "view_label": "Engineering Garden",
@@ -372,8 +407,6 @@
       "eyebrow": "COURTYARD · PERSONAL SEMANTIC GARDEN",
       "title": "Latent Garden",
       "intro": "把寒柳别苑留下的文字放在一张温柔的地图上，让相隔很远的念头重新靠近。",
-      "topic_heading": "精选主题",
-      "topic_copy": "颜色代表博客策展主题。选择一个主题，地图会留下相关内容。",
       "source_prefix": "文字来自",
       "source_label": "寒柳别苑",
       "source_url": "https://zylatent.com",
@@ -383,6 +416,14 @@
       "neighbors": 2,
       "max_second_distance": 0.48,
       "metric": "euclidean-2d"
-    }
+    },
+    "category_source": "blog frontmatter",
+    "categories": [
+      "做东西",
+      "解问题",
+      "读作品",
+      "看人间",
+      "过日子"
+    ]
   }
 }

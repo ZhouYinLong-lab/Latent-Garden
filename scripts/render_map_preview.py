@@ -60,11 +60,17 @@ def render(garden: dict) -> str:
         cluster.get("id"): color(cluster.get("color"), PALETTE[index % len(PALETTE)])
         for index, cluster in enumerate(clusters)
     }
+    category_counts: dict[str, int] = {}
+    for node in nodes:
+        categories = node.get("categories") or ["未分类"]
+        for category in categories:
+            category_counts[str(category)] = category_counts.get(str(category), 0) + 1
+    categories = sorted(category_counts.items(), key=lambda item: (-item[1], item[0]))
 
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" role="img" aria-labelledby="title desc">',
         '<title id="title">Latent Garden semantic map for zylatent.com</title>',
-        '<desc id="desc">A two-dimensional semantic map of blog articles, colored by topic cluster.</desc>',
+        '<desc id="desc">A two-dimensional semantic map of blog articles, indexed by category and tag.</desc>',
         "<defs>",
         '<linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f4e5"/><stop offset="1" stop-color="#e0e7cf"/></linearGradient>',
         '<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#697653" flood-opacity=".18"/></filter>',
@@ -130,21 +136,18 @@ def render(garden: dict) -> str:
 
     parts.extend(
         [
-            '<text x="930" y="168" fill="#586347" font-family="Georgia, serif" font-size="22" font-weight="700">精选主题</text>',
-            '<text x="930" y="194" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="12">博客内容策展索引</text>',
+            '<text x="930" y="168" fill="#586347" font-family="Georgia, serif" font-size="22" font-weight="700">分类与标签</text>',
+            '<text x="930" y="194" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="12">博客内容索引</text>',
         ]
     )
-    for index, cluster in enumerate(clusters):
+    for index, (category, count) in enumerate(categories):
         y = 238 + index * 52
-        cluster_id = cluster.get("id", index)
-        fill = colors.get(cluster_id, PALETTE[index % len(PALETTE)])
-        label = escape(cluster.get("label", f"Cluster {cluster_id}"))
-        count = len(cluster.get("node_ids", []))
-        parts.append(f'<circle cx="936" cy="{y - 5}" r="7" fill="{fill}"/><text x="956" y="{y}" fill="#4c5141" font-family="Segoe UI, sans-serif" font-size="14">主题 {index + 1} · {label}</text><text x="956" y="{y + 19}" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">{count} 篇内容</text>')
+        fill = PALETTE[index % len(PALETTE)]
+        parts.append(f'<circle cx="936" cy="{y - 5}" r="7" fill="{fill}"/><text x="956" y="{y}" fill="#4c5141" font-family="Segoe UI, sans-serif" font-size="14">{escape(category)}</text><text x="956" y="{y + 19}" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">{count} 篇内容</text>')
 
     parts.extend(
         [
-            '<text x="66" y="666" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">position = reduced embedding coordinate · colors = topic clusters · hover/click in the interactive frontend</text>',
+            '<text x="66" y="666" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">position = reduced embedding coordinate · regions = semantic clusters · hover/click in the interactive frontend</text>',
             f'<text x="1110" y="666" text-anchor="end" fill="#7c8271" font-family="Segoe UI, sans-serif" font-size="11">snapshot: {escape(generated_label(garden.get("generated_at")))}</text>',
             "</svg>",
         ]

@@ -31,13 +31,13 @@ Core
 └── api/            可选 FastAPI 服务
 
 examples/zylatent/
-├── config.json                 网站清洗、展示主题、策展规则和命名视图
+├── config.json                 网站清洗、分类来源和命名视图
 ├── garden.json                 完整花园快照
 ├── engineering-garden.json     技术向视图快照
 └── README.md                   案例生成说明
 ```
 
-案例 profile 可以提供标题清洗、描述补充、品牌文案、主题颜色和人工策展规则，但不会进入通用 `core/`、`pipeline/` 或 provider。
+案例 profile 可以提供标题清洗、描述补充、品牌文案和命名视图，但不会进入通用 `core/`、`pipeline/` 或 provider。
 
 ## 工作原理
 
@@ -48,15 +48,15 @@ Content source → Adapter → ContentItem → EmbeddingProvider
                                       ↓
                          UMAP reducer → Clusterer
                                       ↓
-                        optional case profile / views
+                        optional case presentation / views
                                       ↓
                               garden.json → Frontend/API
 ```
 
 需要区分两类信息：
 
-- **语义坐标**：标题、摘要、正文和标签生成高维向量，再由 UMAP 投影到二维。点越近通常表示内容关系越近，但二维距离不是绝对相似度分数，坐标方向也没有固定量纲。前端的主题轮廓只帮助辨认内容分布，不代表严格分类边界。
-- **主题标签**：通用流程默认使用 K-Means；案例也可以在坐标生成后增加人工策展层。寒柳别苑的五个主题来自关键词辅助的编辑规则，不是模型自动发现的五个天然类别。
+- **语义坐标**：标题、摘要、正文和标签生成高维向量，再由 UMAP 投影到二维。点越近通常表示内容关系越近，但二维距离不是绝对相似度分数，坐标方向也没有固定量纲。前端的语义簇轮廓只帮助辨认内容分布，不代表严格分类边界。
+- **分类与标签**：分类来自内容源的 `categories` 字段，标签来自 `tags` 字段；两者都随 `ContentItem` 和 `GardenNode` 传递，前端分别提供主筛选和交叉筛选。
 
 当前仓库的寒柳别苑案例使用本地 **BAAI/bge-small-zh-v1.5**：中文语义和技术英文混合内容会先编码成 512 维向量，再用 UMAP 投影到二维。没有模型依赖时仍可使用离线、确定性的 CJK n-gram provider 作为透明工程基线；需要更深语义时也可以切换 OpenAI provider。
 
@@ -69,7 +69,7 @@ Content source → Adapter → ContentItem → EmbeddingProvider
 - K-Means 默认聚类，以及与核心解耦的可选案例 profile
 - Markdown、MDX、JSON、RSS、Atom 和公开网站适配器
 - 网站抓取清洗：HTML/组件文本过滤、标题规范化、重复标题去重、摘要质量门槛
-- 零构建依赖前端：Obsidian 风格工作区、节点详情、局部近邻、探索路径、主题筛选、搜索、缩放、受限平移和原文跳转
+- 零构建依赖前端：Obsidian 风格工作区、节点详情、局部近邻、探索路径、分类与标签筛选、搜索、缩放、受限平移和原文跳转
 - 完整花园与命名子视图，可为个人表达和作品集提供不同入口
 - 可选 FastAPI、Docker、GitHub Pages 和定时刷新流程
 
@@ -152,6 +152,7 @@ Markdown/MDX 使用 frontmatter：
 title: A local-first search project
 description: An inspectable retrieval pipeline for private notes.
 tags: [AI, retrieval]
+categories: [解问题]
 date: 2026-01-01
 url: https://example.org/projects/local-search
 type: project
@@ -160,7 +161,7 @@ type: project
 正文会参与 embedding，但不会写入最终 garden.json。
 ```
 
-JSON 可以是对象、对象数组或 `{ "items": [...] }`。支持字段包括 `id`、`title`、`description`、`body/content/text`、`tags`、`date`、`url`、`type/content_type`。
+JSON 可以是对象、对象数组或 `{ "items": [...] }`。支持字段包括 `id`、`title`、`description`、`body/content/text`、`categories/category`、`tags`、`date`、`url`、`type/content_type`。
 
 前端节点示例：
 
@@ -169,6 +170,7 @@ JSON 可以是对象、对象数组或 `{ "items": [...] }`。支持字段包括
   "id": "local-search",
   "title": "Local-first search",
   "description": "An inspectable retrieval pipeline.",
+  "categories": ["解问题"],
   "tags": ["AI", "retrieval"],
   "date": "2026-01-01",
   "url": "https://example.org/projects/local-search",
@@ -186,7 +188,7 @@ JSON 可以是对象、对象数组或 `{ "items": [...] }`。支持字段包括
 - 移除“每日诗语”等地图展示前缀；
 - 过滤评论、导航、页脚、源码链接等组件文本；
 - 拒绝或补充空白、过短摘要；
-- 将语义坐标上的内容整理为五个编辑主题；
+- 保留文章的分类和标签，并输出语义簇；
 - 输出完整花园与 Engineering Garden。
 
 当前案例快照：
@@ -194,11 +196,11 @@ JSON 可以是对象、对象数组或 `{ "items": [...] }`。支持字段包括
 | 项目 | 结果 |
 | --- | --- |
 | 来源 | [zylatent.com](https://zylatent.com) 公开文章 |
-| 完整视图 | 41 个节点、5 个编辑主题 |
-| Engineering 视图 | 17 个节点、3 个编辑主题 |
+| 完整视图 | 48 个节点、5 个分类 |
+| Engineering 视图 | 15 个节点、做东西 / 解问题 |
 | Embedding | BAAI/bge-small-zh-v1.5 512D |
 | 坐标 | UMAP 2D |
-| 最终主题方式 | `curated-keywords` |
+| 分类来源 | 博客 frontmatter `categories` |
 | 完整输出 | [`examples/zylatent/garden.json`](examples/zylatent/garden.json) |
 | 技术输出 | [`examples/zylatent/engineering-garden.json`](examples/zylatent/engineering-garden.json) |
 

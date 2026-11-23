@@ -1,16 +1,16 @@
 const params = new URLSearchParams(location.search);
 const requestedView = params.get("view") === "engineering" ? "engineering" : "full";
 const dataUrl = params.get("data") || (requestedView === "engineering" ? "./engineering-garden.json" : "./garden.json");
-const requestedCluster = params.get("cluster");
 const requestedTheme = params.get("theme");
 if (params.get("embed") === "1") document.documentElement.dataset.embed = "true";
 const state = {
   garden: null,
   query: "",
-  cluster: null,
+  categoryFilter: null,
+  tagFilter: null,
   typeFilter: null,
   layoutMode: "2d",
-  colorBy: "topic",
+  colorBy: "category",
   showLabels: false,
   showEdges: true,
   focusedId: null,
@@ -205,13 +205,22 @@ function pointFor(node) {
 }
 
 function colorForNode(node) {
+  const palette = ["#9fb46b", "#86a8a1", "#d5a36c", "#b7a5c8", "#d5a5a1", "#c7b46b"];
+  if (state.colorBy === "category") {
+    const categories = Array.from(new Set(state.garden.nodes.flatMap(item => item.categories || []))).sort();
+    const category = (node.categories || [])[0] || "未分类";
+    return palette[Math.max(0, categories.indexOf(category)) % palette.length] || palette[0];
+  }
+  if (state.colorBy === "tag") {
+    const tags = Array.from(new Set(state.garden.nodes.flatMap(item => item.tags || []))).sort();
+    const tag = (node.tags || [])[0] || "未标注";
+    return palette[Math.max(0, tags.indexOf(tag)) % palette.length] || palette[0];
+  }
   if (state.colorBy === "type") {
-    const palette = ["#9fb46b", "#86a8a1", "#d5a36c", "#b7a5c8", "#d5a5a1"];
     const types = Array.from(new Set(state.garden.nodes.map(item => item.content_type || "document"))).sort();
     return palette[types.indexOf(node.content_type || "document") % palette.length] || palette[0];
   }
   if (state.colorBy === "year") {
-    const palette = ["#9fb46b", "#86a8a1", "#d5a36c", "#b7a5c8", "#d5a5a1", "#c7b46b"];
     const years = Array.from(new Set(state.garden.nodes.map(item => String(item.date || "").slice(0, 4)).filter(Boolean))).sort();
     return palette[years.indexOf(String(node.date || "").slice(0, 4)) % palette.length] || "#a4b96f";
   }
@@ -251,7 +260,7 @@ function relationshipReason(source, target) {
   if (tags.length) return "共同标签 · " + tags.slice(0, 2).join("、");
   if (source.cluster_id === target.cluster_id) {
     const cluster = state.clusterById.get(String(source.cluster_id));
-    return "同一主题 · " + (cluster ? cluster.label : "相近内容");
+    return "同一语义簇 · " + (cluster ? cluster.label : "相近内容");
   }
   return "语义邻近 · 适合继续探索";
 }
@@ -327,7 +336,7 @@ function renderRegions() {
   const clusters = state.garden.clusters;
   regionLayer.innerHTML = clusters.map(cluster => {
     const path = regionPath(state.nodesByCluster.get(String(cluster.id)) || []);
-    const className = state.cluster === null ? "" : state.cluster === cluster.id ? " active" : " dim";
+    const className = "";
     return path ? '<path class="cluster-region' + className + '" d="' + path + '" style="--region-color:' +
       safeColor(cluster.color) + '"></path>' : "";
   }).join("");
@@ -367,11 +376,8 @@ function zoomAt(clientX, clientY, scale) {
 function render() {
   const nodes = state.garden.nodes;
   const clusters = state.garden.clusters;
-  if (state.cluster === null && requestedCluster !== null && clusters.some(cluster => Number(cluster.id) === Number(requestedCluster))) {
-    state.cluster = Number(requestedCluster);
-  }
   document.querySelector("#item-count").textContent = nodes.length + " 篇文字";
-  document.querySelector("#cluster-count").textContent = clusters.length + " 个主题";
+  document.querySelector("#cluster-count").textContent = clusters.length + " 个语义簇";
   document.querySelector("#generated").textContent = "生成于 " + new Date(state.garden.generated_at).toLocaleDateString();
   const focusStatus = document.querySelector("#focus-status");
   if (focusStatus) focusStatus.textContent = state.focusedId ? "局部视图" : "全局视图";
@@ -383,16 +389,10 @@ function render() {
     link.classList.toggle("active", active);
     link.setAttribute("aria-current", active ? "page" : "false");
   });
-  document.querySelector("#legend").innerHTML = clusters.map((cluster, index) =>
-    '<button type="button" aria-pressed="' + (state.cluster === cluster.id) + '" data-cluster="' + Number(cluster.id) + '" class="' +
-    (state.cluster === cluster.id ? "active" : "") + '"><span class="cluster-index">' + String(index + 1).padStart(2, "0") +
-    '</span><i style="--cluster-color:' + safeColor(cluster.color) + '"></i><span class="cluster-name">' +
-    esc(cluster.label || "未命名") + '</span><span class="cluster-count">' + (cluster.node_ids || []).length + ' 篇</span></button>'
-  ).join("");
-  document.querySelectorAll("[data-cluster]").forEach(button => button.addEventListener("click", () => {
-    state.cluster = state.cluster === Number(button.dataset.cluster) ? null : Number(button.dataset.cluster);
-    render();
-  }));
+  renderCategoryIndex();
+  renderTagIndex();
+  renderCategoryFilters();
+  renderTagFilters();
   renderTypeFilters();
   const metadata = state.garden.metadata || {};
   document.querySelector("#meta-provider").textContent = metadata.provider || "—";
@@ -400,6 +400,85 @@ function render() {
   document.querySelector("#meta-dimensions").textContent = state.garden.dimensions ? state.garden.dimensions + "D" : "—";
   document.querySelector("#meta-generated").textContent = new Date(state.garden.generated_at).toLocaleDateString();
   renderGraph();
+}
+
+function categoryValues(node) {
+  return Array.isArray(node.categories) && node.categories.length ? node.categories.map(String) : ["未分类"];
+}
+
+function tagValues(node) {
+  return Array.isArray(node.tags) && node.tags.length ? node.tags.map(String) : ["未标注"];
+}
+
+function categoryCounts() {
+  const counts = new Map();
+  state.garden.nodes.forEach(node => categoryValues(node).forEach(category => counts.set(category, (counts.get(category) || 0) + 1)));
+  return Array.from(counts, ([label, count]) => ({ label, count })).sort((left, right) => right.count - left.count || left.label.localeCompare(right.label, "zh-CN"));
+}
+
+function tagCounts() {
+  const counts = new Map();
+  state.garden.nodes.forEach(node => tagValues(node).forEach(tag => counts.set(tag, (counts.get(tag) || 0) + 1)));
+  return Array.from(counts, ([label, count]) => ({ label, count })).sort((left, right) => right.count - left.count || left.label.localeCompare(right.label, "zh-CN"));
+}
+
+function renderCategoryIndex() {
+  const categories = categoryCounts();
+  document.querySelector("#legend").innerHTML = categories.map((category, index) =>
+    '<button type="button" aria-pressed="' + (state.categoryFilter === category.label) + '" data-category="' + esc(category.label) + '" class="' +
+    (state.categoryFilter === category.label ? "active" : "") + '"><span class="cluster-index">' + String(index + 1).padStart(2, "0") +
+    '</span><i style="--cluster-color:' + colorForCategory(category.label, categories.map(item => item.label)) + '"></i><span class="cluster-name">' +
+    esc(category.label) + '</span><span class="cluster-count">' + category.count + ' 篇</span></button>'
+  ).join("");
+  document.querySelectorAll("[data-category]").forEach(button => button.addEventListener("click", () => {
+    state.categoryFilter = state.categoryFilter === button.dataset.category ? null : button.dataset.category;
+    render();
+  }));
+}
+
+function renderTagIndex() {
+  const tags = tagCounts().slice(0, 12);
+  document.querySelector("#tag-index").innerHTML = '<p class="detail-section-title">常用标签</p>' + tags.map(tag =>
+    '<button type="button" class="tag-index-item ' + (state.tagFilter && state.tagFilter.has(tag.label) ? "active" : "") + '" data-index-tag="' + esc(tag.label) + '">' +
+    '<span>' + esc(tag.label) + '</span><small>' + tag.count + '</small></button>'
+  ).join("");
+  document.querySelectorAll("[data-index-tag]").forEach(button => button.addEventListener("click", () => toggleTag(button.dataset.indexTag)));
+}
+
+function colorForCategory(category, categories) {
+  const palette = ["#9fb46b", "#86a8a1", "#d5a36c", "#b7a5c8", "#d5a5a1", "#c7b46b"];
+  return palette[Math.max(0, categories.indexOf(category)) % palette.length];
+}
+
+function renderCategoryFilters() {
+  const categories = categoryCounts();
+  const categoryFilter = document.querySelector("#category-filter");
+  categoryFilter.innerHTML = categories.map(category => {
+    const active = state.categoryFilter === null || state.categoryFilter === category.label;
+    return '<button type="button" class="filter-chip ' + (active ? "is-active" : "") + '" data-filter-category="' + esc(category.label) + '" aria-pressed="' + active + '">' + esc(category.label) + '</button>';
+  }).join("");
+  categoryFilter.querySelectorAll("[data-filter-category]").forEach(button => button.addEventListener("click", () => {
+    state.categoryFilter = state.categoryFilter === button.dataset.filterCategory ? null : button.dataset.filterCategory;
+    render();
+  }));
+}
+
+function toggleTag(tag) {
+  if (state.tagFilter === null) state.tagFilter = new Set();
+  if (state.tagFilter.has(tag)) state.tagFilter.delete(tag);
+  else state.tagFilter.add(tag);
+  if (state.tagFilter.size === 0) state.tagFilter = null;
+  render();
+}
+
+function renderTagFilters() {
+  const tags = tagCounts().slice(0, 18);
+  const tagFilter = document.querySelector("#tag-filter");
+  tagFilter.innerHTML = tags.map(tag => {
+    const active = state.tagFilter === null || state.tagFilter.has(tag.label);
+    return '<button type="button" class="filter-chip ' + (active ? "is-active" : "") + '" data-filter-tag="' + esc(tag.label) + '" aria-pressed="' + active + '">' + esc(tag.label) + '</button>';
+  }).join("");
+  tagFilter.querySelectorAll("[data-filter-tag]").forEach(button => button.addEventListener("click", () => toggleTag(button.dataset.filterTag)));
 }
 
 function renderTypeFilters() {
@@ -428,8 +507,8 @@ function renderPresentation() {
   document.querySelector("#brand-eyebrow").textContent = presentation.eyebrow || "CONTENT COLLECTION · SEMANTIC MAP";
   document.querySelector("#brand-title").textContent = presentation.title || "Latent Garden";
   document.querySelector("#brand-intro").textContent = presentation.intro || "Project a collection into a searchable, interactive semantic map.";
-  document.querySelector("#topic-heading").textContent = presentation.topic_heading || "Topics";
-  document.querySelector("#topic-copy").textContent = presentation.topic_copy || "Colors identify groups in the loaded collection.";
+  document.querySelector("#topic-heading").textContent = "分类与标签";
+  document.querySelector("#topic-copy").textContent = "分类构成主结构，标签用于交叉筛选。";
   document.querySelector("#source-prefix").textContent = presentation.source_prefix || "Source";
   document.querySelector("#source-label").textContent = presentation.source_label || "content collection";
   const sourceLink = document.querySelector("#source-link");
@@ -458,7 +537,8 @@ function nodeVisibility(node) {
   const isFocused = !focused || focused.has(String(node.id));
   return {
     matches: !state.query || searchable.includes(state.query),
-    visibleCluster: state.cluster === null || node.cluster_id === state.cluster,
+    visibleCategory: state.categoryFilter === null || categoryValues(node).includes(state.categoryFilter),
+    visibleTag: state.tagFilter === null || tagValues(node).some(tag => state.tagFilter.has(tag)),
     visibleType: state.typeFilter === null || state.typeFilter.has(String(node.content_type || "document")),
     isFocused,
     isSelected: state.focusedId !== null && String(node.id) === String(state.focusedId),
@@ -498,8 +578,8 @@ function renderEdges(visibility) {
     const toNode = state.nodeById.get(edge.to.id);
     const fromState = visibility.get(edge.from.id);
     const toState = visibility.get(edge.to.id);
-    const active = state.showEdges && fromState.matches && fromState.visibleCluster && fromState.visibleType && fromState.isFocused &&
-      toState.matches && toState.visibleCluster && toState.visibleType && toState.isFocused;
+    const active = state.showEdges && fromState.matches && fromState.visibleCategory && fromState.visibleTag && fromState.visibleType && fromState.isFocused &&
+      toState.matches && toState.visibleCategory && toState.visibleTag && toState.visibleType && toState.isFocused;
     const sameTopic = fromNode.cluster_id === toNode.cluster_id;
     const cluster = state.clusterById.get(String(fromNode.cluster_id));
     const dx = edge.to.x - edge.from.x;
@@ -525,7 +605,7 @@ function highlightEdges(id, highlighted) {
 
 function renderGraph() {
   const visibility = new Map(state.garden.nodes.map(node => [String(node.id), nodeVisibility(node)]));
-  const visibleCount = Array.from(visibility.values()).filter(item => item.matches && item.visibleCluster && item.visibleType && item.isFocused).length;
+  const visibleCount = Array.from(visibility.values()).filter(item => item.matches && item.visibleCategory && item.visibleTag && item.visibleType && item.isFocused).length;
   document.querySelector("#selection-count").textContent = visibleCount === state.garden.nodes.length ? "全部节点" : visibleCount + " 个节点";
   renderRegions();
   renderEdges(visibility);
@@ -535,20 +615,20 @@ function renderGraph() {
 function renderNodes(visibility) {
   const nodes = state.garden.nodes;
   labelLayer.innerHTML = nodes.map(node => {
-    const { matches, visibleCluster, visibleType, isFocused, isSelected } = visibility.get(String(node.id));
+    const { matches, visibleCategory, visibleTag, visibleType, isFocused, isSelected } = visibility.get(String(node.id));
     const point = state.points.get(String(node.id)) || pointFor(node);
     const x = point.x;
     const y = -point.y;
     const layout = labelLayout(node.title, x);
     const label = '<text x="' + layout.offset + '" y=".012" text-anchor="' + layout.anchor + '">' +
       esc(layout.text) + "</text>";
-    const showLabel = (state.showLabels || Boolean(state.query) || isSelected) && matches && visibleCluster && visibleType && isFocused;
+    const showLabel = (state.showLabels || Boolean(state.query) || isSelected) && matches && visibleCategory && visibleTag && visibleType && isFocused;
     return '<g class="node-label' + (showLabel ? " show-label" : "") + '" transform="translate(' + x + " " +
       (-y) + ')" data-id="' + esc(node.id) + '">' + label + "</g>";
   }).join("");
   nodeLayer.innerHTML = nodes.map(node => {
-    const { matches, visibleCluster, visibleType, isFocused, isSelected } = visibility.get(String(node.id));
-    const visible = matches && visibleCluster && visibleType && isFocused;
+    const { matches, visibleCategory, visibleTag, visibleType, isFocused, isSelected } = visibility.get(String(node.id));
+    const visible = matches && visibleCategory && visibleTag && visibleType && isFocused;
     const point = state.points.get(String(node.id)) || pointFor(node);
     const radius = visible ? (state.layoutMode === "3d" ? ".028" : ".025") : ".018";
     const x = point.x;
@@ -679,17 +759,18 @@ document.querySelector("#show-edges").addEventListener("change", event => {
 document.querySelector("#reset").addEventListener("click", () => {
   hideHoverCard();
   state.query = "";
-  state.cluster = null;
+  state.categoryFilter = null;
+  state.tagFilter = null;
   state.typeFilter = null;
   state.layoutMode = "2d";
   document.documentElement.dataset.layout = "2d";
-  state.colorBy = "topic";
+  state.colorBy = "category";
   state.showLabels = false;
   state.showEdges = true;
   state.focusedId = null;
   state.focusedSet = null;
   document.querySelector("#search").value = "";
-  document.querySelector("#color-by").value = "topic";
+  document.querySelector("#color-by").value = "category";
   document.querySelector("#show-labels").checked = false;
   document.querySelector("#show-edges").checked = true;
   document.querySelectorAll("[data-layout]").forEach(button => {
@@ -751,7 +832,7 @@ fetch(dataUrl)
     });
     state.points = new Map(garden.nodes.map(node => [String(node.id), pointFor(node)]));
     state.searchTextById = new Map(garden.nodes.map(node => [
-      String(node.id), [node.title, node.description].concat(node.tags || []).join(" ").toLowerCase()
+      String(node.id), [node.title, node.description].concat(node.categories || [], node.tags || []).join(" ").toLowerCase()
     ]));
     state.edges = semanticEdges(garden.nodes);
     status.remove();

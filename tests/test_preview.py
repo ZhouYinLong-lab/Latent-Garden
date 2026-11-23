@@ -4,12 +4,12 @@ from scripts.render_map_preview import render
 
 
 class PreviewTests(unittest.TestCase):
-    def test_preview_contains_clipped_map_and_topic_legend(self):
+    def test_preview_contains_clipped_map_and_category_legend(self):
         garden = {
             "generated_at": "2026-08-03T00:00:00+00:00",
             "reducer": "umap",
             "metadata": {"provider": "hash"},
-            "nodes": [{"id": "one", "title": "One", "x": 0.9, "y": -0.9, "cluster_id": 0}],
+            "nodes": [{"id": "one", "title": "One", "categories": ["Example"], "x": 0.9, "y": -0.9, "cluster_id": 0}],
             "clusters": [{"id": 0, "label": "Example", "node_ids": ["one"], "color": "#a8bd72"}],
         }
 

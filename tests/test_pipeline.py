@@ -82,6 +82,7 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(item.description, "A short summary")
         self.assertEqual(item.date, "2026-08-03")
         self.assertEqual(item.tags, ["Python"])
+        self.assertEqual(item.categories, [])
 
     def test_website_adapter_cleans_site_prefixes_components_and_short_descriptions(self):
         html = """
@@ -167,13 +168,14 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual(provider.calls, 1)
 
     def test_output_contract_is_frontend_ready(self):
-        items = [ContentItem(id="a", title="A", body="text", url="https://example.com")]
+        items = [ContentItem(id="a", title="A", body="text", categories=["解问题"], url="https://example.com")]
         with tempfile.TemporaryDirectory() as directory:
             garden = build_garden(items, cache=EmbeddingCache(Path(directory) / "embeddings.json"))
         payload = garden.to_dict()
         self.assertIn("nodes", payload)
         self.assertIn("clusters", payload)
         self.assertEqual(payload["nodes"][0]["url"], "https://example.com")
+        self.assertEqual(payload["nodes"][0]["categories"], ["解问题"])
         self.assertIn("reducer_config", payload["metadata"])
         self.assertEqual(payload["metadata"]["reducer_config"]["random_state"], 42)
         self.assertEqual(payload["metadata"]["clusterer_config"]["iterations"], 30)

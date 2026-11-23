@@ -15,6 +15,7 @@ class ContentItem:
     body: str
     description: str = ""
     tags: list[str] = field(default_factory=list)
+    categories: list[str] = field(default_factory=list)
     date: str | None = None
     url: str | None = None
     content_type: str = "document"
@@ -52,6 +53,7 @@ class GardenNode:
     y: float
     cluster_id: int
     content_hash: str
+    categories: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)

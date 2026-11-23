@@ -273,12 +273,17 @@ def _item_from_page(
         [text for href, text in parser.links if "/blog/tag/" in href],
         config,
     )
+    categories = _unique_text(
+        [text for href, text in parser.links if "/blog/category/" in href or "/blog/categories/" in href],
+        config,
+    )
     return ContentItem(
         id=re.sub(r"[^\w\u4e00-\u9fff-]+", "-", slug.lower()).strip("-"),
         title=title,
         description=description,
         body=body,
         tags=tags,
+        categories=categories,
         date=_date_from(" ".join(paragraphs) + " " + html),
         url=url,
         content_type="article",

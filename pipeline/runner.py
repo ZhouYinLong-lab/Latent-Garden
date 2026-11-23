@@ -39,7 +39,7 @@ def build_garden(
     ]
     nodes = [
         GardenNode(
-            id=item.id, title=item.title, description=item.description, tags=item.tags, date=item.date,
+            id=item.id, title=item.title, description=item.description, tags=item.tags, categories=item.categories, date=item.date,
             url=item.url, content_type=item.content_type, x=point[0], y=point[1], cluster_id=label,
             content_hash=item.content_hash,
         )

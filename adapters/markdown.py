@@ -50,15 +50,19 @@ def load_markdown(path: str | Path) -> ContentItem:
     tags = metadata.get("tags", [])
     if isinstance(tags, str):
         tags = [part.strip() for part in re.split(r"[,，]", tags) if part.strip()]
+    categories = metadata.get("categories", metadata.get("category", []))
+    if isinstance(categories, str):
+        categories = [part.strip() for part in re.split(r"[,，]", categories) if part.strip()]
     return ContentItem(
         id=str(metadata.get("id") or file_path.stem),
         title=title,
         description=description,
         body=body,
         tags=list(tags),
+        categories=list(categories),
         date=str(metadata["date"]) if metadata.get("date") else None,
         url=str(metadata["url"]) if metadata.get("url") else None,
         content_type=str(metadata.get("type") or metadata.get("content_type") or "article"),
         source_path=str(file_path),
-        metadata={key: value for key, value in metadata.items() if key not in {"id", "title", "description", "tags", "date", "url", "type", "content_type"}},
+        metadata={key: value for key, value in metadata.items() if key not in {"id", "title", "description", "tags", "categories", "category", "date", "url", "type", "content_type"}},
     )

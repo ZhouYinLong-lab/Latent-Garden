@@ -3,7 +3,7 @@
   "generated_at": "2026-11-16T09:49:39.104913+00:00",
   "dimensions": 512,
   "reducer": "umap",
-  "clusterer": "curated-keywords",
+  "clusterer": "kmeans",
   "nodes": [
     {
       "id": "刀锋-书评",
@@ -19,8 +19,11 @@
       "content_type": "article",
       "x": -0.10377899804116131,
       "y": -0.2620884008028874,
-      "cluster_id": 3,
-      "content_hash": "9ac64b0b9cb50011d867692bed6bc7a55a2a7fe061e9b015b9187ad337014d7e"
+      "cluster_id": 0,
+      "content_hash": "9ac64b0b9cb50011d867692bed6bc7a55a2a7fe061e9b015b9187ad337014d7e",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "慢下来",
@@ -39,8 +42,11 @@
       "content_type": "article",
       "x": -0.03143575983775049,
       "y": -0.31839303677142594,
-      "cluster_id": 4,
-      "content_hash": "7328b0bb4a7a866dbc0d82b9f94e7ce179e6e720d45545cb849a69f49114be7a"
+      "cluster_id": 0,
+      "content_hash": "7328b0bb4a7a866dbc0d82b9f94e7ce179e6e720d45545cb849a69f49114be7a",
+      "categories": [
+        "看人间"
+      ]
     },
     {
       "id": "dog-map",
@@ -59,8 +65,11 @@
       "content_type": "article",
       "x": -0.062317972350024675,
       "y": -0.5720625276870068,
-      "cluster_id": 4,
-      "content_hash": "d04e18cd5aa7f4d09a67a40be5e9f3f5bdedefaac79111dbaafb2733a4a527bb"
+      "cluster_id": 0,
+      "content_hash": "d04e18cd5aa7f4d09a67a40be5e9f3f5bdedefaac79111dbaafb2733a4a527bb",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "point-allocation-credit-assignment",
@@ -80,7 +89,10 @@
       "x": 0.09551426944371999,
       "y": -0.5030579571439795,
       "cluster_id": 0,
-      "content_hash": "25744ca99ad5dcf0c544d601d364326779b48254f914e7bb832ac4e59a7cc514"
+      "content_hash": "25744ca99ad5dcf0c544d601d364326779b48254f914e7bb832ac4e59a7cc514",
+      "categories": [
+        "解问题"
+      ]
     },
     {
       "id": "七夕-重走上学路",
@@ -97,8 +109,11 @@
       "content_type": "article",
       "x": 0.2978799944057414,
       "y": -0.21496007899475778,
-      "cluster_id": 4,
-      "content_hash": "b0d553430113b307fd5912d0fa7ac9303403d9edaf1d736d1b576a247c98042b"
+      "cluster_id": 0,
+      "content_hash": "b0d553430113b307fd5912d0fa7ac9303403d9edaf1d736d1b576a247c98042b",
+      "categories": [
+        "过日子"
+      ]
     },
     {
       "id": "gomoku-search",
@@ -117,8 +132,11 @@
       "content_type": "article",
       "x": -0.09840715854388393,
       "y": -0.7459792315264259,
-      "cluster_id": 0,
-      "content_hash": "2484b04a27d018efa6c3231ab4448d8da47a62b0cfbcd0b470c3b6b7435478f9"
+      "cluster_id": 1,
+      "content_hash": "2484b04a27d018efa6c3231ab4448d8da47a62b0cfbcd0b470c3b6b7435478f9",
+      "categories": [
+        "解问题"
+      ]
     },
     {
       "id": "fastapi-basics",
@@ -138,7 +156,10 @@
       "y": -0.660410162718726,
       "cluster_id": 1,
       "content_hash": "a4c17a070c61517bfb786ab76120bc5be364071d076d3bf38eb294eec10fb253",
-      "cover": "./assets/covers/ce60466f23ae.webp"
+      "cover": "./assets/covers/ce60466f23ae.webp",
+      "categories": [
+        "解问题"
+      ]
     },
     {
       "id": "bayesian-mcmc",
@@ -156,8 +177,11 @@
       "content_type": "article",
       "x": -0.4091854964071888,
       "y": -0.8303003345657742,
-      "cluster_id": 0,
-      "content_hash": "4cae811f616c427b863c10b4a4d3258b64ca4f4fba2cdece157a25273b7d021c"
+      "cluster_id": 1,
+      "content_hash": "4cae811f616c427b863c10b4a4d3258b64ca4f4fba2cdece157a25273b7d021c",
+      "categories": [
+        "解问题"
+      ]
     },
     {
       "id": "dog-babble",
@@ -175,8 +199,11 @@
       "content_type": "article",
       "x": -0.3236105772911406,
       "y": -0.47656237243070626,
-      "cluster_id": 2,
-      "content_hash": "7d614f7218a22a43431e3624618eca2bc1b63a3b00d0b244a207023425e93f81"
+      "cluster_id": 1,
+      "content_hash": "7d614f7218a22a43431e3624618eca2bc1b63a3b00d0b244a207023425e93f81",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "dog-littletools",
@@ -195,7 +222,10 @@
       "x": -0.15132231727471945,
       "y": -0.92,
       "cluster_id": 1,
-      "content_hash": "a7c8cfffbd9b8b3c124c5c9ed863c591da68da1704e5e2c4438189ae3d7c2c1f"
+      "content_hash": "a7c8cfffbd9b8b3c124c5c9ed863c591da68da1704e5e2c4438189ae3d7c2c1f",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "miniarena",
@@ -213,8 +243,11 @@
       "content_type": "article",
       "x": -0.2207118355573695,
       "y": -0.7068618619444691,
-      "cluster_id": 2,
-      "content_hash": "7aac409b2641c81562aa14d51589bba3455ff9de268fc337b39ced6c6c2d9ca4"
+      "cluster_id": 1,
+      "content_hash": "7aac409b2641c81562aa14d51589bba3455ff9de268fc337b39ced6c6c2d9ca4",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "nannahelper-docs",
@@ -233,7 +266,10 @@
       "x": -0.5257080749675279,
       "y": -0.5191648949549735,
       "cluster_id": 1,
-      "content_hash": "952a644b850cb42ffce3bdaa14c3d7c40d195301648fe9df235951890c294bb5"
+      "content_hash": "952a644b850cb42ffce3bdaa14c3d7c40d195301648fe9df235951890c294bb5",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "绘出七彩的七天",
@@ -251,9 +287,12 @@
       "content_type": "article",
       "x": -0.713331147471609,
       "y": -0.6830310607229289,
-      "cluster_id": 4,
+      "cluster_id": 1,
       "content_hash": "0d7590a8e201705ce02913e652fb7073db6ca1273c87c9be71069b3f2df5777a",
-      "cover": "./assets/covers/aebc28fea043.webp"
+      "cover": "./assets/covers/aebc28fea043.webp",
+      "categories": [
+        "过日子"
+      ]
     },
     {
       "id": "dog-skills-48",
@@ -271,8 +310,11 @@
       "content_type": "article",
       "x": -0.912417700230328,
       "y": 0.027413742526296248,
-      "cluster_id": 1,
-      "content_hash": "a30480d2229c80875cb9c527caeb179142928ace2dae8b222b9d2d4e3d0b1ac5"
+      "cluster_id": 2,
+      "content_hash": "a30480d2229c80875cb9c527caeb179142928ace2dae8b222b9d2d4e3d0b1ac5",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "2026上半年-项目回顾",
@@ -286,8 +328,11 @@
       "content_type": "article",
       "x": -0.6948637941348583,
       "y": 0.18631355522844018,
-      "cluster_id": 1,
-      "content_hash": "d1480681e0b48392ed82bbb97fe617102482c921c61950620b9331d49bb0485d"
+      "cluster_id": 2,
+      "content_hash": "d1480681e0b48392ed82bbb97fe617102482c921c61950620b9331d49bb0485d",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "挽救计划-书评",
@@ -303,8 +348,11 @@
       "content_type": "article",
       "x": -0.540335529983007,
       "y": -0.009145742643371091,
-      "cluster_id": 3,
-      "content_hash": "0dd9523524e73917d49f73fe49cd259413929eb6fdd5e2c0042b21d414e4426e"
+      "cluster_id": 2,
+      "content_hash": "0dd9523524e73917d49f73fe49cd259413929eb6fdd5e2c0042b21d414e4426e",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "海子-以梦为马",
@@ -319,9 +367,12 @@
       "content_type": "article",
       "x": -0.48218376246382,
       "y": 0.7206303823926373,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "653274e9352773b4fc2f88ef3abbfecc24fdbb395668fddc64994f0ac36ddc3f",
-      "cover": "./assets/covers/920aad709eab.webp"
+      "cover": "./assets/covers/920aad709eab.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "小鞋子-影评",
@@ -338,8 +389,11 @@
       "content_type": "article",
       "x": -0.8682895190370626,
       "y": -0.5437747637100336,
-      "cluster_id": 4,
-      "content_hash": "b32122667a6b62c4a33a603d2cb57b663b4cb404e287e02bde2ffcd197a4503e"
+      "cluster_id": 1,
+      "content_hash": "b32122667a6b62c4a33a603d2cb57b663b4cb404e287e02bde2ffcd197a4503e",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "smart-agent",
@@ -356,8 +410,11 @@
       "content_type": "article",
       "x": 0.5566885728699266,
       "y": 0.24904306882398475,
-      "cluster_id": 2,
-      "content_hash": "c43a521702dafc96cb8cce4668e4dfd67d295ee497df1e0c94f010523afabc42"
+      "cluster_id": 3,
+      "content_hash": "c43a521702dafc96cb8cce4668e4dfd67d295ee497df1e0c94f010523afabc42",
+      "categories": [
+        "解问题"
+      ]
     },
     {
       "id": "鸳鸯",
@@ -372,8 +429,11 @@
       "content_type": "article",
       "x": -0.5605098917534193,
       "y": -0.23439951462325104,
-      "cluster_id": 4,
-      "content_hash": "c86049e52ea597489c8dc1c599b0cfde77b5c0c6c6ad5b20ce4cf9cee8339754"
+      "cluster_id": 2,
+      "content_hash": "c86049e52ea597489c8dc1c599b0cfde77b5c0c6c6ad5b20ce4cf9cee8339754",
+      "categories": [
+        "过日子"
+      ]
     },
     {
       "id": "cpp-memory-ownership-raii",
@@ -391,7 +451,10 @@
       "y": -0.833298367839257,
       "cluster_id": 0,
       "content_hash": "544d970b23cdf8865f3a691f9d403266f8b1a0c049711ef4c9a5bb8da2a9ec9c",
-      "cover": "./assets/covers/fe980845aabe.webp"
+      "cover": "./assets/covers/fe980845aabe.webp",
+      "categories": [
+        "解问题"
+      ]
     },
     {
       "id": "网络时代的一棵树",
@@ -406,8 +469,11 @@
       "content_type": "article",
       "x": 0.3275695088627616,
       "y": -0.5476166518379111,
-      "cluster_id": 1,
-      "content_hash": "9d781962403169668b5ca16ecc2ac2cec7ed8b9bcdd90c513c81efe8de61ec4b"
+      "cluster_id": 0,
+      "content_hash": "9d781962403169668b5ca16ecc2ac2cec7ed8b9bcdd90c513c81efe8de61ec4b",
+      "categories": [
+        "看人间"
+      ]
     },
     {
       "id": "济南游记",
@@ -422,8 +488,11 @@
       "content_type": "article",
       "x": 0.92,
       "y": 0.2778985317001236,
-      "cluster_id": 4,
-      "content_hash": "74abfbc2ba2ebacad607a62fd3efe1251f5bc73759e3d9f8197fb1b208d3763f"
+      "cluster_id": 3,
+      "content_hash": "74abfbc2ba2ebacad607a62fd3efe1251f5bc73759e3d9f8197fb1b208d3763f",
+      "categories": [
+        "过日子"
+      ]
     },
     {
       "id": "七王国的骑士-第一季",
@@ -441,7 +510,10 @@
       "y": -0.3094722276077172,
       "cluster_id": 2,
       "content_hash": "5b5b847824ea71be839c0a769b2658bd4919747589fa35b82efc89ee0ae7a8f9",
-      "cover": "./assets/covers/a2705e213389.webp"
+      "cover": "./assets/covers/a2705e213389.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-地狱之夜",
@@ -456,9 +528,12 @@
       "content_type": "article",
       "x": -0.92,
       "y": -0.1812180324416347,
-      "cluster_id": 3,
+      "cluster_id": 2,
       "content_hash": "111c7eaff03174695c812ab12a819b4c760721f38e32d9ea94d445a565b68d8c",
-      "cover": "./assets/covers/bffe884dba48.webp"
+      "cover": "./assets/covers/bffe884dba48.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-第一次夜晚",
@@ -475,7 +550,10 @@
       "y": 0.8002993508724173,
       "cluster_id": 3,
       "content_hash": "fa132c6676a9916e7a6e019be4b60ed893370754d5d1cde7417f573d55904ce4",
-      "cover": "./assets/covers/74d1b1667847.webp"
+      "cover": "./assets/covers/74d1b1667847.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-被囚禁者",
@@ -490,9 +568,12 @@
       "content_type": "article",
       "x": 0.3588078026246321,
       "y": 0.92,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "e69baeb58e7b2a4d8600847443a8c1cf454befc89673de850892e80a0ec240d8",
-      "cover": "./assets/covers/c11ea233514d.webp"
+      "cover": "./assets/covers/c11ea233514d.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "夜空为你闪烁",
@@ -506,8 +587,11 @@
       "content_type": "article",
       "x": 0.5057677056920061,
       "y": 0.1601058691723044,
-      "cluster_id": 2,
-      "content_hash": "6c94fef51fb7c20cde83f3f97003bc321d7ae130125900264d148ba3a9401694"
+      "cluster_id": 3,
+      "content_hash": "6c94fef51fb7c20cde83f3f97003bc321d7ae130125900264d148ba3a9401694",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "兰波-致一位理性的人",
@@ -522,9 +606,12 @@
       "content_type": "article",
       "x": 0.3374341225395273,
       "y": 0.7817163226417384,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "9e77189ba187fc36d9d93c2594b71da4ece8abe3062f8978220fa9b6286556b5",
-      "cover": "./assets/covers/6c94035a5119.webp"
+      "cover": "./assets/covers/6c94035a5119.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-母狼",
@@ -539,9 +626,12 @@
       "content_type": "article",
       "x": 0.012544907026253771,
       "y": 0.8294054596961907,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "95cb92cee669933488a9dd364b53b2e4546101c8937e9173c0f158fb66f737b9",
-      "cover": "./assets/covers/0ec1cc41076c.webp"
+      "cover": "./assets/covers/0ec1cc41076c.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "大庚剑阵",
@@ -556,9 +646,12 @@
       "content_type": "article",
       "x": 0.3306988710016753,
       "y": 0.22798516493588716,
-      "cluster_id": 2,
+      "cluster_id": 3,
       "content_hash": "7631c89adc9f9ccdb1e785642ed8dafd352d3324830e9f9eea57036415a05961",
-      "cover": "./assets/covers/a589afbbc9ea.webp"
+      "cover": "./assets/covers/a589afbbc9ea.webp",
+      "categories": [
+        "做东西"
+      ]
     },
     {
       "id": "兰波-告别",
@@ -573,9 +666,12 @@
       "content_type": "article",
       "x": -0.34584029141926376,
       "y": 0.2918508861712742,
-      "cluster_id": 3,
+      "cluster_id": 2,
       "content_hash": "1b43a4d31e55103e9ce59b7d6333fd59edbe544dbb2f88f46f0e542266e24d25",
-      "cover": "./assets/covers/f5c056bb867d.webp"
+      "cover": "./assets/covers/f5c056bb867d.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-七岁智者",
@@ -590,9 +686,12 @@
       "content_type": "article",
       "x": 0.12132414759539512,
       "y": 0.6724298304240292,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "e6f8a12cb947ea4d6757827fe24d4413aa3300450d9de811aec3f836afecd6f2",
-      "cover": "./assets/covers/1241f6672d03.webp"
+      "cover": "./assets/covers/1241f6672d03.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-我的饥饿",
@@ -607,9 +706,12 @@
       "content_type": "article",
       "x": -0.17185609506561128,
       "y": 0.6875422828595944,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "6b5d74ab7ffc7f0f2c0d487e1d0114a2fd14a6a183f699f4e0464f5c549cf8a2",
-      "cover": "./assets/covers/5ff49e28b538.webp"
+      "cover": "./assets/covers/5ff49e28b538.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-奥菲利娅",
@@ -626,7 +728,10 @@
       "y": 0.5586134897149028,
       "cluster_id": 3,
       "content_hash": "cbfc5e2d0f0ce692fecee6498b771ba4f628366c475af3e5da067fdd77346b2a",
-      "cover": "./assets/covers/5b47e8ae223f.webp"
+      "cover": "./assets/covers/5b47e8ae223f.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "烟火文沃-康城新章",
@@ -640,8 +745,11 @@
       "content_type": "article",
       "x": 0.7820854411833046,
       "y": -0.02816891973524338,
-      "cluster_id": 4,
-      "content_hash": "45fd69d9ebb32885bfc6cb9ab97b3618823f59f3b6f5aa9ce745d9aae87ca52f"
+      "cluster_id": 3,
+      "content_hash": "45fd69d9ebb32885bfc6cb9ab97b3618823f59f3b6f5aa9ce745d9aae87ca52f",
+      "categories": [
+        "过日子"
+      ]
     },
     {
       "id": "兰波-黎明",
@@ -656,9 +764,12 @@
       "content_type": "article",
       "x": 0.08785829259320088,
       "y": 0.28026448367432144,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "d30de86174cb793dcc928f3f561698cda2ec1354580c4feaa7182b880982f857",
-      "cover": "./assets/covers/4cc74fde1ebb.webp"
+      "cover": "./assets/covers/4cc74fde1ebb.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "攻壳机动队-影评",
@@ -674,8 +785,11 @@
       "content_type": "article",
       "x": -0.35511920105132067,
       "y": -0.11614524243419877,
-      "cluster_id": 4,
-      "content_hash": "375a36de951ec9f7ec4752aab6589d5697db0fa99eaf215557352a1f61ecbf3a"
+      "cluster_id": 2,
+      "content_hash": "375a36de951ec9f7ec4752aab6589d5697db0fa99eaf215557352a1f61ecbf3a",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-邪恶",
@@ -690,9 +804,12 @@
       "content_type": "article",
       "x": 0.0386960817290275,
       "y": -0.028003712067012576,
-      "cluster_id": 3,
+      "cluster_id": 0,
       "content_hash": "36532a6f922e5be74997a1fedbcd5e111af54336f4f84516008db31a32abebf7",
-      "cover": "./assets/covers/986699180a10.webp"
+      "cover": "./assets/covers/986699180a10.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-醉舟",
@@ -707,9 +824,12 @@
       "content_type": "article",
       "x": -0.24621353488258113,
       "y": 0.45146214464077483,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "6014a26b9d818514bb1ec2d0b63db12c8b3ab3c0fe4e177abb28ac95aacd7fd0",
-      "cover": "./assets/covers/99498a4e525e.webp"
+      "cover": "./assets/covers/99498a4e525e.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-巴黎狂欢节",
@@ -726,7 +846,10 @@
       "y": 0.5787364315786253,
       "cluster_id": 3,
       "content_hash": "51aae451ad11210b5ffd349586f394d1091d76e786b719a66c3ae2dd1f6667b3",
-      "cover": "./assets/covers/c3289b5c8001.webp"
+      "cover": "./assets/covers/c3289b5c8001.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-永恒",
@@ -741,9 +864,12 @@
       "content_type": "article",
       "x": 0.010402111390650393,
       "y": 0.4423348258917775,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "bf823ced6ac1269c2f6e16c104afaff2d0b73869295ae8f694497162ccd5a629",
-      "cover": "./assets/covers/d1ec18593cb4.webp"
+      "cover": "./assets/covers/d1ec18593cb4.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-山谷睡者",
@@ -758,9 +884,12 @@
       "content_type": "article",
       "x": -0.22666717782202372,
       "y": 0.871896629012704,
-      "cluster_id": 3,
+      "cluster_id": 4,
       "content_hash": "cb28cd2f3196a244b264e8db9940cb660c2157ef9d27ca25aaeeff83a5fd9556",
-      "cover": "./assets/covers/d988bb926d95.webp"
+      "cover": "./assets/covers/d988bb926d95.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-感觉",
@@ -777,7 +906,10 @@
       "y": 0.690280357008067,
       "cluster_id": 3,
       "content_hash": "053109e2d5f3eb86ab86559cff3139c5af48aa560fdfb4fcc1d59148c8aa8f4e",
-      "cover": "./assets/covers/5adf2c08be9b.webp"
+      "cover": "./assets/covers/5adf2c08be9b.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "兰波-我的流浪",
@@ -794,7 +926,10 @@
       "y": 0.7462023428626884,
       "cluster_id": 3,
       "content_hash": "f94f0cb9f728ee1e8996290fcdb449a004e296355210a982f117a010590d9425",
-      "cover": "./assets/covers/3b1bc939b9ca.webp"
+      "cover": "./assets/covers/3b1bc939b9ca.webp",
+      "categories": [
+        "读作品"
+      ]
     },
     {
       "id": "黄金时代为何总在过去",
@@ -810,8 +945,11 @@
       "content_type": "article",
       "x": -0.2624042253525528,
       "y": 0.08604464823499669,
-      "cluster_id": 4,
-      "content_hash": "ee18c26a3790fa3703b869c678412ef646e56b3ac0ed7dc3f704a86be61ee882"
+      "cluster_id": 2,
+      "content_hash": "ee18c26a3790fa3703b869c678412ef646e56b3ac0ed7dc3f704a86be61ee882",
+      "categories": [
+        "看人间"
+      ]
     },
     {
       "id": "2025-大雪",
@@ -826,8 +964,11 @@
       "content_type": "article",
       "x": 0.470124885973236,
       "y": -0.40365517564648135,
-      "cluster_id": 4,
-      "content_hash": "aac7f3ae8ac2ac15c7829d14760aea1bcce745df5ba270c3e40e494a34c70cd3"
+      "cluster_id": 0,
+      "content_hash": "aac7f3ae8ac2ac15c7829d14760aea1bcce745df5ba270c3e40e494a34c70cd3",
+      "categories": [
+        "过日子"
+      ]
     },
     {
       "id": "问号与聊天压力",
@@ -842,70 +983,75 @@
       "content_type": "article",
       "x": 0.15278191199274305,
       "y": 0.033034042612187786,
-      "cluster_id": 4,
-      "content_hash": "57f5fc051b02c784b12da2cfc32940d427dce4a5018650d246c63ecb66eb6b66"
+      "cluster_id": 0,
+      "content_hash": "57f5fc051b02c784b12da2cfc32940d427dce4a5018650d246c63ecb66eb6b66",
+      "categories": [
+        "看人间"
+      ]
     }
   ],
   "clusters": [
     {
       "id": 0,
-      "label": "智能与计算",
+      "label": "语义簇 01",
       "node_ids": [
+        "刀锋-书评",
+        "慢下来",
+        "dog-map",
         "point-allocation-credit-assignment",
-        "gomoku-search",
-        "bayesian-mcmc",
-        "cpp-memory-ownership-raii"
+        "七夕-重走上学路",
+        "cpp-memory-ownership-raii",
+        "网络时代的一棵树",
+        "兰波-邪恶",
+        "2025-大雪",
+        "问号与聊天压力"
       ],
-      "color": "#9fb46b"
+      "color": "#a8bd72"
     },
     {
       "id": 1,
-      "label": "工具与开源",
+      "label": "语义簇 02",
       "node_ids": [
+        "gomoku-search",
         "fastapi-basics",
-        "dog-littletools",
-        "nannahelper-docs",
-        "dog-skills-48",
-        "2026上半年-项目回顾",
-        "网络时代的一棵树"
-      ],
-      "color": "#86a8a1"
-    },
-    {
-      "id": 2,
-      "label": "互动实验",
-      "node_ids": [
+        "bayesian-mcmc",
         "dog-babble",
+        "dog-littletools",
         "miniarena",
-        "smart-agent",
-        "七王国的骑士-第一季",
-        "夜空为你闪烁",
-        "大庚剑阵"
+        "nannahelper-docs",
+        "绘出七彩的七天",
+        "小鞋子-影评"
       ],
       "color": "#d5a36c"
     },
     {
-      "id": 3,
-      "label": "诗歌与文学",
+      "id": 2,
+      "label": "语义簇 03",
       "node_ids": [
-        "刀锋-书评",
+        "dog-skills-48",
+        "2026上半年-项目回顾",
         "挽救计划-书评",
-        "海子-以梦为马",
+        "鸳鸯",
+        "七王国的骑士-第一季",
         "兰波-地狱之夜",
-        "兰波-第一次夜晚",
-        "兰波-被囚禁者",
-        "兰波-致一位理性的人",
-        "兰波-母狼",
         "兰波-告别",
-        "兰波-七岁智者",
-        "兰波-我的饥饿",
+        "攻壳机动队-影评",
+        "黄金时代为何总在过去"
+      ],
+      "color": "#86a8a1"
+    },
+    {
+      "id": 3,
+      "label": "语义簇 04",
+      "node_ids": [
+        "smart-agent",
+        "济南游记",
+        "兰波-第一次夜晚",
+        "夜空为你闪烁",
+        "大庚剑阵",
         "兰波-奥菲利娅",
-        "兰波-黎明",
-        "兰波-邪恶",
-        "兰波-醉舟",
+        "烟火文沃-康城新章",
         "兰波-巴黎狂欢节",
-        "兰波-永恒",
-        "兰波-山谷睡者",
         "兰波-感觉",
         "兰波-我的流浪"
       ],
@@ -913,20 +1059,18 @@
     },
     {
       "id": 4,
-      "label": "影像与见闻",
+      "label": "语义簇 05",
       "node_ids": [
-        "慢下来",
-        "dog-map",
-        "七夕-重走上学路",
-        "绘出七彩的七天",
-        "小鞋子-影评",
-        "鸳鸯",
-        "济南游记",
-        "烟火文沃-康城新章",
-        "攻壳机动队-影评",
-        "黄金时代为何总在过去",
-        "2025-大雪",
-        "问号与聊天压力"
+        "海子-以梦为马",
+        "兰波-被囚禁者",
+        "兰波-致一位理性的人",
+        "兰波-母狼",
+        "兰波-七岁智者",
+        "兰波-我的饥饿",
+        "兰波-黎明",
+        "兰波-醉舟",
+        "兰波-永恒",
+        "兰波-山谷睡者"
       ],
       "color": "#d5a5a1"
     }
@@ -944,8 +1088,6 @@
       "clusters": null,
       "iterations": 30
     },
-    "topic_mode": "curated",
-    "topic_source": "寒柳别苑 editorial taxonomy",
     "case_profile": "寒柳别苑",
     "view": "full",
     "view_label": "完整花园",
@@ -967,8 +1109,6 @@
       "eyebrow": "COURTYARD · PERSONAL SEMANTIC GARDEN",
       "title": "Latent Garden",
       "intro": "把寒柳别苑留下的文字放在一张温柔的地图上，让相隔很远的念头重新靠近。",
-      "topic_heading": "精选主题",
-      "topic_copy": "颜色代表博客策展主题。选择一个主题，地图会留下相关内容。",
       "source_prefix": "文字来自",
       "source_label": "寒柳别苑",
       "source_url": "https://zylatent.com",
@@ -978,6 +1118,14 @@
       "neighbors": 2,
       "max_second_distance": 0.48,
       "metric": "euclidean-2d"
-    }
+    },
+    "category_source": "blog frontmatter",
+    "categories": [
+      "做东西",
+      "解问题",
+      "读作品",
+      "看人间",
+      "过日子"
+    ]
   }
 }
